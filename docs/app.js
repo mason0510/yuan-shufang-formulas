@@ -8,7 +8,7 @@ const LS = {
 };
 
 const DEMO_KEY = 'sk-7ad4e48c969f1d8bef21173bc51e6cd45f62266f8d198c703dcb44aff2d1e538';
-const PROXY_BASE = 'https://yuan-shufang-cors.bencong66.workers.dev/v1';
+const PROXY_BASE = 'https://ysf-api.tap365.org/v1';
 const CHAINFUEL_UPSTREAM = 'https://ca.chainfuel.tap365.org';
 
 const PRESETS = {
