@@ -7,6 +7,7 @@ const LS = {
   preset: 'ysf_preset',
 };
 
+const DEMO_KEY = 'sk-7ad4e48c969f1d8bef21173bc51e6cd45f62266f8d198c703dcb44aff2d1e538';
 const PROXY_BASE = 'https://ysf-api.tap365.org/v1';
 const CHAINFUEL_UPSTREAM = 'https://ca.chainfuel.tap365.org';
 
@@ -17,7 +18,7 @@ const PRESETS = {
     upstreamBase: CHAINFUEL_UPSTREAM,
     model: 'grok-4.7-build-fast',
     apiStyle: 'responses',
-    apiKey: '',
+    apiKey: DEMO_KEY,
   },
   openai: {
     label: 'OpenAI',
@@ -75,7 +76,7 @@ function cfg() {
     upstreamBase: (localStorage.getItem(LS.upstream) || d.upstreamBase || '').replace(/\/$/, ''),
     model: localStorage.getItem(LS.model) || d.model,
     apiStyle: localStorage.getItem(LS.style) || d.apiStyle || 'chat',
-    apiKey: localStorage.getItem(LS.key) || '',
+    apiKey: localStorage.getItem(LS.key) || (preset === 'chainfuel' ? DEMO_KEY : ''),
   };
 }
 
@@ -128,7 +129,7 @@ function applyPresetToForm(name) {
   document.getElementById('upstreamBase').value = p.upstreamBase || '';
   document.getElementById('model').value = p.model;
   document.getElementById('apiStyle').value = p.apiStyle;
-  document.getElementById('apiKey').value = localStorage.getItem(LS.key) || '';
+  document.getElementById('apiKey').value = localStorage.getItem(LS.key) || (name === 'chainfuel' ? DEMO_KEY : '');
 }
 
 function loadSettingsForm() {
@@ -202,10 +203,7 @@ async function bootstrap() {
     'bot',
     `验方库已加载 ${n} 首。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请尽量用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）、经带胎产、病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
   );
-  if (!cfg().apiKey) {
-    loadSettingsForm();
-    dlg.showModal();
-  }
+  // ChainFuel preset carries DEMO_KEY, so 开方 does not open settings first.
 }
 
 /**
