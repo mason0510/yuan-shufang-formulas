@@ -1,0 +1,14 @@
+name = "yuan-shufang-cors"
+main = "build/worker/shim.mjs"
+compatibility_date = "2026-11-04"
+workers_dev = true
+
+[build]
+command = "worker-build --release"
+
+[vars]
+DEFAULT_UPSTREAM = "https://ca.chainfuel.tap365.org"
+
+[[kv_namespaces]]
+binding = "SUPPORT"
+id = "32de9c4e7a0346a4b177a75747a38367"

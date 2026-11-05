@@ -327,26 +327,53 @@ bootstrap().catch((err) => {
 });
 
 
-// --- support counter + flowers ---
+// --- support counter + flowers (server-backed) ---
 (function supportCounter() {
-  const KEY = 'ysf_support_total_v1';
+  const API = 'https://ysf-api.tap365.org/v1/support';
   const MINE = 'ysf_support_mine_v1';
   const el = document.getElementById('supportCount');
   const btn = document.getElementById('btnSupport');
   if (!el || !btn) return;
-  const seed = 1286;
-  let total = Number(localStorage.getItem(KEY) || seed);
-  if (!Number.isFinite(total) || total < seed) total = seed;
-  el.textContent = String(total);
-  btn.addEventListener('click', () => {
+
+  // Drop legacy fake localStorage total if present; never trust it for display.
+  try { localStorage.removeItem('ysf_support_total_v1'); } catch (_) {}
+
+  function setCount(n) {
+    if (typeof n === 'number' && Number.isFinite(n)) el.textContent = String(n);
+    else el.textContent = '—';
+  }
+
+  function markMine() {
+    btn.textContent = '已送过花，谢谢';
+    btn.disabled = true;
+  }
+
+  if (localStorage.getItem(MINE) === '1') markMine();
+
+  fetch(API, { method: 'GET', mode: 'cors' })
+    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+    .then((data) => setCount(data && data.count))
+    .catch(() => setCount(null));
+
+  btn.addEventListener('click', async () => {
     if (localStorage.getItem(MINE) === '1') {
-      btn.textContent = '已送过花，谢谢';
+      markMine();
       return;
     }
-    total += 1;
-    localStorage.setItem(KEY, String(total));
-    localStorage.setItem(MINE, '1');
-    el.textContent = String(total);
-    btn.textContent = '谢谢支持 🌸';
+    btn.disabled = true;
+    const prev = btn.textContent;
+    btn.textContent = '送出中…';
+    try {
+      const r = await fetch(API, { method: 'POST', mode: 'cors' });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error((data && data.error && data.error.message) || r.statusText);
+      setCount(data.count);
+      localStorage.setItem(MINE, '1');
+      btn.textContent = '谢谢支持 🌸';
+    } catch (_) {
+      btn.textContent = prev;
+      btn.disabled = false;
+      // Keep displayed total from last successful GET; do not invent a number.
+    }
   });
 })();
