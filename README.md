@@ -58,5 +58,3 @@ jq '.formulas[] | select(.ind | contains("痛经"))' data/formulas.json
 启用仓库 Pages（Source: Deploy from branch → `/docs`）。
 
 在线地址形如：`https://mason0510.github.io/yuan-shufang-formulas/`
-
-打开后在「设置」填入本机 `~/.grok/secrets/all-keys.env` 中的 `CHAINFUEL_GROK_API_KEY`（只存浏览器本地）。默认模型：`grok-4.7-build-fast`，Base URL：`https://ca.chainfuel.tap365.org/v1`。
