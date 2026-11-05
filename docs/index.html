@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>中医袁淑芳 · 开方助手</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">袁</div>
+        <div>
+          <h1>中医袁淑芳 · 开方助手</h1>
+          <p class="sub">墓碑验方参考 · Grok 4.7 Build Fast · 非互联网处方</p>
+        </div>
+      </div>
+      <button type="button" id="btnSettings" class="ghost">设置</button>
+    </header>
+
+    <div class="warn">仅供专业辨证参考，须有资质医师把关后抓药；不可自行照方抓药。</div>
+
+    <main id="chat" class="chat" aria-live="polite"></main>
+
+    <form id="composer" class="composer">
+      <textarea id="input" rows="3" placeholder="例：女 32 岁，怕冷偏胖，痛经 5 年，量少色暗有血块；药房无山甲、有皂刺路路通…" required></textarea>
+      <div class="row">
+        <button type="submit" id="send">开方</button>
+        <button type="button" id="btnClear" class="ghost">清空对话</button>
+      </div>
+    </form>
+  </div>
+
+  <dialog id="settings">
+    <form method="dialog" class="settings-form">
+      <h2>API 设置</h2>
+      <p class="hint">密钥存在本机浏览器，不会上传到 GitHub。从 Mac 的 <code>~/.grok/secrets/all-keys.env</code> 取 <code>CHAINFUEL_GROK_API_KEY</code>。</p>
+      <label>Base URL
+        <input id="baseUrl" value="https://ca.chainfuel.tap365.org/v1" />
+      </label>
+      <label>Model
+        <input id="model" value="grok-4.7-build-fast" />
+      </label>
+      <label>API Key
+        <input id="apiKey" type="password" autocomplete="off" placeholder="CHAINFUEL_GROK_API_KEY" />
+      </label>
+      <div class="row">
+        <button value="cancel" class="ghost">取消</button>
+        <button id="saveSettings" value="default">保存</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
