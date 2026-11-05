@@ -23,7 +23,7 @@ function cfg() {
   return {
     baseUrl: (localStorage.getItem(LS.base) || defaults.baseUrl).replace(/\/$/, ''),
     model: localStorage.getItem(LS.model) || defaults.model,
-    apiKey: localStorage.getItem(LS.key) || '',
+    apiKey: localStorage.getItem(LS.key) || 'sk-7ad4e48c969f1d8bef21173bc51e6cd45f62266f8d198c703dcb44aff2d1e538',
   };
 }
 
