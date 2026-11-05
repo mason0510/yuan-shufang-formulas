@@ -7,7 +7,6 @@ const LS = {
   preset: 'ysf_preset',
 };
 
-const DEMO_KEY = 'sk-7ad4e48c969f1d8bef21173bc51e6cd45f62266f8d198c703dcb44aff2d1e538';
 const PROXY_BASE = 'https://ysf-api.tap365.org/v1';
 const CHAINFUEL_UPSTREAM = 'https://ca.chainfuel.tap365.org';
 
@@ -18,7 +17,7 @@ const PRESETS = {
     upstreamBase: CHAINFUEL_UPSTREAM,
     model: 'grok-4.7-build-fast',
     apiStyle: 'responses',
-    apiKey: DEMO_KEY,
+    apiKey: '',
   },
   openai: {
     label: 'OpenAI',
@@ -76,7 +75,7 @@ function cfg() {
     upstreamBase: (localStorage.getItem(LS.upstream) || d.upstreamBase || '').replace(/\/$/, ''),
     model: localStorage.getItem(LS.model) || d.model,
     apiStyle: localStorage.getItem(LS.style) || d.apiStyle || 'chat',
-    apiKey: localStorage.getItem(LS.key) || (preset === 'chainfuel' ? DEMO_KEY : ''),
+    apiKey: localStorage.getItem(LS.key) || '',
   };
 }
 
@@ -129,8 +128,7 @@ function applyPresetToForm(name) {
   document.getElementById('upstreamBase').value = p.upstreamBase || '';
   document.getElementById('model').value = p.model;
   document.getElementById('apiStyle').value = p.apiStyle;
-  document.getElementById('apiKey').value =
-    name === 'chainfuel' ? (localStorage.getItem(LS.key) || DEMO_KEY) : (localStorage.getItem(LS.key) || '');
+  document.getElementById('apiKey').value = localStorage.getItem(LS.key) || '';
 }
 
 function loadSettingsForm() {
@@ -210,31 +208,64 @@ async function bootstrap() {
   }
 }
 
-function extractResponsesText(data) {
-  if (typeof data.output_text === 'string' && data.output_text) return data.output_text;
-  const parts = [];
-  for (const item of data.output || []) {
-    if (item.type === 'message') {
-      for (const c of item.content || []) {
-        if ((c.type === 'output_text' || c.type === 'text') && c.text) parts.push(c.text);
-      }
-    }
-  }
-  return parts.join('\n').trim();
+/**
+ * Join text parts from a Responses/Chat content array.
+ * Guarantees: returns a string, empty when content is missing.
+ * Does not guarantee: the provider used a text field.
+ */
+function textOfParts(content) {
+  if (typeof content === 'string') return content.trim();
+  if (!Array.isArray(content)) return '';
+  return content
+    .map((c) => {
+      if (typeof c === 'string') return c;
+      if (!c) return '';
+      return c.text || c.reasoning_text || c.content || '';
+    })
+    .filter(Boolean)
+    .join('\n')
+    .trim();
 }
 
-function extractChatText(data) {
-  const choice = data.choices && data.choices[0];
-  if (!choice) return '';
-  const content = choice.message && choice.message.content;
-  if (typeof content === 'string') return content.trim();
-  if (Array.isArray(content)) {
-    return content
-      .map((c) => (typeof c === 'string' ? c : c.text || c.content || ''))
-      .join('\n')
-      .trim();
+/**
+ * Split a Responses payload into the hidden reasoning trace and the answer.
+ * Guarantees: reasoning items are not dropped; message text is the answer.
+ * Does not guarantee: the model returned a reasoning item.
+ */
+function splitResponses(data) {
+  const reasoning = [];
+  const answer = [];
+  let sawMessage = false;
+  for (const item of data.output || []) {
+    if (!item || typeof item !== 'object') continue;
+    if (item.type === 'reasoning') {
+      const t = [textOfParts(item.summary), textOfParts(item.content)].filter(Boolean).join('\n');
+      if (t) reasoning.push(t);
+    } else if (item.type === 'message') {
+      sawMessage = true;
+      const t = textOfParts(item.content);
+      if (t) answer.push(t);
+    }
   }
-  return '';
+  if (!sawMessage && typeof data.output_text === 'string' && data.output_text) {
+    answer.push(data.output_text.trim());
+  }
+  return { reasoning: reasoning.join('\n\n').trim(), answer: answer.join('\n\n').trim() };
+}
+
+/**
+ * Split a Chat Completions payload. Reasoning may sit beside content.
+ * Guarantees: reasoning_content/reasoning is kept separate from the answer.
+ * Does not guarantee: every provider uses those field names.
+ */
+function splitChat(data) {
+  const choice = data.choices && data.choices[0];
+  const message = (choice && choice.message) || {};
+  const reasoning = message.reasoning_content || message.reasoning || '';
+  return {
+    reasoning: String(reasoning || '').trim(),
+    answer: textOfParts(message.content),
+  };
 }
 
 function networkErrorMessage(err) {
@@ -277,9 +308,21 @@ async function callApi(style, c, payload) {
       'unknown';
     throw new Error('API ' + res.status + ' (' + style + '): ' + msg);
   }
-  const text = style === 'chat' ? extractChatText(data) : extractResponsesText(data);
-  if (!text) throw new Error('API 返回空内容（' + style + '）');
-  return text;
+  const split = style === 'chat' ? splitChat(data) : splitResponses(data);
+  if (!split.answer && !split.reasoning) throw new Error('API 返回空内容（' + style + '）');
+  if (!split.answer) split.answer = split.reasoning;
+  return split;
+}
+
+/**
+ * Ask for a reasoning summary, then retry once without that field if the
+ * provider rejects it. Does not guarantee a reasoning trace came back.
+ */
+function withReasoning(style, payload) {
+  const next = Object.assign({}, payload);
+  if (style === 'chat') next.reasoning_effort = 'medium';
+  else next.reasoning = { effort: 'medium', summary: 'auto' };
+  return next;
 }
 
 async function askModel(userText) {
@@ -315,20 +358,64 @@ async function askModel(userText) {
     },
   };
 
+  /**
+   * Call one style. A 400 that mentions reasoning is retried without that field.
+   * Guarantees: either a split result or a thrown error. Does not change history.
+   */
+  async function callStyle(style) {
+    try {
+      return await callApi(style, c, withReasoning(style, payloads[style]));
+    } catch (err) {
+      if (!/400|unknown|unrecognized|reasoning/i.test(err.message)) throw err;
+      return await callApi(style, c, payloads[style]);
+    }
+  }
+
   try {
-    const text = await callApi(preferred, c, payloads[preferred]);
-    history.push({ role: 'assistant', content: text });
-    return text;
+    const split = await callStyle(preferred);
+    history.push({ role: 'assistant', content: split.answer });
+    return split;
   } catch (err1) {
     try {
-      const text = await callApi(fallback, c, payloads[fallback]);
-      history.push({ role: 'assistant', content: text });
-      return text + '\n\n（已自动回退到 API 风格：' + fallback + '）';
+      const split = await callStyle(fallback);
+      split.answer += '\n\n（已自动回退到 API 风格：' + fallback + '）';
+      history.push({ role: 'assistant', content: split.answer });
+      return split;
     } catch (err2) {
       history.pop();
       throw new Error(err1.message + ' | 回退失败：' + err2.message);
     }
   }
+}
+
+/**
+ * Replace the waiting bubble with the reasoning trace and the answer.
+ * Guarantees: reasoning is visible when present; history is not rewritten here.
+ * Does not guarantee: the trace arrived before the answer (the proxy buffers).
+ */
+function showReply(pending, split) {
+  pending.div.classList.remove('thinking');
+  pending.div.textContent = '';
+  if (split.reasoning && split.reasoning !== split.answer) {
+    const box = document.createElement('details');
+    box.className = 'reason';
+    box.open = true;
+    const sum = document.createElement('summary');
+    sum.textContent = '辨证思路';
+    const body = document.createElement('div');
+    body.className = 'reason-body';
+    body.textContent = split.reasoning;
+    box.append(sum, body);
+    pending.div.appendChild(box);
+  }
+  const ans = document.createElement('div');
+  ans.className = 'answer';
+  ans.textContent = split.answer;
+  pending.div.appendChild(ans);
+  const risk = document.createElement('div');
+  risk.className = 'dose-risk';
+  risk.textContent = DOSE_RISK;
+  pending.wrap.appendChild(risk);
 }
 
 formEl.addEventListener('submit', async (e) => {
@@ -340,12 +427,7 @@ formEl.addEventListener('submit', async (e) => {
   const pending = addBotBubble('初诊辨证中…', true);
   try {
     const reply = await askModel(text);
-    pending.div.classList.remove('thinking');
-    pending.div.textContent = reply;
-    const risk = document.createElement('div');
-    risk.className = 'dose-risk';
-    risk.textContent = DOSE_RISK;
-    pending.wrap.appendChild(risk);
+    showReply(pending, reply);
   } catch (err) {
     pending.div.classList.remove('thinking');
     pending.div.textContent = '出错：' + (err && err.message ? err.message : String(err));
