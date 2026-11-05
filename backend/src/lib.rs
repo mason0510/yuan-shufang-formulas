@@ -7,8 +7,6 @@ use worker::*;
 
 const SUPPORT_KEY: &str = "support_count";
 const SUPPORT_SEED: u64 = 1286;
-/// Anti-spam: same CF-Connecting-IP may increment at most once per hour.
-const SUPPORT_IP_TTL_SECS: u64 = 3600;
 
 fn cors_headers() -> Headers {
     let h = Headers::new();
@@ -163,29 +161,12 @@ async fn handle_support_get(env: &Env) -> Result<Response> {
     json_count(count)
 }
 
-async fn handle_support_post(req: &Request, env: &Env) -> Result<Response> {
+/// Increment the shared flower count once per POST.
+/// Guarantees: a successful POST adds 1, including a repeat from the same browser or IP.
+/// Does not guarantee: spam protection. There is no per-IP lock.
+async fn handle_support_post(_req: &Request, env: &Env) -> Result<Response> {
     let kv = env.kv("SUPPORT")?;
     let count = read_support_count(&kv).await?;
-
-    // Light anti-spam: same CF connecting IP posts >1/hour → return current count, no increment.
-    // Relies on CF-Connecting-IP (set by Cloudflare edge). Missing IP skips the throttle.
-    let ip = req
-        .headers()
-        .get("CF-Connecting-IP")
-        .ok()
-        .flatten()
-        .unwrap_or_default();
-    if !ip.is_empty() {
-        let ip_key = format!("support_ip:{ip}");
-        if kv.get(&ip_key).text().await?.is_some() {
-            return json_count(count);
-        }
-        kv.put(&ip_key, "1")?
-            .expiration_ttl(SUPPORT_IP_TTL_SECS)
-            .execute()
-            .await?;
-    }
-
     let next = count.saturating_add(1);
     kv.put(SUPPORT_KEY, next.to_string())?.execute().await?;
     json_count(next)

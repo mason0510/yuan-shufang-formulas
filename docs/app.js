@@ -192,7 +192,7 @@ async function bootstrap() {
   // v=120 bypasses the cached 40-formula file from the previous Pages deploy.
   const [fRes, sRes] = await Promise.all([
     fetch('formulas.json?v=120', { cache: 'no-store' }),
-    fetch('system.md?v=120', { cache: 'no-store' }),
+    fetch('system.md?v=123', { cache: 'no-store' }),
   ]);
   if (!fRes.ok) throw new Error('验方库 HTTP ' + fRes.status);
   formulas = await fRes.json();
@@ -497,15 +497,15 @@ bootstrap().catch((err) => {
   }
 
   /**
-   * Mark this browser as already sent. Button stays clickable so the
-   * thank-you overlay can replay without a second POST.
+   * After a counted click, leave the button ready for another one.
+   * Does not remember a one-time lock.
    */
-  function markMine() {
-    btn.textContent = '已送过花，谢谢';
+  function readyAgain() {
+    btn.textContent = '再送一朵';
     btn.disabled = false;
   }
 
-  if (localStorage.getItem(MINE) === '1') markMine();
+  if (localStorage.getItem(MINE) === '1') readyAgain();
 
   fetch(API, { method: 'GET', mode: 'cors' })
     .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
@@ -513,11 +513,7 @@ bootstrap().catch((err) => {
     .catch(() => setCount(null));
 
   btn.addEventListener('click', async () => {
-    if (localStorage.getItem(MINE) === '1') {
-      markMine();
-      celebrateSupport();
-      return;
-    }
+    if (btn.disabled) return;
     btn.disabled = true;
     const prev = btn.textContent;
     btn.textContent = '送出中…';
@@ -527,12 +523,11 @@ bootstrap().catch((err) => {
       if (!r.ok) throw new Error((data && data.error && data.error.message) || r.statusText);
       setCount(data.count);
       localStorage.setItem(MINE, '1');
-      markMine();
+      readyAgain();
       celebrateSupport();
     } catch (_) {
       btn.textContent = prev;
       btn.disabled = false;
-      // Keep displayed total from last successful GET; do not invent a number.
     }
   });
 })();
