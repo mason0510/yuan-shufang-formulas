@@ -80,19 +80,39 @@ function cfg() {
   };
 }
 
-function addMsg(role, text) {
-  if (role === 'bot') {
-    const wrap = document.createElement('div');
-    wrap.className = 'msg-wrap';
-    const div = document.createElement('div');
-    div.className = 'msg bot';
-    div.textContent = text;
+function agentAvatar() {
+  const img = document.createElement('img');
+  img.className = 'avatar';
+  img.src = 'yuan-shufang.png';
+  img.alt = '中医袁淑芳';
+  return img;
+}
+
+function addBotBubble(text, thinking) {
+  const row = document.createElement('div');
+  row.className = 'bot-row';
+  row.appendChild(agentAvatar());
+  const wrap = document.createElement('div');
+  wrap.className = 'msg-wrap';
+  const div = document.createElement('div');
+  div.className = thinking ? 'msg bot thinking' : 'msg bot';
+  div.textContent = text;
+  wrap.appendChild(div);
+  if (!thinking) {
     const risk = document.createElement('div');
     risk.className = 'dose-risk';
     risk.textContent = DOSE_RISK;
-    wrap.appendChild(div);
     wrap.appendChild(risk);
-    chatEl.appendChild(wrap);
+  }
+  row.appendChild(wrap);
+  chatEl.appendChild(row);
+  chatEl.scrollTop = chatEl.scrollHeight;
+  return { row, wrap, div };
+}
+
+function addMsg(role, text) {
+  if (role === 'bot') {
+    addBotBubble(text, false);
   } else {
     const div = document.createElement('div');
     div.className = 'msg ' + role;
@@ -301,23 +321,18 @@ formEl.addEventListener('submit', async (e) => {
   if (!text) return;
   inputEl.value = '';
   addMsg('user', text);
-  const thinking = document.createElement('div');
-  thinking.className = 'msg bot';
-  thinking.textContent = '初诊辨证中…';
-  const wrap = document.createElement('div');
-  wrap.className = 'msg-wrap';
-  wrap.appendChild(thinking);
-  chatEl.appendChild(wrap);
-  chatEl.scrollTop = chatEl.scrollHeight;
+  const pending = addBotBubble('初诊辨证中…', true);
   try {
     const reply = await askModel(text);
-    thinking.textContent = reply;
+    pending.div.classList.remove('thinking');
+    pending.div.textContent = reply;
     const risk = document.createElement('div');
     risk.className = 'dose-risk';
     risk.textContent = DOSE_RISK;
-    wrap.appendChild(risk);
+    pending.wrap.appendChild(risk);
   } catch (err) {
-    thinking.textContent = '出错：' + (err && err.message ? err.message : String(err));
+    pending.div.classList.remove('thinking');
+    pending.div.textContent = '出错：' + (err && err.message ? err.message : String(err));
   }
 });
 
@@ -338,14 +353,60 @@ bootstrap().catch((err) => {
   // Drop legacy fake localStorage total if present; never trust it for display.
   try { localStorage.removeItem('ysf_support_total_v1'); } catch (_) {}
 
+  const overlay = document.getElementById('wanOverlay');
+  const closeBtn = document.getElementById('wanClose');
+
+  /**
+   * Play the petal overlay for this visitor's flower.
+   * Guarantees: overlay unhides and petals spawn.
+   * Does not guarantee: tying to 10000, page-load, or GET count.
+   */
+  function celebrateSupport() {
+    if (!overlay) return;
+    overlay.hidden = false;
+    const petals = overlay.querySelector('.wan-petals');
+    petals.innerHTML = '';
+    const glyphs = ['🌸', '🌺', '🌼', '💐', '🌹', '🌷'];
+    for (let i = 0; i < 28; i += 1) {
+      const p = document.createElement('span');
+      p.className = 'wan-petal';
+      p.textContent = glyphs[i % glyphs.length];
+      p.style.left = Math.round(Math.random() * 100) + '%';
+      p.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
+      p.style.animationDuration = (3.2 + Math.random() * 2.4) + 's';
+      p.style.animationDelay = (Math.random() * 0.9) + 's';
+      p.style.fontSize = (16 + Math.round(Math.random() * 16)) + 'px';
+      petals.appendChild(p);
+    }
+  }
+
+  /**
+   * Hide the thank-you overlay. Does not change the server count.
+   */
+  function hideSupportFx() {
+    if (overlay) overlay.hidden = true;
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', hideSupportFx);
+  if (overlay) overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) hideSupportFx();
+  });
+
+  /**
+   * Render the public total. Does not open the overlay at any threshold.
+   */
   function setCount(n) {
     if (typeof n === 'number' && Number.isFinite(n)) el.textContent = String(n);
     else el.textContent = '—';
   }
 
+  /**
+   * Mark this browser as already sent. Button stays clickable so the
+   * thank-you overlay can replay without a second POST.
+   */
   function markMine() {
     btn.textContent = '已送过花，谢谢';
-    btn.disabled = true;
+    btn.disabled = false;
   }
 
   if (localStorage.getItem(MINE) === '1') markMine();
@@ -358,6 +419,7 @@ bootstrap().catch((err) => {
   btn.addEventListener('click', async () => {
     if (localStorage.getItem(MINE) === '1') {
       markMine();
+      celebrateSupport();
       return;
     }
     btn.disabled = true;
@@ -369,7 +431,8 @@ bootstrap().catch((err) => {
       if (!r.ok) throw new Error((data && data.error && data.error.message) || r.statusText);
       setCount(data.count);
       localStorage.setItem(MINE, '1');
-      btn.textContent = '谢谢支持 🌸';
+      markMine();
+      celebrateSupport();
     } catch (_) {
       btn.textContent = prev;
       btn.disabled = false;

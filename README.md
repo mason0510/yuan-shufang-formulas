@@ -10,18 +10,19 @@
 
 | 项目 | 说明 |
 |------|------|
-| 收录 | 40 首（碑称约百首，本批未录全） |
-| 分类 | 妊娠病、产后病、不孕症、闭经、痛经、杂病 |
+| 收录 | 120 首（碑称百首；立面四末段风化未补） |
+| 分类 | 妊娠、产后、不孕、经带、儿科、内科、外科、五官 |
 | 格式 | JSON + Markdown |
 | 标记 | `ctrl` 管控药 / `doubt` 存疑（照片与电子版冲突或残缺） |
 
 ## 目录
 
 ```
-data/formulas.json   # 机器可读
-data/formulas.md     # 人类可读
-agent/               # 开方智能体：系统提示 + 启动说明
-docs/disclaimer.md   # 合规与使用边界
+data/formulas.json                 # 机器可读
+data/formulas.md                   # 人类可读
+data/sources/xhs-100fang/          # 小红书 22 张实拍誊录底本
+agent/                             # 开方智能体：系统提示 + 启动说明
+docs/disclaimer.md                 # 合规与使用边界
 ```
 
 ## 快速使用数据

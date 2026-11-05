@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>中医袁淑芳 · 辨证开方</title>
+  <link rel="icon" href="yuan-shufang.png" />
+  <link rel="apple-touch-icon" href="yuan-shufang.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,7 +26,7 @@
     <main class="main">
       <header class="top">
         <div class="brand">
-          <div class="avatar" aria-hidden="true">袁</div>
+          <img class="avatar" src="yuan-shufang.png" alt="中医袁淑芳" />
           <div>
             <h1>中医袁淑芳 · 辨证开方</h1>
             <p class="sub">参考方助手 · 可自配模型供应商</p>
@@ -66,6 +68,16 @@
       </div>
       <div class="rail-foot">计量错误可伤身<br/>请到医院面诊调量</div>
     </aside>
+  </div>
+
+  <div id="wanOverlay" class="wan-overlay" hidden>
+    <div class="wan-petals" aria-hidden="true"></div>
+    <div class="wan-card" role="dialog" aria-labelledby="wanTitle">
+      <img class="wan-avatar" src="yuan-shufang.png" alt="" />
+      <div id="wanTitle" class="wan-title">谢谢送花</div>
+      <p class="wan-sub">医者仁心 · 这束花我收下了</p>
+      <button type="button" id="wanClose">收下这份心意</button>
+    </div>
   </div>
 
   <dialog id="settings">
