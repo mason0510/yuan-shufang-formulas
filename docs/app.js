@@ -484,7 +484,7 @@ async function askModel(userText, onDelta) {
 /**
  * Append one streamed fragment onto the open bubble.
  * Guarantees: reasoning and answer stay in separate nodes and grow as chunks arrive.
- * The reasoning box starts closed; a click on 辨证思路 opens it.
+ * The reasoning box starts open. The visitor can still click 辨证思路 to fold it.
  * Does not guarantee: the first chunk arrives before the model has finished thinking upstream.
  */
 function appendStream(pending, state, kind, text) {
@@ -494,7 +494,7 @@ function appendStream(pending, state, kind, text) {
     if (!state.reasonBody) {
       const box = document.createElement('details');
       box.className = 'reason';
-      // Closed until the visitor clicks. Do not set open.
+      box.open = true;
       const sum = document.createElement('summary');
       sum.textContent = '辨证思路';
       state.reasonBody = document.createElement('div');
