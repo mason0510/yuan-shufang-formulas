@@ -3,28 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>中医袁淑芳 · 开方助手</title>
+  <title>中医袁淑芳 · 辨证参考助手</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <aside class="side-disclaimer left" aria-label="左侧免责与风险提示">
+    <div class="side-title">免责声明</div>
+    <p>仅供专业辨证参考</p>
+    <p>须有资质医师把关后抓药</p>
+    <p>不可自行照方抓药</p>
+    <p>非互联网处方</p>
+    <p>不替代面诊</p>
+    <div class="side-title risk">风险提示</div>
+    <p>急危重症请立刻就医</p>
+    <p>管控药已替换非原方</p>
+    <p>误用中药可能伤身</p>
+    <p>输出仅为参考方，不构成诊疗建议</p>
+    <p class="dose">计量/用量错误可伤身，须医师调量</p>
+  </aside>
+
   <div class="app">
     <header>
       <div class="brand">
         <div class="avatar" aria-hidden="true">袁</div>
         <div>
-          <h1>中医袁淑芳 · 开方助手</h1>
-          <p class="sub">墓碑验方参考 · Grok 4.7 Build Fast · 非互联网处方</p>
+          <h1>中医袁淑芳 · 辨证参考助手</h1>
+          <p class="sub">墓碑验方参考 · 可自配模型供应商 · 非互联网处方</p>
         </div>
       </div>
       <button type="button" id="btnSettings" class="ghost">设置</button>
     </header>
 
-    <div class="warn">仅供专业辨证参考，须有资质医师把关后抓药；不可自行照方抓药。</div>
+    <div class="warn">
+      <strong>风险提示：</strong>仅供专业辨证参考，须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医；管控药已替换为合法代用品（非原方）；误用中药可能伤身；本站输出仅为参考方，不构成诊疗建议。
+    </div>
+    <div class="warn dose-banner">
+      <strong>计量风险：</strong>药味克数若使用错误可伤身甚至危及生命；剂量须由有资质医师当面辨证后调整；严禁自行照方抓药或加减。
+    </div>
 
     <main id="chat" class="chat" aria-live="polite"></main>
 
+    <div class="examples" aria-label="患者自述示例">
+      <button type="button" class="example" data-fill="我32岁女，怕冷偏胖，痛经5年，量少色暗有血块；月经周期不准；药房无山甲，有皂刺、路路通、当归、川芎。">例：我32岁女，痛经怕冷…</button>
+      <button type="button" class="example" data-fill="我28岁女，婚后3年未孕，形体偏胖，平时痰多、嗜睡，月经量少色淡；未服过西药促排；本地药房药味较全。">例：我28岁未孕偏胖…</button>
+      <button type="button" class="example" data-fill="我45岁女，月经紊乱半年，潮热盗汗，心烦失眠；现服过更年片效果一般；请先问诊，信息不够先别开方。">例：我45岁更年期…</button>
+    </div>
+
     <form id="composer" class="composer">
-      <textarea id="input" rows="3" placeholder="例：女 32 岁，怕冷偏胖，痛经 5 年，量少色暗有血块；药房无山甲、有皂刺路路通…" required></textarea>
+      <textarea id="input" rows="3" placeholder="例：我32岁女，怕冷偏胖，痛经5年，量少色暗有血块；药房无山甲、有皂刺路路通…（信息不全时请先补全再开参考方）" required></textarea>
       <div class="row">
         <button type="submit" id="send">开方</button>
         <button type="button" id="btnClear" class="ghost">清空对话</button>
@@ -32,18 +58,50 @@
     </form>
   </div>
 
+  <aside class="side-disclaimer right" aria-label="右侧免责与风险提示">
+    <div class="side-title">免责声明</div>
+    <p>仅供专业辨证参考</p>
+    <p>须有资质医师把关后抓药</p>
+    <p>不可自行照方抓药</p>
+    <p>非互联网处方</p>
+    <p>不替代面诊</p>
+    <div class="side-title risk">风险提示</div>
+    <p>急危重症请立刻就医</p>
+    <p>管控药已替换非原方</p>
+    <p>误用中药可能伤身</p>
+    <p>输出仅为参考方，不构成诊疗建议</p>
+    <p class="dose">计量/用量错误可伤身，须医师调量</p>
+  </aside>
+
   <dialog id="settings">
     <form method="dialog" class="settings-form">
-      <h2>API 设置</h2>
-      <p class="hint">已内置公开测试 Key（约 $100 额度）。也可在下方换成自己的 Key；自定义 Key 只存本机浏览器。</p>
+      <h2>模型供应商</h2>
+      <p class="hint">可自配任意 OpenAI 兼容接口。演示预设走 CORS 代理 + 公开测试 Key；自定义 Key 只存本机浏览器，不会写入仓库。</p>
+      <label>供应商预设
+        <select id="preset">
+          <option value="chainfuel">ChainFuel 演示（经 CORS 代理）</option>
+          <option value="openai">OpenAI</option>
+          <option value="deepseek">DeepSeek</option>
+          <option value="custom">自定义</option>
+        </select>
+      </label>
       <label>Base URL
-        <input id="baseUrl" value="https://ca.chainfuel.tap365.org/v1" />
+        <input id="baseUrl" autocomplete="off" />
+      </label>
+      <label>上游真实地址（走代理时可选，写入请求头 X-Upstream-Base）
+        <input id="upstreamBase" autocomplete="off" placeholder="留空则代理默认转发 ChainFuel" />
       </label>
       <label>Model
-        <input id="model" value="grok-4.7-build-fast" />
+        <input id="model" autocomplete="off" />
+      </label>
+      <label>API 风格
+        <select id="apiStyle">
+          <option value="responses">responses（/v1/responses）</option>
+          <option value="chat">chat（/v1/chat/completions）</option>
+        </select>
       </label>
       <label>API Key
-        <input id="apiKey" type="password" autocomplete="off" placeholder="CHAINFUEL_GROK_API_KEY" />
+        <input id="apiKey" type="password" autocomplete="off" placeholder="sk-..." />
       </label>
       <div class="row">
         <button value="cancel" class="ghost">取消</button>

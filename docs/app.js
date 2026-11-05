@@ -1,14 +1,53 @@
-
 const LS = {
   key: 'ysf_api_key',
   base: 'ysf_base_url',
   model: 'ysf_model',
+  style: 'ysf_api_style',
+  upstream: 'ysf_upstream_base',
+  preset: 'ysf_preset',
 };
 
-const defaults = {
-  baseUrl: 'https://ca.chainfuel.tap365.org/v1',
-  model: 'grok-4.7-build-fast',
+const DEMO_KEY = 'sk-7ad4e48c969f1d8bef21173bc51e6cd45f62266f8d198c703dcb44aff2d1e538';
+const PROXY_BASE = 'https://yuan-shufang-cors.bencong66.workers.dev/v1';
+const CHAINFUEL_UPSTREAM = 'https://ca.chainfuel.tap365.org';
+
+const PRESETS = {
+  chainfuel: {
+    label: 'ChainFuel 演示',
+    baseUrl: PROXY_BASE,
+    upstreamBase: CHAINFUEL_UPSTREAM,
+    model: 'grok-4.7-build-fast',
+    apiStyle: 'responses',
+    apiKey: DEMO_KEY,
+  },
+  openai: {
+    label: 'OpenAI',
+    baseUrl: 'https://api.openai.com/v1',
+    upstreamBase: '',
+    model: 'gpt-4o-mini',
+    apiStyle: 'chat',
+    apiKey: '',
+  },
+  deepseek: {
+    label: 'DeepSeek',
+    baseUrl: 'https://api.deepseek.com/v1',
+    upstreamBase: '',
+    model: 'deepseek-chat',
+    apiStyle: 'chat',
+    apiKey: '',
+  },
+  custom: {
+    label: '自定义',
+    baseUrl: PROXY_BASE,
+    upstreamBase: '',
+    model: '',
+    apiStyle: 'chat',
+    apiKey: '',
+  },
 };
+
+const DOSE_RISK =
+  '【计量/用量风险】药味克数若使用错误可伤身甚至危及生命；剂量须由有资质中医师当面辨证后调整；严禁自行照方抓药或擅自加减。本输出仅为参考方，不构成处方。';
 
 const chatEl = document.getElementById('chat');
 const inputEl = document.getElementById('input');
@@ -20,27 +59,73 @@ let systemPrompt = '';
 let history = [];
 
 function cfg() {
+  const preset = localStorage.getItem(LS.preset) || 'chainfuel';
+  const d = PRESETS[preset] || PRESETS.chainfuel;
+  let baseUrl = (localStorage.getItem(LS.base) || d.baseUrl).replace(/\/$/, '');
+  // Old Pages pointed browser straight at ChainFuel (CORS blocked). Auto-migrate.
+  if (/ca\.chainfuel\.tap365\.org/i.test(baseUrl)) {
+    baseUrl = PROXY_BASE.replace(/\/$/, '');
+    localStorage.setItem(LS.base, baseUrl);
+    if (!localStorage.getItem(LS.upstream)) {
+      localStorage.setItem(LS.upstream, CHAINFUEL_UPSTREAM);
+    }
+  }
   return {
-    baseUrl: (localStorage.getItem(LS.base) || defaults.baseUrl).replace(/\/$/, ''),
-    model: localStorage.getItem(LS.model) || defaults.model,
-    apiKey: localStorage.getItem(LS.key) || 'sk-7ad4e48c969f1d8bef21173bc51e6cd45f62266f8d198c703dcb44aff2d1e538',
+    preset,
+    baseUrl,
+    upstreamBase: (localStorage.getItem(LS.upstream) || d.upstreamBase || '').replace(/\/$/, ''),
+    model: localStorage.getItem(LS.model) || d.model,
+    apiStyle: localStorage.getItem(LS.style) || d.apiStyle || 'chat',
+    apiKey: localStorage.getItem(LS.key) || (preset === 'chainfuel' ? DEMO_KEY : ''),
   };
 }
 
 function addMsg(role, text) {
-  const div = document.createElement('div');
-  div.className = 'msg ' + role;
-  div.textContent = text;
-  chatEl.appendChild(div);
+  if (role === 'bot') {
+    const wrap = document.createElement('div');
+    wrap.className = 'msg-wrap';
+    const div = document.createElement('div');
+    div.className = 'msg bot';
+    div.textContent = text;
+    const risk = document.createElement('div');
+    risk.className = 'dose-risk';
+    risk.textContent = DOSE_RISK;
+    wrap.appendChild(div);
+    wrap.appendChild(risk);
+    chatEl.appendChild(wrap);
+  } else {
+    const div = document.createElement('div');
+    div.className = 'msg ' + role;
+    div.textContent = text;
+    chatEl.appendChild(div);
+  }
   chatEl.scrollTop = chatEl.scrollHeight;
+}
+
+function applyPresetToForm(name) {
+  const p = PRESETS[name] || PRESETS.custom;
+  document.getElementById('preset').value = name;
+  document.getElementById('baseUrl').value = p.baseUrl;
+  document.getElementById('upstreamBase').value = p.upstreamBase || '';
+  document.getElementById('model').value = p.model;
+  document.getElementById('apiStyle').value = p.apiStyle;
+  document.getElementById('apiKey').value =
+    name === 'chainfuel' ? (localStorage.getItem(LS.key) || DEMO_KEY) : (localStorage.getItem(LS.key) || '');
 }
 
 function loadSettingsForm() {
   const c = cfg();
+  document.getElementById('preset').value = c.preset in PRESETS ? c.preset : 'custom';
   document.getElementById('baseUrl').value = c.baseUrl;
+  document.getElementById('upstreamBase').value = c.upstreamBase;
   document.getElementById('model').value = c.model;
+  document.getElementById('apiStyle').value = c.apiStyle;
   document.getElementById('apiKey').value = c.apiKey;
 }
+
+document.getElementById('preset').addEventListener('change', (e) => {
+  applyPresetToForm(e.target.value);
+});
 
 document.getElementById('btnSettings').onclick = () => {
   loadSettingsForm();
@@ -49,80 +134,165 @@ document.getElementById('btnSettings').onclick = () => {
 
 document.getElementById('saveSettings').onclick = (e) => {
   e.preventDefault();
+  localStorage.setItem(LS.preset, document.getElementById('preset').value);
   localStorage.setItem(LS.base, document.getElementById('baseUrl').value.trim());
+  localStorage.setItem(LS.upstream, document.getElementById('upstreamBase').value.trim());
   localStorage.setItem(LS.model, document.getElementById('model').value.trim());
+  localStorage.setItem(LS.style, document.getElementById('apiStyle').value);
   localStorage.setItem(LS.key, document.getElementById('apiKey').value.trim());
   dlg.close();
-  addMsg('sys', '设置已保存到本机浏览器。');
+  addMsg('sys', '设置已保存到本机浏览器（Key 不会上传到本站仓库）。');
 };
 
 document.getElementById('btnClear').onclick = () => {
   history = [];
   chatEl.innerHTML = '';
-  addMsg('sys', '对话已清空。直接描述病人情况即可开参考方。');
+  addMsg('sys', '对话已清空。请用患者自述补充初诊信息；信息不足时我会先问诊，再给参考方，并附计量风险提示。');
 };
+
+document.querySelectorAll('.example').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    inputEl.value = btn.getAttribute('data-fill') || '';
+    inputEl.focus();
+    inputEl.setSelectionRange(inputEl.value.length, inputEl.value.length);
+  });
+});
 
 async function bootstrap() {
   addMsg('sys', '正在加载验方库…');
-  const [fRes, sRes] = await Promise.all([
-    fetch('formulas.json'),
-    fetch('system.md'),
-  ]);
+  const [fRes, sRes] = await Promise.all([fetch('formulas.json'), fetch('system.md')]);
   formulas = await fRes.json();
   systemPrompt = await sRes.text();
   chatEl.innerHTML = '';
-  addMsg('bot', `验方库已加载 ${formulas.count} 首。\n请发送：年龄/性别、主诉、体质（胖瘦寒热）、经带胎产、药房有无药。\n我将按碑方编号加减开出参考方。`);
+  addMsg(
+    'bot',
+    `验方库已加载 ${formulas.count} 首。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请尽量用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）、经带胎产、病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
+  );
   if (!cfg().apiKey) {
     loadSettingsForm();
     dlg.showModal();
   }
 }
 
-function extractText(data) {
+function extractResponsesText(data) {
   if (typeof data.output_text === 'string' && data.output_text) return data.output_text;
   const parts = [];
   for (const item of data.output || []) {
     if (item.type === 'message') {
       for (const c of item.content || []) {
-        if (c.type === 'output_text' && c.text) parts.push(c.text);
-        if (c.type === 'text' && c.text) parts.push(c.text);
+        if ((c.type === 'output_text' || c.type === 'text') && c.text) parts.push(c.text);
       }
     }
   }
-  return parts.join('\n').trim() || JSON.stringify(data).slice(0, 400);
+  return parts.join('\n').trim();
 }
 
-async function askGrok(userText) {
+function extractChatText(data) {
+  const choice = data.choices && data.choices[0];
+  if (!choice) return '';
+  const content = choice.message && choice.message.content;
+  if (typeof content === 'string') return content.trim();
+  if (Array.isArray(content)) {
+    return content
+      .map((c) => (typeof c === 'string' ? c : c.text || c.content || ''))
+      .join('\n')
+      .trim();
+  }
+  return '';
+}
+
+function networkErrorMessage(err) {
+  const msg = (err && err.message) || String(err);
+  if (/Failed to fetch|NetworkError|Load failed|CORS/i.test(msg)) {
+    return (
+      '网络/CORS 失败：' +
+      msg +
+      '。请确认 Base URL 指向 CORS 代理（演示默认已配置），或自建可跨域的 OpenAI 兼容接口；设置里可切换「模型供应商」。'
+    );
+  }
+  return msg;
+}
+
+async function callApi(style, c, payload) {
+  const path = style === 'chat' ? '/chat/completions' : '/responses';
+  const headers = {
+    Authorization: 'Bearer ' + c.apiKey,
+    'Content-Type': 'application/json',
+  };
+  // When using our proxy, allow overriding the real upstream.
+  if (c.baseUrl.includes('yuan-shufang-cors') && c.upstreamBase) {
+    headers['X-Upstream-Base'] = c.upstreamBase;
+  }
+  let res;
+  try {
+    res = await fetch(c.baseUrl + path, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(payload),
+    });
+  } catch (err) {
+    throw new Error(networkErrorMessage(err));
+  }
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    const msg =
+      (data && data.error && (data.error.message || JSON.stringify(data.error))) ||
+      res.statusText ||
+      'unknown';
+    throw new Error('API ' + res.status + ' (' + style + '): ' + msg);
+  }
+  const text = style === 'chat' ? extractChatText(data) : extractResponsesText(data);
+  if (!text) throw new Error('API 返回空内容（' + style + '）');
+  return text;
+}
+
+async function askModel(userText) {
   const c = cfg();
   if (!c.apiKey) {
     loadSettingsForm();
     dlg.showModal();
-    throw new Error('请先在设置中填写 CHAINFUEL_GROK_API_KEY');
+    throw new Error('请先在「模型供应商」设置中填写 API Key');
   }
+  if (!c.model) throw new Error('请先填写 Model 名称');
+
   history.push({ role: 'user', content: userText });
-  const input = history.map((m) => ({ role: m.role, content: m.content }));
-  const res = await fetch(c.baseUrl + '/responses', {
-    method: 'POST',
-    headers: {
-      'Authorization': 'Bearer ' + c.apiKey,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
+  const messages = [
+    { role: 'system', content: systemPrompt },
+    ...history.map((m) => ({ role: m.role, content: m.content })),
+  ];
+
+  const preferred = c.apiStyle === 'responses' ? 'responses' : 'chat';
+  const fallback = preferred === 'responses' ? 'chat' : 'responses';
+
+  const payloads = {
+    responses: {
       model: c.model,
       instructions: systemPrompt,
-      input,
+      input: history.map((m) => ({ role: m.role, content: m.content })),
       max_output_tokens: 2048,
-      reasoning: { effort: 'low' },
-    }),
-  });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) {
-    const msg = (data && data.error && (data.error.message || JSON.stringify(data.error))) || res.statusText;
-    throw new Error('API ' + res.status + ': ' + msg);
+    },
+    chat: {
+      model: c.model,
+      messages,
+      max_tokens: 2048,
+      temperature: 0.4,
+    },
+  };
+
+  try {
+    const text = await callApi(preferred, c, payloads[preferred]);
+    history.push({ role: 'assistant', content: text });
+    return text;
+  } catch (err1) {
+    try {
+      const text = await callApi(fallback, c, payloads[fallback]);
+      history.push({ role: 'assistant', content: text });
+      return text + '\n\n（已自动回退到 API 风格：' + fallback + '）';
+    } catch (err2) {
+      history.pop();
+      throw new Error(err1.message + ' | 回退失败：' + err2.message);
+    }
   }
-  const text = extractText(data);
-  history.push({ role: 'assistant', content: text });
-  return text;
 }
 
 formEl.addEventListener('submit', async (e) => {
@@ -133,11 +303,19 @@ formEl.addEventListener('submit', async (e) => {
   addMsg('user', text);
   const thinking = document.createElement('div');
   thinking.className = 'msg bot';
-  thinking.textContent = '辨证开方中…';
-  chatEl.appendChild(thinking);
+  thinking.textContent = '初诊辨证中…';
+  const wrap = document.createElement('div');
+  wrap.className = 'msg-wrap';
+  wrap.appendChild(thinking);
+  chatEl.appendChild(wrap);
+  chatEl.scrollTop = chatEl.scrollHeight;
   try {
-    const reply = await askGrok(text);
+    const reply = await askModel(text);
     thinking.textContent = reply;
+    const risk = document.createElement('div');
+    risk.className = 'dose-risk';
+    risk.textContent = DOSE_RISK;
+    wrap.appendChild(risk);
   } catch (err) {
     thinking.textContent = '出错：' + (err && err.message ? err.message : String(err));
   }
