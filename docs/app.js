@@ -387,14 +387,15 @@ async function askModel(userText) {
 }
 
 /**
- * Replace the waiting bubble with the reasoning trace and the answer.
- * Guarantees: reasoning is visible when present; history is not rewritten here.
- * Does not guarantee: the trace arrived before the answer (the proxy buffers).
+ * Paint the reasoning trace first, then the answer.
+ * Guarantees: when a separate trace exists, the answer is not in the DOM until the trace has been shown.
+ * Does not guarantee: tokens arrived separately. The proxy still buffers the whole reply.
  */
 function showReply(pending, split) {
   pending.div.classList.remove('thinking');
   pending.div.textContent = '';
-  if (split.reasoning && split.reasoning !== split.answer) {
+  const hasTrace = Boolean(split.reasoning) && split.reasoning !== split.answer;
+  if (hasTrace) {
     const box = document.createElement('details');
     box.className = 'reason';
     box.open = true;
@@ -408,12 +409,22 @@ function showReply(pending, split) {
   }
   const ans = document.createElement('div');
   ans.className = 'answer';
-  ans.textContent = split.answer;
   pending.div.appendChild(ans);
   const risk = document.createElement('div');
   risk.className = 'dose-risk';
   risk.textContent = DOSE_RISK;
   pending.wrap.appendChild(risk);
+  const paintAnswer = () => {
+    ans.textContent = split.answer;
+    chatEl.scrollTop = chatEl.scrollHeight;
+  };
+  if (!hasTrace) {
+    paintAnswer();
+    return;
+  }
+  chatEl.scrollTop = chatEl.scrollHeight;
+  const wait = Math.min(2400, 450 + split.reasoning.length * 12);
+  window.setTimeout(paintAnswer, wait);
 }
 
 formEl.addEventListener('submit', async (e) => {
