@@ -58,3 +58,7 @@ jq '.formulas[] | select(.ind | contains("痛经"))' data/formulas.json
 启用仓库 Pages（Source: Deploy from branch → `/docs`）。
 
 在线地址形如：`https://mason0510.github.io/yuan-shufang-formulas/`
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mason0510/yuan-shufang-formulas&type=Date)](https://www.star-history.com/#mason0510/yuan-shufang-formulas&Date)
