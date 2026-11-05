@@ -61,4 +61,6 @@ jq '.formulas[] | select(.ind | contains("痛经"))' data/formulas.json
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mason0510/yuan-shufang-formulas&type=Date)](https://www.star-history.com/#mason0510/yuan-shufang-formulas&Date)
+[![GitHub stars](https://img.shields.io/github/stars/mason0510/yuan-shufang-formulas?style=social)](https://github.com/mason0510/yuan-shufang-formulas/stargazers)
+
+![Star 累计](docs/star-history.svg)
