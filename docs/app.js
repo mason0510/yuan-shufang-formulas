@@ -488,12 +488,34 @@ bootstrap().catch((err) => {
     if (e.target === overlay) hideSupportFx();
   });
 
+  let shown = null;
+
   /**
-   * Render the public total. Does not open the overlay at any threshold.
+   * Render the public total. Ignores a smaller poll result so a slow GET
+   * cannot roll back a click that just incremented.
+   * Does not open the overlay at any threshold.
    */
   function setCount(n) {
-    if (typeof n === 'number' && Number.isFinite(n)) el.textContent = String(n);
-    else el.textContent = '—';
+    if (typeof n === 'number' && Number.isFinite(n)) {
+      if (shown !== null && n < shown) return;
+      shown = n;
+      el.textContent = String(n);
+    } else if (shown === null) {
+      el.textContent = '—';
+    }
+  }
+
+  /**
+   * Pull the shared total. A failed poll keeps the last number.
+   * Does not increment the counter.
+   */
+  function refreshCount() {
+    fetch(API, { method: 'GET', mode: 'cors', cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((data) => setCount(data && data.count))
+      .catch(() => {
+        if (shown === null) setCount(null);
+      });
   }
 
   /**
@@ -507,10 +529,11 @@ bootstrap().catch((err) => {
 
   if (localStorage.getItem(MINE) === '1') readyAgain();
 
-  fetch(API, { method: 'GET', mode: 'cors' })
-    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-    .then((data) => setCount(data && data.count))
-    .catch(() => setCount(null));
+  refreshCount();
+  setInterval(refreshCount, 8000);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') refreshCount();
+  });
 
   btn.addEventListener('click', async () => {
     if (btn.disabled) return;
