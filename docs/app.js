@@ -192,7 +192,7 @@ async function bootstrap() {
   // v=120 bypasses the cached 40-formula file from the previous Pages deploy.
   const [fRes, sRes] = await Promise.all([
     fetch('formulas.json?v=120', { cache: 'no-store' }),
-    fetch('system.md?v=123', { cache: 'no-store' }),
+    fetch('system.md?v=127', { cache: 'no-store' }),
   ]);
   if (!fRes.ok) throw new Error('验方库 HTTP ' + fRes.status);
   formulas = await fRes.json();
@@ -201,7 +201,7 @@ async function bootstrap() {
   chatEl.innerHTML = '';
   addMsg(
     'bot',
-    `验方库已加载 ${n} 首。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请尽量用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）、经带胎产、病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
+    `验方库已加载 ${n} 首。妇科、儿科、外科有对证方。癫痫、骨伤目前没有专条，遇到会说明，不编方。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）。妇科可写经带胎产，儿科写年龄和喂养，外科写疮疡部位，癫痫写发作，骨伤写受伤处。再补病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
   );
   // ChainFuel preset carries DEMO_KEY, so 开方 does not open settings first.
 }
@@ -484,6 +484,7 @@ async function askModel(userText, onDelta) {
 /**
  * Append one streamed fragment onto the open bubble.
  * Guarantees: reasoning and answer stay in separate nodes and grow as chunks arrive.
+ * The reasoning box starts closed; a click on 辨证思路 opens it.
  * Does not guarantee: the first chunk arrives before the model has finished thinking upstream.
  */
 function appendStream(pending, state, kind, text) {
@@ -493,7 +494,7 @@ function appendStream(pending, state, kind, text) {
     if (!state.reasonBody) {
       const box = document.createElement('details');
       box.className = 'reason';
-      box.open = true;
+      // Closed until the visitor clicks. Do not set open.
       const sum = document.createElement('summary');
       sum.textContent = '辨证思路';
       state.reasonBody = document.createElement('div');

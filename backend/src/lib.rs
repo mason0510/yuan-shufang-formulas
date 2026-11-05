@@ -91,7 +91,26 @@ fn is_hop(name: &str) -> bool {
             | "x-forwarded-for"
             | "x-forwarded-proto"
             | "x-real-ip"
+            | "accept-encoding"
+            | "content-encoding"
     )
+}
+
+/// Ask upstream for an uncompressed body.
+/// Guarantees: Accept-Encoding is identity.
+/// Does not guarantee: upstream honors it.
+fn request_plain_body(headers: &Headers) {
+    let _ = headers.set("Accept-Encoding", "identity");
+}
+
+/// Keep the browser from waiting on a gzipped SSE body.
+/// Guarantees: no content-encoding, no content-length, Cache-Control includes no-transform.
+/// Does not guarantee: every edge obeys no-transform.
+fn response_plain_stream(headers: &Headers) {
+    let _ = headers.set("Cache-Control", "no-cache, no-transform");
+    let _ = headers.set("X-Accel-Buffering", "no");
+    let _ = headers.delete("content-encoding");
+    let _ = headers.delete("content-length");
 }
 
 fn pick_upstream(req: &Request, env: &Env) -> std::result::Result<String, String> {
@@ -220,6 +239,8 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
         }
         let _ = headers.set(&k, &v);
     }
+    // Browser gzip makes SSE sit until the whole answer exists. Ask for plain text.
+    request_plain_body(&headers);
 
     let method = req.method();
     let mut init = RequestInit::new();
@@ -250,6 +271,7 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
     for (k, v) in cors_headers().entries() {
         let _ = out_headers.set(&k, &v);
     }
+    response_plain_stream(&out_headers);
 
     // Pass the body through. Buffering here is what made the browser wait
     // until the model finished before the first token could render.
