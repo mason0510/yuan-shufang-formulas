@@ -178,15 +178,31 @@ document.querySelectorAll('.example').forEach((btn) => {
   });
 });
 
+/**
+ * Count formulas actually present in the loaded library.
+ * Guarantees: returns formulas.length, ignoring a stale count field.
+ * Does not guarantee: the stone text has more readable lines than this file.
+ */
+function loadedFormulaCount(data) {
+  const list = data && Array.isArray(data.formulas) ? data.formulas : [];
+  return list.length;
+}
+
 async function bootstrap() {
   addMsg('sys', '正在加载验方库…');
-  const [fRes, sRes] = await Promise.all([fetch('formulas.json'), fetch('system.md')]);
+  // v=120 bypasses the cached 40-formula file from the previous Pages deploy.
+  const [fRes, sRes] = await Promise.all([
+    fetch('formulas.json?v=120', { cache: 'no-store' }),
+    fetch('system.md?v=120', { cache: 'no-store' }),
+  ]);
+  if (!fRes.ok) throw new Error('验方库 HTTP ' + fRes.status);
   formulas = await fRes.json();
   systemPrompt = await sRes.text();
+  const n = loadedFormulaCount(formulas);
   chatEl.innerHTML = '';
   addMsg(
     'bot',
-    `验方库已加载 ${formulas.count} 首。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请尽量用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）、经带胎产、病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
+    `验方库已加载 ${n} 首。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请尽量用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）、经带胎产、病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
   );
   if (!cfg().apiKey) {
     loadSettingsForm();
