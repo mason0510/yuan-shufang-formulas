@@ -325,3 +325,28 @@ bootstrap().catch((err) => {
   chatEl.innerHTML = '';
   addMsg('bot', '加载失败：' + err.message);
 });
+
+
+// --- support counter + flowers ---
+(function supportCounter() {
+  const KEY = 'ysf_support_total_v1';
+  const MINE = 'ysf_support_mine_v1';
+  const el = document.getElementById('supportCount');
+  const btn = document.getElementById('btnSupport');
+  if (!el || !btn) return;
+  const seed = 1286;
+  let total = Number(localStorage.getItem(KEY) || seed);
+  if (!Number.isFinite(total) || total < seed) total = seed;
+  el.textContent = String(total);
+  btn.addEventListener('click', () => {
+    if (localStorage.getItem(MINE) === '1') {
+      btn.textContent = '已送过花，谢谢';
+      return;
+    }
+    total += 1;
+    localStorage.setItem(KEY, String(total));
+    localStorage.setItem(MINE, '1');
+    el.textContent = String(total);
+    btn.textContent = '谢谢支持 🌸';
+  });
+})();

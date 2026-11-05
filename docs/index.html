@@ -3,76 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>中医袁淑芳 · 辨证参考助手</title>
+  <title>中医袁淑芳 · 辨证开方</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <aside class="side-disclaimer left" aria-label="免责与风险"><div class="side-title">医者仁心</div><p>仅供辨证参考 · 须医师把关 · 不可自行抓药</p><div class="side-title risk">风险</div><p class="dose">计量错误可伤身；急危重症立刻就医</p></aside>
+  <div class="shell">
+    <aside class="rail left" aria-label="验方原本">
+      <div class="rail-brand">医者仁心</div>
+      <h2>验方原本 · 电子版公开</h2>
+      <p class="rail-note">河南西平袁淑芳墓碑验方公开整理，可对照查原方。</p>
+      <nav class="orig-list">
+        <a href="https://github.com/mason0510/yuan-shufang-formulas/blob/main/data/formulas.md" target="_blank" rel="noopener">formulas.md 全文</a>
+        <a href="https://github.com/mason0510/yuan-shufang-formulas/blob/main/data/formulas.json" target="_blank" rel="noopener">formulas.json 结构化</a>
+        <a href="https://github.com/mason0510/yuan-shufang-formulas" target="_blank" rel="noopener">开源仓库</a>
+        <a href="disclaimer.md" target="_blank" rel="noopener">免责声明原文</a>
+      </nav>
+      <div class="rail-foot">仅供专业辨证参考<br/>须医师把关 · 不可自行抓药</div>
+    </aside>
 
-  <div class="app">
-    <header>
-      <div class="brand">
-        <div class="avatar" aria-hidden="true">袁</div>
-        <div>
-          <h1>中医袁淑芳 · 辨证参考助手</h1>
-          <p class="sub">医者仁心 · 墓碑验方参考 · 可自配模型供应商 · 非互联网处方</p>
+    <main class="main">
+      <header class="top">
+        <div class="brand">
+          <div class="avatar" aria-hidden="true">袁</div>
+          <div>
+            <h1>中医袁淑芳 · 辨证开方</h1>
+            <p class="sub">参考方助手 · 可自配模型供应商</p>
+          </div>
         </div>
+        <button type="button" id="btnSettings" class="ghost">设置</button>
+      </header>
+
+      <div class="warn"><strong>风险：</strong>参考方须有资质医师把关后抓药；计量错误可伤身；急危重症请立刻就医；不可自行照方抓药。</div>
+
+      <section id="chat" class="chat" aria-live="polite"></section>
+
+      <div class="examples" aria-label="患者自述示例">
+        <button type="button" class="example" data-fill="我32岁女，怕冷偏胖，痛经5年，量少色暗有血块；月经周期不准；药房无山甲，有皂刺、路路通、当归、川芎。">例：我32岁女，痛经怕冷…</button>
+        <button type="button" class="example" data-fill="我28岁女，婚后3年未孕，形体偏胖，平时痰多、嗜睡，月经量少色淡；未服过西药促排；本地药房药味较全。">例：我28岁未孕偏胖…</button>
+        <button type="button" class="example" data-fill="我45岁女，月经紊乱半年，潮热盗汗，心烦失眠；现服过更年片效果一般；请先问诊，信息不够先别开方。">例：我45岁更年期…</button>
       </div>
-      <button type="button" id="btnSettings" class="ghost">设置</button>
-    </header>
 
-    <div class="motto" aria-label="医者仁心">医者仁心 · 先问诊、慎开方、必提示风险</div>
+      <form id="composer" class="composer">
+        <textarea id="input" rows="3" placeholder="例：我32岁女，怕冷偏胖，痛经5年…（信息不全时请先补全）" required></textarea>
+        <div class="row">
+          <button type="submit" id="send">开方</button>
+          <button type="button" id="btnClear" class="ghost">清空对话</button>
+        </div>
+      </form>
+    </main>
 
-    <div class="warn"><strong>医者仁心 / 风险：</strong>参考方须医师把关后抓药；不可自行照方；计量错误可伤身；急危重症请立刻就医。</div>
-
-    <main id="chat" class="chat" aria-live="polite"></main>
-
-    <div class="examples" aria-label="患者自述示例">
-      <button type="button" class="example" data-fill="我32岁女，怕冷偏胖，痛经5年，量少色暗有血块；月经周期不准；药房无山甲，有皂刺、路路通、当归、川芎。">例：我32岁女，痛经怕冷…</button>
-      <button type="button" class="example" data-fill="我28岁女，婚后3年未孕，形体偏胖，平时痰多、嗜睡，月经量少色淡；未服过西药促排；本地药房药味较全。">例：我28岁未孕偏胖…</button>
-      <button type="button" class="example" data-fill="我45岁女，月经紊乱半年，潮热盗汗，心烦失眠；现服过更年片效果一般；请先问诊，信息不够先别开方。">例：我45岁更年期…</button>
-    </div>
-
-    <form id="composer" class="composer">
-      <textarea id="input" rows="3" placeholder="例：我32岁女，怕冷偏胖，痛经5年，量少色暗有血块；药房无山甲、有皂刺路路通…（信息不全时请先补全再开参考方）" required></textarea>
-      <div class="row">
-        <button type="submit" id="send">开方</button>
-        <button type="button" id="btnClear" class="ghost">清空对话</button>
+    <aside class="rail right" aria-label="支持与鲜花">
+      <div class="flowers" aria-hidden="true">
+        <div class="bouquet">🌸🌺🌼💐🌹</div>
+        <div class="bouquet soft">🌷🌻💮🪷</div>
       </div>
-    </form>
+      <h2>一束电子鲜花</h2>
+      <p class="rail-note">感谢每一位愿意对照碑方、谨慎求医的朋友。</p>
+      <div class="support-card">
+        <div class="support-label">已支持人数</div>
+        <div id="supportCount" class="support-num">—</div>
+        <button type="button" id="btnSupport" class="support-btn">送一朵花 · 支持一下</button>
+      </div>
+      <div class="rail-foot">计量错误可伤身<br/>请到医院面诊调量</div>
+    </aside>
   </div>
-
 
   <dialog id="settings">
     <form method="dialog" class="settings-form">
       <h2>模型供应商</h2>
-      <p class="hint">可自配任意 OpenAI 兼容接口。演示预设走 CORS 代理 + 公开测试 Key；自定义 Key 只存本机浏览器，不会写入仓库。</p>
+      <p class="hint">演示走 ysf-api.tap365.org 代理；也可换成自己的 Key。自定义 Key 只存本机浏览器。</p>
       <label>供应商预设
         <select id="preset">
-          <option value="chainfuel">ChainFuel 演示（经 CORS 代理）</option>
+          <option value="chainfuel">ChainFuel 演示</option>
           <option value="openai">OpenAI</option>
           <option value="deepseek">DeepSeek</option>
           <option value="custom">自定义</option>
         </select>
       </label>
-      <label>Base URL
-        <input id="baseUrl" autocomplete="off" />
-      </label>
-      <label>上游真实地址（走代理时可选，写入请求头 X-Upstream-Base）
-        <input id="upstreamBase" autocomplete="off" placeholder="留空则代理默认转发 ChainFuel" />
-      </label>
-      <label>Model
-        <input id="model" autocomplete="off" />
-      </label>
+      <label>Base URL<input id="baseUrl" autocomplete="off" /></label>
+      <label>上游真实地址（代理时可选）<input id="upstreamBase" autocomplete="off" placeholder="留空则默认 ChainFuel" /></label>
+      <label>Model<input id="model" autocomplete="off" /></label>
       <label>API 风格
         <select id="apiStyle">
-          <option value="responses">responses（/v1/responses）</option>
-          <option value="chat">chat（/v1/chat/completions）</option>
+          <option value="responses">responses</option>
+          <option value="chat">chat</option>
         </select>
       </label>
-      <label>API Key
-        <input id="apiKey" type="password" autocomplete="off" placeholder="sk-..." />
-      </label>
+      <label>API Key<input id="apiKey" type="password" autocomplete="off" placeholder="sk-..." /></label>
       <div class="row">
         <button value="cancel" class="ghost">取消</button>
         <button id="saveSettings" value="default">保存</button>
