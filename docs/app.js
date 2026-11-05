@@ -278,35 +278,130 @@ function networkErrorMessage(err) {
   return msg;
 }
 
-async function callApi(style, c, payload) {
+/**
+ * Pull one SSE event into reasoning and answer fragments.
+ * Guarantees: a delta is not also copied from a later full-text event when saw* is set.
+ * Does not guarantee: every provider uses these field names.
+ */
+function takeSseData(json, seen) {
+  const out = { reasoning: '', answer: '' };
+  if (!json || typeof json !== 'object') return out;
+  if (json.error && (json.error.message || json.error)) {
+    throw new Error(json.error.message || JSON.stringify(json.error));
+  }
+  const delta = json.choices && json.choices[0] && json.choices[0].delta;
+  if (delta) {
+    const reason = delta.reasoning_content || delta.reasoning || '';
+    const answer = typeof delta.content === 'string' ? delta.content : '';
+    if (reason) {
+      seen.reason = true;
+      out.reasoning += reason;
+    }
+    if (answer) {
+      seen.answer = true;
+      out.answer += answer;
+    }
+    return out;
+  }
+  const typ = json.type || '';
+  const piece = typeof json.delta === 'string' ? json.delta : '';
+  if (piece && /reasoning/i.test(typ)) {
+    seen.reason = true;
+    out.reasoning += piece;
+    return out;
+  }
+  if (piece && /output_text|text\.delta/i.test(typ)) {
+    seen.answer = true;
+    out.answer += piece;
+    return out;
+  }
+  if (seen.reason || seen.answer) return out;
+  const split = json.output || json.response ? splitResponses(json.response || json) : splitChat(json);
+  if (split.reasoning) out.reasoning += split.reasoning;
+  if (split.answer) out.answer += split.answer;
+  return out;
+}
+
+/**
+ * Read a streaming or one-shot completion and report each fragment.
+ * Guarantees: onDelta is called with 'reason' or 'answer' before the function returns the joined text.
+ * Does not guarantee: the proxy flushed each chunk. A buffered body still arrives in one read.
+ */
+async function callApi(style, c, payload, onDelta) {
   const path = style === 'chat' ? '/chat/completions' : '/responses';
   const headers = {
     Authorization: 'Bearer ' + c.apiKey,
     'Content-Type': 'application/json',
+    Accept: 'text/event-stream',
   };
-  // When using our proxy, allow overriding the real upstream.
   if (c.baseUrl.includes('yuan-shufang-cors') && c.upstreamBase) {
     headers['X-Upstream-Base'] = c.upstreamBase;
   }
+  const body = Object.assign({ stream: true }, payload);
   let res;
   try {
     res = await fetch(c.baseUrl + path, {
       method: 'POST',
       headers,
-      body: JSON.stringify(payload),
+      body: JSON.stringify(body),
     });
   } catch (err) {
     throw new Error(networkErrorMessage(err));
   }
-  const data = await res.json().catch(() => ({}));
   if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
     const msg =
       (data && data.error && (data.error.message || JSON.stringify(data.error))) ||
       res.statusText ||
       'unknown';
     throw new Error('API ' + res.status + ' (' + style + '): ' + msg);
   }
-  const split = style === 'chat' ? splitChat(data) : splitResponses(data);
+  const ctype = (res.headers.get('content-type') || '').toLowerCase();
+  const split = { reasoning: '', answer: '' };
+  const emit = (kind, text) => {
+    if (!text) return;
+    if (kind === 'reason') split.reasoning += text;
+    else split.answer += text;
+    if (onDelta) onDelta(kind, text);
+  };
+  if (!res.body || ctype.includes('application/json')) {
+    const data = await res.json();
+    const parsed = style === 'chat' ? splitChat(data) : splitResponses(data);
+    emit('reason', parsed.reasoning);
+    emit('answer', parsed.answer);
+  } else {
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    let buf = '';
+    const seen = { reason: false, answer: false };
+    const consume = (block) => {
+      const dataLines = block
+        .split('\n')
+        .filter((line) => line.startsWith('data:'))
+        .map((line) => line.slice(5).trim());
+      for (const line of dataLines) {
+        if (!line || line === '[DONE]') continue;
+        let json;
+        try {
+          json = JSON.parse(line);
+        } catch (_) {
+          continue;
+        }
+        const part = takeSseData(json, seen);
+        emit('reason', part.reasoning);
+        emit('answer', part.answer);
+      }
+    };
+    while (true) {
+      const step = await reader.read();
+      if (step.done) break;
+      buf += dec.decode(step.value, { stream: true });
+      const blocks = buf.split('\n\n');
+      buf = blocks.pop();
+      blocks.forEach(consume);
+    }
+    if (buf.trim()) consume(buf);
+  }
   if (!split.answer && !split.reasoning) throw new Error('API 返回空内容（' + style + '）');
   if (!split.answer) split.answer = split.reasoning;
   return split;
@@ -323,7 +418,7 @@ function withReasoning(style, payload) {
   return next;
 }
 
-async function askModel(userText) {
+async function askModel(userText, onDelta) {
   const c = cfg();
   if (!c.apiKey) {
     loadSettingsForm();
@@ -362,10 +457,10 @@ async function askModel(userText) {
    */
   async function callStyle(style) {
     try {
-      return await callApi(style, c, withReasoning(style, payloads[style]));
+      return await callApi(style, c, withReasoning(style, payloads[style]), onDelta);
     } catch (err) {
       if (!/400|unknown|unrecognized|reasoning/i.test(err.message)) throw err;
-      return await callApi(style, c, payloads[style]);
+      return await callApi(style, c, payloads[style], onDelta);
     }
   }
 
@@ -387,44 +482,47 @@ async function askModel(userText) {
 }
 
 /**
- * Paint the reasoning trace first, then the answer.
- * Guarantees: when a separate trace exists, the answer is not in the DOM until the trace has been shown.
- * Does not guarantee: tokens arrived separately. The proxy still buffers the whole reply.
+ * Append one streamed fragment onto the open bubble.
+ * Guarantees: reasoning and answer stay in separate nodes and grow as chunks arrive.
+ * Does not guarantee: the first chunk arrives before the model has finished thinking upstream.
  */
-function showReply(pending, split) {
+function appendStream(pending, state, kind, text) {
   pending.div.classList.remove('thinking');
-  pending.div.textContent = '';
-  const hasTrace = Boolean(split.reasoning) && split.reasoning !== split.answer;
-  if (hasTrace) {
-    const box = document.createElement('details');
-    box.className = 'reason';
-    box.open = true;
-    const sum = document.createElement('summary');
-    sum.textContent = '辨证思路';
-    const body = document.createElement('div');
-    body.className = 'reason-body';
-    body.textContent = split.reasoning;
-    box.append(sum, body);
-    pending.div.appendChild(box);
+  if (pending.div.textContent === '初诊辨证中…') pending.div.textContent = '';
+  if (kind === 'reason') {
+    if (!state.reasonBody) {
+      const box = document.createElement('details');
+      box.className = 'reason';
+      box.open = true;
+      const sum = document.createElement('summary');
+      sum.textContent = '辨证思路';
+      state.reasonBody = document.createElement('div');
+      state.reasonBody.className = 'reason-body';
+      box.append(sum, state.reasonBody);
+      pending.div.appendChild(box);
+    }
+    state.reasonBody.textContent += text;
+  } else {
+    if (!state.answerEl) {
+      state.answerEl = document.createElement('div');
+      state.answerEl.className = 'answer';
+      pending.div.appendChild(state.answerEl);
+    }
+    state.answerEl.textContent += text;
   }
-  const ans = document.createElement('div');
-  ans.className = 'answer';
-  pending.div.appendChild(ans);
+  chatEl.scrollTop = chatEl.scrollHeight;
+}
+
+/**
+ * Attach the dose warning once the reply has finished.
+ * Does not change the reply text.
+ */
+function finishReply(pending) {
+  if (pending.wrap.querySelector('.dose-risk')) return;
   const risk = document.createElement('div');
   risk.className = 'dose-risk';
   risk.textContent = DOSE_RISK;
   pending.wrap.appendChild(risk);
-  const paintAnswer = () => {
-    ans.textContent = split.answer;
-    chatEl.scrollTop = chatEl.scrollHeight;
-  };
-  if (!hasTrace) {
-    paintAnswer();
-    return;
-  }
-  chatEl.scrollTop = chatEl.scrollHeight;
-  const wait = Math.min(2400, 450 + split.reasoning.length * 12);
-  window.setTimeout(paintAnswer, wait);
 }
 
 formEl.addEventListener('submit', async (e) => {
@@ -435,8 +533,9 @@ formEl.addEventListener('submit', async (e) => {
   addMsg('user', text);
   const pending = addBotBubble('初诊辨证中…', true);
   try {
-    const reply = await askModel(text);
-    showReply(pending, reply);
+    const state = { reasonBody: null, answerEl: null };
+    await askModel(text, (kind, chunk) => appendStream(pending, state, kind, chunk));
+    finishReply(pending);
   } catch (err) {
     pending.div.classList.remove('thinking');
     pending.div.textContent = '出错：' + (err && err.message ? err.message : String(err));

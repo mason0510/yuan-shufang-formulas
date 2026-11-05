@@ -251,8 +251,17 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
         let _ = out_headers.set(&k, &v);
     }
 
-    let body = upstream_res.bytes().await?;
-    Ok(Response::from_bytes(body)?
-        .with_status(status)
-        .with_headers(out_headers))
+    // Pass the body through. Buffering here is what made the browser wait
+    // until the model finished before the first token could render.
+    match upstream_res.stream() {
+        Ok(stream) => Ok(Response::from_stream(stream)?
+            .with_status(status)
+            .with_headers(out_headers)),
+        Err(_) => {
+            let body = upstream_res.bytes().await?;
+            Ok(Response::from_bytes(body)?
+                .with_status(status)
+                .with_headers(out_headers))
+        }
+    }
 }
