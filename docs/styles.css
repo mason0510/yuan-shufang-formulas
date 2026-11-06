@@ -305,7 +305,7 @@ input, select {
   100% { transform: translate3d(var(--dx, 40px), 118vh, 0) rotate(360deg); opacity: 0.15; }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px), (max-height: 540px) {
   .shell {
     display: flex;
     flex-direction: column;
@@ -330,7 +330,23 @@ input, select {
   h1 { font-size: 1rem; }
   .sub { font-size: 0.78rem; }
   .warn { font-size: 0.8rem; }
-  .chat { min-height: 46vh; padding: 12px; border-radius: 12px; }
+  .chat {
+    min-height: 28dvh;
+    max-height: 46dvh;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  .composer {
+    position: sticky;
+    bottom: 0;
+    z-index: 4;
+    background: #f4efe6;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  dialog {
+    max-height: calc(100dvh - 16px);
+    overflow: auto;
+  }
   .bot-row, .msg { max-width: 100%; }
   .examples {
     flex-wrap: nowrap;
