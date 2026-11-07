@@ -55,6 +55,20 @@ body {
   font-size: 0.9rem;
 }
 .orig-list a:hover { border-color: var(--accent); }
+.orig-list button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+}
+.orig-list button:hover { border-color: var(--accent); }
 .rail-foot {
   margin-top: auto;
   color: var(--danger);
@@ -146,20 +160,24 @@ body {
 }
 .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .top-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
-.dev-pop {
+.dev-mask {
   position: fixed;
-  top: 72px;
-  right: 16px;
-  z-index: 20;
-  width: min(280px, calc(100vw - 32px));
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  background: rgba(43, 36, 28, 0.45);
+  padding: 16px;
+}
+.dev-mask[hidden] { display: none; }
+.dev-pop {
+  width: min(360px, calc(100vw - 32px));
   background: #fff;
-  border: 1px solid var(--line);
   border-radius: 14px;
   padding: 14px;
-  box-shadow: 0 8px 24px rgba(43, 36, 28, 0.12);
 }
-.dev-pop[hidden] { display: none; }
-.dev-pop strong { font-size: 1.2rem; letter-spacing: 0.04em; }
+.dev-pop img { width: 100%; height: auto; display: block; }
+.dev-pop strong { font-size: 1.1rem; letter-spacing: 0.04em; }
 .brand { display: flex; gap: 12px; align-items: center; }
 .avatar {
   width: 48px; height: 48px; border-radius: 50%;
