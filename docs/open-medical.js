@@ -49,24 +49,43 @@
       return Array.from(document.querySelectorAll('#gateInterests input:checked')).map((node) => node.value);
     }
 
+    /** Names of answers still empty. Used only to build the popup. */
+    function missingAnswers() {
+      const gaps = [];
+      if (!document.getElementById('gateEmail').value.trim()) gaps.push('邮箱');
+      if (document.getElementById('gatePassword').value.length < 8) gaps.push('密码至少 8 位');
+      if (!document.getElementById('gateCountry').value) gaps.push('国籍');
+      if (!document.getElementById('gateJob').value) gaps.push('职业');
+      if (!interests().length) gaps.push('感兴趣的方向');
+      if (!document.getElementById('gateFound').value) gaps.push('通过什么方式找到这个网站');
+      return gaps;
+    }
+
     /** Profile fields. Null when one answer is missing. */
     function profileBody() {
-      const country = document.getElementById('gateCountry').value;
-      const occupation = document.getElementById('gateJob').value;
-      const found_via = document.getElementById('gateFound').value;
-      const picked = interests();
-      if (!country || !occupation || !picked.length || !found_via) return null;
-      return { country, occupation, interests: picked, found_via };
+      if (missingAnswers().length) return null;
+      return {
+        country: document.getElementById('gateCountry').value,
+        occupation: document.getElementById('gateJob').value,
+        interests: interests(),
+        found_via: document.getElementById('gateFound').value,
+      };
+    }
+
+    /** Popup the missing items. Returns true when the form can be sent. */
+    function tellGaps() {
+      const gaps = missingAnswers();
+      if (!gaps.length) return true;
+      alert('还没填完：\n' + gaps.join('\n'));
+      return false;
     }
 
     document.getElementById('gate').addEventListener('submit', async (e) => {
       e.preventDefault();
-      gateStatus.textContent = '';
       const profile = profileBody();
       const button = document.getElementById('gateRegister');
       if (!profile) {
-        gateStatus.textContent = '请再选至少一项感兴趣的方向';
-        gateStatus.scrollIntoView({ block: 'nearest' });
+        tellGaps();
         return;
       }
       button.disabled = true;
@@ -87,8 +106,7 @@
         if (data.token) localStorage.setItem(TOKEN, data.token);
         goGive();
       } catch (err) {
-        gateStatus.textContent = err && err.message ? err.message : '没有写成';
-        gateStatus.scrollIntoView({ block: 'nearest' });
+        alert(err && err.message ? err.message : '没有写成');
         button.disabled = false;
         button.textContent = localStorage.getItem(TOKEN) ? '保存资料' : '注册';
       }
@@ -103,9 +121,9 @@
         });
         if (data.token) localStorage.setItem(TOKEN, data.token);
         if (ready(data)) goGive();
-        else gateStatus.textContent = '请把下面的国籍、职业、方向和来源选完，再点注册';
+        else alert('请把国籍、职业、感兴趣的方向，以及你是怎么找到这里的选完，再点注册');
       } catch (err) {
-        gateStatus.textContent = err && err.message ? err.message : '登录失败';
+        alert(err && err.message ? err.message : '登录失败');
       }
     });
 

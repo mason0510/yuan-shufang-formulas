@@ -1028,9 +1028,15 @@ bootstrap().catch((err) => {
         const country = document.getElementById('authCountry').value;
         const occupation = document.getElementById('authJob').value;
         const foundVia = document.getElementById('authFound').value;
-        if (!country || !occupation || !interests.length || !foundVia) {
-          show('请再选至少一项感兴趣的方向');
-          status.scrollIntoView({ block: 'nearest' });
+        const gaps = [];
+        if (!email) gaps.push('邮箱');
+        if (password.length < 8) gaps.push('密码至少 8 位');
+        if (!country) gaps.push('国籍');
+        if (!occupation) gaps.push('职业');
+        if (!interests.length) gaps.push('感兴趣的方向');
+        if (!foundVia) gaps.push('通过什么方式找到这个网站');
+        if (gaps.length) {
+          alert('还没填完：\n' + gaps.join('\n'));
           return;
         }
         data = await call('/v1/auth/register', {
@@ -1043,7 +1049,7 @@ bootstrap().catch((err) => {
       setLoggedIn(data);
       dialog.close();
     } catch (err) {
-      show(err && err.message ? err.message : (mode === 'register' ? '注册失败' : '登录失败'));
+      alert(err && err.message ? err.message : (mode === 'register' ? '注册失败' : '登录失败'));
     } finally {
       submit.disabled = false;
     }
