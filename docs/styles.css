@@ -150,6 +150,8 @@ body {
 .board-page h1 { margin: 0; font-size: 1.4rem; }
 .board-back { color: var(--accent); }
 .board-note { color: var(--muted, #6d6256); }
+.bio { display: grid; gap: 12px; }
+.bio p { margin: 0; line-height: 1.75; }
 .board-form, .board-list {
   background: #fff;
   border: 1px solid var(--line);
