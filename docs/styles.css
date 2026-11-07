@@ -285,6 +285,19 @@ h1 { font-size: 1.15rem; margin: 0; }
   line-height: 1.4;
   font-weight: 600;
 }
+.rate-row { display: flex; gap: 8px; }
+.rate {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+.rate[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
 .examples { display: flex; flex-wrap: wrap; gap: 8px; }
 .example {
   background: #fff;

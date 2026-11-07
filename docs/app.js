@@ -129,8 +129,66 @@ function agentAvatar() {
   return img;
 }
 
+const REPLY_MARKS = 'ysf_reply_marks_v1';
+
 /**
- * Append one bot row. A thinking bubble omits the dose warning until the reply finishes.
+ * Stable key for one finished reply so a reload keeps the same good/worse mark.
+ * Guarantees: the same text yields the same key. Does not guarantee: two different replies never collide.
+ */
+function replyMarkId(text) {
+  const s = String(text || '').slice(0, 160);
+  let hash = 0;
+  for (let i = 0; i < s.length; i += 1) hash = (hash * 33 + s.charCodeAt(i)) >>> 0;
+  return 'm' + hash.toString(16) + ':' + s.length;
+}
+
+/**
+ * Read saved good/worse marks. Guarantees: a plain object. Does not guarantee: every key still has a bubble.
+ */
+function readReplyMarks() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(REPLY_MARKS) || '{}');
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch (_) {
+    return {};
+  }
+}
+
+/**
+ * Put 好 / 差 under a finished reply.
+ * Guarantees: one pair of buttons, and a click stores good or worse for this reply text.
+ * Does not guarantee: the mark is sent to the server.
+ */
+function addRateBar(wrap, text) {
+  if (!wrap || wrap.querySelector('.rate-row')) return;
+  const id = replyMarkId(text || wrap.innerText);
+  const saved = readReplyMarks();
+  const row = document.createElement('div');
+  row.className = 'rate-row';
+  row.setAttribute('role', 'group');
+  row.setAttribute('aria-label', '这条回复好不好');
+  ['good', 'worse'].forEach((name) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'rate';
+    btn.dataset.mark = name;
+    btn.textContent = name === 'good' ? '👍 好' : '👎 差';
+    btn.setAttribute('aria-pressed', saved[id] === name ? 'true' : 'false');
+    btn.addEventListener('click', () => {
+      const all = readReplyMarks();
+      all[id] = name;
+      localStorage.setItem(REPLY_MARKS, JSON.stringify(all));
+      row.querySelectorAll('button').forEach((node) => {
+        node.setAttribute('aria-pressed', node.dataset.mark === name ? 'true' : 'false');
+      });
+    });
+    row.appendChild(btn);
+  });
+  wrap.appendChild(row);
+}
+
+/**
+ * Append one bot row. A thinking bubble omits the dose warning and the rating until the reply finishes.
  * Guarantees: text is set with textContent. Does not guarantee: the model will answer.
  */
 function addBotBubble(text, thinking) {
@@ -148,6 +206,7 @@ function addBotBubble(text, thinking) {
     risk.className = 'dose-risk';
     risk.textContent = DOSE_RISK;
     wrap.appendChild(risk);
+    addRateBar(wrap, text);
   }
   row.appendChild(wrap);
   chatEl.appendChild(row);
@@ -732,15 +791,18 @@ function appendStream(pending, state, kind, text) {
 }
 
 /**
- * Attach the dose warning once the reply has finished.
+ * Attach the dose warning and the good/worse gestures once the reply has finished.
  * Does not change the reply text.
  */
 function finishReply(pending) {
-  if (pending.wrap.querySelector('.dose-risk')) return;
-  const risk = document.createElement('div');
-  risk.className = 'dose-risk';
-  risk.textContent = DOSE_RISK;
-  pending.wrap.appendChild(risk);
+  if (!pending.wrap.querySelector('.dose-risk')) {
+    const risk = document.createElement('div');
+    risk.className = 'dose-risk';
+    risk.textContent = DOSE_RISK;
+    pending.wrap.appendChild(risk);
+  }
+  const answer = pending.wrap.querySelector('.answer');
+  addRateBar(pending.wrap, answer ? answer.textContent : pending.div.textContent);
 }
 
 formEl.addEventListener('submit', async (e) => {
@@ -772,6 +834,7 @@ formEl.addEventListener('submit', async (e) => {
   } catch (err) {
     pending.div.classList.remove('thinking');
     pending.div.textContent = '出错：' + (err && err.message ? err.message : String(err));
+    finishReply(pending);
   }
 });
 
