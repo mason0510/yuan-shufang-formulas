@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>提交方子 · open-medical</title>
+  <link rel="icon" href="yuan-shufang.png" />
+  <link rel="stylesheet" href="styles.css?v=141" />
+</head>
+<body>
+  <div class="board-page">
+    <header>
+      <div>
+        <h1>提交方子</h1>
+        <p class="board-note">把方子或线索交到这里。</p>
+      </div>
+      <a class="board-back" href="index.html">回开方</a>
+    </header>
+    <form id="giveForm" class="board-form">
+      <p id="giveWho" class="rail-note"></p>
+      <label>这一条是
+        <select id="giveKind">
+          <option value="formula">方子</option>
+          <option value="clue">线索</option>
+        </select>
+      </label>
+      <input id="giveTitle" maxlength="80" required placeholder="标题，例如书名或方名" />
+      <textarea id="giveBody" maxlength="4000" rows="6" required placeholder="方子正文，或你知道的线索：谁有抄本、哪本书、哪一页"></textarea>
+      <input id="giveSource" maxlength="200" placeholder="出处，可空" />
+      <div class="row">
+        <button type="submit" id="giveSend">提交到库</button>
+        <button type="button" id="giveLogout" class="ghost">退出</button>
+      </div>
+      <p id="giveStatus" class="board-status" role="status"></p>
+    </form>
+    <ul id="giveList" class="comment-list board-list"></ul>
+    <p class="board-note"><a href="open-medical.html">返回注册</a></p>
+  </div>
+  <script src="open-medical.js?v=2"></script>
+</body>
+</html>

@@ -162,6 +162,7 @@ body {
   margin-top: 16px;
 }
 .board-form { display: grid; gap: 8px; }
+.board-form[hidden] { display: none; }
 .board-form input, .board-form textarea, .board-form select { width: 100%; font-size: 16px; }
 .board-status { min-height: 1.2em; color: var(--accent); }
 .main {
