@@ -350,6 +350,132 @@ document.getElementById('btnClear').onclick = () => {
   clearStoredChats();
 };
 
+/**
+ * Read this visitor's own turns from the screen.
+ * Guarantees: the opening greeting and status lines are left out; a still-writing reply sets pending.
+ * Does not guarantee: a turn that was never drawn is included. Logged-out chats stay in this browser.
+ */
+function collectVisitRecord() {
+  const turns = [];
+  let seenUser = false;
+  for (const node of chatEl.children) {
+    if (node.classList.contains('user')) {
+      const text = node.textContent.trim();
+      if (!text) continue;
+      seenUser = true;
+      turns.push({ role: 'user', text });
+      continue;
+    }
+    if (!node.classList.contains('bot-row') || !seenUser) continue;
+    const msg = node.querySelector('.msg.bot');
+    if (!msg || msg.classList.contains('thinking') || msg.textContent.trim() === '初诊辨证中…') {
+      return { pending: true, turns };
+    }
+    const answer = node.querySelector('.answer');
+    const reasonEl = node.querySelector('.reason-body');
+    const reason = reasonEl ? reasonEl.textContent.trim() : '';
+    let text = '';
+    if (answer) {
+      text = answer.textContent.trim();
+    } else {
+      const clone = msg.cloneNode(true);
+      clone.querySelectorAll('.reason, .reason-body, .rate-row, .fix-box').forEach((el) => el.remove());
+      text = clone.textContent.trim();
+    }
+    if (!text && !reason) continue;
+    turns.push({ role: 'assistant', text, reason });
+  }
+  return { pending: false, turns };
+}
+
+/**
+ * Fill a print document the visitor can save as PDF and take to a physician.
+ * Guarantees: turn text is set with textContent, and the sheet says it is not a prescription.
+ * Does not guarantee: the browser saves a file. The visitor confirms that in the print dialog.
+ */
+function writeVisitDocument(doc, turns) {
+  const now = new Date();
+  const pad = (n) => String(n).padStart(2, '0');
+  const stamp = now.getFullYear() + '-' + pad(now.getMonth() + 1) + '-' + pad(now.getDate())
+    + ' ' + pad(now.getHours()) + ':' + pad(now.getMinutes());
+  doc.title = '袁淑芳就医记录-' + stamp.slice(0, 10);
+  const style = doc.createElement('style');
+  style.textContent = [
+    '@page { margin: 16mm; }',
+    'body { margin: 0; color: #1a1a1a; font: 15px/1.65 "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif; }',
+    'h1 { font-size: 20px; margin: 0 0 6px; }',
+    '.meta { margin: 0 0 10px; font-size: 13px; }',
+    '.note, .risk { font-size: 13px; margin: 0 0 8px; }',
+    '.risk { font-weight: 700; }',
+    '.turn { margin: 14px 0 0; page-break-inside: avoid; }',
+    '.who { margin: 0 0 4px; font-size: 13px; font-weight: 700; }',
+    '.body { margin: 0; white-space: pre-wrap; }',
+  ].join('\n');
+  const h1 = doc.createElement('h1');
+  h1.textContent = '袁淑芳 · 就医参考记录';
+  const meta = doc.createElement('p');
+  meta.className = 'meta';
+  meta.textContent = '导出时间 ' + stamp + '。只含你这次对话里自己写下的内容和当时的参考回复。';
+  const note = doc.createElement('p');
+  note.className = 'note';
+  note.textContent = '拿给有资质的医师当面看。这不是处方，不可自行照方抓药。急危重症请立刻就医。';
+  const risk = doc.createElement('p');
+  risk.className = 'risk';
+  risk.textContent = DOSE_RISK;
+  doc.head.appendChild(style);
+  doc.body.append(h1, meta, note, risk);
+  turns.forEach((turn) => {
+    const block = doc.createElement('section');
+    block.className = 'turn';
+    const who = doc.createElement('p');
+    who.className = 'who';
+    who.textContent = turn.role === 'user' ? '患者自述' : '参考回复（不是处方）';
+    block.appendChild(who);
+    if (turn.reason) {
+      const why = doc.createElement('p');
+      why.className = 'body';
+      why.textContent = '当时的辨证思路（供医师对照，不是诊断结论）\n' + turn.reason;
+      block.appendChild(why);
+    }
+    if (turn.text) {
+      const body = doc.createElement('p');
+      body.className = 'body';
+      body.textContent = turn.text;
+      block.appendChild(body);
+    }
+    doc.body.appendChild(block);
+  });
+}
+
+/**
+ * Open the print dialog for this visitor's own chat.
+ * Guarantees: nothing is uploaded, and an unfinished or empty chat does not print.
+ * Does not guarantee: a PDF file is written. The visitor chooses 存储为 PDF in the dialog.
+ */
+function exportVisitPdf() {
+  const record = collectVisitRecord();
+  if (record.pending) {
+    alert('这一条还在写。等它结束，再导出给医师。');
+    return;
+  }
+  if (!record.turns.some((turn) => turn.role === 'user')) {
+    alert('还没有你的自述。先把年龄、主诉和病程写在对话里，再导出给医师。');
+    return;
+  }
+  const frame = document.createElement('iframe');
+  frame.setAttribute('title', '就医记录');
+  // A zero-size frame prints a blank page in Chrome. Keep it laid out, off to the side.
+  frame.style.cssText = 'position:fixed;left:-10000px;top:0;width:800px;height:1100px;border:0';
+  document.body.appendChild(frame);
+  const win = frame.contentWindow;
+  writeVisitDocument(win.document, record.turns);
+  win.addEventListener('afterprint', () => frame.remove());
+  win.focus();
+  win.print();
+}
+
+document.getElementById('btnExport').onclick = exportVisitPdf;
+
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     inputEl.value = btn.getAttribute('data-fill') || '';
