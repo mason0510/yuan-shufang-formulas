@@ -1,0 +1,15 @@
+[Unit]
+Description=Yuan Shufang visitor auth
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Service]
+User=ubuntu
+Environment=LC_ALL=C
+EnvironmentFile=/etc/ysf-auth.env
+ExecStart=/usr/bin/python3 /opt/ysf-auth/server.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

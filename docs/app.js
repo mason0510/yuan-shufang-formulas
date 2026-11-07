@@ -58,6 +58,8 @@ let formulas = null;
 let systemPrompt = '';
 let history = [];
 const COMMENT_API = PROXY_BASE.replace(/\/$/, '') + '/comments';
+const AUTH_API = 'https://progress.tap365.org';
+const AUTH_TOKEN = 'ysf_auth_token';
 
 /**
  * Read the visitor's saved supplier settings.
@@ -860,4 +862,94 @@ bootstrap().catch((err) => {
   });
 
   load();
+})();
+
+/**
+ * Register and log in a visitor against the project database user.
+ * Guarantees: the token stays in this browser only, and the password is not written to localStorage.
+ * Does not guarantee: progress.tap365.org is reachable.
+ */
+(function auth() {
+  const form = document.getElementById('authForm');
+  const status = document.getElementById('authStatus');
+  if (!form || !status) return;
+  const loginBtn = document.getElementById('authLogin');
+  const registerBtn = document.getElementById('authRegister');
+  const logoutBtn = document.getElementById('authLogout');
+
+  function show(text) {
+    status.textContent = text;
+  }
+
+  function setLoggedIn(user) {
+    const on = !!(user && user.email);
+    logoutBtn.hidden = !on;
+    loginBtn.hidden = on;
+    registerBtn.hidden = on;
+    document.getElementById('authPassword').hidden = on;
+    document.getElementById('authEmail').hidden = on;
+    document.getElementById('authName').hidden = on;
+    show(on ? '已登录 ' + (user.name || user.email) : '登录后只记在这个公用库的 ysf_ 表里。');
+  }
+
+  async function call(path, body) {
+    const headers = { 'Content-Type': 'application/json' };
+    const token = localStorage.getItem(AUTH_TOKEN) || '';
+    if (token) headers.Authorization = 'Bearer ' + token;
+    const r = await fetch(AUTH_API + path, {
+      method: body ? 'POST' : 'GET',
+      mode: 'cors',
+      headers,
+      body: body ? JSON.stringify(body) : undefined,
+    });
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error((data && data.error && data.error.message) || r.statusText);
+    return data;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    loginBtn.disabled = true;
+    try {
+      const data = await call('/v1/auth/login', {
+        email: document.getElementById('authEmail').value.trim(),
+        password: document.getElementById('authPassword').value,
+      });
+      localStorage.setItem(AUTH_TOKEN, data.token);
+      setLoggedIn(data);
+    } catch (err) {
+      show(err && err.message ? err.message : '登录失败');
+    } finally {
+      loginBtn.disabled = false;
+    }
+  });
+
+  registerBtn.addEventListener('click', async () => {
+    registerBtn.disabled = true;
+    try {
+      const data = await call('/v1/auth/register', {
+        email: document.getElementById('authEmail').value.trim(),
+        password: document.getElementById('authPassword').value,
+        name: document.getElementById('authName').value.trim(),
+      });
+      if (data.token) localStorage.setItem(AUTH_TOKEN, data.token);
+      setLoggedIn(data);
+    } catch (err) {
+      show(err && err.message ? err.message : '注册失败');
+    } finally {
+      registerBtn.disabled = false;
+    }
+  });
+
+  logoutBtn.addEventListener('click', async () => {
+    try { await call('/v1/auth/logout', {}); } catch (_) { /* token may already be gone */ }
+    localStorage.removeItem(AUTH_TOKEN);
+    setLoggedIn(null);
+  });
+
+  const saved = localStorage.getItem(AUTH_TOKEN);
+  if (!saved) return;
+  call('/v1/auth/me').then(setLoggedIn).catch(() => {
+    localStorage.removeItem(AUTH_TOKEN);
+  });
 })();

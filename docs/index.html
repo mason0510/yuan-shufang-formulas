@@ -68,6 +68,20 @@
         <div id="supportCount" class="support-num">—</div>
         <button type="button" id="btnSupport" class="support-btn">送一朵花 · 支持一下</button>
       </div>
+      <div class="comment-card" id="authCard">
+        <h2>访客账号</h2>
+        <p id="authStatus" class="rail-note">登录后只记在这个公用库的 ysf_ 表里。</p>
+        <form id="authForm">
+          <input id="authName" maxlength="16" placeholder="怎么称呼，注册时用" autocomplete="nickname" />
+          <input id="authEmail" type="email" maxlength="80" required placeholder="邮箱" autocomplete="username" />
+          <input id="authPassword" type="password" minlength="8" maxlength="72" required placeholder="密码至少 8 位" autocomplete="current-password" />
+          <div class="row">
+            <button type="submit" id="authLogin">登录</button>
+            <button type="button" id="authRegister" class="ghost">注册</button>
+            <button type="button" id="authLogout" class="ghost" hidden>退出</button>
+          </div>
+        </form>
+      </div>
       <div class="comment-card">
         <h2>留下一句</h2>
         <p class="rail-note">公开短评，最多 40 条。不要写联系方式，也不要写药方。</p>
@@ -122,6 +136,6 @@
     </form>
   </dialog>
 
-  <script src="app.js?v=130"></script>
+  <script src="app.js?v=131"></script>
 </body>
 </html>
