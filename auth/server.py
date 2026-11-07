@@ -369,6 +369,30 @@ def list_contributions(user_id: str) -> list:
     return found if isinstance(found, list) else []
 
 
+def save_fix(note: str, reply: str, user_id: str | None) -> str:
+    """Store one chat correction.
+
+    Guarantees: the note is inserted, the returned id is digits only, and user_id is set only when that account exists.
+    Does not guarantee: the note is applied to a formula, or that a guest is attached to an account.
+    """
+    if user_id:
+        raw = psql(
+            "INSERT INTO ysf_fixes (user_id, reply, note) "
+            "VALUES (:'user_id'::bigint, :'reply', :'note') RETURNING id::text;",
+            {"user_id": user_id, "reply": reply, "note": note},
+        )
+    else:
+        raw = psql(
+            "INSERT INTO ysf_fixes (reply, note) VALUES (:'reply', :'note') RETURNING id::text;",
+            {"reply": reply, "note": note},
+        )
+    # psql -At still prints the command tag on the next line. The id is the first line only.
+    new_id = raw.splitlines()[0].strip() if raw else ""
+    if not new_id.isdigit():
+        raise RuntimeError("fix id missing")
+    return new_id
+
+
 def save_contribution(user_id: str, kind: str, title: str, body: str, source: str) -> str:
     """Store one contributed item for this account.
 
@@ -459,7 +483,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         path = self.path.split("?", 1)[0]
-        data = self._read_json(80000 if path == "/v1/chats" else 4000)
+        data = self._read_json(80000 if path == "/v1/chats" else 12000 if path == "/v1/fixes" else 4000)
         if path == "/v1/chats":
             user = current_user(self._bearer())
             if not user:
@@ -478,6 +502,20 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(500, {"error": {"message": "聊天没有写成"}})
                 return
             self._send(201, {"ok": True})
+            return
+        if path == "/v1/fixes":
+            note = clip_note(str(data.get("note", "")), 4000)
+            reply = clip_note(str(data.get("reply", "")), 2000)
+            if len(note) < 4:
+                self._send(400, {"error": {"message": "请写清错在哪里"}})
+                return
+            user = current_user(self._bearer())
+            try:
+                new_id = save_fix(note, reply, str(user["id"]) if user else None)
+            except RuntimeError:
+                self._send(500, {"error": {"message": "纠错没有写进库"}})
+                return
+            self._send(201, {"id": new_id})
             return
         if path == "/v1/auth/logout":
             logout(self._bearer())

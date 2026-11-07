@@ -155,9 +155,40 @@ function readReplyMarks() {
 }
 
 /**
- * Put 好 / 差 under a finished reply.
- * Guarantees: one pair of buttons, and a click stores good or worse for this reply text.
- * Does not guarantee: the mark is sent to the server.
+ * Write one chat correction into ysf_fixes.
+ * Guarantees: a successful return means the server stored an id. Login is optional.
+ * Does not guarantee: the note changes the tombstone formulas.
+ */
+async function submitReplyFix(replyText, note) {
+  const text = String(note || '').trim();
+  if (text.length < 4) {
+    alert('请写清错在哪里，至少几个字');
+    return false;
+  }
+  const headers = { 'Content-Type': 'application/json' };
+  const token = localStorage.getItem(AUTH_TOKEN) || '';
+  if (token) headers.Authorization = 'Bearer ' + token;
+  const r = await fetch(AUTH_API + '/v1/fixes', {
+    method: 'POST',
+    mode: 'cors',
+    headers,
+    body: JSON.stringify({
+      note: text,
+      reply: String(replyText || '').replace(/\s+/g, ' ').slice(0, 1800),
+    }),
+  });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok || !data.id) {
+    alert((data.error && data.error.message) || '没有写进库');
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Put 好 / 差 / 纠错 under a finished reply.
+ * Guarantees: good and worse stay on this browser; a correction is posted to the library database, with or without login.
+ * Does not guarantee: the correction rewrites the reply.
  */
 function addRateBar(wrap, text) {
   if (!wrap || wrap.querySelector('.rate-row')) return;
@@ -184,7 +215,40 @@ function addRateBar(wrap, text) {
     });
     row.appendChild(btn);
   });
+  const fix = document.createElement('button');
+  fix.type = 'button';
+  fix.className = 'rate';
+  fix.textContent = '纠错';
+  const box = document.createElement('form');
+  box.className = 'fix-box';
+  box.hidden = true;
+  const area = document.createElement('textarea');
+  area.maxLength = 4000;
+  area.rows = 3;
+  area.placeholder = '错在哪里，应该怎么改';
+  const send = document.createElement('button');
+  send.type = 'submit';
+  send.textContent = '提交纠错';
+  box.appendChild(area);
+  box.appendChild(send);
+  fix.addEventListener('click', () => {
+    box.hidden = !box.hidden;
+    if (!box.hidden) area.focus();
+  });
+  box.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    send.disabled = true;
+    const ok = await submitReplyFix(text || wrap.innerText, area.value);
+    send.disabled = false;
+    if (!ok) return;
+    fix.setAttribute('aria-pressed', 'true');
+    box.replaceChildren();
+    box.hidden = false;
+    box.textContent = '纠错已记入库';
+  });
+  row.appendChild(fix);
   wrap.appendChild(row);
+  wrap.appendChild(box);
 }
 
 /**

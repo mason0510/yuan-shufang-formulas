@@ -298,6 +298,9 @@ h1 { font-size: 1.15rem; margin: 0; }
   color: #fff;
   border-color: var(--accent);
 }
+.fix-box { display: grid; gap: 6px; }
+.fix-box[hidden] { display: none; }
+.fix-box textarea { width: 100%; font-size: 16px; }
 .examples { display: flex; flex-wrap: wrap; gap: 8px; }
 .example {
   background: #fff;
