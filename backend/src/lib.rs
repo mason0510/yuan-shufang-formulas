@@ -15,7 +15,7 @@ const BCPM_DETAIL: &str = "/pharma/general/v1/tcm_recipe/detail";
 fn cors_headers() -> Headers {
     let h = Headers::new();
     let _ = h.set("Access-Control-Allow-Origin", "*");
-    let _ = h.set("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+    let _ = h.set("Access-Control-Allow-Methods", "GET,POST,DELETE,OPTIONS");
     let _ = h.set(
         "Access-Control-Allow-Headers",
         "Authorization,Content-Type,X-Upstream-Base,X-Ysf-Base,X-Requested-With",
@@ -29,7 +29,7 @@ fn with_cors(mut res: Response) -> Response {
     let headers = res.headers_mut();
     for (k, v) in [
         ("Access-Control-Allow-Origin", "*"),
-        ("Access-Control-Allow-Methods", "GET,POST,OPTIONS"),
+        ("Access-Control-Allow-Methods", "GET,POST,DELETE,OPTIONS"),
         (
             "Access-Control-Allow-Headers",
             "Authorization,Content-Type,X-Upstream-Base,X-Ysf-Base,X-Requested-With",
@@ -258,22 +258,74 @@ fn comments_body(items: &[serde_json::Value]) -> Result<Response> {
     Ok(with_cors(res))
 }
 
-/// Return the stored visitor notes, newest last.
-/// Guarantees: the body is `{comments: [...]}`.
-/// Does not guarantee: another tab's just-posted note is already visible.
-async fn handle_comments_get(env: &Env) -> Result<Response> {
-    let kv = env.kv("SUPPORT")?;
-    let items = read_comments(&kv).await?;
-    comments_body(&items)
+/// Hide the stored owner. `mine` is true only when the caller email matches.
+/// Guarantees: the result has no `owner` field.
+/// Does not guarantee: a missing id is filled in.
+fn public_comment(item: &serde_json::Value, me: Option<&str>) -> serde_json::Value {
+    let owner = item.get("owner").and_then(|v| v.as_str()).unwrap_or("");
+    let mine = me.map(|email| !email.is_empty() && email == owner).unwrap_or(false);
+    serde_json::json!({
+        "id": item.get("id").and_then(|v| v.as_str()).unwrap_or(""),
+        "name": item.get("name").and_then(|v| v.as_str()).unwrap_or("访客"),
+        "text": item.get("text").and_then(|v| v.as_str()).unwrap_or(""),
+        "at": item.get("at").and_then(|v| v.as_str()).unwrap_or(""),
+        "mine": mine,
+    })
 }
 
-/// Append one note. Name defaults to 访客. Text must be 1 to 120 characters.
-/// Guarantees: a stored note is capped, the list never grows past 40, and a blocked note is not stored.
+/// Resolve the bearer token to the account email and name.
+/// Guarantees: a missing or rejected token returns None, and the token is not copied into the result.
+/// Does not guarantee: progress.tap365.org is reachable.
+async fn commenter_from_request(req: &Request) -> Option<(String, String)> {
+    let header = req.headers().get("Authorization").ok().flatten()?;
+    if header.len() < 8 || header.len() > 240 {
+        return None;
+    }
+    if !header.to_ascii_lowercase().starts_with("bearer ") {
+        return None;
+    }
+    let headers = Headers::new();
+    headers.set("Authorization", &header).ok()?;
+    let mut init = RequestInit::new();
+    init.with_method(Method::Get);
+    init.with_headers(headers);
+    let upstream = Request::new_with_init("https://progress.tap365.org/v1/auth/me", &init).ok()?;
+    let mut res = Fetch::Request(upstream).send().await.ok()?;
+    if res.status_code() != 200 {
+        return None;
+    }
+    let text = res.text().await.ok()?;
+    let value: serde_json::Value = serde_json::from_str(&text).ok()?;
+    let email = value.get("email").and_then(|v| v.as_str()).unwrap_or("").trim().to_string();
+    if email.is_empty() || email.len() > 80 {
+        return None;
+    }
+    let name = value.get("name").and_then(|v| v.as_str()).unwrap_or("").to_string();
+    Some((email, name))
+}
+
+/// Return the stored visitor notes, newest last.
+/// Guarantees: the body is `{comments: [...]}` and does not include owner emails.
+/// Does not guarantee: another tab's just-posted note is already visible.
+async fn handle_comments_get(req: &Request, env: &Env) -> Result<Response> {
+    let me = commenter_from_request(req).await.map(|(email, _)| email);
+    let kv = env.kv("SUPPORT")?;
+    let items = read_comments(&kv).await?;
+    let public: Vec<_> = items
+        .iter()
+        .map(|item| public_comment(item, me.as_deref()))
+        .collect();
+    comments_body(&public)
+}
+
+/// Append one note. A logged-in caller owns it and is shown under the account name.
+/// Guarantees: a stored note is capped, the list never grows past 40, a blocked note is not stored, and the response omits the owner email.
 /// Does not guarantee: the same person cannot post again, or that a reworded note is caught.
 async fn handle_comments_post(mut req: Request, env: &Env) -> Result<Response> {
+    let who = commenter_from_request(&req).await;
     let bytes = req.bytes().await?;
     let incoming: serde_json::Value = serde_json::from_slice(&bytes).unwrap_or(serde_json::Value::Null);
-    let name = clip_visitor(
+    let typed = clip_visitor(
         incoming.get("name").and_then(|v| v.as_str()).unwrap_or(""),
         16,
     );
@@ -284,15 +336,26 @@ async fn handle_comments_post(mut req: Request, env: &Env) -> Result<Response> {
     if text.chars().count() < 1 {
         return json_error(400, "评论不能为空");
     }
+    let (owner, name) = match who {
+        Some((email, account_name)) => {
+            let account = clip_visitor(&account_name, 16);
+            let shown = if account.is_empty() { "访客".to_string() } else { account };
+            (email, shown)
+        }
+        None => (String::new(), if typed.is_empty() { "访客".to_string() } else { typed }),
+    };
     if comment_blocked(&name) || comment_blocked(&text) {
         return json_error(400, "这句话不能留下");
     }
     let kv = env.kv("SUPPORT")?;
     let mut items = read_comments(&kv).await?;
+    let id = format!("{}-{}", Date::now().as_millis(), items.len());
     items.push(serde_json::json!({
-        "name": if name.is_empty() { "访客".to_string() } else { name },
+        "id": id,
+        "name": name,
         "text": text,
         "at": Date::now().to_string(),
+        "owner": owner,
     }));
     if items.len() > COMMENT_CAP {
         let drop_n = items.len() - COMMENT_CAP;
@@ -301,7 +364,44 @@ async fn handle_comments_post(mut req: Request, env: &Env) -> Result<Response> {
     kv.put(COMMENTS_KEY, serde_json::Value::Array(items.clone()).to_string())?
         .execute()
         .await?;
-    comments_body(&items)
+    let me = if owner.is_empty() { None } else { Some(owner.as_str()) };
+    let public: Vec<_> = items.iter().map(|item| public_comment(item, me)).collect();
+    comments_body(&public)
+}
+
+/// Remove one note when the caller owns it.
+/// Guarantees: a note is removed only when its stored owner email equals the logged-in email.
+/// Does not guarantee: a guest note can be deleted. Guests have no owner.
+async fn handle_comments_delete(mut req: Request, env: &Env) -> Result<Response> {
+    let me = match commenter_from_request(&req).await {
+        Some((email, _)) => email,
+        None => return json_error(401, "登录后才能删除"),
+    };
+    let bytes = req.bytes().await?;
+    let incoming: serde_json::Value = serde_json::from_slice(&bytes).unwrap_or(serde_json::Value::Null);
+    let id = incoming.get("id").and_then(|v| v.as_str()).unwrap_or("").trim();
+    if id.is_empty() || id.len() > 80 {
+        return json_error(400, "没有这条留言");
+    }
+    let kv = env.kv("SUPPORT")?;
+    let mut items = read_comments(&kv).await?;
+    let before = items.len();
+    items.retain(|item| {
+        let same = item.get("id").and_then(|v| v.as_str()) == Some(id);
+        let owns = item.get("owner").and_then(|v| v.as_str()) == Some(me.as_str());
+        !(same && owns)
+    });
+    if items.len() == before {
+        return json_error(403, "只能删除自己的留言");
+    }
+    kv.put(COMMENTS_KEY, serde_json::Value::Array(items.clone()).to_string())?
+        .execute()
+        .await?;
+    let public: Vec<_> = items
+        .iter()
+        .map(|item| public_comment(item, Some(me.as_str())))
+        .collect();
+    comments_body(&public)
 }
 
 /// Increment the shared flower count once per POST.
@@ -666,7 +766,7 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
 
     let path = req.url()?.path().to_string();
     if req.method() == Method::Get && path == "/" {
-        let body = r#"{"ok":true,"service":"yuan-shufang-cors","runtime":"rust-workers-rs","usage":"POST /v1/responses or /v1/chat/completions with Authorization; optional X-Upstream-Base; GET/POST /v1/support; GET/POST /v1/comments; POST /v1/formulas/external"}"#;
+        let body = r#"{"ok":true,"service":"yuan-shufang-cors","runtime":"rust-workers-rs","usage":"POST /v1/responses or /v1/chat/completions with Authorization; optional X-Upstream-Base; GET/POST /v1/support; GET/POST/DELETE /v1/comments; POST /v1/formulas/external"}"#;
         let mut res = Response::from_bytes(body.as_bytes().to_vec())?;
         res.headers_mut()
             .set("Content-Type", "application/json")?;
@@ -687,8 +787,9 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
 
     if path == "/v1/comments" {
         return match req.method() {
-            Method::Get => handle_comments_get(&env).await,
+            Method::Get => handle_comments_get(&req, &env).await,
             Method::Post => handle_comments_post(req, &env).await,
+            Method::Delete => handle_comments_delete(req, &env).await,
             _ => json_error(405, "Method Not Allowed"),
         };
     }
@@ -765,7 +866,24 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
 
 #[cfg(test)]
 mod comment_filter_tests {
-    use super::comment_blocked;
+    use super::{comment_blocked, public_comment};
+
+    #[test]
+    fn public_view_hides_owner() {
+        let item = serde_json::json!({
+            "id": "1",
+            "name": "猴子",
+            "text": "你好",
+            "at": "t",
+            "owner": "secret@example.com"
+        });
+        let mine = public_comment(&item, Some("secret@example.com"));
+        let other = public_comment(&item, Some("other@example.com"));
+        assert_eq!(mine["mine"], true);
+        assert_eq!(other["mine"], false);
+        assert!(mine.get("owner").is_none());
+        assert!(!mine.to_string().contains("secret@example.com"));
+    }
 
     #[test]
     fn keeps_ordinary_notes() {

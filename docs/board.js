@@ -36,6 +36,24 @@
       .catch(() => {});
   }
 
+  /**
+   * Attach the session when this browser is logged in.
+   * Guarantees: a saved token is sent as a bearer header. No token means no Authorization header.
+   * Does not guarantee: the token is still valid.
+   */
+  function authHeaders(json) {
+    const headers = {};
+    if (json) headers['Content-Type'] = 'application/json';
+    const token = localStorage.getItem('ysf_auth_token') || '';
+    if (token) headers.Authorization = 'Bearer ' + token;
+    return headers;
+  }
+
+  /**
+   * Draw the notes. A delete control is added only when the API marks the note as mine.
+   * Guarantees: names and text use textContent.
+   * Does not guarantee: a guest note can be removed.
+   */
   function render(items) {
     list.replaceChildren();
     const rows = (items || []).slice().reverse();
@@ -52,12 +70,44 @@
       const body = document.createElement('div');
       body.textContent = (item && item.text) || '';
       li.append(who, body);
+      if (item && item.mine && item.id) {
+        const del = document.createElement('button');
+        del.type = 'button';
+        del.className = 'ghost';
+        del.textContent = '删除';
+        del.addEventListener('click', () => remove(item.id, del));
+        li.append(del);
+      }
       list.appendChild(li);
     });
   }
 
+  /**
+   * Delete one note owned by the logged-in account.
+   * Guarantees: the request sends the note id and the session token.
+   * Does not guarantee: the note still exists.
+   */
+  async function remove(id, button) {
+    button.disabled = true;
+    status.textContent = '';
+    try {
+      const r = await fetch(api, {
+        method: 'DELETE',
+        mode: 'cors',
+        headers: authHeaders(true),
+        body: JSON.stringify({ id: id }),
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error((data && data.error && data.error.message) || r.statusText);
+      render(data.comments);
+    } catch (err) {
+      status.textContent = err && err.message ? err.message : '没删掉';
+      button.disabled = false;
+    }
+  }
+
   function load() {
-    fetch(api, { method: 'GET', mode: 'cors', cache: 'no-store' })
+    fetch(api, { method: 'GET', mode: 'cors', cache: 'no-store', headers: authHeaders(false) })
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((data) => render(data && data.comments))
       .catch(() => {
@@ -77,7 +127,7 @@
       const r = await fetch(api, {
         method: 'POST',
         mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
+        headers: authHeaders(true),
         body: JSON.stringify({ name, text }),
       });
       const data = await r.json().catch(() => ({}));

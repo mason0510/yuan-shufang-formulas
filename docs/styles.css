@@ -140,6 +140,7 @@ body {
   line-height: 1.45;
 }
 .comment-list strong { color: var(--accent); }
+.comment-list button.ghost { margin-top: 6px; padding: 4px 10px; font-size: 0.82rem; }
 .board-page {
   max-width: 720px;
   margin: 0 auto;
