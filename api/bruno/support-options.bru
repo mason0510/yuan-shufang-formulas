@@ -1,0 +1,15 @@
+meta {
+  name: support options
+  type: http
+  seq: 3
+}
+
+options {
+  url: {{baseUrl}}/v1/support
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 204
+}

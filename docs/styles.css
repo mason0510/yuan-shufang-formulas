@@ -89,6 +89,24 @@ body {
   cursor: pointer;
   font: inherit;
 }
+.comment-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+.comment-card h2 { margin: 0; font-size: 1rem; }
+.comment-card input, .comment-card textarea { width: 100%; font-size: 16px; }
+.comment-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.comment-list li {
+  border-top: 1px dashed var(--line);
+  padding-top: 8px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.comment-list strong { color: var(--accent); }
 .main {
   display: flex;
   flex-direction: column;

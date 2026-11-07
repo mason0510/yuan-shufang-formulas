@@ -1,0 +1,22 @@
+meta {
+  name: health
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
+
+tests {
+  test("service name is present", function() {
+    expect(res.body.ok).to.equal(true);
+    expect(res.body.service).to.equal("yuan-shufang-cors");
+  });
+}

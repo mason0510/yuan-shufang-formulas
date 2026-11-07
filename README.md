@@ -64,3 +64,5 @@ jq '.formulas[] | select(.ind | contains("痛经"))' data/formulas.json
 [![GitHub stars](https://img.shields.io/github/stars/mason0510/yuan-shufang-formulas?style=social)](https://github.com/mason0510/yuan-shufang-formulas/stargazers)
 
 ![Star 累计](docs/star-history.svg)
+
+曲线由 `python3 scripts/update_star_history.py <stargazers.tsv>` 重画。仓库里没有定时函数，不跑这句，图就停在上次写出的数字。

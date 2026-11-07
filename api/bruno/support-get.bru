@@ -1,0 +1,22 @@
+meta {
+  name: support get
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/support
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
+
+tests {
+  test("count is a number at least the seed", function() {
+    expect(res.body.count).to.be.a("number");
+    expect(res.body.count).to.be.at.least(1286);
+  });
+}

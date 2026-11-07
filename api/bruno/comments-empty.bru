@@ -1,0 +1,26 @@
+meta {
+  name: comments reject empty
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/v1/comments
+  body: json
+  auth: none
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "name": "试",
+    "text": "   "
+  }
+}
+
+assert {
+  res.status: eq 400
+}

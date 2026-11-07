@@ -1,0 +1,21 @@
+meta {
+  name: comments get
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/comments
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
+
+tests {
+  test("comments is an array", function() {
+    expect(res.body.comments).to.be.an("array");
+  });
+}
