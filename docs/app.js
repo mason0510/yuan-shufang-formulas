@@ -800,31 +800,46 @@ bootstrap().catch((err) => {
 })();
 
 /**
- * Register and log in a visitor against the project database user.
- * Guarantees: the token stays in this browser only, and the password is not written to localStorage.
- * Does not guarantee: progress.tap365.org is reachable.
+ * Show 游客 in the top-right until a person registers or logs in.
+ * Guarantees: register and login open one small dialog; a successful register stores the returned token and shows the name in the corner.
+ * Does not guarantee: progress.tap365.org is reachable, or that the password is saved anywhere except the request body.
  */
 (function auth() {
   const form = document.getElementById('authForm');
   const status = document.getElementById('authStatus');
-  if (!form || !status) return;
-  const loginBtn = document.getElementById('authLogin');
-  const registerBtn = document.getElementById('authRegister');
+  const dialog = document.getElementById('authDialog');
+  const who = document.getElementById('authWho');
+  if (!form || !status || !dialog || !who) return;
+  const openLogin = document.getElementById('authOpenLogin');
+  const openRegister = document.getElementById('authOpenRegister');
   const logoutBtn = document.getElementById('authLogout');
+  const submit = document.getElementById('authSubmit');
+  const nameInput = document.getElementById('authName');
+  let mode = 'register';
 
   function show(text) {
     status.textContent = text;
   }
 
+  /** A missing email means logged out, so the corner stays 游客. */
   function setLoggedIn(user) {
     const on = !!(user && user.email);
     logoutBtn.hidden = !on;
-    loginBtn.hidden = on;
-    registerBtn.hidden = on;
-    document.getElementById('authPassword').hidden = on;
-    document.getElementById('authEmail').hidden = on;
-    document.getElementById('authName').hidden = on;
-    show(on ? '已登录 ' + (user.name || user.email) : '登录后只记在这个公用库的 ysf_ 表里。');
+    openLogin.hidden = on;
+    openRegister.hidden = on;
+    who.textContent = on ? (user.name || user.email) : '游客';
+  }
+
+  /** Open the same small window for register or login. Register is the only mode that asks for a name. */
+  function openDialog(next) {
+    mode = next;
+    const title = next === 'register' ? '注册' : '登录';
+    document.getElementById('authDialogTitle').textContent = title;
+    submit.textContent = title;
+    nameInput.hidden = next !== 'register';
+    document.getElementById('authPassword').autocomplete = next === 'register' ? 'new-password' : 'current-password';
+    show('');
+    dialog.showModal();
   }
 
   async function call(path, body) {
@@ -842,37 +857,26 @@ bootstrap().catch((err) => {
     return data;
   }
 
+  openLogin.addEventListener('click', () => openDialog('login'));
+  openRegister.addEventListener('click', () => openDialog('register'));
+  document.getElementById('authCancel').addEventListener('click', () => dialog.close());
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    loginBtn.disabled = true;
+    submit.disabled = true;
     try {
-      const data = await call('/v1/auth/login', {
-        email: document.getElementById('authEmail').value.trim(),
-        password: document.getElementById('authPassword').value,
-      });
-      localStorage.setItem(AUTH_TOKEN, data.token);
-      setLoggedIn(data);
-    } catch (err) {
-      show(err && err.message ? err.message : '登录失败');
-    } finally {
-      loginBtn.disabled = false;
-    }
-  });
-
-  registerBtn.addEventListener('click', async () => {
-    registerBtn.disabled = true;
-    try {
-      const data = await call('/v1/auth/register', {
-        email: document.getElementById('authEmail').value.trim(),
-        password: document.getElementById('authPassword').value,
-        name: document.getElementById('authName').value.trim(),
-      });
+      const email = document.getElementById('authEmail').value.trim();
+      const password = document.getElementById('authPassword').value;
+      const data = mode === 'register'
+        ? await call('/v1/auth/register', { email, password, name: nameInput.value.trim() })
+        : await call('/v1/auth/login', { email, password });
       if (data.token) localStorage.setItem(AUTH_TOKEN, data.token);
       setLoggedIn(data);
+      dialog.close();
     } catch (err) {
-      show(err && err.message ? err.message : '注册失败');
+      show(err && err.message ? err.message : (mode === 'register' ? '注册失败' : '登录失败'));
     } finally {
-      registerBtn.disabled = false;
+      submit.disabled = false;
     }
   });
 
@@ -884,7 +888,10 @@ bootstrap().catch((err) => {
 
   const saved = localStorage.getItem(AUTH_TOKEN);
   if (!saved) return;
+  openLogin.hidden = true;
+  openRegister.hidden = true;
   call('/v1/auth/me').then(setLoggedIn).catch(() => {
     localStorage.removeItem(AUTH_TOKEN);
+    setLoggedIn(null);
   });
 })();

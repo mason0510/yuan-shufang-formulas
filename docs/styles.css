@@ -150,6 +150,9 @@ body {
 }
 .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .top-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.auth-who { font-weight: 700; color: var(--accent); white-space: nowrap; }
+#authDialog { max-width: 360px; }
+#authDialog input { width: 100%; font-size: 16px; }
 .dev-mask {
   position: fixed;
   inset: 0;
