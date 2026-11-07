@@ -121,16 +121,6 @@ body {
   line-height: 1.45;
 }
 .comment-list strong { color: var(--accent); }
-.board-link {
-  display: block;
-  text-align: center;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 10px 12px;
-  color: var(--accent);
-  text-decoration: none;
-}
 .board-page {
   max-width: 720px;
   margin: 0 auto;
