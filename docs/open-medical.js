@@ -146,7 +146,8 @@
     list.replaceChildren();
     (items || []).forEach((item) => {
       const li = document.createElement('li');
-      const kind = item.kind === 'clue' ? '线索' : '方子';
+      const kindNames = { formula: '方子', clue: '线索', book: '古籍', gazetteer: '地方志', case: '医案', photo: '照片或扫描', correction: '纠错' };
+      const kind = kindNames[item.kind] || item.kind;
       li.textContent = kind + ' · ' + (item.title || '') + (item.source ? ' · ' + item.source : '');
       list.appendChild(li);
     });

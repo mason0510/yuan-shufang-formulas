@@ -22,6 +22,7 @@ COUNTRIES = ("中国", "中国香港", "中国澳门", "中国台湾", "美国",
 OCCUPATIONS = ("中医师", "中药师", "西医师", "医学生", "药学", "古籍整理", "文史研究", "患者或家属", "软件开发", "其他")
 INTERESTS = ("古方", "碑方", "民间验方", "地方志", "妇科", "儿科", "外科", "内科", "本草", "针灸", "骨伤", "其他")
 FOUND_VIA = ("搜索引擎", "GitHub", "微信", "朋友介绍", "新闻报道", "小红书", "微博", "其他")
+CONTRIB_KINDS = ("formula", "clue", "book", "gazetteer", "case", "photo", "correction")
 ORIGINS = {
     "https://mason0510.github.io",
     "http://127.0.0.1:8000",
@@ -369,12 +370,12 @@ def list_contributions(user_id: str) -> list:
 
 
 def save_contribution(user_id: str, kind: str, title: str, body: str, source: str) -> str:
-    """Store one formula or one clue for this account.
+    """Store one contributed item for this account.
 
-    Guarantees: kind is formula or clue, and the row belongs to user_id.
+    Guarantees: kind is one of CONTRIB_KINDS, and the row belongs to user_id.
     Does not guarantee: the text is medically valid, or that it joins the tombstone library.
     """
-    if kind not in ("formula", "clue"):
+    if kind not in CONTRIB_KINDS:
         raise ValueError("kind")
     return psql(
         "INSERT INTO ysf_contributions (user_id, kind, title, body, source) "
@@ -511,8 +512,8 @@ class Handler(BaseHTTPRequestHandler):
             title = clip_note(str(data.get("title", "")), 80)
             body = clip_note(str(data.get("body", "")), 4000)
             source = clip_note(str(data.get("source", "")), 200)
-            if kind not in ("formula", "clue") or len(title) < 2 or len(body) < 4:
-                self._send(400, {"error": {"message": "请写明是方子还是线索，并写上标题和内容"}})
+            if kind not in CONTRIB_KINDS or len(title) < 2 or len(body) < 4:
+                self._send(400, {"error": {"message": "请选择类型，并写上标题和内容"}})
                 return
             try:
                 new_id = save_contribution(str(user["id"]), kind, title, body, source)

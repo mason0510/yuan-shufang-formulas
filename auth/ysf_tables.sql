@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS ysf_contributions (
   body text NOT NULL,
   source text NOT NULL DEFAULT '',
   created_at timestamptz NOT NULL DEFAULT now(),
-  CONSTRAINT ysf_contributions_kind_chk CHECK (kind IN ('formula', 'clue'))
+  CONSTRAINT ysf_contributions_kind_chk CHECK (kind IN ('formula', 'clue', 'book', 'gazetteer', 'case', 'photo', 'correction'))
 );
 
 CREATE INDEX IF NOT EXISTS ysf_contributions_user_id_idx ON ysf_contributions (user_id, id);
