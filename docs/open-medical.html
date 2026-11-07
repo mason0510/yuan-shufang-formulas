@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>open-medical · 古方数据库</title>
+  <link rel="icon" href="yuan-shufang.png" />
+  <link rel="stylesheet" href="styles.css?v=140" />
+</head>
+<body>
+  <div class="board-page">
+    <header>
+      <div>
+        <h1>open-medical</h1>
+        <p class="board-note">正在收集古方和线索，做成免费开放给每一个人的古方数据库。交来的内容单独入库，不自动写进墓碑验方。不可自行照方抓药。</p>
+      </div>
+      <a class="board-back" href="index.html">回开方</a>
+    </header>
+
+    <section id="gate" class="board-form">
+      <h2 id="gateTitle">注册后提交</h2>
+      <p id="gateStatus" class="board-status" role="status"></p>
+      <input id="gateName" maxlength="16" placeholder="怎么称呼" autocomplete="nickname" />
+      <input id="gateEmail" type="email" maxlength="80" required placeholder="邮箱" autocomplete="username" />
+      <input id="gatePassword" type="password" minlength="8" maxlength="72" required placeholder="密码至少 8 位" autocomplete="new-password" />
+      <label>国籍
+        <select id="gateCountry">
+          <option value="">请选择</option>
+          <option>中国</option><option>中国香港</option><option>中国澳门</option><option>中国台湾</option>
+          <option>美国</option><option>加拿大</option><option>英国</option><option>日本</option><option>韩国</option>
+          <option>新加坡</option><option>马来西亚</option><option>澳大利亚</option><option>德国</option><option>法国</option>
+          <option>其他</option>
+        </select>
+      </label>
+      <label>职业
+        <select id="gateJob">
+          <option value="">请选择</option>
+          <option>中医师</option><option>中药师</option><option>西医师</option><option>医学生</option><option>药学</option>
+          <option>古籍整理</option><option>文史研究</option><option>患者或家属</option><option>软件开发</option><option>其他</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>感兴趣的方向</legend>
+        <div class="checks" id="gateInterests">
+          <label><input type="checkbox" value="古方" />古方</label>
+          <label><input type="checkbox" value="碑方" />碑方</label>
+          <label><input type="checkbox" value="民间验方" />民间验方</label>
+          <label><input type="checkbox" value="地方志" />地方志</label>
+          <label><input type="checkbox" value="妇科" />妇科</label>
+          <label><input type="checkbox" value="儿科" />儿科</label>
+          <label><input type="checkbox" value="外科" />外科</label>
+          <label><input type="checkbox" value="内科" />内科</label>
+          <label><input type="checkbox" value="本草" />本草</label>
+          <label><input type="checkbox" value="针灸" />针灸</label>
+          <label><input type="checkbox" value="骨伤" />骨伤</label>
+          <label><input type="checkbox" value="其他" />其他</label>
+        </div>
+      </fieldset>
+      <label>通过什么方式找到这个网站
+        <select id="gateFound">
+          <option value="">请选择</option>
+          <option>搜索引擎</option><option>GitHub</option><option>微信</option><option>朋友介绍</option>
+          <option>新闻报道</option><option>小红书</option><option>微博</option><option>其他</option>
+        </select>
+      </label>
+      <div class="row">
+        <button type="button" id="gateLogin" class="ghost">登录</button>
+        <button type="button" id="gateRegister">注册</button>
+      </div>
+    </section>
+
+    <form id="giveForm" class="board-form" hidden>
+      <p id="giveWho" class="rail-note"></p>
+      <label>这一条是
+        <select id="giveKind">
+          <option value="formula">方子</option>
+          <option value="clue">线索</option>
+        </select>
+      </label>
+      <input id="giveTitle" maxlength="80" required placeholder="标题，例如书名或方名" />
+      <textarea id="giveBody" maxlength="4000" rows="6" required placeholder="方子正文，或你知道的线索：谁有抄本、哪本书、哪一页"></textarea>
+      <input id="giveSource" maxlength="200" placeholder="出处，可空" />
+      <div class="row">
+        <button type="submit" id="giveSend">提交到库</button>
+        <button type="button" id="giveLogout" class="ghost">退出</button>
+      </div>
+      <p id="giveStatus" class="board-status" role="status"></p>
+    </form>
+    <ul id="giveList" class="comment-list board-list"></ul>
+    <p class="board-note"><a href="https://github.com/mason0510/yuan-shufang-formulas/issues/" target="_blank" rel="noopener">反馈问题</a></p>
+  </div>
+  <script src="open-medical.js?v=1"></script>
+</body>
+</html>

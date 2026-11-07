@@ -22,7 +22,7 @@ body {
 .shell {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr) 240px;
-  min-height: 100vh;
+  height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -33,6 +33,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-height: 0;
+  overflow-y: auto;
 }
 .rail.right { border-right: none; border-left: 1px solid var(--line); }
 .rail-brand {
@@ -160,21 +162,27 @@ body {
   margin-top: 16px;
 }
 .board-form { display: grid; gap: 8px; }
-.board-form input, .board-form textarea { width: 100%; font-size: 16px; }
+.board-form input, .board-form textarea, .board-form select { width: 100%; font-size: 16px; }
 .board-status { min-height: 1.2em; color: var(--accent); }
 .main {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
   background: transparent;
 }
 .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .top-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
 .auth-who { font-weight: 700; color: var(--accent); white-space: nowrap; }
-#authDialog { max-width: 360px; }
-#authDialog input { width: 100%; font-size: 16px; }
+#authDialog { max-width: 420px; width: calc(100vw - 32px); }
+#authDialog input, #authDialog select { width: 100%; font-size: 16px; }
+#authDialog fieldset { border: 1px solid var(--line); border-radius: 10px; margin: 0; }
+.checks { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; }
+.checks label { display: flex; gap: 6px; align-items: center; font-size: 0.9rem; }
+.checks input { width: auto; }
 .dev-mask {
   position: fixed;
   inset: 0;
@@ -247,7 +255,8 @@ h1 { font-size: 1.15rem; margin: 0; }
   font-size: 0.9rem;
 }
 .chat {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -256,7 +265,6 @@ h1 { font-size: 1.15rem; margin: 0; }
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-height: 420px;
 }
 .msg {
   max-width: 92%;
@@ -404,15 +412,20 @@ input, select {
   .shell {
     display: flex;
     flex-direction: column;
+    height: auto;
     min-height: 100dvh;
     max-width: none;
   }
   .main {
     order: 1;
+    height: auto;
+    max-height: none;
+    overflow: visible;
     min-height: 0;
     padding: 10px 10px calc(8px + env(safe-area-inset-bottom));
     gap: 8px;
   }
+  .rail { max-height: none; overflow: visible; }
   .rail.right { order: 2; }
   .rail.left { order: 3; }
   .rail.left, .rail.right {

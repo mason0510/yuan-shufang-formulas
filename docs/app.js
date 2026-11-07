@@ -46,6 +46,35 @@ const PRESETS = {
   },
 };
 
+/**
+ * China crisis lines. 988 is the US line and is not the number to give here.
+ * Guarantees: the text names 12356, 400-161-9995, 010-82951332, and 120 or 110.
+ * Does not guarantee: a local desk answers at every hour.
+ */
+function chinaCrisisPhones() {
+  return '中国的求助电话：\n12356：全国统一心理援助热线。\n400-161-9995：希望24小时生命危机干预热线，学生按1，抑郁按2，生命热线按3。\n010-82951332：北京心理危机研究与干预中心，手机拨打；座机拨 800-810-1117。\n正在伤害自己，打 120 或 110。';
+}
+
+/**
+ * True when the turn is about suicide or the US hotline slipped into the reply.
+ * Does not decide that the person is safe.
+ */
+function usesCrisis(text) {
+  return /自杀|轻生|不想活|结束自己|想死|活不下去|988/.test(text || '');
+}
+
+/**
+ * Drop 988 and keep the China lines on a crisis reply.
+ * Guarantees: the result contains 12356 and does not contain 988.
+ * Does not guarantee: the model omitted a method. Callers still must not add one.
+ */
+function withChinaCrisis(answer) {
+  let text = String(answer || '').replace(/988/g, '').replace(/\n{3,}/g, '\n\n').trim();
+  if (!text.includes('12356')) text = (text ? text + '\n\n' : '') + chinaCrisisPhones();
+  else if (!text.includes('400-161-9995')) text = text + '\n\n' + chinaCrisisPhones();
+  return text;
+}
+
 const DOSE_RISK =
   '【计量/用量风险】药味克数若使用错误可伤身甚至危及生命；剂量须由有资质中医师当面辨证后调整；严禁自行照方抓药或擅自加减。本输出仅为参考方，不构成处方。';
 
@@ -57,6 +86,7 @@ const dlg = document.getElementById('settings');
 let formulas = null;
 let systemPrompt = '';
 let history = [];
+let clinicReady = false;
 const AUTH_API = 'https://progress.tap365.org';
 const AUTH_TOKEN = 'ysf_auth_token';
 
@@ -194,6 +224,7 @@ document.getElementById('btnClear').onclick = () => {
   history = [];
   chatEl.innerHTML = '';
   addMsg('sys', '对话已清空。请用患者自述补充初诊信息；信息不足时我会先问诊，再给参考方，并附计量风险提示。');
+  clearStoredChats();
 };
 
 document.querySelectorAll('.example').forEach((btn) => {
@@ -223,7 +254,7 @@ async function bootstrap() {
   // v=120 bypasses the cached 40-formula file from the previous Pages deploy.
   const [fRes, sRes] = await Promise.all([
     fetch('formulas.json?v=120', { cache: 'no-store' }),
-    fetch('system.md?v=128', { cache: 'no-store' }),
+    fetch('system.md?v=137', { cache: 'no-store' }),
   ]);
   if (!fRes.ok) throw new Error('验方库 HTTP ' + fRes.status);
   formulas = await fRes.json();
@@ -235,6 +266,66 @@ async function bootstrap() {
     `验方库已加载 ${n} 首。碑方对不上时会查库外方剂文献；查不到或接口未接通，只说明，不编方。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）。妇科可写经带胎产，儿科写年龄和喂养，外科写疮疡部位，癫痫写发作，骨伤写受伤处。再补病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
   );
   // ChainFuel preset carries DEMO_KEY, so 开方 does not open settings first.
+  clinicReady = true;
+  await loadChats();
+}
+
+/**
+ * Save one finished turn for the logged-in account.
+ * Guarantees: a missing token does nothing. Does not guarantee: the database write succeeds.
+ */
+async function saveTurn(userText, answerText) {
+  const token = localStorage.getItem(AUTH_TOKEN);
+  if (!token || !userText || !answerText) return;
+  try {
+    await fetch(AUTH_API + '/v1/chats', {
+      method: 'POST',
+      mode: 'cors',
+      headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+      body: JSON.stringify({
+        messages: [
+          { role: 'user', content: String(userText).slice(0, 8000) },
+          { role: 'assistant', content: String(answerText).slice(0, 8000) },
+        ],
+      }),
+    });
+  } catch (_) { /* the reply is already on screen */ }
+}
+
+/**
+ * Put this account's stored turns back under the greeting.
+ * Guarantees: nothing is drawn when there is no token or the thread is empty.
+ * Does not guarantee: a turn saved in the last second is already listed.
+ */
+async function loadChats() {
+  const token = localStorage.getItem(AUTH_TOKEN);
+  if (!token || history.length) return;
+  try {
+    const r = await fetch(AUTH_API + '/v1/chats', {
+      headers: { Authorization: 'Bearer ' + token },
+      cache: 'no-store',
+    });
+    if (!r.ok) return;
+    const data = await r.json();
+    const rows = Array.isArray(data.messages) ? data.messages : [];
+    if (!rows.length) return;
+    history = rows.map((m) => ({ role: m.role, content: m.content }));
+    rows.forEach((m) => addMsg(m.role === 'assistant' ? 'bot' : 'user', m.content));
+  } catch (_) { /* greeting stays */ }
+}
+
+/**
+ * Delete the logged-in account's stored turns.
+ * Does not guarantee: the request arrives. The screen is already cleared by the caller.
+ */
+function clearStoredChats() {
+  const token = localStorage.getItem(AUTH_TOKEN);
+  if (!token) return;
+  fetch(AUTH_API + '/v1/chats', {
+    method: 'DELETE',
+    mode: 'cors',
+    headers: { Authorization: 'Bearer ' + token },
+  }).catch(() => {});
 }
 
 /**
@@ -668,8 +759,16 @@ formEl.addEventListener('submit', async (e) => {
   const pending = addBotBubble('初诊辨证中…', true);
   try {
     const state = { reasonBody: null, answerEl: null };
-    await askModel(modelText, (kind, chunk) => appendStream(pending, state, kind, chunk));
+    const split = await askModel(modelText, (kind, chunk) => appendStream(pending, state, kind, chunk));
+    if (usesCrisis(text) || usesCrisis(split && split.answer)) {
+      const fixed = withChinaCrisis(split.answer);
+      split.answer = fixed;
+      const last = history[history.length - 1];
+      if (last && last.role === 'assistant') last.content = fixed;
+      if (state.answerEl) state.answerEl.textContent = fixed;
+    }
     finishReply(pending);
+    saveTurn(text, split && split.answer);
   } catch (err) {
     pending.div.classList.remove('thinking');
     pending.div.textContent = '出错：' + (err && err.message ? err.message : String(err));
@@ -870,18 +969,29 @@ bootstrap().catch((err) => {
     openLogin.hidden = on;
     openRegister.hidden = on;
     who.textContent = on ? (user.name || user.email) : '游客';
+    if (on && clinicReady) loadChats();
   }
 
-  /** Open the same small window for register or login. Register is the only mode that asks for a name. */
+  /** Open the same small window for register or login. Register also asks who they are and how they arrived. */
   function openDialog(next) {
     mode = next;
     const title = next === 'register' ? '注册' : '登录';
+    const extra = next === 'register';
     document.getElementById('authDialogTitle').textContent = title;
     submit.textContent = title;
-    nameInput.hidden = next !== 'register';
-    document.getElementById('authPassword').autocomplete = next === 'register' ? 'new-password' : 'current-password';
+    nameInput.hidden = !extra;
+    ['authCountryWrap', 'authJobWrap', 'authInterestWrap', 'authFoundWrap'].forEach((id) => {
+      const node = document.getElementById(id);
+      if (node) node.hidden = !extra;
+    });
+    document.getElementById('authPassword').autocomplete = extra ? 'new-password' : 'current-password';
     show('');
     dialog.showModal();
+  }
+
+  /** Selected interest labels. Empty when none are checked. */
+  function pickedInterests() {
+    return Array.from(document.querySelectorAll('#authInterestWrap input:checked')).map((node) => node.value);
   }
 
   async function call(path, body) {
@@ -909,9 +1019,22 @@ bootstrap().catch((err) => {
     try {
       const email = document.getElementById('authEmail').value.trim();
       const password = document.getElementById('authPassword').value;
-      const data = mode === 'register'
-        ? await call('/v1/auth/register', { email, password, name: nameInput.value.trim() })
-        : await call('/v1/auth/login', { email, password });
+      let data;
+      if (mode === 'register') {
+        const interests = pickedInterests();
+        const country = document.getElementById('authCountry').value;
+        const occupation = document.getElementById('authJob').value;
+        const foundVia = document.getElementById('authFound').value;
+        if (!country || !occupation || !interests.length || !foundVia) {
+          show('请选择国籍、职业、感兴趣的方向，以及你是怎么找到这里的');
+          return;
+        }
+        data = await call('/v1/auth/register', {
+          email, password, name: nameInput.value.trim(), country, occupation, interests, found_via: foundVia,
+        });
+      } else {
+        data = await call('/v1/auth/login', { email, password });
+      }
       if (data.token) localStorage.setItem(AUTH_TOKEN, data.token);
       setLoggedIn(data);
       dialog.close();
