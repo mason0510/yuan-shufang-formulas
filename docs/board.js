@@ -9,6 +9,32 @@
   const status = document.getElementById('commentStatus');
   if (!list || !form) return;
   const api = 'https://ysf-api.tap365.org/v1/comments';
+  const authApi = 'https://progress.tap365.org';
+  let accountName = '';
+
+  /**
+   * Use the logged-in account name when this browser has a session.
+   * Guarantees: a successful /me fills and locks the name field.
+   * Does not guarantee: an expired token still resolves. The field stays editable then.
+   */
+  function loadAccount() {
+    const token = localStorage.getItem('ysf_auth_token') || '';
+    const input = document.getElementById('commentName');
+    if (!token || !input) return;
+    fetch(authApi + '/v1/auth/me', {
+      headers: { Authorization: 'Bearer ' + token },
+      cache: 'no-store',
+    })
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((user) => {
+        accountName = ((user && user.name) || '').trim();
+        if (!accountName) return;
+        input.value = accountName;
+        input.readOnly = true;
+        status.textContent = '署名用登录名：' + accountName;
+      })
+      .catch(() => {});
+  }
 
   function render(items) {
     list.replaceChildren();
@@ -41,7 +67,7 @@
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('commentName').value.trim();
+    const name = accountName || document.getElementById('commentName').value.trim();
     const text = document.getElementById('commentText').value.trim();
     if (!text) return;
     const button = document.getElementById('commentSend');
@@ -66,4 +92,5 @@
   });
 
   load();
+  loadAccount();
 })();

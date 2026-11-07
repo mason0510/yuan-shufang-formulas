@@ -773,7 +773,48 @@ bootstrap().catch((err) => {
 
   if (localStorage.getItem(MINE) === '1') readyAgain();
 
+  /**
+   * Scroll the public notes under the flower button.
+   * Guarantees: each note is inserted as text, and a second copy is added only when there are at least two notes.
+   * Does not guarantee: a note posted in the last second is already stored.
+   */
+  function playTalk() {
+    const track = document.getElementById('talkTrack');
+    if (!track) return;
+    fetch('https://ysf-api.tap365.org/v1/comments', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((data) => {
+        const rows = ((data && data.comments) || []).slice().reverse();
+        track.replaceChildren();
+        track.classList.remove('rolling');
+        if (!rows.length) {
+          const line = document.createElement('div');
+          line.className = 'talk-line';
+          line.textContent = '还没有留言。';
+          track.appendChild(line);
+          return;
+        }
+        const paint = (list) => {
+          list.forEach((item) => {
+            const line = document.createElement('div');
+            line.className = 'talk-line';
+            const who = document.createElement('strong');
+            who.textContent = (item && item.name) || '访客';
+            line.append(who, document.createTextNode(' ' + ((item && item.text) || '')));
+            track.appendChild(line);
+          });
+        };
+        paint(rows);
+        if (rows.length < 2) return;
+        paint(rows);
+        track.classList.add('rolling');
+        track.style.animationDuration = Math.max(12, rows.length * 4) + 's';
+      })
+      .catch(() => {});
+  }
+
   refreshCount();
+  playTalk();
   setInterval(refreshCount, 8000);
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') refreshCount();
@@ -792,6 +833,7 @@ bootstrap().catch((err) => {
       localStorage.setItem(MINE, '1');
       readyAgain();
       celebrateSupport();
+      playTalk();
     } catch (_) {
       btn.textContent = prev;
       btn.disabled = false;

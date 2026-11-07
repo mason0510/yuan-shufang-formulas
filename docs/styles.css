@@ -103,6 +103,25 @@ body {
   cursor: pointer;
   font: inherit;
 }
+.talk-roll { margin-top: 4px; }
+.talk-label { color: var(--muted); font-size: 0.85rem; text-align: center; }
+.talk-window { height: 132px; overflow: hidden; }
+.talk-track { display: grid; gap: 8px; }
+.talk-track.rolling { animation: talkUp linear infinite; }
+.talk-line {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+.talk-line strong { color: var(--accent); }
+@keyframes talkUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+.talk-roll:hover .talk-track { animation-play-state: paused; }
 .comment-card {
   background: #fff;
   border: 1px solid var(--line);

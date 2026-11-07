@@ -187,6 +187,43 @@ async fn handle_support_get(env: &Env) -> Result<Response> {
 const COMMENTS_KEY: &str = "visitor_comments";
 const COMMENT_CAP: usize = 40;
 
+/// Fold a note so spaces and separators cannot hide a blocked word.
+/// Guarantees: the result is lowercase and has no whitespace or separator marks.
+/// Does not guarantee: every homoglyph is caught.
+fn fold_comment(raw: &str) -> String {
+    raw.chars()
+        .filter(|c| {
+            !c.is_whitespace()
+                && !c.is_control()
+                && !matches!(
+                    *c,
+                    '.' | '_' | '-' | '*' | '。' | '，' | ',' | '、' | '/' | '\\' | '|' | '+' | ':' | '：'
+                )
+        })
+        .flat_map(|c| c.to_lowercase())
+        .collect()
+}
+
+/// Reject spam, sexual solicitation, and political agitation.
+/// Guarantees: an empty string is not blocked; a listed phrase is blocked after folding.
+/// Does not guarantee: paraphrases, pictures, or novel slang are caught. Medical body words are not on the list.
+fn comment_blocked(raw: &str) -> bool {
+    let folded = fold_comment(raw);
+    if folded.is_empty() {
+        return false;
+    }
+    const WORDS: &[&str] = &[
+        "http", "https", "www", "加微信", "加vx", "加v信", "威信", "裸聊", "约炮", "黄片", "色情",
+        "淫秽", "嫖娼", "做爱", "手淫", "口交", "肛交", "博彩", "网赌", "刷单", "代开发票", "办证",
+        "六四", "天安门事件", "法轮", "台独", "港独", "藏独", "推翻政府", "游行示威",
+    ];
+    if WORDS.iter().any(|word| folded.contains(word)) {
+        return true;
+    }
+    let digits = folded.chars().filter(|c| c.is_ascii_digit()).count();
+    digits >= 11
+}
+
 /// Drop control characters and cap a visitor field by Unicode scalar count.
 /// Guarantees: the result has no control chars and is at most `max_chars`.
 /// Does not guarantee: the text is polite or unique.
@@ -231,8 +268,8 @@ async fn handle_comments_get(env: &Env) -> Result<Response> {
 }
 
 /// Append one note. Name defaults to 访客. Text must be 1 to 120 characters.
-/// Guarantees: a stored note is capped, and the list never grows past 40.
-/// Does not guarantee: the same person cannot post again. There is no login.
+/// Guarantees: a stored note is capped, the list never grows past 40, and a blocked note is not stored.
+/// Does not guarantee: the same person cannot post again, or that a reworded note is caught.
 async fn handle_comments_post(mut req: Request, env: &Env) -> Result<Response> {
     let bytes = req.bytes().await?;
     let incoming: serde_json::Value = serde_json::from_slice(&bytes).unwrap_or(serde_json::Value::Null);
@@ -246,6 +283,9 @@ async fn handle_comments_post(mut req: Request, env: &Env) -> Result<Response> {
     );
     if text.chars().count() < 1 {
         return json_error(400, "评论不能为空");
+    }
+    if comment_blocked(&name) || comment_blocked(&text) {
+        return json_error(400, "这句话不能留下");
     }
     let kv = env.kv("SUPPORT")?;
     let mut items = read_comments(&kv).await?;
@@ -720,5 +760,25 @@ async fn fetch(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
                 .with_status(status)
                 .with_headers(out_headers))
         }
+    }
+}
+
+#[cfg(test)]
+mod comment_filter_tests {
+    use super::comment_blocked;
+
+    #[test]
+    fn keeps_ordinary_notes() {
+        assert!(!comment_blocked("老师走好"));
+        assert!(!comment_blocked("你好"));
+        assert!(!comment_blocked("猴子"));
+    }
+
+    #[test]
+    fn blocks_spam_sexual_and_political() {
+        assert!(comment_blocked("加微.信 abc"));
+        assert!(comment_blocked("来看黄片"));
+        assert!(comment_blocked("台独宣传"));
+        assert!(comment_blocked("电话 13800138000"));
     }
 }
