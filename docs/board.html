@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>留言板 · 中医袁淑芳</title>
+  <link rel="icon" href="yuan-shufang.png" />
+  <link rel="stylesheet" href="styles.css?v=132" />
+</head>
+<body>
+  <div class="board-page">
+    <header>
+      <div>
+        <h1>留言板</h1>
+        <p class="board-note">公开短评，最多 40 条。不要写联系方式，也不要写药方。</p>
+      </div>
+      <div class="top-actions">
+        <button type="button" id="btnDev" class="ghost">和开发者聊聊</button>
+        <a class="board-back" href="index.html">回开方</a>
+      </div>
+    </header>
+    <form id="commentForm" class="board-form">
+      <input id="commentName" maxlength="16" placeholder="怎么称呼，可空" autocomplete="nickname" />
+      <textarea id="commentText" maxlength="120" rows="4" required placeholder="一句就好"></textarea>
+      <div class="row">
+        <button type="submit" id="commentSend">留下</button>
+      </div>
+      <p id="commentStatus" class="board-status" role="status"></p>
+    </form>
+    <ul id="commentList" class="comment-list board-list"></ul>
+  </div>
+  <script src="dev.js?v=132"></script>
+  <script src="board.js?v=132"></script>
+</body>
+</html>

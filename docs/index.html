@@ -6,7 +6,7 @@
   <title>中医袁淑芳 · 辨证开方</title>
   <link rel="icon" href="yuan-shufang.png" />
   <link rel="apple-touch-icon" href="yuan-shufang.png" />
-  <link rel="stylesheet" href="styles.css?v=130" />
+  <link rel="stylesheet" href="styles.css?v=132" />
 </head>
 <body>
   <div class="shell">
@@ -19,6 +19,7 @@
         <a href="https://github.com/mason0510/yuan-shufang-formulas/blob/main/data/formulas.json" target="_blank" rel="noopener">formulas.json 结构化</a>
         <a href="https://github.com/mason0510/yuan-shufang-formulas" target="_blank" rel="noopener">开源仓库</a>
         <a href="disclaimer.md" target="_blank" rel="noopener">免责声明原文</a>
+        <a href="board.html">留言板</a>
       </nav>
       <div class="rail-foot">仅供专业辨证参考<br/>须医师把关 · 不可自行抓药</div>
     </aside>
@@ -32,7 +33,10 @@
             <p class="sub">参考方助手 · 可自配模型供应商</p>
           </div>
         </div>
-        <button type="button" id="btnSettings" class="ghost">设置</button>
+        <div class="top-actions">
+          <button type="button" id="btnDev" class="ghost">和开发者聊聊</button>
+          <button type="button" id="btnSettings" class="ghost">设置</button>
+        </div>
       </header>
 
       <div class="warn"><strong>风险：</strong>参考方须有资质医师把关后抓药；计量错误可伤身；急危重症请立刻就医；不可自行照方抓药。</div>
@@ -82,16 +86,7 @@
           </div>
         </form>
       </div>
-      <div class="comment-card">
-        <h2>留下一句</h2>
-        <p class="rail-note">公开短评，最多 40 条。不要写联系方式，也不要写药方。</p>
-        <form id="commentForm">
-          <input id="commentName" maxlength="16" placeholder="怎么称呼，可空" autocomplete="nickname" />
-          <textarea id="commentText" maxlength="120" rows="3" required placeholder="一句就好"></textarea>
-          <button type="submit" id="commentSend">留下</button>
-        </form>
-        <ul id="commentList" class="comment-list"></ul>
-      </div>
+      <a class="board-link" href="board.html">去留言板</a>
       <div class="rail-foot">计量错误可伤身<br/>请到医院面诊调量</div>
     </aside>
   </div>
@@ -136,6 +131,7 @@
     </form>
   </dialog>
 
-  <script src="app.js?v=131"></script>
+  <script src="dev.js?v=132"></script>
+  <script src="app.js?v=132"></script>
 </body>
 </html>

@@ -57,7 +57,6 @@ const dlg = document.getElementById('settings');
 let formulas = null;
 let systemPrompt = '';
 let history = [];
-const COMMENT_API = PROXY_BASE.replace(/\/$/, '') + '/comments';
 const AUTH_API = 'https://progress.tap365.org';
 const AUTH_TOKEN = 'ysf_auth_token';
 
@@ -798,70 +797,6 @@ bootstrap().catch((err) => {
       btn.disabled = false;
     }
   });
-})();
-
-/**
- * Show and accept public short notes.
- * Guarantees: names and text are inserted with textContent, never HTML.
- * Does not guarantee: the worker is deployed, or two fast posts both stick.
- */
-(function comments() {
-  const list = document.getElementById('commentList');
-  const form = document.getElementById('commentForm');
-  if (!list || !form) return;
-
-  function render(items) {
-    list.replaceChildren();
-    (items || []).forEach((item) => {
-      const li = document.createElement('li');
-      const who = document.createElement('strong');
-      who.textContent = (item && item.name) || '访客';
-      const body = document.createElement('div');
-      body.textContent = (item && item.text) || '';
-      li.append(who, body);
-      list.appendChild(li);
-    });
-  }
-
-  function load() {
-    fetch(COMMENT_API, { method: 'GET', mode: 'cors', cache: 'no-store' })
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((data) => render(data && data.comments))
-      .catch(() => {
-        if (!list.childElementCount) {
-          const li = document.createElement('li');
-          li.textContent = '评论暂时读不到。';
-          list.appendChild(li);
-        }
-      });
-  }
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const name = document.getElementById('commentName').value.trim();
-    const text = document.getElementById('commentText').value.trim();
-    if (!text) return;
-    const button = document.getElementById('commentSend');
-    button.disabled = true;
-    try {
-      const r = await fetch(COMMENT_API, {
-        method: 'POST',
-        mode: 'cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, text }),
-      });
-      const data = await r.json().catch(() => ({}));
-      if (!r.ok) throw new Error((data && data.error && data.error.message) || r.statusText);
-      document.getElementById('commentText').value = '';
-      render(data.comments);
-    } catch (err) {
-      addMsg('sys', '评论没留下：' + (err && err.message ? err.message : '失败'));
-    } finally {
-      button.disabled = false;
-    }
-  });
-
-  load();
 })();
 
 /**
