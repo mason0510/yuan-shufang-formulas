@@ -11,3 +11,5 @@ backend/target/
 backend/node_modules/
 backend/.cf-token
 *.tgz
+
+.idea/
