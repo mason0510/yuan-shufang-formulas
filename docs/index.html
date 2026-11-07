@@ -6,7 +6,7 @@
   <title>中医袁淑芳 · 辨证开方</title>
   <link rel="icon" href="yuan-shufang.png" />
   <link rel="apple-touch-icon" href="yuan-shufang.png" />
-  <link rel="stylesheet" href="styles.css?v=141" />
+  <link rel="stylesheet" href="styles.css?v=142" />
 </head>
 <body>
   <div class="shell">
@@ -102,7 +102,6 @@
   <dialog id="authDialog">
     <form id="authForm" class="settings-form">
       <h2 id="authDialogTitle">注册</h2>
-      <p id="authStatus" class="rail-note"></p>
       <input id="authName" maxlength="16" placeholder="怎么称呼，注册时用" autocomplete="nickname" />
       <input id="authEmail" type="email" maxlength="80" required placeholder="邮箱" autocomplete="username" />
       <input id="authPassword" type="password" minlength="8" maxlength="72" required placeholder="密码至少 8 位" autocomplete="new-password" />
@@ -146,6 +145,7 @@
           <option>新闻报道</option><option>小红书</option><option>微博</option><option>其他</option>
         </select>
       </label>
+      <p id="authStatus" class="board-status" role="status"></p>
       <div class="row">
         <button type="button" id="authCancel" class="ghost">取消</button>
         <button type="submit" id="authSubmit">注册</button>
@@ -184,6 +184,6 @@
   </dialog>
 
   <script src="dev.js?v=133"></script>
-  <script src="app.js?v=136"></script>
+  <script src="app.js?v=137"></script>
 </body>
 </html>

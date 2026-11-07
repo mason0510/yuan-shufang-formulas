@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>open-medical · 古方数据库</title>
   <link rel="icon" href="yuan-shufang.png" />
-  <link rel="stylesheet" href="styles.css?v=141" />
+  <link rel="stylesheet" href="styles.css?v=142" />
 </head>
 <body>
   <div class="board-page">
@@ -17,14 +17,13 @@
       <a class="board-back" href="index.html">回开方</a>
     </header>
 
-    <section id="gate" class="board-form">
+    <form id="gate" class="board-form">
       <h2 id="gateTitle">请先注册</h2>
-      <p id="gateStatus" class="board-status" role="status"></p>
       <input id="gateName" maxlength="16" placeholder="怎么称呼" autocomplete="nickname" />
       <input id="gateEmail" type="email" maxlength="80" required placeholder="邮箱" autocomplete="username" />
       <input id="gatePassword" type="password" minlength="8" maxlength="72" required placeholder="密码至少 8 位" autocomplete="new-password" />
       <label>国籍
-        <select id="gateCountry">
+        <select id="gateCountry" required>
           <option value="">请选择</option>
           <option>中国</option><option>中国香港</option><option>中国澳门</option><option>中国台湾</option>
           <option>美国</option><option>加拿大</option><option>英国</option><option>日本</option><option>韩国</option>
@@ -33,7 +32,7 @@
         </select>
       </label>
       <label>职业
-        <select id="gateJob">
+        <select id="gateJob" required>
           <option value="">请选择</option>
           <option>中医师</option><option>中药师</option><option>西医师</option><option>医学生</option><option>药学</option>
           <option>古籍整理</option><option>文史研究</option><option>患者或家属</option><option>软件开发</option><option>其他</option>
@@ -57,19 +56,20 @@
         </div>
       </fieldset>
       <label>通过什么方式找到这个网站
-        <select id="gateFound">
+        <select id="gateFound" required>
           <option value="">请选择</option>
           <option>搜索引擎</option><option>GitHub</option><option>微信</option><option>朋友介绍</option>
           <option>新闻报道</option><option>小红书</option><option>微博</option><option>其他</option>
         </select>
       </label>
+      <p id="gateStatus" class="board-status" role="status"></p>
       <div class="row">
         <button type="button" id="gateLogin" class="ghost">登录</button>
-        <button type="button" id="gateRegister">注册</button>
+        <button type="submit" id="gateRegister">注册</button>
       </div>
-    </section>
+    </form>
     <p class="board-note"><a href="https://github.com/mason0510/yuan-shufang-formulas/issues/" target="_blank" rel="noopener">反馈问题</a></p>
   </div>
-  <script src="open-medical.js?v=2"></script>
+  <script src="open-medical.js?v=3"></script>
 </body>
 </html>

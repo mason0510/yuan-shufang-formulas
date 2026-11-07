@@ -984,6 +984,9 @@ bootstrap().catch((err) => {
       const node = document.getElementById(id);
       if (node) node.hidden = !extra;
     });
+    document.getElementById('authCountry').required = extra;
+    document.getElementById('authJob').required = extra;
+    document.getElementById('authFound').required = extra;
     document.getElementById('authPassword').autocomplete = extra ? 'new-password' : 'current-password';
     show('');
     dialog.showModal();
@@ -1026,7 +1029,8 @@ bootstrap().catch((err) => {
         const occupation = document.getElementById('authJob').value;
         const foundVia = document.getElementById('authFound').value;
         if (!country || !occupation || !interests.length || !foundVia) {
-          show('请选择国籍、职业、感兴趣的方向，以及你是怎么找到这里的');
+          show('请再选至少一项感兴趣的方向');
+          status.scrollIntoView({ block: 'nearest' });
           return;
         }
         data = await call('/v1/auth/register', {

@@ -59,13 +59,18 @@
       return { country, occupation, interests: picked, found_via };
     }
 
-    document.getElementById('gateRegister').addEventListener('click', async () => {
+    document.getElementById('gate').addEventListener('submit', async (e) => {
+      e.preventDefault();
       gateStatus.textContent = '';
       const profile = profileBody();
+      const button = document.getElementById('gateRegister');
       if (!profile) {
-        gateStatus.textContent = '请选择国籍、职业、感兴趣的方向，以及你是怎么找到这里的';
+        gateStatus.textContent = '请再选至少一项感兴趣的方向';
+        gateStatus.scrollIntoView({ block: 'nearest' });
         return;
       }
+      button.disabled = true;
+      button.textContent = '注册中…';
       try {
         const token = localStorage.getItem(TOKEN) || '';
         if (token) {
@@ -83,6 +88,9 @@
         goGive();
       } catch (err) {
         gateStatus.textContent = err && err.message ? err.message : '没有写成';
+        gateStatus.scrollIntoView({ block: 'nearest' });
+        button.disabled = false;
+        button.textContent = localStorage.getItem(TOKEN) ? '保存资料' : '注册';
       }
     });
 
