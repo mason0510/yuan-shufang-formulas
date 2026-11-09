@@ -47,37 +47,11 @@ body:has(> .mission) {
   height: 100vh;
   overflow: hidden;
 }
-body:has(> .mission) .stage {
-  flex: 1 1 auto;
-  min-height: 0;
-  width: 100%;
-}
-.stage {
-  display: grid;
-  grid-template-columns: 200px minmax(0, 1fr) 200px;
-  min-height: 0;
-}
-.edge-ad {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 8px;
-  padding: 20px 14px;
-  background: #fff8ee;
-  color: var(--ink);
-  text-decoration: none;
-  border-right: 1px solid var(--accent);
-  overflow: auto;
-}
-.edge-ad.edge-right { border-right: none; border-left: 1px solid var(--accent); }
-.edge-ad strong { color: var(--accent); font-size: 1.15rem; }
-.edge-ad span:last-child { font-size: 0.9rem; line-height: 1.5; }
 body:has(> .mission) .shell {
-  height: 100%;
+  flex: 1 1 auto;
+  height: auto;
   min-height: 0;
   width: 100%;
-  max-width: none;
-  margin: 0;
 }
 body:has(> .mission) .main {
   height: auto;
@@ -85,10 +59,10 @@ body:has(> .mission) .main {
 }
 .shell {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr) 220px;
-  height: 100%;
-  max-width: none;
-  margin: 0;
+  grid-template-columns: 240px minmax(0, 1fr) 240px;
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .rail {
   background: var(--rail);
@@ -517,15 +491,6 @@ input, select {
     display: block;
     height: auto;
     overflow: visible;
-  }
-  .stage {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-  .edge-ad, .edge-ad.edge-right {
-    border: none;
-    border-bottom: 1px solid var(--accent);
   }
   .shell {
     display: flex;
