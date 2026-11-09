@@ -744,6 +744,7 @@ name = "yuan-shufang-cors"
 version = "0.1.0"
 dependencies = [
  "console_error_panic_hook",
+ "serde_json",
  "worker",
  "worker-macros",
 ]

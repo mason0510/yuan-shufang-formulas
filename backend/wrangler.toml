@@ -8,6 +8,8 @@ command = "worker-build --release"
 
 [vars]
 DEFAULT_UPSTREAM = "https://ca.chainfuel.tap365.org"
+# 库外方剂密钥不要写在这里。开通后执行：
+#   wrangler secret put BCPM_API_KEY
 
 [[kv_namespaces]]
 binding = "SUPPORT"
