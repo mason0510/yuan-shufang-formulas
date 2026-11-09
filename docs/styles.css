@@ -19,6 +19,37 @@ body {
   color: var(--ink);
   min-height: 100vh;
 }
+.mission {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 11px 16px;
+  background: var(--accent);
+  color: #fffdf8;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+.mission:hover { background: #6e3610; }
+body:has(> .mission) {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+body:has(> .mission) .shell {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+  width: 100%;
+}
+body:has(> .mission) .main {
+  height: auto;
+  flex: 1;
+}
 .shell {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr) 240px;
@@ -428,6 +459,11 @@ input, select {
 }
 
 @media (max-width: 800px), (max-height: 540px) {
+  body:has(> .mission) {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
   .shell {
     display: flex;
     flex-direction: column;
