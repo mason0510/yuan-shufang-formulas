@@ -10,6 +10,14 @@
 
 河南西平县芦庙乡盘龙桥村老中医**袁淑芳**（行医八十余年）遗愿：将毕生精要验方刻于墓碑，供后人借鉴。
 
+## 初心
+
+袁淑芳把验方刻上墓碑，是要留给后来的人，不是锁在家里。我们接着做这件事：把碑方和各方交来的古方开源。开源属于全人类。
+
+## 号召
+
+请把你手头的方剂、出处和线索交到 [open-medical](https://mason0510.github.io/yuan-shufang-formulas/open-medical.html)。目标是做成世界最大的中医古方库，收录倪海厦等名医的方剂资料。交来的内容单独入库，不自动写进这 120 首墓碑验方。
+
 本仓库据墓碑照片誊录 + 公开电子版互校，整理为可检索、可程序化调用的开源验方数据，并附带可直接启动的开方智能体说明。
 
 > **重要**：仅供专业辨证学习参考，**不可自行照方抓药**。家属强调碑方只是参考框架，须按体质加减。穿山甲等管控/禁用野生药材须换合法代用品并注明非原方。
@@ -66,6 +74,8 @@ jq '.formulas[] | select(.ind | contains("痛经"))' data/formulas.json
 启用仓库 Pages（Source: Deploy from branch → `/docs`）。
 
 在线地址形如：`https://mason0510.github.io/yuan-shufang-formulas/`
+
+页面、Worker 和登录库怎么部署，见 [docs/DEPLOY.md](docs/DEPLOY.md)。
 
 ## Star History
 

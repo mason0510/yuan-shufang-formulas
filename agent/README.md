@@ -18,6 +18,13 @@ export SYSTEM_PROMPT="$(cat agent/SYSTEM.md)"
 # 再调用你常用的 CLI / SDK，把 SYSTEM_PROMPT 当作 system
 ```
 
+## 库外方剂
+
+碑方对不上时，网页会先请求 `POST /v1/formulas/external`（摩熵数科中医药方剂，约 10 万首）。密钥只放 Worker secret `BCPM_API_KEY`，不进浏览器。未接通或检索为空时，仍然不准编药名和克数。
+
+开通：<https://open.bcpmdata.com/api/163.html>  
+写入：`cd backend && npx wrangler secret put BCPM_API_KEY`
+
 ## 最小问诊字段
 
 - 年龄、性别、主诉与病程
