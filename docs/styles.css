@@ -81,6 +81,27 @@ body:has(> .mission) .main {
   letter-spacing: 0.18em;
   font-size: 0.95rem;
 }
+.ad-slot {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  background: #fff8ee;
+}
+.ad-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+.ad-slot a {
+  display: grid;
+  gap: 4px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.ad-slot strong { color: var(--accent); font-size: 1rem; }
+.ad-slot span { font-size: 0.82rem; line-height: 1.45; }
 .rail h2 { margin: 8px 0 0; font-size: 1rem; }
 .rail-note { margin: 0; color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
 .orig-list { display: grid; gap: 8px; margin-top: 8px; }
