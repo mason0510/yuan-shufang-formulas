@@ -52,6 +52,8 @@ body:has(> .mission) .shell {
   height: auto;
   min-height: 0;
   width: 100%;
+  max-width: none;
+  margin: 0;
 }
 body:has(> .mission) .main {
   height: auto;
@@ -61,11 +63,9 @@ body:has(> .mission) .main {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr) 240px;
   height: 100vh;
-  max-width: 1280px;
-  margin: 0 auto;
-  align-items: start;
+  max-width: none;
+  margin: 0;
 }
-.main { align-self: stretch; }
 .rail {
   background: var(--rail);
   border-right: 1px solid var(--line);
