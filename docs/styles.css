@@ -34,6 +34,13 @@ body {
   line-height: 1.4;
 }
 .mission:hover { background: #6e3610; }
+.mission-title, .mission-sub { display: block; }
+.mission-sub {
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
 body:has(> .mission) {
   display: flex;
   flex-direction: column;
