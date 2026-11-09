@@ -63,7 +63,9 @@ body:has(> .mission) .main {
   height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
+  align-items: start;
 }
+.main { align-self: stretch; }
 .rail {
   background: var(--rail);
   border-right: 1px solid var(--line);
@@ -131,7 +133,7 @@ body:has(> .mission) .main {
 }
 .orig-list button:hover { border-color: var(--accent); }
 .rail-foot {
-  margin-top: auto;
+  margin-top: 8px;
   color: var(--danger);
   font-size: 0.78rem;
   line-height: 1.45;
