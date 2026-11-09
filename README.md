@@ -1,8 +1,8 @@
-赞助商：[ChainFuel](https://chainfuel.tap365.org/)
+## 赞助商：[ChainFuel](https://chainfuel.tap365.org/)
 
-ChainFuel 提供稳定、低价的大模型接口。在现有工具里填一把密钥和 Base URL，按 OpenAI 兼容方式调用 GPT、Claude、Grok、Gemini、GLM、Kimi、DeepSeek。别家要分别注册、分别买钥匙；这里一把钥匙走这些模型。
+**ChainFuel 提供稳定、低价的大模型接口。** 在现有工具里填一把密钥和 Base URL，按 OpenAI 兼容方式调用 GPT、Claude、Grok、Gemini、GLM、Kimi、DeepSeek。
 
-注册福利：余额 2 刀 + 5 刀订阅体验。现在邀请新用户购买，赠送一个月订阅套餐。
+**注册福利：余额 2 刀 + 5 刀订阅体验。现在邀请新用户购买，赠送一个月订阅套餐。**
 
 # 袁淑芳墓碑验方库
 
