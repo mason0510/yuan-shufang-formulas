@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="760" viewBox="0 0 520 760">
+  <rect width="520" height="760" rx="28" fill="#f4f4f4"/>
+  <text x="36" y="48" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="22" fill="#8d8d8d">我们现在</text>
+
+  <rect x="36" y="88" width="200" height="52" rx="12" fill="#ffffff"/>
+  <text x="136" y="120" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="17" fill="#333333">120 首方剂全文</text>
+
+  <rect x="284" y="88" width="200" height="52" rx="12" fill="#ffffff"/>
+  <text x="384" y="120" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="17" fill="#333333">用户原话</text>
+
+  <line x1="136" y1="140" x2="136" y2="176" stroke="#9a9a9a" stroke-width="1.6"/>
+  <polygon points="130,176 142,176 136,186" fill="#9a9a9a"/>
+  <line x1="384" y1="140" x2="384" y2="176" stroke="#9a9a9a" stroke-width="1.6"/>
+  <polygon points="378,176 390,176 384,186" fill="#9a9a9a"/>
+
+  <rect x="24" y="190" width="224" height="64" rx="12" fill="#ffffff"/>
+  <text x="136" y="218" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="16" fill="#333333">整篇注入</text>
+  <text x="136" y="240" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="16" fill="#333333">系统提示词</text>
+
+  <rect x="272" y="190" width="224" height="64" rx="12" fill="#ffffff"/>
+  <text x="384" y="218" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="16" fill="#333333">只看字面</text>
+  <text x="384" y="240" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="16" fill="#333333">是否包含</text>
+
+  <line x1="330" y1="254" x2="250" y2="318" stroke="#9a9a9a" stroke-width="1.6"/>
+  <polygon points="246,312 258,324 254,308" fill="#9a9a9a"/>
+  <text x="268" y="292" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="14" fill="#8d8d8d">包含</text>
+
+  <line x1="438" y1="254" x2="430" y2="318" stroke="#9a9a9a" stroke-width="1.6"/>
+  <polygon points="424,312 438,324 432,308" fill="#9a9a9a"/>
+  <text x="444" y="292" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="14" fill="#8d8d8d">不包含</text>
+
+  <rect x="150" y="328" width="180" height="58" rx="12" fill="#ffffff"/>
+  <text x="240" y="362" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="16" fill="#333333">不查库外</text>
+
+  <rect x="340" y="328" width="164" height="58" rx="12" fill="#ffffff"/>
+  <text x="422" y="354" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="15" fill="#333333">摩熵几条</text>
+  <text x="422" y="374" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="15" fill="#333333">接到消息后</text>
+
+  <line x1="136" y1="254" x2="136" y2="470" stroke="#9a9a9a" stroke-width="1.6"/>
+  <line x1="240" y1="386" x2="240" y2="470" stroke="#9a9a9a" stroke-width="1.6"/>
+  <line x1="422" y1="386" x2="422" y2="470" stroke="#9a9a9a" stroke-width="1.6"/>
+  <line x1="136" y1="470" x2="422" y2="470" stroke="#9a9a9a" stroke-width="1.6"/>
+  <line x1="260" y1="470" x2="260" y2="508" stroke="#9a9a9a" stroke-width="1.6"/>
+  <polygon points="254,508 266,508 260,518" fill="#9a9a9a"/>
+
+  <rect x="70" y="522" width="380" height="64" rx="12" fill="#ffffff"/>
+  <text x="260" y="550" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="17" fill="#333333">模型仍看着全部 120 首</text>
+  <text x="260" y="572" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="16" fill="#333333">自己选 1～2 首，并写加减克数</text>
+
+  <text x="36" y="680" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="15" fill="#8d8d8d">没有切块，没有索引，没有证据判断。</text>
+  <text x="36" y="708" font-family="PingFang SC, Hiragino Sans GB, sans-serif" font-size="15" fill="#8d8d8d">只允许这 120 首。再多就离开这一列。</text>
+</svg>
