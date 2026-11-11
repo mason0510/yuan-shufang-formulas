@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "竹茹"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "v1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"科达\"竹茹浓缩细粒\nZHU RU EXTRACT GRANULA SUBTILAE \"KO DA\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n竹茹 (7 g)\n以上生药制成浸膏0.35g(生药与浸膏比例7：0.35＝20：1) ( )\n淀粉 (0.64 g)\n羧甲基纤维素钠 (0.01 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热、除烦、化痰、止呕。",
+          "related_organisms_count": 2,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "hlYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"毵田\"竹茹(姜)粉末\nZhu Ru (Jiang) Powder \"PT\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "竹茹(姜) ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "qlYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"天明\" 温胆汤浓缩细粒\n\"TIMING\"WEN TAN TANG GRANULA SUBTILAE",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每7.5公克中含有：\n半夏 (5 g)\n竹茹 (5 g)\n枳实 (5 g)\n陈皮 (7.5 g)\n生姜 (5 g)\n甘草 (2.5 g)\n茯苓 (4 g)\n大枣 (1 g)\n以上生药制成浸膏3.8g(生药与浸膏比例35:3.8=9.21:1) ( )\n玉米淀粉 (3.7 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胆虚不眠、痰热上扰、虚烦惊悸、口苦呕涎。温胆和胃、除痰止呕。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "8FYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"天明\"竹茹浓缩细粒\n\"TIMING\"JHU RU CONCENTRATED GRANULES",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有:\n竹茹 (2.5 g)\n以上生药制成浸膏0.35g(生药与浸膏比例2.5:0.35=7.14:1) ( )\n淀粉 (0.45 g)\n糊精 (0.20 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热、除烦、化痰、止呕。",
+          "related_organisms_count": 2,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "UlcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"仙丰\"橘皮竹茹汤浓缩散\nJYU PYI JWU RU TANG EXTRACT PULVERES \"SHENG FOONG\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n赤茯苓 (3 g)\n陈皮 (3 g)\n枇杷叶 (3 g)\n麦门冬 (3 g)\n竹茹 (3 g)\n半夏 (3 g)\n人参 (1.5 g)\n甘草 (1.5 g)\n生姜 (3 g)\n大枣 (2 g)\n以上生药制成浸膏5g(生药与浸膏比例26：5＝5.2：1) ( )\n淀粉 (4 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胃热多渴、呕哕不食。理气消热、和中降逆。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "8VYNtJMBspugNIZg7Fvk",
+          "recipe_name": "2号养胃汤",
+          "recipe_reference": "封菊秋方",
+          "recipe_class": "",
+          "recipe_composition": "姜夏15克；枳实15克；陈皮15克；茯苓20克；竹茹20克；生姜20克；甘草10克；红人参15克",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "健脾和胃，益气养阴。主治脾胃气虚，元气不足。（乳腺癌化疗反应）",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-VYNtJMBspugNIZg7Fvk",
+          "recipe_name": "阿胶地黄汤",
+          "recipe_reference": "《太平圣惠方》卷三十七",
+          "recipe_class": "",
+          "recipe_composition": "生干地黄120克；阿胶60克（捣碎；炒令黄燥）；蒲黄60克",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "热伤肺脏，唾血不止。",
+          "related_organisms_count": 4,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "-lYNtJMBspugNIZg7Fvk",
+          "recipe_name": "阿胶地黄汤",
+          "recipe_reference": "方出《圣惠》卷三十七，名见《普济方》卷一九O",
+          "recipe_class": "",
+          "recipe_composition": "生干地黄四两；阿胶二两（捣碎，炒令黄燥）；蒲黄二两",
+          "recipe_preparation": "上为散。",
+          "function": "",
+          "indications": "热伤肺脏，唾血不止。",
+          "related_organisms_count": 4,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "flcYtJMBspugNIZge5Dp",
+          "recipe_name": "阿胶汤",
+          "recipe_reference": "《圣济总录》卷一五四。",
+          "recipe_class": "",
+          "recipe_composition": "阿胶（炙燥）1两，生姜（切，炒干）3分，芎半两，续断半两，侧柏3分，当归（切，焙）3分，桑寄生3分，艾叶3分，竹茹鸡子大1团。",
+          "recipe_preparation": "",
+          "function": "胎动不安",
+          "indications": "妊娠胎动腹痛，下血晕闷。",
+          "related_organisms_count": 18,
+          "classical_recipe": "",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "WVYStJMBspugNIZgwfWy",
+          "recipe_name": "安神温胆丸",
+          "recipe_reference": "卫生部药品标准中药成方制剂 第四册",
+          "recipe_class": "安神方",
+          "recipe_composition": "制半夏125g，陈皮125g，竹茹75g，酸枣仁（炒）50g，枳实75g，远志（制50g，五味子50g，人参50g，熟地黄50g，茯苓125g，朱砂25g，甘草50g，大枣50g",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "和胃化痰，安神定志。用于心胆虚怯，触事易惊，心悸不安，虚烦不寐。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 632
+    },
+    "message": ""
+  }
+}

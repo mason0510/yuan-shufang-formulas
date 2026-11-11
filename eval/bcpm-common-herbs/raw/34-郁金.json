@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "郁金"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "klYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"台马\"郁金粉末\nYu Jin Powder \"TM\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "郁金 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "CFcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"天一\"郁金浓缩颗粒\nTU CHIN EXTRACT GRANULES \"TI\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有:\n郁金 (5.0 g)\n以上生药制成浸膏 0.5g(生药与浸膏比例 5:0.5=10:1) ( )\n淀粉 (0.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "利胆、健胃。",
+          "related_organisms_count": 2,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ClcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"铁鹤牌\"大力练功散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n白朮 (67 mg)\n茯苓 (67 mg)\n当归 (67 mg)\n白芍 (67 mg)\n枳壳 (67 mg)\n泽兰 (67 mg)\n桔梗 (67 mg)\n郁金 (67 mg)\n骨碎补 (67 mg)\n百合 (66 mg)\n香附 (92 mg)\n川贝母 (53 mg)\n黑栀 (53 mg)\n牡丹皮 (53 mg)\n柴胡 (53 mg)\n薄荷 (27 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "打扑伤引起之胸部疼痛、祛伤解郁。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "CVcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"铁鹤牌\"大力练功散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n白朮 (67 g)\n茯苓 (67 g)\n当归 (67 g)\n白芍 (67 g)\n枳壳 (67 g)\n泽兰 (67 g)\n桔梗 (67 g)\n郁金 (67 g)\n骨碎补 (67 g)\n百合 (66 g)\n香附 (92 g)\n川贝母 (53 g)\n黑栀 (53 g)\n牡丹皮 (53 g)\n柴胡 (53 g)\n薄荷 (27 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "打扑伤引起之胸部疼痛、袪伤解郁。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "51cbtJMBspugNIZgruHC",
+          "recipe_name": "阿伽陀药",
+          "recipe_reference": "《千金翼》卷二十一。",
+          "recipe_class": "",
+          "recipe_composition": "紫檀5两，小柏5两，茜根5两，郁金5两，胡椒5两。",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "诸种病。先吐血，后嗽血。",
+          "related_organisms_count": 16,
+          "classical_recipe": "",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "FVcXtJMBspugNIZgmHn6",
+          "recipe_name": "安宫降压丸",
+          "recipe_reference": "中国药典 一部（2020年版）",
+          "recipe_class": "清热方",
+          "recipe_composition": "郁金100g，黄连100g，栀子100g，黄芩80g，天麻20g，珍珠母50g，黄芪80g，白芍80g，党参150g，麦冬80g，醋五味子40g，川芎80g，人工牛黄100g，水牛角浓缩粉100g，冰片25g",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热镇惊，平肝潜阳。用于肝阳上亢、肝火上炎所致的眩晕，症见头晕、目眩、心烦、目赤、口苦、耳鸣耳聋；高血压病见上述证候者。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "oVYStJMBspugNIZg3Pje",
+          "recipe_name": "安宫牛黄胶囊",
+          "recipe_reference": "新药转正标准 第17册",
+          "recipe_class": "开窍方",
+          "recipe_composition": "本品为牛黄，水牛角浓缩粉，麝香，珍珠，黄连，黄芩，郁金，冰片等药味经加工制成的胶囊",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热解毒，镇惊，开窍。用于热病高热烦躁，神昏谵语。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "WlYStJMBspugNIZgr_Pi",
+          "recipe_name": "安宫牛黄片",
+          "recipe_reference": "卫生部药品标准中药成方制剂 第十四册",
+          "recipe_class": "开窍方",
+          "recipe_composition": "人工牛黄30g，水牛角浓缩粉60g，麝香7.5g，珍珠（制）15g，朱砂（水飞）30g，雄黄（水飞）30g，黄连30g，黄芩30g，栀子30g，郁金30g，冰片7.5g",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热解毒，镇惊开窍。用于热病，邪入心包，高热惊厥，神昏谵语。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FlcXtJMBspugNIZgmHn6",
+          "recipe_name": "安宫牛黄散",
+          "recipe_reference": "中国药典 一部（2020年版）",
+          "recipe_class": "开窍方",
+          "recipe_composition": "牛黄100g，水牛角浓缩粉200g，人工麝香25g，珍珠50g，朱砂100g，雄黄100g，黄连100g，黄芩100g，栀子100g，郁金100g，冰片25g",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热解毒，镇惊开窍。用于热病，邪入心包，高热惊厥，神昏谵语；中风昏迷及脑炎、脑膜炎、中毒性脑病、脑出血、败血症见上述证候者。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "KVYStJMBspugNIZg6PrF",
+          "recipe_name": "安宫牛黄栓",
+          "recipe_reference": "新药转正标准 第51册",
+          "recipe_class": "开窍方",
+          "recipe_composition": "人工牛黄，麝香，珍珠，朱砂，雄黄，黄连，黄芩，栀子，郁金，冰片，水牛角浓缩粉",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热解毒，镇惊开窍。用于热病，邪入心包，高热惊厥，神昏谵语。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 1152
+    },
+    "message": ""
+  }
+}

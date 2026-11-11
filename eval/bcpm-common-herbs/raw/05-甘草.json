@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "甘草"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "3lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"安生\"加减玉泉散\nYeu-Cheng Powder \"An Shing\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有:\n天花粉 (140 mg)\n葛根 (120 mg)\n麦门冬 (90 mg)\n人参 (120 mg)\n茯苓 (90 mg)\n黄芩 (100 mg)\n甘草 (90 mg)\n黄耆 (100 mg)\n准山药 (100 mg)\n黄莲 (50 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "4FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"安生\"清脑丸(孔圣枕中丹加味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n人参 (20 mg)\n远志 (35 mg)\n龙骨 (40 mg)\n酸枣仁 (30 mg)\n茯神 (40 mg)\n生地黄 (35 mg)\n节菖蒲 (20 mg)\n麦门冬 (40 mg)\n龟板 (30 mg)\n莲心 (20 mg)\n甘草 (20 mg)\n川芎 (20 mg)\n蜂蜜 (150 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "心神不安、精神恍惚、思虑劳神、失眠。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "2FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"人参安脑丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（500mg）中含有：\n人参 (34 mg)\n败龟板 (34 mg)\n龙骨 (34 mg)\n茯神 (34 mg)\n枣仁 (34 mg)\n麦冬 (34 mg)\n远志 (28 mg)\n生地 (28 mg)\n节菖蒲 (17 mg)\n莲心 (17 mg)\n甘草 (17 mg)\n川芎 (17 mg)\n蜂蜜 (172 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "思虑劳神、心神不宁、精神恍惚、健脑、失眠。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "21YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"治肝保胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n柴胡 (84.0 mg)\n知母 (41.5 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n0号胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "6VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"天王补心散(去朱砂)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n生地黄 (55.55 mg)\n人参 (55.55 mg)\n茯苓 (55.55 mg)\n石菖蒲 (55.55 mg)\n玄参 (55.55 mg)\n柏子仁 (55.55 mg)\n桔梗 (55.55 mg)\n天门冬 (55.55 mg)\n远志 (55.55 mg)\n丹参 (55.55 mg)\n酸枣仁 (55.55 mg)\n甘草 (55.55 mg)\n麦门冬 (55.55 mg)\n百部 (55.55 mg)\n杜仲 (55.55 mg)\n茯神 (55.55 mg)\n当归 (55.55 mg)\n五味子 (55.65 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "思虑过度、神志不宁、咽干口燥、健忘怔忡、口舌生疮。宁心、化痰涎、祛烦热。",
+          "related_organisms_count": 18,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"得力\"顾立肝胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n知母 (41.5 mg)\n柴胡 (84.0 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n０号透明胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "81YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"甘麦大枣汤浓缩细粒\nGan-Mai-Da-Tzau-Tang  conc.  shi li\"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每4.5公克中含有：\n甘草 (6 g)\n小麦 (12 g)\n大枣 (6 g)\n以上生药制成浸膏3g(生药与浸膏比例24:3=8:1) ( )\n淀粉 (1.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人脏燥，善悲欲泣，小儿夜啼，不眠。安心养神，和中缓急。",
+          "related_organisms_count": 4,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "91YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6.0公克中含有：\n苍朮 (3.6 g)\n厚朴 (2.4 g)\n砂仁 (2.4 g)\n山楂 (2.4 g)\n麦芽 (2.4 g)\n白芍 (2.4 g)\n陈皮 (2.4 g)\n香附 (2.4 g)\n神曲 (2.4 g)\n枳壳 (2.4 g)\n生姜 (1.2 g)\n甘草 (1.2 g)\n以上生药制成浸膏3.0g（生药与浸膏比例27.6:3.0=9.2:1） ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "嗳气吞酸、恶心、食欲不振、消化不良、健胃。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "9lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有:\n当归 (1.5 g)\n赤芍 (1.5 g)\n黄芩 (1.5 g)\n连翘 (1.5 g)\n川芎 (1.5 g)\n生地黄 (1.5 g)\n山栀子 (1.5 g)\n防风 (1.5 g)\n荆芥 (1.5 g)\n羌活 (1.5 g)\n决明子 (1.5 g)\n薄荷 (1.5 g)\n蔓荆子 (1.5 g)\n菊花 (1.5 g)\n黄连 (1.5 g)\n蒺藜 (1.5 g)\n桔梗 (1.5 g)\n甘草 (1.5 g)\n石膏 (1.5 g)\n以上生药制成浸膏4.8g(生药与浸膏比例28.5:4.8=5.9:1) ( )\n淀粉 (4.2 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热祛风、目赤肿痛。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"得生\"筋畅喷剂\nBICEPS Spray \"T.S\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每1毫升中含有：\n防风 (1.1 mg)\n蕲艾 (1.1 mg)\n牡丹皮 (1.1 mg)\n鹤虱 (1.1 mg)\n升麻 (1.1 mg)\n苦参 (2.2 mg)\n铁线透骨草 (2.2 mg)\n赤芍 (2.2 mg)\n川椒 (1.1 mg)\n甘草 (1.1 mg)\n金不换 (1.1 mg)\n川七 (1.1 mg)\n薄荷脑 (78.1 mg)\n冬绿油 (30.2 mg)\n酒精加至1ml ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "筋肉疼痛、蚊虫咬伤、消肿止痒。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 38483
+    },
+    "message": ""
+  }
+}

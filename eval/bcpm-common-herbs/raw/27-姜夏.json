@@ -1,0 +1,109 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "姜夏"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "8VYNtJMBspugNIZg7Fvk",
+          "recipe_name": "2号养胃汤",
+          "recipe_reference": "封菊秋方",
+          "recipe_class": "",
+          "recipe_composition": "姜夏15克；枳实15克；陈皮15克；茯苓20克；竹茹20克；生姜20克；甘草10克；红人参15克",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "健脾和胃，益气养阴。主治脾胃气虚，元气不足。（乳腺癌化疗反应）",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "MlYOtJMBspugNIZgRGhW",
+          "recipe_name": "保赤丹",
+          "recipe_reference": "《全国中药成药处方集》（沈阳方）",
+          "recipe_class": "",
+          "recipe_composition": "柴胡一两；粉葛一两；槟榔二两；紫朴一两；姜夏三钱；广皮五钱；姜连三钱；杭芍一两；木香三钱；车前一两；薏米三两；桔梗五钱；黄芩三钱；苍术五钱；赤苓三钱；神曲五钱；麦芽五钱；焦楂五钱；益元散一两半",
+          "recipe_preparation": "上为极细末，炼蜜为丸，每丸二钱重。",
+          "function": "清瘟解热，健胃消食。",
+          "indications": "小儿四时感冒，头痛发热，伤食伤水，泄泻痢疾，食积痞块，各种疳疾，呕吐腹满，食滞咳嗽，腹痛胀闷，肌肉消瘦。",
+          "related_organisms_count": 21,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "Q1YPtJMBspugNIZgZovc",
+          "recipe_name": "调中消食汤",
+          "recipe_reference": "《镐京直指》",
+          "recipe_class": "",
+          "recipe_composition": "川朴一钱；姜夏三钱；广木香一钱；炒麦芽五钱；炒车前三钱；炒神曲三钱；炒枳壳二钱；砂仁八分（冲）；赤苓三钱",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泄泻脘闷，嗳腐吞酸，宿食不化。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "3FYQtJMBspugNIZgHKPZ",
+          "recipe_name": "寒热清脾饮",
+          "recipe_reference": "《镐京直指》",
+          "recipe_class": "",
+          "recipe_composition": "软柴胡一钱五；姜朴一钱；姜夏三钱；草果一钱五；黄芩一钱；赤苓三钱；灵仙一钱五；青皮一钱；老姜三片",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "疟疾。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "6lYRtJMBspugNIZgIMM3",
+          "recipe_name": "开郁顺气丸",
+          "recipe_reference": "《全国中药成药处方集》（沈阳方）",
+          "recipe_class": "",
+          "recipe_composition": "柴胡二两；青皮一两五钱；榔片一两；香附一两；木香五钱；枳壳五钱；酒芍五钱；山栀五钱；黄芩五钱；姜夏五钱；川芎五钱；神曲五钱；紫朴五钱；砂仁五钱；广皮五钱；苍术五钱；乌药五钱；茯苓五钱；盔沉五钱；当归五钱；甘草五钱；桔梗八钱；莱菔三钱",
+          "recipe_preparation": "上为极细末，炼蜜为丸，二钱重。",
+          "function": "开郁养血，消食顺气，和胃健脾。",
+          "indications": "胸膈胀满，两胁攻痛，饮食不消，胃脘胀痛，癥瘕痞块，肠痛肠肿，红白痢疾。",
+          "related_organisms_count": 21,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "vFYRtJMBspugNIZgcM6y",
+          "recipe_name": "茅术夏陈汤",
+          "recipe_reference": "《镐京直指医方》",
+          "recipe_class": "",
+          "recipe_composition": "制茅术三钱；姜夏二钱；白蛤壳五钱（煅）；川朴一钱；橘红一钱；生苡仁六钱；通草一钱半；白茯苓三钱；杏仁二钱；老姜三片",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "湿伤脾阳，咳嗽痰稀，舌白灰滑，脘闷呕恶。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "uFYRtJMBspugNIZgfc-H",
+          "recipe_name": "宁嗽丸",
+          "recipe_reference": "《饲鹤亭集方》",
+          "recipe_class": "",
+          "recipe_composition": "南沙参二两；桑叶二两；杏仁二两；茯苓二两；川贝二两；姜夏二两；前胡二两；薄荷二两；苏子一两五钱；橘红一两；米仁三两；炙草五钱",
+          "recipe_preparation": "上为末。",
+          "function": "清热润肺，止咳化痰，定喘。①《饲鹤亭集方》：止咳宁嗽，清热消痰。②《重订通俗伤寒论》：防变肺痿肺痨。③《药庵医学丛书》：润肺定嘣，降有余之邪火。",
+          "indications": "①《重订通俗伤寒论》：咳尤不止，痰中兼有血丝血珠者。②《鳞爪集》：邪留肺经，久嗽不宁。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        }
+      ],
+      "total": 7
+    },
+    "message": ""
+  }
+}

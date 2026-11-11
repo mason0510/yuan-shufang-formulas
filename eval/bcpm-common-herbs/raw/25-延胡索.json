@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "延胡索"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "GVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福禄寿三仙\"安中散浓缩细粒\nAN JONG SAAN NONG SUO SHIH LIH\"F.L.S.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n甘草 (6 g)\n廷胡索 (3 g)\n良姜 (3 g)\n干姜 (3 g)\n茴香 (3 g)\n肉桂 (3 g)\n牡蛎 (3 g)\n以上生药制成浸膏4.5g(生药与浸膏比例24:4.5=5.3:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾胃寒凝气滞、脘腹疼痛、口吐酸水、停积不消、胀满不适。温中散寒止痛。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "aFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(32mg)中含有：\n乌鸡 (17 mg)\n香附 (4.3 mg)\n熟地黄 (1.1 mg)\n生地黄 (0.5 mg)\n当归 (0.5 mg)\n白芍 (0.5 mg)\n黄耆 (0.5 mg)\n牛膝 (0.5 mg)\n柴胡 (0.5 mg)\n牡丹皮 (0.5 mg)\n知母 (0.5 mg)\n川贝母 (0.5 mg)\n黄连 (0.3 mg)\n地骨皮 (0.3 mg)\n干姜 (0.3 mg)\n延胡索 (0.3 mg)\n茯苓 (1.0 mg)\n秦艽 (0.7 mg)\n艾叶 (1.1 mg)\n青蒿 (1.1 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人赢瘦、血虚有热、经水不调、崩漏带下。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "dVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"护民”月宝汤\nTueh Bao Tong“H.M.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包12.5公克中含有：\n当归 (2 g)\n白芍 (1.6 g)\n茯苓 (1.0 g)\n白朮 (0.8 g)\n泽泻 (0.5 g)\n川芎 (1.6 g)\n阿胶 (1.1 g)\n牡丹皮 (0.6 g)\n山药 (1.2 g)\n小茴香 (0.5 g)\n延胡索 (0.3 g)\n桃仁 (0.1 g)\n红花 (0.3 g)\n肉桂 (0.5 g)\n甘草 (0.4 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不顺、经来腹痛、经期头痛、赤白带下。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "qVYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"金牌一条根\"延胡索粉末\nCorydalidis Tuber Powder“J.P”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "延胡索 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "OlYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"农马\"延胡索(醋)粉末\nYan Hu Suo(Cu) Powder \"FH\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "延胡索(醋) ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "U1YTtJMBspugNIZgDv4J",
+          "recipe_name": "\"三才堂\"安中散浓缩细粒\n“S.T.T.”AN ZHONG SAN EXTRACT SUBTLY GRANULE",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每10公克中含有：\n甘草 (6.0 g)\n延胡索 (3.0 g)\n良姜 (3.0 g)\n干姜 (3.0 g)\n小茴香 (3.0 g)\n肉桂 (3.0 g)\n牡蛎 (3.0 g)\n以上生药制成浸膏5.0g(生药与浸膏比例24:5=4.8:1) ( )\n淀粉 (5.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾胃寒凝气滞、脘腹疼痛、口吐酸水、停积不消、胀满不适。温中散寒止痛。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "jVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"生春\" 延胡索散\nCORYDALIS RHIZOMA POWDER \"SHENG CHUN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "延胡索 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血、行气止痛",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "21YTtJMBspugNIZgGf8t",
+          "recipe_name": "\"天明\"舒缓胃肠散\n\"TIMING\" SHU HUAN WEI CHANG SAN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n桂枝 (211.0 mg)\n茯苓 (211.0 mg)\n延胡索 (168.8 mg)\n牡蛎 (168.8 mg)\n小茴香 (84.4 mg)\n甘草 (63.3 mg)\n缩砂 (63.3 mg)\n良姜 (29.4 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "慢性胃炎、神经性胃痛。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5FcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"长安\"延胡索粉末\nCorydalis Tuber Powder \"C.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "延胡索 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-lcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"忠山\"妇喜女宝丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每２４０丸（１５６公克）中含：\n香附 (7.5000 gm)\n白芍药 (7.5000 gm)\n生地黄 (7.5000 gm)\n延胡索 (7.5000 gm)\n菟丝子 (7.5000 gm)\n茯苓 (7.5000 gm)\n黄耆 (7.5000 gm)\n川芎 (5.7000 gm)\n白朮 (5.7000 gm)\n陈皮 (3.8000 gm)\n川杜仲 (5.7000 gm)\n当归身 (5.7000 gm)\n肉苁蓉 (5.7000 gm)\n小茴香 (3.8000 gm)\n旧青皮 (3.8000 gm)\n台乌药 (3.8000 gm)\n枯黄芩 (3.3000 gm)\n正冬蜜 (56.5000 gm)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不调、头晕目眩、月经困难、白带、经行腹痛、腰酸背痛、理气养血。",
+          "related_organisms_count": 18,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 1906
+    },
+    "message": ""
+  }
+}

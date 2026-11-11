@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "麦冬"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "3lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"安生\"加减玉泉散\nYeu-Cheng Powder \"An Shing\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有:\n天花粉 (140 mg)\n葛根 (120 mg)\n麦门冬 (90 mg)\n人参 (120 mg)\n茯苓 (90 mg)\n黄芩 (100 mg)\n甘草 (90 mg)\n黄耆 (100 mg)\n准山药 (100 mg)\n黄莲 (50 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "4FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"安生\"清脑丸(孔圣枕中丹加味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n人参 (20 mg)\n远志 (35 mg)\n龙骨 (40 mg)\n酸枣仁 (30 mg)\n茯神 (40 mg)\n生地黄 (35 mg)\n节菖蒲 (20 mg)\n麦门冬 (40 mg)\n龟板 (30 mg)\n莲心 (20 mg)\n甘草 (20 mg)\n川芎 (20 mg)\n蜂蜜 (150 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "心神不安、精神恍惚、思虑劳神、失眠。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "2FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"人参安脑丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（500mg）中含有：\n人参 (34 mg)\n败龟板 (34 mg)\n龙骨 (34 mg)\n茯神 (34 mg)\n枣仁 (34 mg)\n麦冬 (34 mg)\n远志 (28 mg)\n生地 (28 mg)\n节菖蒲 (17 mg)\n莲心 (17 mg)\n甘草 (17 mg)\n川芎 (17 mg)\n蜂蜜 (172 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "思虑劳神、心神不宁、精神恍惚、健脑、失眠。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "21YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"治肝保胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n柴胡 (84.0 mg)\n知母 (41.5 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n0号胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"保济堂天天乐\"丸(延龄固本丹)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n天门冬 (16 mg)\n麦门冬 (16 mg)\n生地黄 (16 mg)\n熟地黄 (16 mg)\n山药 (16 mg)\n怀牛膝 (16 mg)\n杜仲 (16 mg)\n巴戟天 (16 mg)\n五味子 (16 mg)\n枸杞子 (16 mg)\n山茱萸 (16 mg)\n茯苓 (16 mg)\n人参 (16 mg)\n木香 (16 mg)\n柏子仁 (16 mg)\n川椒 (8 mg)\n石菖蒲 (8 mg)\n远志 (8 mg)\n泽泻 (8 mg)\n肉苁蓉 (32 mg)\n覆盆子 (12 mg)\n车前子 (12 mg)\n菟丝子 (32 mg)\n地骨皮 (12 mg)\n蜂蜜 (128 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "诸虚百损、须发早白、腰脚酸软。补益脾肾、固本培元。",
+          "related_organisms_count": 25,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "6VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"天王补心散(去朱砂)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n生地黄 (55.55 mg)\n人参 (55.55 mg)\n茯苓 (55.55 mg)\n石菖蒲 (55.55 mg)\n玄参 (55.55 mg)\n柏子仁 (55.55 mg)\n桔梗 (55.55 mg)\n天门冬 (55.55 mg)\n远志 (55.55 mg)\n丹参 (55.55 mg)\n酸枣仁 (55.55 mg)\n甘草 (55.55 mg)\n麦门冬 (55.55 mg)\n百部 (55.55 mg)\n杜仲 (55.55 mg)\n茯神 (55.55 mg)\n当归 (55.55 mg)\n五味子 (55.65 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "思虑过度、神志不宁、咽干口燥、健忘怔忡、口舌生疮。宁心、化痰涎、祛烦热。",
+          "related_organisms_count": 18,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"得力\"得力不老丹丸\nTelibulaodan \"TeLi\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n生地黄 (30 mg)\n熟地黄 (30 mg)\n人参 (30 mg)\n天门冬 (30 mg)\n麦门冬 (30 mg)\n茯苓 (50 mg)\n地骨皮 (50 mg)\n何首乌 (80 mg)\n蜂蜜 (170 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "补气血、增强体力。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"得力\"顾立肝胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n知母 (41.5 mg)\n柴胡 (84.0 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n０号透明胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "9FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"生脉饮浓缩细粒\nSheng-Mo-Yin conc. shi li \"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每4.5公克中含有：\n人参 (6 g)\n麦门冬 (3.6 g)\n五味子 (2.4 g)\n以上生药制成浸膏2.25g(生药与浸膏比例12:2.25=5.3:1) ( )\n淀粉 (2.25 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "热伤元气　气短倦怠、口渴多汗、肺虚而欬。",
+          "related_organisms_count": 4,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-1YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n黄耆 (3.7 mg)\n当归 (3.7 mg)\n茯神 (1.8 mg)\n肉桂 (1.8 mg)\n白朮 (1.5 mg)\n防风 (1.8 mg)\n生地黄 (2.2 mg)\n龟版 (1.8 mg)\n麦门冬 (1.8 mg)\n陈皮 (1.8 mg)\n川芎 (1.8 mg)\n山萸肉 (1.8 mg)\n熟地黄 (1.8 mg)\n党参 (1.8 mg)\n茯苓 (1.8 mg)\n枸杞子 (1.8 mg)\n羌活 (1.5 mg)\n五味子 (1.5 mg)\n麦芽糖 (5.0 mg)\n22度原料酒加至 (1 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "追风定痛、强壮筋骨、筋脉孪急、风寒湿痹、气弱阳衰、神疲体倦。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 7553
+    },
+    "message": ""
+  }
+}

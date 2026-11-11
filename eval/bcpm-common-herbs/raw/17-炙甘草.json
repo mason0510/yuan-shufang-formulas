@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "炙甘草"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "RFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"炙甘草散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "炙甘草 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "补脾胃、润肺、清热、调和诸药",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "rFYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"晋安\"川芎茶调汤\nCHUAN CHIONG CHAR TIAO TANG \" C.A. \"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包(10.0g)中含有：\n川芎 (1.6 g)\n荆芥 (1.6 g)\n薄荷叶 (3.2 g)\n羌活 (0.8 g)\n白芷 (0.8 g)\n防风 (0.8 g)\n炙甘草 (0.4 g)\n细辛 (0.4 g)\n细茶末 (0.4 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "偏正头痛。祛风、止痛。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "vFYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"科达\"平胃散浓缩细粒\nPING WEI SAN EXTRACT GRANULA SUBTILAE \"KO DA\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每12公克中含有：\n陈皮 (5 g)\n厚朴 (5 g)\n炙甘草 (3 g)\n苍朮 (8 g)\n生姜 (3 g)\n大枣 (2 g)\n以上生药制成浸膏6g(生药与浸膏比例26:6=4.33:1) ( )\n淀粉 (4.68 g)\n结晶性纤维素 (1.20 g)\n羧甲基纤维素钠 (0.12 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "湿阻脾胃、脘腹胀满、恶心呕吐、噫气吞酸。燥湿健脾、理气和中。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "1FYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\" 芍药甘草汤浓缩锭\nSHAO YAO GAN CAO TANG EXTRACT TABLET \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n白芍 (450 mg)\n炙甘草 (450 mg)\n以上生药制成浸膏130mg(生药与浸膏比例900:130=6.92:1) ( )\n淀粉 (155 mg)\n羧甲基纤维素钙 (6 mg)\n硬脂酸镁 (3 mg)\n麦芽糊精 (6 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "腹中疼痛、腿脚挛急。缓急止痛。",
+          "related_organisms_count": 4,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "3FYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"补中益气汤浓缩锭\nPu Chung I Chi Tang Extract Tablets \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n黄耆 (250.67 mg)\n人参 (167.11 mg)\n白朮 (83.56 mg)\n炙甘草 (167.11 mg)\n当归 (83.56 mg)\n陈皮 (83.56 mg)\n升麻 (41.78 mg)\n柴胡 (41.78 mg)\n生姜 (125.33 mg)\n大枣 (83.56 mg)\n以上生药制成浸膏141mg(生药与浸膏比例1128.02:141=8.0:1) ( )\n淀粉 (100 mg)\n麦芽糊精 (59 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "劳倦、食少无味、脾胃虚弱、元气不足。补中益气、调补脾胃。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "3VYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"补中益气汤浓缩散\n\"LING SIAN\"PU CHUNG I CHI TANG EXTRACT POWDER",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6公克中含有：\n黄耆 (6.0 g)\n人参 (4.0 g)\n白朮 (2.0 g)\n炙甘草 (4.0 g)\n当归 (2.0 g)\n陈皮 (2.0 g)\n升麻 (1.0 g)\n柴胡 (1.0 g)\n生姜 (3.0 g)\n大枣 (2.0 g)\n以上生药制成浸膏3.4g（生药与浸膏比例27：3.4＝7.9：1） ( )\n玉米淀粉 (2.6 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "劳倦、食少无味、脾胃虚弱、元气不足。补中益气、调补脾胃。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "4lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"当归四逆汤浓缩细粒\nTANG KUEI SU NI TANG GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每7.5公克中含有：\n当归 (4.5 g)\n桂枝 (4.5 g)\n白芍 (4.5 g)\n细辛 (4.5 g)\n大枣 (6.0 g)\n炙甘草 (3.0 g)\n川木通 (3.0 g)\n以上生药制成浸膏3.75g(生药与浸膏比例30:3.75=8:1) ( )\n淀粉 (3.75 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "寒入厥阴，手足厥冷，脉微欲绝。温经散寒，养血通脉。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"甘露饮浓缩锭\nKan Lu Yin Extract Tablets \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n熟地黄 (55.44 mg)\n麦门冬 (55.44 mg)\n枳壳 (55.44 mg)\n炙甘草 (55.44 mg)\n茵陈蒿 (55.44 mg)\n枇杷叶 (55.44 mg)\n石斛 (55.44 mg)\n黄芩 (55.44 mg)\n生地黄 (55.44 mg)\n天门冬 (55.44 mg)\n以上生药制成浸膏144mg(生药与浸膏比例554.4:144=3.85:1) ( )\n淀粉 (100 mg)\n麦芽糊精 (56 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胃经湿热、口臭咽痛、口舌生疮、牙宣龈肿。滋阴、清湿热。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "51YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"桂枝汤浓缩锭\nKUEI CHIH TANG EXTRACT TABLET “LING SIAN”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有:\n桂枝 (192 mg)\n白芍 (192 mg)\n炙甘草 (128 mg)\n生姜 (192 mg)\n大枣 (160 mg)\n以上生药制成浸膏130mg(生药与浸膏比例864:130=6.65:1) ( )\n羧甲基纤维素钙 (6 mg)\n淀粉 (153 mg)\n硬脂酸镁 (3 mg)\n麦芽糊精 (8 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "外感风寒、发热头痛、汗出恶风、鼻鸣干呕。解肌发表、调和营卫。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "6VYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"加味逍遥散浓缩散\n\"LING SIAN\"CHIA WEI HSIAO YAO SAN EXTRACT POWDER",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6公克中含有:\n当归 (4.0 g)\n白朮 (4.0 g)\n白芍 (4.0 g)\n柴胡 (4.0 g)\n茯苓 (4.0 g)\n炙甘草 (2.0 g)\n牡丹皮 (2.5 g)\n山栀子 (2.5 g)\n煨姜 (4.0 g)\n薄荷 (2.0 g)\n以上生药制成浸膏3.4g(生药与浸膏比例33:3.4=9.7:1) ( )\n玉米淀粉 (2.6 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "肝郁血虚发热、月经不调、怔忡不宁。疏肝解郁、清热凉血。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 4053
+    },
+    "message": ""
+  }
+}

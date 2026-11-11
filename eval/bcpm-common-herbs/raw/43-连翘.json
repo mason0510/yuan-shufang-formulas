@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "连翘"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "9lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有:\n当归 (1.5 g)\n赤芍 (1.5 g)\n黄芩 (1.5 g)\n连翘 (1.5 g)\n川芎 (1.5 g)\n生地黄 (1.5 g)\n山栀子 (1.5 g)\n防风 (1.5 g)\n荆芥 (1.5 g)\n羌活 (1.5 g)\n决明子 (1.5 g)\n薄荷 (1.5 g)\n蔓荆子 (1.5 g)\n菊花 (1.5 g)\n黄连 (1.5 g)\n蒺藜 (1.5 g)\n桔梗 (1.5 g)\n甘草 (1.5 g)\n石膏 (1.5 g)\n以上生药制成浸膏4.8g(生药与浸膏比例28.5:4.8=5.9:1) ( )\n淀粉 (4.2 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热祛风、目赤肿痛。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"清痘解毒散(犀角解毒丸去犀角)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n大生地黄 (130 mg)\n防风 (101 mg)\n川黄连 (101 mg)\n当归 (101 mg)\n荆芥 (101 mg)\n连翘 (72 mg)\n赤芍 (72 mg)\n桔梗 (72 mg)\n大力子 (72 mg)\n黄芩 (72 mg)\n薄荷 (53 mg)\n甘草 (53 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "痘瘄后余毒未消、清热解毒、咽干舌燥。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "VVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"公道伯\"顺喉丸(响声破笛丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n连翘 (93.3 mg)\n桔梗 (70.0 mg)\n川芎 (93.3 mg)\n砂仁 (35.0 mg)\n诃子 (35.0 mg)\n儿茶 (70.0 mg)\n薄荷 (140.0 mg)\n大黄 (35.0 mg)\n甘草 (70.0 mg)\n蜂蜜 (357.0 mg)\n蜜蜡 (1.4 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "喉痛声哑、失音。清肺润喉。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ulYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"科达\"凉膈散浓缩细粒\nLIANG GE SAN EXTRACT GRANULA SUBTILAE \"KO DA\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每12公克中含有：\n大黄 (4 g)\n芒硝 (4 g)\n甘草 (4 g)\n连翘 (8 g)\n山栀子 (2 g)\n黄芩 (2 g)\n薄荷 (2 g)\n竹叶 (2 g)\n以上生药制成浸膏6g(生药与浸膏比例28:6=4.7:1) ( )\n淀粉 (4.56 g)\n糊精 (0.12 g)\n羧甲基纤维素钠 (0.12 g)\n结晶性纤维素 (1.20 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脏腑积热、烦躁多渴、口舌生疮、咽喉肿痛、便秘尿赤。清热解毒、泻火通便。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "AVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"领先\"银翘散浓缩锭\nYin Chiao San Tang Extract Tablets \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n连翘 (185.26 mg)\n金银花 (185.26 mg)\n桔梗 (111.15 mg)\n薄荷 (111.15 mg)\n淡竹叶 (74.10 mg)\n甘草 (92.63 mg)\n荆芥 (74.10 mg)\n淡豆豉 (92.63 mg)\n牛蒡子 (111.15 mg)\n芦根 (74.10 mg)\n以上生药制成浸膏149mg(生药与浸膏比例1111.53:149=7.46:1) ( )\n淀粉 (100 mg)\n麦芽糊精 (51 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "温病初起、发热微恶风寒、头痛口渴、咳嗽咽痛。辛凉透表、清热解毒。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "EVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"楼中亮\"美清舒体浓缩锭(防风通圣散)\nMEE CHING SHU TII CONC TAB \"L.J.L\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每(500mg)中含有：\n防风 (83.3 mg)\n荆芥 (83.3 mg)\n连翘 (83.3 mg)\n麻黄 (83.3 mg)\n薄荷 (83.3 mg)\n川芎 (83.3 mg)\n当归 (83.3 mg)\n白芍 (83.3 mg)\n白朮 (83.3 mg)\n山栀子 (83.3 mg)\n大黄 (83.3 mg)\n芒硝 (83.3 mg)\n黄芩 (166.6 mg)\n石膏 (166.6 mg)\n桔梗 (166.6 mg)\n甘草 (333.2 mg)\n滑石 (499.8 mg)\n生姜 (166.6 mg)\n白 (166.6 mg)\n以上生药制成浸膏370mg(生药与浸膏比例2665.6:370=7.2:1) ( )\n淀粉 (125.0 mg)\n滑石粉 (5 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "表里三焦俱实、大便秘结、小便短赤、疮疡肿毒。解表通里、疏风清热",
+          "related_organisms_count": 21,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "IVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"南美\"美研胶囊(凉血解毒丸)\n“N.M.”MEI YAN CAPSULE(LIANG SIE JIE DU WAN)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(600mg)中含有：\n苦参 (180 mg)\n连翘 (72 mg)\n生地黄 (60 mg)\n白芷 (36 mg)\n石膏 (24 mg)\n黄连 (96 mg)\n大黄 (60 mg)\n牛蒡子 (48 mg)\n防风 (24 mg)\n０号胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "凉血、解毒。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "IVYTtJMBspugNIZgDv8J",
+          "recipe_name": "\"顺天堂\"人参泻肺散\n\"Sun Ten\" Ren Shen Xie Fei San",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6公克中含有：\n人参 (0.8 g)\n桔梗 (0.8 g)\n黄芩 (0.8 g)\n连翘 (0.6 g)\n桑白皮 (0.6 g)\n山栀子 (0.4 g)\n枳壳 (0.4 g)\n薄荷 (0.4 g)\n甘草 (0.4 g)\n杏仁 (0.4 g)\n大黄 (0.4 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "化痰、止咳、镇喘、胸膈胀满。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "JFYTtJMBspugNIZgDv8J",
+          "recipe_name": "\"顺天堂\"银翘散浓缩颗粒\n“Sun Ten”Yin Qiao San Extract Granules",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每10.5公克中含有：\n金银花 (5.0 g)\n连翘 (5.0 g)\n薄荷 (3.0 g)\n桔梗 (3.0 g)\n牛蒡子 (3.0 g)\n淡豆豉 (2.5 g)\n甘草 (2.5 g)\n淡竹叶 (2.0 g)\n荆芥 (2.0 g)\n芦根 (2.0 g)\n以上生药制成浸膏5.25g(生药与浸膏比例30：5.25＝5.7：1) ( )\n乳糖 (3.5 g)\n麦芽糊精 (1.75 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "温病初起、发热微恶风寒、头痛口渴、咳嗽咽痛、用于风热感冒、发烧头痛。辛凉透表、清热解毒。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7FYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"天明\"洗肝明目汤浓缩细粒\n\"TIMING\"SI GAN MING MU TANG GRANULA SUBTILAE",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6.0公克中含有：\n当归 (1.2 g)\n白芍 (1.2 g)\n川芎 (1.2 g)\n生地黄 (1.2 g)\n黄芩 (1.2 g)\n栀子 (1.2 g)\n连翘 (1.2 g)\n防风 (1.2 g)\n决明子 (1.2 g)\n黄连 (1.2 g)\n荆芥 (1.2 g)\n薄荷 (1.2 g)\n羌活 (1.2 g)\n蔓荆子 (1.2 g)\n菊花 (1.2 g)\n桔梗 (1.2 g)\n刺蒺藜 (1.2 g)\n甘草 (1.2 g)\n石膏 (1.2 g)\n以上生药制成浸膏2.8g(生药与浸膏比例22.8:2.8=8.14:1) ( )\n淀粉 (2.2 g)\n糊精 (1.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热祛风。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 3668
+    },
+    "message": ""
+  }
+}

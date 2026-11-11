@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "干姜"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "GVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福禄寿三仙\"安中散浓缩细粒\nAN JONG SAAN NONG SUO SHIH LIH\"F.L.S.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n甘草 (6 g)\n廷胡索 (3 g)\n良姜 (3 g)\n干姜 (3 g)\n茴香 (3 g)\n肉桂 (3 g)\n牡蛎 (3 g)\n以上生药制成浸膏4.5g(生药与浸膏比例24:4.5=5.3:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾胃寒凝气滞、脘腹疼痛、口吐酸水、停积不消、胀满不适。温中散寒止痛。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "XlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"国安\"嗽王固肺散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n人参 (80 mg)\n甘草 (40 mg)\n地骨皮 (80 mg)\n茯苓 (80 mg)\n天门冬 (80 mg)\n黄芩 (80 mg)\n薄荷 (80 mg)\n青皮 (80 mg)\n陈皮 (80 mg)\n知母 (120 mg)\n桑白皮 (155.80 mg)\n五味子 (20 mg)\n干生姜 (20 mg)\n薄荷脑 (3 mg)\n冰片 (1.20 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清肺、止咳、化痰。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "aFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(32mg)中含有：\n乌鸡 (17 mg)\n香附 (4.3 mg)\n熟地黄 (1.1 mg)\n生地黄 (0.5 mg)\n当归 (0.5 mg)\n白芍 (0.5 mg)\n黄耆 (0.5 mg)\n牛膝 (0.5 mg)\n柴胡 (0.5 mg)\n牡丹皮 (0.5 mg)\n知母 (0.5 mg)\n川贝母 (0.5 mg)\n黄连 (0.3 mg)\n地骨皮 (0.3 mg)\n干姜 (0.3 mg)\n延胡索 (0.3 mg)\n茯苓 (1.0 mg)\n秦艽 (0.7 mg)\n艾叶 (1.1 mg)\n青蒿 (1.1 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人赢瘦、血虚有热、经水不调、崩漏带下。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "w1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"乐标\"清血丸(大柴胡汤加味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n柴胡 (30 mg)\n大黄 (20 mg)\n枳实 (30 mg)\n半夏 (30 mg)\n黄芩 (30 mg)\n白芍 (30 mg)\n干生姜 (10 mg)\n大枣 (10 mg)\n夏枯草 (30 mg)\n杜仲 (40 mg)\n黄连 (20 mg)\n蜂蜜 (220 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "头晕面赤、腹胀便秘。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "xFYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"乐家老铺\"乐氏同仁川贝枇杷膏",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n川贝 (26.6 mg)\n枇杷叶 (120.1 mg)\n陈皮 (26.6 mg)\n沙参 (26.6 mg)\n茯苓 (26.6 mg)\n栝楼仁 (26.6 mg)\n远志 (26.6 mg)\n莲子 (26.6 mg)\n款冬花 (26.6 mg)\n桔梗 (26.6 mg)\n半夏 (26.6 mg)\n干姜 (13.3 mg)\n薄荷脑 (0.08 mg)\n苦杏仁油 (1.0 mg)\n橙皮油 (0.03 mg)\n草莓香料 (0.33 mg)\n菠萝香料 (0.16 mg)\n麦芽糖 (200.0 mg)\n蔗糖 (300.0 mg)\n蜂蜜 (66.0 mg)\n蒸馏水加至1g ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "咳嗽、喉痛、声哑。镇咳、祛痰。",
+          "related_organisms_count": 18,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5FYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"二朮汤浓缩细粒\nERH CHU TANG GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6公克中含有:\n白朮 (2 g)\n天南星 (2 g)\n陈皮 (2 g)\n茯苓 (2 g)\n香附 (2 g)\n黄芩 (2 g)\n威灵仙 (2 g)\n羌活 (2 g)\n甘草 (2 g)\n苍朮 (3 g)\n半夏 (4 g)\n干姜 (1 g)\n以上生药制成浸膏3g(生药与浸膏比例26:3=8.67:1) ( )\n淀粉 (3 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "痰饮双臂痛、及手臂痛。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_FYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"乌药顺气散浓缩细粒\nWU YAO SHUN CHI SAN GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n麻黄 (4 g)\n陈皮 (4 g)\n乌药 (4 g)\n川芎 (2 g)\n白殭蚕 (2 g)\n枳壳 (2 g)\n白芷 (2 g)\n甘草 (2 g)\n桔梗 (2 g)\n干姜 (1 g)\n生姜 (3 g)\n大枣 (1 g)\n以上生药制成浸膏4.5g(生药与浸膏比例29:4.5=6.4:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "遍身顽麻、骨节疼痛、步履艰难、语言蹇涩、口眼喎斜、筋脉拘挛。顺气宣散、祛风化痰。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "KlYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"农马\"干姜(炭)粉末\nGan Jiang(Tan) Powder \"FH\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "干姜(炭) ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "U1YTtJMBspugNIZgDv4J",
+          "recipe_name": "\"三才堂\"安中散浓缩细粒\n“S.T.T.”AN ZHONG SAN EXTRACT SUBTLY GRANULE",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每10公克中含有：\n甘草 (6.0 g)\n延胡索 (3.0 g)\n良姜 (3.0 g)\n干姜 (3.0 g)\n小茴香 (3.0 g)\n肉桂 (3.0 g)\n牡蛎 (3.0 g)\n以上生药制成浸膏5.0g(生药与浸膏比例24:5=4.8:1) ( )\n淀粉 (5.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾胃寒凝气滞、脘腹疼痛、口吐酸水、停积不消、胀满不适。温中散寒止痛。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "YFYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"三能牌\"咳嗽散(宁嗽化痰散)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n桔梗 (84.58 mg)\n杏仁 (71.64 mg)\n陈皮 (84.58 mg)\n干生姜 (36.80 mg)\n茯苓 (84.58 mg)\n麻黄 (71.64 mg)\n半夏 (84.58 mg)\n甘草 (29.48 mg)\n干葛 (84.58 mg)\n薄荷脑 (4.0 mg)\n枳壳 (84.58 mg)\n桑白皮 (71.64 mg)\n前胡 (84.58 mg)\n葱白 (36.80 mg)\n紫苏 (84.58 mg)\n冰片 (1.0 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "镇咳、化痰。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 7301
+    },
+    "message": ""
+  }
+}

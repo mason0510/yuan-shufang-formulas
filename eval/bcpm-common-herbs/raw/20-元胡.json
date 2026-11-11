@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "元胡"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "C1YNtJMBspugNIZg9V3Q",
+          "recipe_name": "安坤赞育丸",
+          "recipe_reference": "《北京市中药成方选集》",
+          "recipe_class": "",
+          "recipe_composition": "桑寄生十六两；青毛鹿茸（去毛）九十六两；乳香二十四两；血余八两；艾炭三十二两；紫河车八十具（每具约一两五钱）；蚕绵炭八两；大熟地六十四两；杜仲三十二两；茯苓三十二两；桂圆肉四十两；鸡血藤十六两；香附三百八四两；山茱萸三十二两；鹿角胶二十四两；锁阳三十二两；鳖甲（炙）三十二两；酸枣仁（生炒各半）六十四两；白薇三十二两；琥珀十六两；元胡（醋炙）三十二两；白芍六十四两；甘草十六两；鸡冠花二十四两；枸杞子二十四两；没药（炙）四十八两；人参（去芦）八两；乌药十二两；牛膝五十六两；补骨脂（盐炒）四十四两；当归六十四两；黄柏三十二两；阿胶九十六两；天冬四十六两；藏红花三两二钱；黄耆二十四两；菟丝子十六两；龟版（炙）三十二两；秦艽三十二两；川牛膝五十六两；肉苁蓉二十四两；鹿尾五两；沙参四十八两（以上均下罐，用黄酒一千九一十两蒸四昼夜）；川断四十两；川芎四十八两；沉香五十二两；泽泻三十二两；丹参八两；黄芩四十两；赤石脂二十四两；于术四十八两；木香（煨）二十四两；大生地六十四两；苏叶二十两；柴胡二十四两；橘皮五十六两；肉果（煨）二十四两；白术（炒）九十六两；青蒿二十四两；橘红三十二两；远志（去心，炙）三十二两；藁本二十四两；阳春砂九十六两；红花十六两（上为细末，铺槽揽匀，晒干）",
+          "recipe_preparation": "上为极细末，每细末三百二十两兑益母膏汁六十四两，再兑炼蜜为大丸，重四钱，蜡皮封固。",
+          "function": "益气调经。",
+          "indications": "妇女气虚血亏，经血不准，崩漏带下，腹痛腰酸，骨蒸潮热，面色痿黄。",
+          "related_organisms_count": 62,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "eVYNtJMBspugNIZg-11M",
+          "recipe_name": "安神止痛汤",
+          "recipe_reference": "《林如高骨伤验方歌诀方解》",
+          "recipe_class": "",
+          "recipe_composition": "琥珀6g；莲子24g；党参15g；白芍15g；生地9g；淮山15g；黄耆9g；酸枣仁9g；三七3g；醋元胡6g；制乳香4.5g；制没药4.5g；朱茯神9g；远志6g；甘草3g；双钩藤9g",
+          "recipe_preparation": "",
+          "function": "宁心安神，益气镇痛。",
+          "indications": "重伤痛极，夜寐不安。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "xlYNtJMBspugNIZg-11M",
+          "recipe_name": "安胎丸",
+          "recipe_reference": "《仙拈集》卷三",
+          "recipe_class": "",
+          "recipe_composition": "茯苓四两；条芩二两；白术二两；香附二两；益母草二两；元胡五钱；红花五钱；没药五钱",
+          "recipe_preparation": "上药为末，蜜丸，梧桐子大。",
+          "function": "",
+          "indications": "妊娠腹痛，腰酸作胀。如惯于小产者，可预服之。甚至见红将坠者，亦能保足月。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "aFYOtJMBspugNIZgAF7s",
+          "recipe_name": "八宝瑞生丹",
+          "recipe_reference": "《全国中药成药处方集》（沈阳方）",
+          "recipe_class": "",
+          "recipe_composition": "当归七八克；茯苓；草果各六七.五克；元胡一十八克；干姜四五克；草豆蔻七五克；良姜六七.五克；郁金；肉桂各四五克；山楂一十八克；香附九十克；神曲七五克；紫蔻；炙甘草各三十克",
+          "recipe_preparation": "共碾细面，炼蜜为丸，每丸六克。",
+          "function": "",
+          "indications": "开郁健胃。心胃疼痛，胸闷腹胀，吞酸呕吐，消化不良，气逆不舒，胸胁攻痛。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "MlYOtJMBspugNIZgGWJ-",
+          "recipe_name": "白芥子",
+          "recipe_reference": "《外治方》",
+          "recipe_class": "",
+          "recipe_composition": "白芥子；甘遂各二一克；元胡；细辛各一二克",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "据报道，治疗支所管哮喘一十十十例，三年显效率为六十％，总有效率为九八％。肺俞穴位置：俯伏位，在背部第三椎下凹窝左右向外各量五厘米（一.五寸）的地方。心俞穴位置：俯伏位，在背部第五椎下凹窝左右向外各量五厘米（一.五寸）的地方。膈俞穴位置：俯伏位，在背部第七椎下凹窝左右向外各量五厘米（一.五寸）的地方。",
+          "related_organisms_count": 4,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "3lYOtJMBspugNIZgUGgM",
+          "recipe_name": "保胎金丹",
+          "recipe_reference": "《全国中药成药处方集》（大同方）",
+          "recipe_class": "",
+          "recipe_composition": "生地四两；鳖甲四两；香附四两；当归二两；茯苓二两；元胡二两；白薇二两；藁本二两；益母二两；川芎二两；炒艾二两；煅赤石脂二两；丹皮二两；白术二两；青蒿二两；肉桂五钱；没药一两五钱；五味一两；炙草一两；沉香六钱；人参二两；黄柏四两",
+          "recipe_preparation": "白酒二斤，入锅内封口煮一小时，同前药共轧细面，炼蜜为丸重三钱，朱砂为衣，蜡皮。",
+          "function": "",
+          "indications": "胎前产后诸虚症，胎漏，流产，滑胎，产后虚弱，倦怠无力，骨蒸潮热。",
+          "related_organisms_count": 22,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5FYOtJMBspugNIZgUGgM",
+          "recipe_name": "保胎神效丸",
+          "recipe_reference": "《冯氏锦囊•杂症》卷十七",
+          "recipe_class": "",
+          "recipe_composition": "白茯苓二两（要色白坚重者）；真于术一两（米泔水浸一宿，去皮芦净，切片晒干，同黄土炒）；条芩（酒拌炒，须拣实心细条）一两；香附子（童便浸二日，炒熟）一两；元胡索（陈米醋拌炒）一两；红花（隔纸烘燥）一两；益母草（净叶）一两；真没药三钱（新瓦上隔火焙去油）",
+          "recipe_preparation": "上药各为末，炼蜜为丸，如梧桐子大。",
+          "function": "保胎。",
+          "indications": "孕妇胎不安，腹痛腰酸，或作胀坠，或三五月常坠，或见红将坠。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "41YOtJMBspugNIZgcW1l",
+          "recipe_name": "补经汤",
+          "recipe_reference": "《女科切要》卷二",
+          "recipe_class": "",
+          "recipe_composition": "人参；白术；川芎；香附；当归；熟地；元胡；肉桂；吴萸；砂仁；茯神；沉香；阿胶；黄耆；小茴；陈皮；白芍",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "血癖，经行气血虚弱，血海寒冷，经水不调，心腹疼痛，带下如鱼脑或米泔，错杂不分，信期淋漓不止，面黄肌瘦，四肢无力，头晕眼花者。",
+          "related_organisms_count": 17,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "JFYOtJMBspugNIZggG_A",
+          "recipe_name": "补心养胃汤",
+          "recipe_reference": "《疮疡经验全书》卷三",
+          "recipe_class": "",
+          "recipe_composition": "陈皮；半夏；茯苓；甘草；白术；黄连；当归；生地；青皮；白芍；槟榔；乌药；远志；滑石；山栀仁；车前子；元胡索；川芎",
+          "recipe_preparation": "上㕮咀。",
+          "function": "",
+          "indications": "阴蚀疮。",
+          "related_organisms_count": 18,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "7VYOtJMBspugNIZgj3BR",
+          "recipe_name": "参桂鹿茸丸",
+          "recipe_reference": "《北京市中药成方选集》",
+          "recipe_class": "",
+          "recipe_composition": "茯苓八十两；白芍八十两；熟地八十两；生地八十两；鹿茸（去毛）八十两；龟版（炙）四十两；杜仲炭四十两；秦艽四十两；艾炭四十两；山萸肉（炙）四十两；泽泻四十两；橘皮四十两；续断四十两；鳖甲（炙）四十两；没药（炙）四十两；枣仁（炒）四十两；人参（去芦）四十两；元胡（炙）三十两；红花三十两；石脂（煅）三十两；红白鸡冠花六十两；乳香（炙）三十两；甘草二十两；琥珀二十两；阿胶（炒）一百二十两；牛膝四十六两；黄芩五十两；天冬五十四两；香附（炙）一百二十两；川牛膝四十两；藏红花二十两（上药用黄酒一千五百五十两，入罐蒸三昼夜）；当归八十两；砂仁四十两；肉桂(去粗皮)四十两；白术(炒)六十两；川芎六十两；橘皮一百二十两；沉香十两；木香十两",
+          "recipe_preparation": "上药中后八味，共串粗末，拌蒸下罐药料晒干，共研为细粉过罗，炼蜜为丸，重三钱。",
+          "function": "滋阴补肾，益气养荣。",
+          "indications": "气虚血亏，身体衰弱，精神萎靡，腰膝痠软。",
+          "related_organisms_count": 38,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 122
+    },
+    "message": ""
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "知母"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "21YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"治肝保胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n柴胡 (84.0 mg)\n知母 (41.5 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n0号胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"得力\"顾立肝胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n知母 (41.5 mg)\n柴胡 (84.0 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n０号透明胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "DFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"东阳\"酸枣仁汤浓缩细粒\nSuan-Tzao-Ren Tang Conc.Granules\"Tong-Yang\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n酸枣仁 (5.4 g)\n甘草 (0.83 g)\n知母 (2.1 g)\n茯苓 (2.1 g)\n川芎 (2.1 g)\n以上生药制成浸膏4.5g(生药与浸膏比例12.53:4.5=2.8:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "虚劳、虚烦不得眠。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"平肝散(龙胆泻肝汤)\nP’ien Kan Powder\"F.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n龙胆 (83 mg)\n甘草 (83 mg)\n人参 (83 mg)\n天门冬 (83 mg)\n黄连 (83 mg)\n栀子 (83 mg)\n麦门冬 (83 mg)\n知母 (83 mg)\n柴胡 (168 mg)\n黄芩 (117 mg)\n五味子 (51 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "F1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"滋阴降火丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸５００毫克中含有：\n熟地黄 (80.0000 mg)\n山茱萸 (40.0000 mg)\n干山药 (40.0000 mg)\n白茯苓 (30.0000 mg)\n泽泻 (30.0000 mg)\n知母 (20.0000 mg)\n黄柏 (20.0000 mg)\n麦门冬 (20.0000 mg)\n牡丹皮 (30.0000 mg)\n玄参 (20.0000 mg)\n蜂蜜 (170.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "滋阴降火、腰痛足酸、耳鸣、头晕、舌躁咽痛。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "XlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"国安\"嗽王固肺散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n人参 (80 mg)\n甘草 (40 mg)\n地骨皮 (80 mg)\n茯苓 (80 mg)\n天门冬 (80 mg)\n黄芩 (80 mg)\n薄荷 (80 mg)\n青皮 (80 mg)\n陈皮 (80 mg)\n知母 (120 mg)\n桑白皮 (155.80 mg)\n五味子 (20 mg)\n干生姜 (20 mg)\n薄荷脑 (3 mg)\n冰片 (1.20 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清肺、止咳、化痰。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ZVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"国科\"消风散浓缩锭\nShiau Feng San Extract Tablets“K.K.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n当归 (70 mg)\n生地黄 (70 mg)\n防风 (70 mg)\n蝉蜕 (70 mg)\n知母 (70 mg)\n苦参 (70 mg)\n胡麻 (70 mg)\n荆芥 (70 mg)\n苍朮 (70 mg)\n牛蒡子 (70 mg)\n石膏 (70 mg)\n甘草 (35 mg)\n川木通 (35 mg)\n以上生药制成浸膏150mg(生药与浸膏比例840：150＝5.6：1) ( )\n硬脂酸镁 (3 mg)\n淀粉 (147 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风湿浸淫血脉之疮疥搔痒、及风热隐症。润血祛风、除湿清热。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "aFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(32mg)中含有：\n乌鸡 (17 mg)\n香附 (4.3 mg)\n熟地黄 (1.1 mg)\n生地黄 (0.5 mg)\n当归 (0.5 mg)\n白芍 (0.5 mg)\n黄耆 (0.5 mg)\n牛膝 (0.5 mg)\n柴胡 (0.5 mg)\n牡丹皮 (0.5 mg)\n知母 (0.5 mg)\n川贝母 (0.5 mg)\n黄连 (0.3 mg)\n地骨皮 (0.3 mg)\n干姜 (0.3 mg)\n延胡索 (0.3 mg)\n茯苓 (1.0 mg)\n秦艽 (0.7 mg)\n艾叶 (1.1 mg)\n青蒿 (1.1 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人赢瘦、血虚有热、经水不调、崩漏带下。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "olYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"降火谷\"痔痛丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n槐花 (95 mg)\n地黄 (52.5 mg)\n地榆 (52.5 mg)\n侧柏叶 (52.5 mg)\n黄芩 (25 mg)\n大黄 (22.5 mg)\n赤芍 (25 mg)\n牡丹皮 (25 mg)\n黄连 (20 mg)\n知母 (25 mg)\n甘草 (40 mg)\n天花粉 (40 mg)\n蜂蜜 (25 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "内痔、外痔、大便秘结、消肿。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "01YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\" 能克散\n\"Leader\" Neng Ke San",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n桑白皮 (211.0 mg)\n川贝母 (211.0 mg)\n桔梗 (211.0 mg)\n地骨皮 (105.0 mg)\n薄荷 (52.5 mg)\n甘草 (52.0 mg)\n麦门冬 (52.5 mg)\n知母 (52.5 mg)\n黄芩 (52.5 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "火热伤肺起因之频数咳嗽、面赤咽干、痰黄稠黏各症之镇咳、祛痰。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 3493
+    },
+    "message": ""
+  }
+}

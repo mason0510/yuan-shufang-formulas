@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "黄柏"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "6FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（５００毫克）中含有：\n黄耆 (25.1200 mg)\n白朮 (25.1200 mg)\n茯神 (25.1200 mg)\n熟地 (25.1200 mg)\n当归 (25.1200 mg)\n枸杞 (25.1200 mg)\n牛膝 (12.6600 mg)\n虎骨 (12.6600 mg)\n杜仲 (12.6600 mg)\n木瓜 (12.6600 mg)\n白芍 (12.6600 mg)\n独活 (12.6600 mg)\n菟丝子 (12.6600 mg)\n山药 (12.6600 mg)\n黄柏 (12.6600 mg)\n蜂蜜 (248.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "腰腿疼痛、脚膝拘挛、筋骨无力、行步艰难。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "F1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"滋阴降火丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸５００毫克中含有：\n熟地黄 (80.0000 mg)\n山茱萸 (40.0000 mg)\n干山药 (40.0000 mg)\n白茯苓 (30.0000 mg)\n泽泻 (30.0000 mg)\n知母 (20.0000 mg)\n黄柏 (20.0000 mg)\n麦门冬 (20.0000 mg)\n牡丹皮 (30.0000 mg)\n玄参 (20.0000 mg)\n蜂蜜 (170.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "滋阴降火、腰痛足酸、耳鸣、头晕、舌躁咽痛。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "VFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"高基能\"抗治愈胶囊",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n黄连 (96.5 mg)\n黄柏 (96.5 mg)\n猪胆 (6 mg)\n冰片 (12 mg)\n绿豆 (289 mg)\n0号胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "咽喉炎、口腔炎、耳炎、疳疮、肛门炎、痔疮、刀伤、烂皮。",
+          "related_organisms_count": 5,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "XFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"广洲\"接骨膏",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n五加皮 (100.0000 mg)\n穿山甲 (100.0000 mg)\n乳香 (50.0000 mg)\n白芷 (50.0000 mg)\n羌活 (50.0000 mg)\n没药 (50.0000 mg)\n川七 (100.0000 mg)\n黄柏 (50.0000 mg)\n红花 (100.0000 mg)\n生地黄 (100.0000 mg)\n当归 (100.0000 mg)\n铅丹 (250.0000 mg)\n松脂 (450.0000 mg)\n麻黄 (200.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "接骨　跌打损伤风痛便毒无名肿痛其他伤痛。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "cVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"宏星\"参鞭海狗丸\n\"Hong Shing\"San Pan Hai Kuo Wan",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(300mg)中含有：\n人参 (5 mg)\n海狗鞭 (5 mg)\n鹿茸 (5 mg)\n鹿鞭 (5 mg)\n牛夕 (5 mg)\n川柏 (5 mg)\n大海马 (5 mg)\n杞果 (5 mg)\n大蛤蚧 (5 mg)\n生地黄 (5 mg)\n肉桂 (5 mg)\n熟地黄 (5 mg)\n沉香 (5 mg)\n川椒 (5 mg)\n覆盆子 (5 mg)\n杭芍 (5 mg)\n破故纸 (5 mg)\n当归 (5 mg)\n菟丝子 (5 mg)\n冬朮 (5 mg)\n淫羊藿 (5 mg)\n云苓 (5 mg)\n何首乌 (5 mg)\n寸云 (5 mg)\n桑螵蛸 (5 mg)\n泽泻 (5 mg)\n巴戟天 (5 mg)\n小茴香 (5 mg)\n净肉 (5 mg)\n甘松 (5 mg)\n粉丹皮 (5 mg)\n山药 (5 mg)\n炙棉菧 (5 mg)\n杜仲 (5 mg)\n石菖蒲 (5 mg)\n远志 (5 mg)\n冬虫夏草 (5 mg)\n川芎 (5 mg)\n柴河车 (5 mg)\n飞阳起石 (5 mg)\n蜂蜜 (100 mg)\nCarmin ( q.s.)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "先天不足、后天失调、丹田无力、腰膝酸软、四肢困倦、冬月手冻、精神衰弱、梦遗泄精、夜多小便、腰背脊痛、耳鸣眼花、膀胱寒湿、便有余浊、心肾平交、身体衰弱、记忆减退、气血两虚、肾部虚弱、精寒阳痿、子嗣维难、酒色过度、青年早婚、元阳不固。",
+          "related_organisms_count": 39,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "DVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"龙杏\"黄柏粉末",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "黄柏 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "X1YTtJMBspugNIZgDv4J",
+          "recipe_name": "\"三虎\"治浊固本丸浓缩细粒",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每7.5公克中含有：\n莲须 (4.0 g)\n黄连 (4.0 g)\n茯苓 (2.0 g)\n砂仁 (2.0 g)\n益智仁 (2.0 g)\n半夏 (2.0 g)\n黄柏 (2.0 g)\n炙甘草 (6.0 g)\n猪苓 (5.0 g)\n以上生药制成浸膏3.75g（生药与浸膏比例29.0:3.75=7.73:1.0） ( )\n淀粉 (3.75 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "湿热下注、频尿白浊。清热、利湿。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "YVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"三品\"足得治外用粉\nAn Yeang Sann \"TS\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有:\n硫磺 (370 mg)\n樟脑 (185 mg)\n龙脑 (75 mg)\n黄连 (185 mg)\n黄柏 (185 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "热疮、湿痒。",
+          "related_organisms_count": 4,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ClYTtJMBspugNIZgDv8J",
+          "recipe_name": "\"顺安\"黄蘗粉末\n\"S.A.\" Huangbo Powder",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "黄蘗 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FVYTtJMBspugNIZgDv8J",
+          "recipe_name": "\"顺安\"养血壮筋健步丸(加减味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n熟地黄 (49 mg)\n怀牛膝 (24 mg)\n杜仲 (24 mg)\n当归 (24 mg)\n黄柏 (24 mg)\n苍朮 (24 mg)\n白芍 (18 mg)\n黄耆 (12 mg)\n补骨脂 (12 mg)\n山药 (12 mg)\n五味子 (12 mg)\n枸杞子 (12 mg)\n人参 (12 mg)\n菟丝子 (12 mg)\n白朮 (12 mg)\n龟板 (12 mg)\n防己 (6 mg)\n防风 (7 mg)\n羌活 (4 mg)\n狗脊 (4 mg)\n蜂蜜 (184 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "神经痛、关节痛、筋肉痛。",
+          "related_organisms_count": 21,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 5221
+    },
+    "message": ""
+  }
+}

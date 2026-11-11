@@ -1,0 +1,14 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "木香"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10429,
+    "data": {},
+    "message": "too many requests"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "半夏"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "31YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"安生\"平血丸(大柴胡汤加味)\nPieng Shiee Pills \"An Shing\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n柴胡 (30 mg)\n大黄 (20 mg)\n枳实 (30 mg)\n半夏 (30 mg)\n黄芩 (30 mg)\n芍药 (30 mg)\n生姜 (10 mg)\n大枣 (10 mg)\n夏枯草 (30 mg)\n杜仲 (40 mg)\n黄连 (20 mg)\n蜂蜜 (220 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "E1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"宁嗽散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n桔梗 (110 mg)\n川石斛 (110 mg)\n半夏 (110 mg)\n川贝母 (105 mg)\n苏子 (105 mg)\n茯苓 (105 mg)\n薄荷 (75 mg)\n杏仁 (75 mg)\n桑白皮 (75 mg)\n橘红 (40 mg)\n麦芽 (60 mg)\n甘草 (30 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "咳嗽。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"万灵膏(万灵膏加减味)\nWan Ning Kao \"F.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n骨碎补 (20 mg)\n当归 (20 mg)\n红花 (20 mg)\n自然铜 (20 mg)\n瓜儿血竭 (20 mg)\n乳香 (20 mg)\n没药 (20 mg)\n川芎 (16 mg)\n赤芍 (40 mg)\n薄荷 (20 mg)\n川牛膝 (10 mg)\n五加皮 (10 mg)\n石菖蒲 (10 mg)\n苍朮 (10 mg)\n木香 (6 mg)\n秦艽 (6 mg)\n蛇床子 (6 mg)\n肉桂 (6 mg)\n附子 (6 mg)\n半夏 (6 mg)\n石斛 (6 mg)\n萆薢 (6 mg)\n鹿茸 (6 mg)\n麝香 (4 mg)\n松香 (20 mg)\n黄丹 (160 mg)\n麻油加至 (1000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "消瘀、舒筋、活血、止痛、跌打损伤。",
+          "related_organisms_count": 27,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "QFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"小柴胡汤散\nHSIAO CHAI FU TANG",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６公克中含：\n柴胡 (1500 mg)\n半夏 (1000 mg)\n黄芩 (750 mg)\n人参 (750 mg)\n甘草 (500 mg)\n生姜 (750 mg)\n大枣 (750 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "日晡潮热、胸肋苦满、心烦恶心、感冒、胃肠炎。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "SFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦牌\"温经汤散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６公克中含：\n吴茱萸 (1000 mg)\n当归 (330 mg)\n川芎 (530 mg)\n芍药 (530 mg)\n人参 (330 mg)\n桂枝 (530 mg)\n牡丹皮 (330 mg)\n半夏 (660 mg)\n麦门冬 (400 mg)\n甘草 (530 mg)\n生姜 (330 mg)\n阿胶 (500 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不顺或过多、心悸、白带。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "WFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"观音牌\"香砂平胃散(加减味)\n“Guan Yin”Siang Sha Ping Wei San(Jia Jian Wei)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n茯苓 (146 mg)\n苍朮 (146 mg)\n半夏 (146 mg)\n甘草 (42 mg)\n陈皮 (125 mg)\n木香 (83 mg)\n砂仁 (83 mg)\n丁香 (42 mg)\n肉桂 (42 mg)\n薄荷脑 (20 mg)\n碳酸氢钠 (125 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胃病、呕吐、腹痛。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ZFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"国科\"温经汤浓缩锭\nWen Jing Tang Extract Tablets“K.K.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n吴茱萸 (102 mg)\n当归 (68 mg)\n川芎 (68 mg)\n白芍 (68 mg)\n人参 (68 mg)\n桂枝 (68 mg)\n阿胶 (68 mg)\n牡丹皮 (68 mg)\n生姜 (68 mg)\n甘草 (68 mg)\n半夏(制) (102 mg)\n麦门冬 (136 mg)\n以上生药制成浸膏150mg(生药与浸膏比例952：150＝6.3：1) ( )\n淀粉 (147 mg)\n硬脂酸镁 (3 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人少腹寒冷、胀急不舒、经期不顺、淋漓不止。温经养血、活血调经。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "c1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"厚生\"萧尧速立清丸(大柴胡汤加味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（５００mg）中含有：\n柴胡 (30 mg)\n枳实 (30 mg)\n白芍 (30 mg)\n大枣 (10 mg)\n杜仲 (40 mg)\n黄芩 (30 mg)\n大黄 (20 mg)\n半夏 (30 mg)\n生姜 (10 mg)\n夏枯草 (30 mg)\n黄连 (20 mg)\n蜂蜜 (220 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "头晕面赤、腹胀便秘。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "eVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"华昌\"半夏(制)散\nBan Xia (Zih) Powder \"H.C\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "半夏(制) ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "降逆止呕、燥湿祛痰。",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "u1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"科达\"宁嗽丸浓缩细粒\nNING SOU WAN EXTRACT GRANULA SUBTILAE \"KO DA\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n桔梗 (3.0 g)\n川石斛 (3.0 g)\n半夏 (3.0 g)\n川贝母 (3.0 g)\n苏子 (3.0 g)\n茯苓 (3.0 g)\n薄荷 (2.3 g)\n杏仁 (2.3 g)\n桑白皮 (2.3 g)\n橘红 (1.5 g)\n谷芽 (1.5 g)\n甘草 (0.8 g)\n以上生药制成浸膏4.5g(生药与浸膏比例28.7:4.5=6.38:1) ( )\n淀粉 (3.42 g)\n糊精 (0.09 g)\n羧甲基纤维素钠 (0.09 g)\n结晶性纤维素 (0.90 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "咳嗽痰多气急、痰白黏或色黄。止咳宁嗽、清肺化痰。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 9676
+    },
+    "message": ""
+  }
+}

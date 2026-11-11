@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "党参"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "-1YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n黄耆 (3.7 mg)\n当归 (3.7 mg)\n茯神 (1.8 mg)\n肉桂 (1.8 mg)\n白朮 (1.5 mg)\n防风 (1.8 mg)\n生地黄 (2.2 mg)\n龟版 (1.8 mg)\n麦门冬 (1.8 mg)\n陈皮 (1.8 mg)\n川芎 (1.8 mg)\n山萸肉 (1.8 mg)\n熟地黄 (1.8 mg)\n党参 (1.8 mg)\n茯苓 (1.8 mg)\n枸杞子 (1.8 mg)\n羌活 (1.5 mg)\n五味子 (1.5 mg)\n麦芽糖 (5.0 mg)\n22度原料酒加至 (1 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "追风定痛、强壮筋骨、筋脉孪急、风寒湿痹、气弱阳衰、神疲体倦。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰十一虎药酒(中药酒剂基准方十二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n龙眼肉 (9.0 mg)\n广木香 (1.0 mg)\n什开 (2.0 mg)\n沈香 (7.0 mg)\n山栀子 (3.0 mg)\n党参 (1.0 mg)\n当归 (1.4 mg)\n川芎 (0.5 mg)\n玉竹 (3.0 mg)\n肉桂 (1.5 mg)\n陈皮 (1.0 mg)\n五加皮 (1.6 mg)\n麦芽糖 (5.0 mg)\n22度原料酒加至 (1 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "开胃健脾、补血养颜。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ElYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n熟地黄 (31 mg)\n党参 (31 mg)\n海狗肾 (31 mg)\n人参 (31 mg)\n黄耆 (31 mg)\n川芎 (31 mg)\n当归 (31 mg)\n白芍 (31 mg)\n茯苓 (31 mg)\n白朮 (31 mg)\n肉桂 (15 mg)\n山药(酒调) (167 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "气血两虚、肢体倦怠。补气血、壮元阳。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "m1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"黄泽丰\"国典药酒(周公百岁药酒)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n黄耆 (7.5 mg)\n白茯苓 (7.5 mg)\n肉桂 (2.25 mg)\n全当归 (4.50 mg)\n生地黄 (4.50 mg)\n熟地黄 (4.50 mg)\n西党参 (3.75 mg)\n白朮 (3.75 mg)\n麦门冬 (3.75 mg)\n茯苓 (3.75 mg)\n陈皮 (3.75 mg)\n茱萸肉 (3.75 mg)\n枸杞子 (3.75 mg)\n川芎 (3.75 mg)\n防风 (3.75 mg)\n龟板胶 (3.75 mg)\n五味子 (3.00 mg)\n羌活 (3.00 mg)\n冰糖 (100 mg)\n玻瑰红香料0.002ml ( )\n30度米酒加至1ml ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "追风定痛、强筋壮骨、筋脉挛急、风寒湿痹、气弱阳衰、神疲体倦。",
+          "related_organisms_count": 19,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "JlYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"农马\"党参粉末\nDang Shen Powder \"FH\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "党参 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "Q1YTtJMBspugNIZgDv4J",
+          "recipe_name": "\"劝奉堂\"党参散\nDang Shen Powder“C.F.T.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "党参 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "补中益气、生津。",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5lYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"胜昌\"明党参散\nCHANGII RADIX POWDER \"SHENG CHANG\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "明党参 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "润肺化痰",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "mVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"生春\"党参散\nCODONOPSIS RADIX POWDER \"SHENG CHUN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "党参 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "补中益气、生津",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "QlYTtJMBspugNIZgDv8J",
+          "recipe_name": "\"台马\"党参粉末\nDang Shen Powder \"TM\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "党参 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "b1YTtJMBspugNIZgGf8t",
+          "recipe_name": "\"台马\"明党参粉末\nMing Dang Shen Powder \"TM\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "明党参 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 1786
+    },
+    "message": ""
+  }
+}

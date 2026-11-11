@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "山萸肉"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "2VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"温补肾丸(还少丹)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n山药 (36 mg)\n怀牛膝 (36 mg)\n茯苓 (24 mg)\n山萸肉 (24 mg)\n楮实 (24 mg)\n杜仲 (24 mg)\n五味子 (24 mg)\n巴戟天 (24 mg)\n肉苁蓉 (24 mg)\n远志 (24 mg)\n小茴香 (24 mg)\n石菖蒲 (12 mg)\n熟地黄 (12 mg)\n枸杞子 (12 mg)\n大枣 (12 mg)\n蜂蜜 (164 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾肾虚寒、血气虚损、体虚盗汗、遗精尿浊。补心肾脾胃虚损。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-1YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n黄耆 (3.7 mg)\n当归 (3.7 mg)\n茯神 (1.8 mg)\n肉桂 (1.8 mg)\n白朮 (1.5 mg)\n防风 (1.8 mg)\n生地黄 (2.2 mg)\n龟版 (1.8 mg)\n麦门冬 (1.8 mg)\n陈皮 (1.8 mg)\n川芎 (1.8 mg)\n山萸肉 (1.8 mg)\n熟地黄 (1.8 mg)\n党参 (1.8 mg)\n茯苓 (1.8 mg)\n枸杞子 (1.8 mg)\n羌活 (1.5 mg)\n五味子 (1.5 mg)\n麦芽糖 (5.0 mg)\n22度原料酒加至 (1 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "追风定痛、强壮筋骨、筋脉孪急、风寒湿痹、气弱阳衰、神疲体倦。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "n1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"火车标\"明目地黄丸(加味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（500mg）中含有：\n熟地黄 (70 mg)\n山萸肉 (30 mg)\n石决明 (30 mg)\n山药 (30 mg)\n枸杞子 (30 mg)\n茯苓 (20 mg)\n白芍 (20 mg)\n牡丹皮 (20 mg)\n菊花 (20 mg)\n当归 (20 mg)\n沙苑蒺藜 (20 mg)\n泽泻 (20 mg)\n榖精草 (20 mg)\n蜂蜜 (150 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "目翳遮睛、目涩多泪、视物不清。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "P1YTtJMBspugNIZgDv4J",
+          "recipe_name": "\"潘大夫\"勇本活力丸(打老儿丸)\n\"Pan dai fu\"Yaog ben huo li wan.",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n大枣 (50.0 mg)\n熟地黄 (33.3 mg)\n山药 (25.0 mg)\n怀牛膝 (25.0 mg)\n枸杞子 (25.0 mg)\n山萸肉 (16.7 mg)\n茯神 (16.7 mg)\n杜仲 (16.7 mg)\n远志 (16.7 mg)\n五味子 (16.7 mg)\n楮实子 (16.7 mg)\n小茴香 (16.7 mg)\n巴戟天 (16.7 mg)\n肉苁蓉 (16.7 mg)\n续断 (16.7 mg)\n石菖蒲 (8.3 mg)\n蜂蜜 (166.4 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾胃虚寒、血气赢乏、不思饮食、体虚盗汗、遗精尿浊。",
+          "related_organisms_count": 17,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "cVcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"萧尧\"澄极明目丸(明目地黄丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n熟地黄 (60 mg)\n白茯苓 (22.5 mg)\n牡丹皮 (22.5 mg)\n泽泻 (22.5 mg)\n甘菊花 (22.5 mg)\n当归身 (22.5 mg)\n白芍 (22.5 mg)\n枸杞子 (22.5 mg)\n白蒺蔾 (22.5 mg)\n山药 (30 mg)\n山萸肉 (30 mg)\n石决明 (30 mg)\n赤石脂 (10 mg)\n蜂蜜 (160 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "目翳遮睛、目涩多泪、视物不清。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_1cTtJMBspugNIZgGQAt",
+          "recipe_name": "\"忠山\"明目地黄丸\n〝JON SAN〞MING MU DI HUANG WAN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n熟地黄 (60 mg)\n茯苓 (23 mg)\n白芍 (23 mg)\n牡丹皮 (23 mg)\n泽泻 (23 mg)\n菊花 (23 mg)\n当归身 (23 mg)\n枸杞子 (23 mg)\n沙苑蒺藜 (23 mg)\n山药 (30 mg)\n石决明 (30 mg)\n山萸肉 (30 mg)\n蜂蜜 (166 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "目翳遮睛、目涩多泪、视物不清。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "eFYNtJMBspugNIZg8VxC",
+          "recipe_name": "艾柏饮",
+          "recipe_reference": "《验方新编》卷一",
+          "recipe_class": "",
+          "recipe_composition": "艾叶一钱半；柏子仁（去净油）一钱半；山萸肉一钱半；丹皮一钱半；大生地三钱；白莲肉（去心）二钱；真山药二钱；泽泻一钱；生荷叶一张（干者不效）",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "鼻血不止，无论虚实至重者。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "DVYNtJMBspugNIZg9V3Q",
+          "recipe_name": "安老汤",
+          "recipe_reference": "《傅青主女科》（清•傅山）",
+          "recipe_class": "理血方>>止血",
+          "recipe_composition": "人参；黄芪；土白术；酒当归；熟地黄；山萸肉；阿胶珠；芥穗炭；醋香附；木耳炭；甘草",
+          "recipe_preparation": "",
+          "function": "补气养血，固冲止血",
+          "indications": "老年妇女肝脾两虚，肾水亏耗，月经已绝，忽而复行，或下紫血决，或下血淋漓如红血淋",
+          "related_organisms_count": 11,
+          "classical_recipe": "是",
+          "recipe_type": "古代方剂"
+        },
+        {
+          "id": "QlcXtJMBspugNIZgL3DE",
+          "recipe_name": "阿桐伯帝王回春丹丸(延龄固本丹)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n天门冬 (16 mg)\n麦门冬 (16 mg)\n生地黄 (16 mg)\n熟地黄 (16 mg)\n山药 (16 mg)\n牛膝 (16 mg)\n杜仲 (16 mg)\n巴戟天 (16 mg)\n五味子 (16 mg)\n枸杞子 (16 mg)\n山萸肉 (16 mg)\n茯苓 (16 mg)\n人参 (16 mg)\n木香 (16 mg)\n柏子仁 (16 mg)\n川椒 (8 mg)\n石菖莆 (8 mg)\n远志 (8 mg)\n泽泻 (8 mg)\n肉苁蓉 (32 mg)\n覆盆子 (12 mg)\n车前子 (12 mg)\n菟丝子 (32 mg)\n地骨皮 (12 mg)\n蜂蜜 (128 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "诸虚百损、须发早白、腰脚酸软。补益脾肾、固本培元",
+          "related_organisms_count": 25,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "U1cXtJMBspugNIZgL3DE",
+          "recipe_name": "阿桐伯眼光保胶囊(明目地黄散)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n熟地黄 (85 mg)\n茯苓 (32 mg)\n白芍 (32 mg)\n牡丹皮 (32 mg)\n泽泻 (32 mg)\n菊花 (32 mg)\n当归 (32 mg)\n枸杞子 (32 mg)\n白蒺藜 (32 mg)\n山药 (53 mg)\n石决明 (53 mg)\n山萸肉 (53 mg)\n0号全红咖啡色硬胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "目翳遮睛、目涩多泪、视物不清。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 501
+    },
+    "message": ""
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "当归"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "51YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"八厘散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n苏木力面 (85.0000 mg)\n当归 (85.0000 mg)\n红花 (130.0000 mg)\n五加皮 (130.0000 mg)\n乳香 (160.0000 mg)\n没药 (160.0000 mg)\n血竭 (160.0000 mg)\n丁香 (50.0000 mg)\n麝香 (5.0000 mg)\n冰片 (35.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "跌打损伤、瘀血停滞。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "6FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（５００毫克）中含有：\n黄耆 (25.1200 mg)\n白朮 (25.1200 mg)\n茯神 (25.1200 mg)\n熟地 (25.1200 mg)\n当归 (25.1200 mg)\n枸杞 (25.1200 mg)\n牛膝 (12.6600 mg)\n虎骨 (12.6600 mg)\n杜仲 (12.6600 mg)\n木瓜 (12.6600 mg)\n白芍 (12.6600 mg)\n独活 (12.6600 mg)\n菟丝子 (12.6600 mg)\n山药 (12.6600 mg)\n黄柏 (12.6600 mg)\n蜂蜜 (248.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "腰腿疼痛、脚膝拘挛、筋骨无力、行步艰难。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "6VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"天王补心散(去朱砂)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n生地黄 (55.55 mg)\n人参 (55.55 mg)\n茯苓 (55.55 mg)\n石菖蒲 (55.55 mg)\n玄参 (55.55 mg)\n柏子仁 (55.55 mg)\n桔梗 (55.55 mg)\n天门冬 (55.55 mg)\n远志 (55.55 mg)\n丹参 (55.55 mg)\n酸枣仁 (55.55 mg)\n甘草 (55.55 mg)\n麦门冬 (55.55 mg)\n百部 (55.55 mg)\n杜仲 (55.55 mg)\n茯神 (55.55 mg)\n当归 (55.55 mg)\n五味子 (55.65 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "思虑过度、神志不宁、咽干口燥、健忘怔忡、口舌生疮。宁心、化痰涎、祛烦热。",
+          "related_organisms_count": 18,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "9lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有:\n当归 (1.5 g)\n赤芍 (1.5 g)\n黄芩 (1.5 g)\n连翘 (1.5 g)\n川芎 (1.5 g)\n生地黄 (1.5 g)\n山栀子 (1.5 g)\n防风 (1.5 g)\n荆芥 (1.5 g)\n羌活 (1.5 g)\n决明子 (1.5 g)\n薄荷 (1.5 g)\n蔓荆子 (1.5 g)\n菊花 (1.5 g)\n黄连 (1.5 g)\n蒺藜 (1.5 g)\n桔梗 (1.5 g)\n甘草 (1.5 g)\n石膏 (1.5 g)\n以上生药制成浸膏4.8g(生药与浸膏比例28.5:4.8=5.9:1) ( )\n淀粉 (4.2 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热祛风、目赤肿痛。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n人参 (22 mg)\n白朮 (22 mg)\n茯苓 (22 mg)\n白芍 (22 mg)\n鹿角霜 (22 mg)\n川椒 (22 mg)\n杜仲 (22 mg)\n川芎 (12 mg)\n甘草 (12 mg)\n当归 (44 mg)\n熟地黄 (44 mg)\n菟丝子 (44 mg)\n蜂蜜 (190 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人气血俱虚、经脉不调、或断续或滞浊、腹痛。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰风湿药酒(中药酒剂基准方十七方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n白茄根 (4.20 mg)\n甘草 (0.42 mg)\n麻黄 (0.20 mg)\n川乌 (1.00 mg)\n草乌 (1.00 mg)\n秦艽 (2.10 mg)\n桂枝 (1.00 mg)\n防风 (2.10 mg)\n牛膝 (2.10 mg)\n羌活 (1.00 mg)\n白花蛇 (2.10 mg)\n附子 (2.10 mg)\n独活 (2.10 mg)\n松节 (2.10 mg)\n全蝎 (0.60 mg)\n红花 (1.00 mg)\n桑寄生 (2.10 mg)\n木瓜 (2.10 mg)\n续断 (2.10 mg)\n苍朮 (2.10 mg)\n杜仲 (2.10 mg)\n天麻 (1.00 mg)\n砂糖 (5.0 mg)\n原料酒加至 (1 ml)\n当归 (2.10 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "袪风健脾、和血舒筋、燥湿发汗、止痛镇惊、强壮筋骨、增强体质。",
+          "related_organisms_count": 25,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰海芙蓉药酒(中药酒剂基准方十四)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n海芙蓉 (2 mg)\n当归 (1 mg)\n川牛膝 (1 mg)\n白朮 (1 mg)\n蚕砂 (1 mg)\n苍耳子 (2 mg)\n秦艽 (2 mg)\n杜仲 (1 mg)\n威灵仙 (1 mg)\n续断 (1 mg)\n防己 (1 mg)\n独活 (1 mg)\n桑寄生 (1 mg)\n枸杞子 (2 mg)\n羌活 (1 mg)\n防风 (1 mg)\n麦芽糖 (5 mg)\n22度原料酒加至 (1 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风湿痛、四肢麻木。",
+          "related_organisms_count": 17,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-1YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n黄耆 (3.7 mg)\n当归 (3.7 mg)\n茯神 (1.8 mg)\n肉桂 (1.8 mg)\n白朮 (1.5 mg)\n防风 (1.8 mg)\n生地黄 (2.2 mg)\n龟版 (1.8 mg)\n麦门冬 (1.8 mg)\n陈皮 (1.8 mg)\n川芎 (1.8 mg)\n山萸肉 (1.8 mg)\n熟地黄 (1.8 mg)\n党参 (1.8 mg)\n茯苓 (1.8 mg)\n枸杞子 (1.8 mg)\n羌活 (1.5 mg)\n五味子 (1.5 mg)\n麦芽糖 (5.0 mg)\n22度原料酒加至 (1 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "追风定痛、强壮筋骨、筋脉孪急、风寒湿痹、气弱阳衰、神疲体倦。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰十一虎药酒(中药酒剂基准方十二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n龙眼肉 (9.0 mg)\n广木香 (1.0 mg)\n什开 (2.0 mg)\n沈香 (7.0 mg)\n山栀子 (3.0 mg)\n党参 (1.0 mg)\n当归 (1.4 mg)\n川芎 (0.5 mg)\n玉竹 (3.0 mg)\n肉桂 (1.5 mg)\n陈皮 (1.0 mg)\n五加皮 (1.6 mg)\n麦芽糖 (5.0 mg)\n22度原料酒加至 (1 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "开胃健脾、补血养颜。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n黄耆 (7.50 mg)\n茯苓 (3.75 mg)\n茯神 (7.50 mg)\n肉桂 (2.25 mg)\n全当归 (4.50 mg)\n熟地黄 (4.50 mg)\n陈皮 (3.75 mg)\n枸杞子 (3.75 mg)\n川芎 (3.75 mg)\n防风 (3.75 mg)\n五味子 (3.00 mg)\n羌活 (3.00 mg)\n杜仲 (4.50 mg)\n续断 (3.75 mg)\n沙参 (3.75 mg)\n白芍 (3.75 mg)\n秦艽 (3.75 mg)\n前胡 (3.75 mg)\n麦芽糖 (5.00 mg)\n22度原料酒加至 (1.00 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "追风定痛、强壮筋骨、筋脉挛急、风寒湿痹、气弱阳衰、神疲体倦、腰酸背痛。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 25070
+    },
+    "message": ""
+  }
+}

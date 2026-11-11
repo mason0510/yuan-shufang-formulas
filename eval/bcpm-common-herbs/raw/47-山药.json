@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "山药"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "3VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"爱生\"杞菊地黄丸\nChi Jyu Dih Hwang Pill“L.L.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n枸杞子 (24 mg)\n甘菊花 (24 mg)\n熟地黄 (96 mg)\n山茱萸 (48 mg)\n山药 (48 mg)\n茯苓 (36 mg)\n牡丹皮 (36 mg)\n泽泻 (36 mg)\n蜂蜜 (152 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "肝肾阴虚、头晕目眩、视物不清、眼睛涩痛、迎风流泪。滋肾养肝。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "3lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"安生\"加减玉泉散\nYeu-Cheng Powder \"An Shing\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有:\n天花粉 (140 mg)\n葛根 (120 mg)\n麦门冬 (90 mg)\n人参 (120 mg)\n茯苓 (90 mg)\n黄芩 (100 mg)\n甘草 (90 mg)\n黄耆 (100 mg)\n准山药 (100 mg)\n黄莲 (50 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "2VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"温补肾丸(还少丹)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n山药 (36 mg)\n怀牛膝 (36 mg)\n茯苓 (24 mg)\n山萸肉 (24 mg)\n楮实 (24 mg)\n杜仲 (24 mg)\n五味子 (24 mg)\n巴戟天 (24 mg)\n肉苁蓉 (24 mg)\n远志 (24 mg)\n小茴香 (24 mg)\n石菖蒲 (12 mg)\n熟地黄 (12 mg)\n枸杞子 (12 mg)\n大枣 (12 mg)\n蜂蜜 (164 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾肾虚寒、血气虚损、体虚盗汗、遗精尿浊。补心肾脾胃虚损。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"保济堂天天乐\"丸(延龄固本丹)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n天门冬 (16 mg)\n麦门冬 (16 mg)\n生地黄 (16 mg)\n熟地黄 (16 mg)\n山药 (16 mg)\n怀牛膝 (16 mg)\n杜仲 (16 mg)\n巴戟天 (16 mg)\n五味子 (16 mg)\n枸杞子 (16 mg)\n山茱萸 (16 mg)\n茯苓 (16 mg)\n人参 (16 mg)\n木香 (16 mg)\n柏子仁 (16 mg)\n川椒 (8 mg)\n石菖蒲 (8 mg)\n远志 (8 mg)\n泽泻 (8 mg)\n肉苁蓉 (32 mg)\n覆盆子 (12 mg)\n车前子 (12 mg)\n菟丝子 (32 mg)\n地骨皮 (12 mg)\n蜂蜜 (128 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "诸虚百损、须发早白、腰脚酸软。补益脾肾、固本培元。",
+          "related_organisms_count": 25,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "4VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"八仙\" 六味地黄丸\nLoui Wei Di Fan Pill \"Ba Shian\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n熟地黄 (104 mg)\n山茱萸 (52 mg)\n山药 (52 mg)\n泽泻 (39 mg)\n牡丹皮 (39 mg)\n茯苓 (39 mg)\n蜂蜜 (175 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "肝肾不足、腰痛足酸、头晕目眩、消渴、舌燥喉痛、足跟作痛。滋阴补肾。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "6FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（５００毫克）中含有：\n黄耆 (25.1200 mg)\n白朮 (25.1200 mg)\n茯神 (25.1200 mg)\n熟地 (25.1200 mg)\n当归 (25.1200 mg)\n枸杞 (25.1200 mg)\n牛膝 (12.6600 mg)\n虎骨 (12.6600 mg)\n杜仲 (12.6600 mg)\n木瓜 (12.6600 mg)\n白芍 (12.6600 mg)\n独活 (12.6600 mg)\n菟丝子 (12.6600 mg)\n山药 (12.6600 mg)\n黄柏 (12.6600 mg)\n蜂蜜 (248.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "腰腿疼痛、脚膝拘挛、筋骨无力、行步艰难。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ElYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n熟地黄 (31 mg)\n党参 (31 mg)\n海狗肾 (31 mg)\n人参 (31 mg)\n黄耆 (31 mg)\n川芎 (31 mg)\n当归 (31 mg)\n白芍 (31 mg)\n茯苓 (31 mg)\n白朮 (31 mg)\n肉桂 (15 mg)\n山药(酒调) (167 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "气血两虚、肢体倦怠。补气血、壮元阳。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "F1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"滋阴降火丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸５００毫克中含有：\n熟地黄 (80.0000 mg)\n山茱萸 (40.0000 mg)\n干山药 (40.0000 mg)\n白茯苓 (30.0000 mg)\n泽泻 (30.0000 mg)\n知母 (20.0000 mg)\n黄柏 (20.0000 mg)\n麦门冬 (20.0000 mg)\n牡丹皮 (30.0000 mg)\n玄参 (20.0000 mg)\n蜂蜜 (170.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "滋阴降火、腰痛足酸、耳鸣、头晕、舌躁咽痛。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "SVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦牌'疗女散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每克中含：\n当归 (100 mg)\n杜仲 (100 mg)\n破故纸 (80 mg)\n川芎 (100 mg)\n香附 (100 mg)\n续断 (80 mg)\n白朮 (100 mg)\n人参 (100 mg)\n椿根皮 (100 mg)\n山药 (80 mg)\n牡蛎 (60 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人赤白带下、头昏眼花、四肢无力、产后血虚、月经不顺、腰酸。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "J1cTtJMBspugNIZgGQEt",
+          "recipe_name": "\"港香兰\"济生肾气丸\nJI SHENG SHEN QI WAN \"KAISER\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "成分：每丸（５００ＭＧ）中含有\n熟地黄 (80.0000 mg)\n茯苓 (60.0000 mg)\n山药 (40.0000 mg)\n山茱萸 (40.0000 mg)\n牡丹皮 (30.0000 mg)\n泽泻 (30.0000 mg)\n牛膝 (20.0000 mg)\n车前子 (20.0000 mg)\n附子（炮） (10.0000 mg)\n肉桂 (10.0000 mg)\n蜂蜜 (160.0000 mg)\n全量 (500.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "肾气不化　小便濇数。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 5266
+    },
+    "message": ""
+  }
+}

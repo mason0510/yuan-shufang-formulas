@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "苍术"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "2lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"消郁丸(越曲丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n苍朮 (60 mg)\n香附 (60 mg)\n川芎 (60 mg)\n神曲 (60 mg)\n炒栀子 (60 mg)\n蜂蜜 (200 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "气、血、痰、火、湿、食之郁结所致的胸膈满闷、脘腹胀痛、嘈杂吞酸、饮食不化、嗳气呕吐。行气解郁",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "91YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6.0公克中含有：\n苍朮 (3.6 g)\n厚朴 (2.4 g)\n砂仁 (2.4 g)\n山楂 (2.4 g)\n麦芽 (2.4 g)\n白芍 (2.4 g)\n陈皮 (2.4 g)\n香附 (2.4 g)\n神曲 (2.4 g)\n枳壳 (2.4 g)\n生姜 (1.2 g)\n甘草 (1.2 g)\n以上生药制成浸膏3.0g（生药与浸膏比例27.6:3.0=9.2:1） ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "嗳气吞酸、恶心、食欲不振、消化不良、健胃。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰风湿药酒(中药酒剂基准方十七方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n白茄根 (4.20 mg)\n甘草 (0.42 mg)\n麻黄 (0.20 mg)\n川乌 (1.00 mg)\n草乌 (1.00 mg)\n秦艽 (2.10 mg)\n桂枝 (1.00 mg)\n防风 (2.10 mg)\n牛膝 (2.10 mg)\n羌活 (1.00 mg)\n白花蛇 (2.10 mg)\n附子 (2.10 mg)\n独活 (2.10 mg)\n松节 (2.10 mg)\n全蝎 (0.60 mg)\n红花 (1.00 mg)\n桑寄生 (2.10 mg)\n木瓜 (2.10 mg)\n续断 (2.10 mg)\n苍朮 (2.10 mg)\n杜仲 (2.10 mg)\n天麻 (1.00 mg)\n砂糖 (5.0 mg)\n原料酒加至 (1 ml)\n当归 (2.10 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "袪风健脾、和血舒筋、燥湿发汗、止痛镇惊、强壮筋骨、增强体质。",
+          "related_organisms_count": 25,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"万灵膏(万灵膏加减味)\nWan Ning Kao \"F.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n骨碎补 (20 mg)\n当归 (20 mg)\n红花 (20 mg)\n自然铜 (20 mg)\n瓜儿血竭 (20 mg)\n乳香 (20 mg)\n没药 (20 mg)\n川芎 (16 mg)\n赤芍 (40 mg)\n薄荷 (20 mg)\n川牛膝 (10 mg)\n五加皮 (10 mg)\n石菖蒲 (10 mg)\n苍朮 (10 mg)\n木香 (6 mg)\n秦艽 (6 mg)\n蛇床子 (6 mg)\n肉桂 (6 mg)\n附子 (6 mg)\n半夏 (6 mg)\n石斛 (6 mg)\n萆薢 (6 mg)\n鹿茸 (6 mg)\n麝香 (4 mg)\n松香 (20 mg)\n黄丹 (160 mg)\n麻油加至 (1000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "消瘀、舒筋、活血、止痛、跌打损伤。",
+          "related_organisms_count": 27,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "QlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"越鞠丸浓缩细粒",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n苍朮 (5.0 g)\n香附子 (5.0 g)\n川芎 (5.0 g)\n炒栀子 (5.0 g)\n神曲 (5.0 g)\n以上生药制成浸膏4.5g(生药与浸膏比例25:4.5=5.6:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "气、血、痰、火、湿、食之郁结所致胸膈满闷、脘腹胀痛、嘈杂吞酸、饮食不化、嗳气呕吐。行气郁结。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "WFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"观音牌\"香砂平胃散(加减味)\n“Guan Yin”Siang Sha Ping Wei San(Jia Jian Wei)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n茯苓 (146 mg)\n苍朮 (146 mg)\n半夏 (146 mg)\n甘草 (42 mg)\n陈皮 (125 mg)\n木香 (83 mg)\n砂仁 (83 mg)\n丁香 (42 mg)\n肉桂 (42 mg)\n薄荷脑 (20 mg)\n碳酸氢钠 (125 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胃病、呕吐、腹痛。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ZVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"国科\"消风散浓缩锭\nShiau Feng San Extract Tablets“K.K.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n当归 (70 mg)\n生地黄 (70 mg)\n防风 (70 mg)\n蝉蜕 (70 mg)\n知母 (70 mg)\n苦参 (70 mg)\n胡麻 (70 mg)\n荆芥 (70 mg)\n苍朮 (70 mg)\n牛蒡子 (70 mg)\n石膏 (70 mg)\n甘草 (35 mg)\n川木通 (35 mg)\n以上生药制成浸膏150mg(生药与浸膏比例840：150＝5.6：1) ( )\n硬脂酸镁 (3 mg)\n淀粉 (147 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风湿浸淫血脉之疮疥搔痒、及风热隐症。润血祛风、除湿清热。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "jlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"华昌\"镇痛风湿丸\nChen Tong Hong Si Pill \"H.C.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n茅朮 (160 mg)\n全蝎 (20 mg)\n石斛 (20 mg)\n当归 (20 mg)\n甘草 (20 mg)\n明天麻 (20 mg)\n川芎 (20 mg)\n羌活 (20 mg)\n荆芥 (20 mg)\n防风 (20 mg)\n麻黄 (20 mg)\n北细辛 (20 mg)\n制川乌 (20 mg)\n制草乌 (20 mg)\n制何首乌 (20 mg)\n蜂蜜 (60 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风湿痛、骨节酸痛、偏身起痛、风湿痹、手足震颤、鹤膝风症、气血凝滞、步履艰辛。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "o1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"金龙\"消化散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每50gm中含\n苍朮 (6.0 gm)\n厚朴 (6.0 gm)\n橘皮 (6.0 gm)\n甘草 (3.0 gm)\n香附 (6.0 gm)\n生姜 (6.0 gm)\n薄荷叶 (6.0 gm)\n枳实 (4.0 gm)\n缩砂 (4.0 gm)\n木香 (3.0 gm)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肚、胃酸过多、消化不良、食伤、食积、呕气、腹部膨满、食欲不振、健胃整肠。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "vFYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"科达\"平胃散浓缩细粒\nPING WEI SAN EXTRACT GRANULA SUBTILAE \"KO DA\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每12公克中含有：\n陈皮 (5 g)\n厚朴 (5 g)\n炙甘草 (3 g)\n苍朮 (8 g)\n生姜 (3 g)\n大枣 (2 g)\n以上生药制成浸膏6g(生药与浸膏比例26:6=4.33:1) ( )\n淀粉 (4.68 g)\n结晶性纤维素 (1.20 g)\n羧甲基纤维素钠 (0.12 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "湿阻脾胃、脘腹胀满、恶心呕吐、噫气吞酸。燥湿健脾、理气和中。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 4945
+    },
+    "message": ""
+  }
+}

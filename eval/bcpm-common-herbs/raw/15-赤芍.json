@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "赤芍"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "9lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有:\n当归 (1.5 g)\n赤芍 (1.5 g)\n黄芩 (1.5 g)\n连翘 (1.5 g)\n川芎 (1.5 g)\n生地黄 (1.5 g)\n山栀子 (1.5 g)\n防风 (1.5 g)\n荆芥 (1.5 g)\n羌活 (1.5 g)\n决明子 (1.5 g)\n薄荷 (1.5 g)\n蔓荆子 (1.5 g)\n菊花 (1.5 g)\n黄连 (1.5 g)\n蒺藜 (1.5 g)\n桔梗 (1.5 g)\n甘草 (1.5 g)\n石膏 (1.5 g)\n以上生药制成浸膏4.8g(生药与浸膏比例28.5:4.8=5.9:1) ( )\n淀粉 (4.2 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热祛风、目赤肿痛。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"得生\"筋畅喷剂\nBICEPS Spray \"T.S\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每1毫升中含有：\n防风 (1.1 mg)\n蕲艾 (1.1 mg)\n牡丹皮 (1.1 mg)\n鹤虱 (1.1 mg)\n升麻 (1.1 mg)\n苦参 (2.2 mg)\n铁线透骨草 (2.2 mg)\n赤芍 (2.2 mg)\n川椒 (1.1 mg)\n甘草 (1.1 mg)\n金不换 (1.1 mg)\n川七 (1.1 mg)\n薄荷脑 (78.1 mg)\n冬绿油 (30.2 mg)\n酒精加至1ml ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "筋肉疼痛、蚊虫咬伤、消肿止痒。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"清痘解毒散(犀角解毒丸去犀角)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n大生地黄 (130 mg)\n防风 (101 mg)\n川黄连 (101 mg)\n当归 (101 mg)\n荆芥 (101 mg)\n连翘 (72 mg)\n赤芍 (72 mg)\n桔梗 (72 mg)\n大力子 (72 mg)\n黄芩 (72 mg)\n薄荷 (53 mg)\n甘草 (53 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "痘瘄后余毒未消、清热解毒、咽干舌燥。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"万灵膏(万灵膏加减味)\nWan Ning Kao \"F.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n骨碎补 (20 mg)\n当归 (20 mg)\n红花 (20 mg)\n自然铜 (20 mg)\n瓜儿血竭 (20 mg)\n乳香 (20 mg)\n没药 (20 mg)\n川芎 (16 mg)\n赤芍 (40 mg)\n薄荷 (20 mg)\n川牛膝 (10 mg)\n五加皮 (10 mg)\n石菖蒲 (10 mg)\n苍朮 (10 mg)\n木香 (6 mg)\n秦艽 (6 mg)\n蛇床子 (6 mg)\n肉桂 (6 mg)\n附子 (6 mg)\n半夏 (6 mg)\n石斛 (6 mg)\n萆薢 (6 mg)\n鹿茸 (6 mg)\n麝香 (4 mg)\n松香 (20 mg)\n黄丹 (160 mg)\n麻油加至 (1000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "消瘀、舒筋、活血、止痛、跌打损伤。",
+          "related_organisms_count": 27,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "oVYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"降火谷\"经痛丸(桂枝茯苓丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n桂枝 (66 mg)\n茯苓 (66 mg)\n牡丹皮 (66 mg)\n桃仁 (66 mg)\n赤芍 (66 mg)\n蜂蜜 (170 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人宿有症块，妊娠胎动，漏下不止，瘀血痛经，经闭。活血化瘀，缓消症块。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "olYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"降火谷\"痔痛丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n槐花 (95 mg)\n地黄 (52.5 mg)\n地榆 (52.5 mg)\n侧柏叶 (52.5 mg)\n黄芩 (25 mg)\n大黄 (22.5 mg)\n赤芍 (25 mg)\n牡丹皮 (25 mg)\n黄连 (20 mg)\n知母 (25 mg)\n甘草 (40 mg)\n天花粉 (40 mg)\n蜂蜜 (25 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "内痔、外痔、大便秘结、消肿。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "wVYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"科林顿\"科林顿酸痛膏(太乙膏加减味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n白芷 (14 mg)\n当归 (14 mg)\n赤芍 (14 mg)\n玄参 (14 mg)\n肉桂 (14 mg)\n大黄 (14 mg)\n木鳖子 (14 mg)\n生地黄 (14 mg)\n血余 (7 mg)\n乳香 (4 mg)\n薄荷 (3 mg)\n没药 (2 mg)\n阿魏 (2 mg)\n树脂 (200 mg)\n氧化锌 (30 mg)\n薄荷脑 (40 mg)\n冰片 (5 mg)\n冬绿油 (5 mg)\n抗氧化剂(BHT) (1 mg)\n食用黄色4号 (0.5 mg)\n麻油加至1g ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风湿痛、筋骨酸痛、跌伤、打扑伤。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "21YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"补阳还五汤浓缩细粒\nPU YANG HUAN WU TANG GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6公克中含有：\n黄耆 (20.0 g)\n归尾 (1.0 g)\n赤芍 (1.0 g)\n地龙 (0.5 g)\n川芎 (0.5 g)\n桃仁 (0.5 g)\n红花 (0.5 g)\n以上生药制成浸膏3g(生药与浸膏比例24:3=8:1) ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "半身不遂、口眼歪斜、语言蹇涩、中风后遗症。补气、活血、通络。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7FYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"领先易清痔丸(消痔丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n生地黄 (56 mg)\n黄芩 (21 mg)\n金银花 (14 mg)\n枳壳 (14 mg)\n秦艽 (14 mg)\n防风 (28 mg)\n大黄 (28 mg)\n当归 (28 mg)\n苍朮 (28 mg)\n槐花 (28 mg)\n赤芍 (28 mg)\n地龙 (28 mg)\n蜂蜜 (185 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "痔漏、便秘。清热、凉血、通便。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"万应膏(加减味去穿山甲)\nPAIN RELIEF HERBAL BALM. TN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n肉桂 (30 mg)\n独活 (30 mg)\n白蔹 (30 mg)\n当归 (30 mg)\n白芷 (30 mg)\n生地黄 (30 mg)\n草乌 (30 mg)\n甘草 (30 mg)\n乌药 (30 mg)\n玄参 (30 mg)\n羌活 (30 mg)\n乳香 (30 mg)\n木?子 (30 mg)\n赤芍 (30 mg)\n川乌 (30 mg)\n没药 (30 mg)\n大黄 (30 mg)\n辣椒 (30 mg)\n薄荷脑 (20 mg)\n冰片 (20 mg)\n冬绿油 (10 mg)\n黄蜡 (100 mg)\n凡士林 (300 mg)\n麻油加至1g ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风湿遍身酸痛、筋骨酸痛、关节痛、扭伤、闪伤。",
+          "related_organisms_count": 21,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 5644
+    },
+    "message": ""
+  }
+}

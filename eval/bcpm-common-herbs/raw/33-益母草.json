@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "益母草"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "dFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"护民”母女士丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n当归 (10 mg)\n川芎 (12 mg)\n人参 (5 mg)\n牡丹 (5 mg)\n白朮 (10 mg)\n香附 (35 mg)\n白芍 (11 mg)\n茯苓 (18 mg)\n黄耆 (35 mg)\n甘草 (7 mg)\n熟地黄 (55 mg)\n益母草 (18 mg)\n菟丝子 (19 mg)\n杜仲 (10 mg)\n蜂蜜 (250 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "补气血、妇女身体虚弱、经期不顺、调经理带。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "KVcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"万国\"益母草散\nI Mu Tsao powder\"w.k\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "益母草 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血调经",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "eFcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"协兴\"妇女保身丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（０.５公克）中含：\n当归末 (0.1000 gm)\n川芎末 (0.0120 gm)\n人参末 (0.0050 gm)\n牡丹末 (0.0100 gm)\n香附末 (0.0350 gm)\n白朮末 (0.0100 gm)\n芍药末 (0.0110 gm)\n茯苓末 (0.0180 gm)\n黄耆末 (0.0350 gm)\n甘草末 (0.0070 gm)\n熟地黄末 (0.0550 gm)\n益母草末 (0.0180 gm)\n菟丝子末 (0.0190 gm)\n杜仲末 (0.0100 gm)\n蜂蜜 (0.2500 gm)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "补气血、妇女身体虚弱、经期不顺、调经理带。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "eVcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"协兴\"妇女保身丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n当归 (100 mg)\n川芎 (12 mg)\n人参 (5 mg)\n牡丹 (10 mg)\n香附 (35 mg)\n白朮 (10 mg)\n白芍 (11 mg)\n茯苓 (18 mg)\n黄耆 (35 mg)\n甘草 (7 mg)\n熟地黄 (55 mg)\n益母草 (18 mg)\n菟丝子 (19 mg)\n杜仲 (10 mg)\n蜂蜜 (155 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "补气血、妇女身体虚弱、经期不顺、调经理带。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "plcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"新典\"益母草散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "益母草 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血调经",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5VcTtJMBspugNIZgGQAt",
+          "recipe_name": "\"长安\"益母草粉末\nMotherwort Herb Powder \"C.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "益母草 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "EVYStJMBspugNIZgovEl",
+          "recipe_name": "阿胶生化膏",
+          "recipe_reference": "卫生部药品标准中药成方制剂 第十九册",
+          "recipe_class": "补益方",
+          "recipe_composition": "阿胶400g，熟地黄1000g，黄芪400g，川芎300g，路路通500g，赤芍300g，麦冬300g，当归500g，益母草400g，关木通200g，桃仁300g，甘草200g，王不留行200g",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "滋阴养血，祛瘀生新，通乳。用于妇女产后血虚体弱，瘀血不清，下腹疼痛，乳汁不通。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "RFcXtJMBspugNIZg7ILj",
+          "recipe_name": "安宫止血膏",
+          "recipe_reference": "国家药监局审批",
+          "recipe_class": "解表方>>扶正解表",
+          "recipe_composition": "益母草,马齿苋",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血化瘀、清热止血。用于人工流产、足月分娩后因血瘀兼热证引起的恶露不净。",
+          "related_organisms_count": 12,
+          "classical_recipe": "",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "GFcXtJMBspugNIZgmHn6",
+          "recipe_name": "安宫止血颗粒",
+          "recipe_reference": "中国药典 一部（2020年版）",
+          "recipe_class": "解表方>>扶正解表",
+          "recipe_composition": "益母草2184g，马齿苋2184g",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血化瘀，清热止血。用于瘀热内蕴所致的恶露不净，症见恶露不止、小腹疼痛、口燥咽干；人工流产及产后子宫复位不全见上述证候者。",
+          "related_organisms_count": 2,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "N1cXtJMBspugNIZg0n_g",
+          "recipe_name": "安宫止血丸",
+          "recipe_reference": "注册标准",
+          "recipe_class": "解表方>>扶正解表",
+          "recipe_composition": "益母草，马齿苋",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血化瘀，清热止血。用于瘀热内蕴所致的恶露不净，症见恶露不止、小腹疼痛、口燥咽干；人工流产及产后子宫复位不全见上述证候者。",
+          "related_organisms_count": 2,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 861
+    },
+    "message": ""
+  }
+}

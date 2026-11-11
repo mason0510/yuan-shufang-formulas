@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "红花"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "51YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"八厘散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n苏木力面 (85.0000 mg)\n当归 (85.0000 mg)\n红花 (130.0000 mg)\n五加皮 (130.0000 mg)\n乳香 (160.0000 mg)\n没药 (160.0000 mg)\n血竭 (160.0000 mg)\n丁香 (50.0000 mg)\n麝香 (5.0000 mg)\n冰片 (35.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "跌打损伤、瘀血停滞。",
+          "related_organisms_count": 9,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰风湿药酒(中药酒剂基准方十七方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n白茄根 (4.20 mg)\n甘草 (0.42 mg)\n麻黄 (0.20 mg)\n川乌 (1.00 mg)\n草乌 (1.00 mg)\n秦艽 (2.10 mg)\n桂枝 (1.00 mg)\n防风 (2.10 mg)\n牛膝 (2.10 mg)\n羌活 (1.00 mg)\n白花蛇 (2.10 mg)\n附子 (2.10 mg)\n独活 (2.10 mg)\n松节 (2.10 mg)\n全蝎 (0.60 mg)\n红花 (1.00 mg)\n桑寄生 (2.10 mg)\n木瓜 (2.10 mg)\n续断 (2.10 mg)\n苍朮 (2.10 mg)\n杜仲 (2.10 mg)\n天麻 (1.00 mg)\n砂糖 (5.0 mg)\n原料酒加至 (1 ml)\n当归 (2.10 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "袪风健脾、和血舒筋、燥湿发汗、止痛镇惊、强壮筋骨、增强体质。",
+          "related_organisms_count": 25,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_1YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"山霸乌荳壮补药酒(中药酒剂基准方四)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n木瓜 (9.6 mg)\n川芎 (3.2 mg)\n川牛膝 (3.2 mg)\n当归 (3.2 mg)\n天麻 (3.2 mg)\n五加皮 (3.2 mg)\n红花 (3.2 mg)\n续断 (3.2 mg)\n白茄根 (3.2 mg)\n玉竹 (6.4 mg)\n秦艽 (1.6 mg)\n防风 (1.6 mg)\n桑枝 (12.5 mg)\n砂糖 (10.0 mg)\n麦芽糖 (10.0 mg)\n乌豆香料 ( q.s.)\n原料酒加至 (1.0 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "壮筋强骨、追风定痛、筋脉挛急、风寒湿痹。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"万灵膏(万灵膏加减味)\nWan Ning Kao \"F.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n骨碎补 (20 mg)\n当归 (20 mg)\n红花 (20 mg)\n自然铜 (20 mg)\n瓜儿血竭 (20 mg)\n乳香 (20 mg)\n没药 (20 mg)\n川芎 (16 mg)\n赤芍 (40 mg)\n薄荷 (20 mg)\n川牛膝 (10 mg)\n五加皮 (10 mg)\n石菖蒲 (10 mg)\n苍朮 (10 mg)\n木香 (6 mg)\n秦艽 (6 mg)\n蛇床子 (6 mg)\n肉桂 (6 mg)\n附子 (6 mg)\n半夏 (6 mg)\n石斛 (6 mg)\n萆薢 (6 mg)\n鹿茸 (6 mg)\n麝香 (4 mg)\n松香 (20 mg)\n黄丹 (160 mg)\n麻油加至 (1000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "消瘀、舒筋、活血、止痛、跌打损伤。",
+          "related_organisms_count": 27,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "O1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"桃红四物汤浓缩细粒",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n桃仁 (5.0 g)\n红花 (2.5 g)\n当归 (5.0 g)\n川芎 (2.5 g)\n白芍 (5.0 g)\n熟地黄 (5.0 g)\n以上生药制成浸膏4.5g(生药与浸膏比例25:4.5=5.6:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不调、痛经、经行不畅有血块。活血行瘀。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "XFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"广洲\"接骨膏",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n五加皮 (100.0000 mg)\n穿山甲 (100.0000 mg)\n乳香 (50.0000 mg)\n白芷 (50.0000 mg)\n羌活 (50.0000 mg)\n没药 (50.0000 mg)\n川七 (100.0000 mg)\n黄柏 (50.0000 mg)\n红花 (100.0000 mg)\n生地黄 (100.0000 mg)\n当归 (100.0000 mg)\n铅丹 (250.0000 mg)\n松脂 (450.0000 mg)\n麻黄 (200.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "接骨　跌打损伤风痛便毒无名肿痛其他伤痛。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "XVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"广洲\"行气散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n广木香 (43.4700 mg)\n丁香 (43.4700 mg)\n川贝 (86.9600 mg)\n香附 (86.9600 mg)\n三棱 (86.9600 mg)\n莪朮 (86.9600 mg)\n红花 (43.4600 mg)\n桔梗 (86.9600 mg)\n百合 (86.9600 mg)\n甘草 (86.9600 mg)\n百部 (86.9600 mg)\n五味 (86.9600 mg)\n枇杷 (86.9600 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "打扑损伤引起之胸部疼痛　袪伤解郁。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "dVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"护民”月宝汤\nTueh Bao Tong“H.M.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包12.5公克中含有：\n当归 (2 g)\n白芍 (1.6 g)\n茯苓 (1.0 g)\n白朮 (0.8 g)\n泽泻 (0.5 g)\n川芎 (1.6 g)\n阿胶 (1.1 g)\n牡丹皮 (0.6 g)\n山药 (1.2 g)\n小茴香 (0.5 g)\n延胡索 (0.3 g)\n桃仁 (0.1 g)\n红花 (0.3 g)\n肉桂 (0.5 g)\n甘草 (0.4 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不顺、经来腹痛、经期头痛、赤白带下。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "0lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\" 领先运气散\n\"Leader\" Leader Yun Ci San",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n大黄 (75.2 mg)\n厚朴 (112.8 mg)\n苏木 (112.8 mg)\n梅片 (37.6 mg)\n木通 (75.2 mg)\n当归 (112.8 mg)\n陈皮 (112.8 mg)\n川七 (22.4 mg)\n枳壳 (112.8 mg)\n红花 (112.8 mg)\n甘草 (112.8 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "跌打损伤、瘀血停滞。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "21YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"补阳还五汤浓缩细粒\nPU YANG HUAN WU TANG GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6公克中含有：\n黄耆 (20.0 g)\n归尾 (1.0 g)\n赤芍 (1.0 g)\n地龙 (0.5 g)\n川芎 (0.5 g)\n桃仁 (0.5 g)\n红花 (0.5 g)\n以上生药制成浸膏3g(生药与浸膏比例24:3=8:1) ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "半身不遂、口眼歪斜、语言蹇涩、中风后遗症。补气、活血、通络。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 3706
+    },
+    "message": ""
+  }
+}

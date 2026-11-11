@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "厚朴"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "91YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6.0公克中含有：\n苍朮 (3.6 g)\n厚朴 (2.4 g)\n砂仁 (2.4 g)\n山楂 (2.4 g)\n麦芽 (2.4 g)\n白芍 (2.4 g)\n陈皮 (2.4 g)\n香附 (2.4 g)\n神曲 (2.4 g)\n枳壳 (2.4 g)\n生姜 (1.2 g)\n甘草 (1.2 g)\n以上生药制成浸膏3.0g（生药与浸膏比例27.6:3.0=9.2:1） ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "嗳气吞酸、恶心、食欲不振、消化不良、健胃。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "q1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"晋安\"保产无忧汤\nPAO CHAN WU YU TANG \"C.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包(10.0g)中含有：\n原朴 (0.59 g)\n蕲艾 (0.59 g)\n当归（酒炒） (1.26 g)\n川芎 (1.26 g)\n黄耆 (0.63 g)\n荆芥穗 (0.63 g)\n川贝母 (0.83 g)\n菟丝子 (0.83 g)\n羌活 (0.47 g)\n甘草 (0.47 g)\n枳壳（麸炒） (0.47 g)\n白芍药（酒炒) (1.58 g)\n生姜 (0.39 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "安胎、补血、产前调养。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "o1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"金龙\"消化散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每50gm中含\n苍朮 (6.0 gm)\n厚朴 (6.0 gm)\n橘皮 (6.0 gm)\n甘草 (3.0 gm)\n香附 (6.0 gm)\n生姜 (6.0 gm)\n薄荷叶 (6.0 gm)\n枳实 (4.0 gm)\n缩砂 (4.0 gm)\n木香 (3.0 gm)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肚、胃酸过多、消化不良、食伤、食积、呕气、腹部膨满、食欲不振、健胃整肠。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "vFYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"科达\"平胃散浓缩细粒\nPING WEI SAN EXTRACT GRANULA SUBTILAE \"KO DA\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每12公克中含有：\n陈皮 (5 g)\n厚朴 (5 g)\n炙甘草 (3 g)\n苍朮 (8 g)\n生姜 (3 g)\n大枣 (2 g)\n以上生药制成浸膏6g(生药与浸膏比例26:6=4.33:1) ( )\n淀粉 (4.68 g)\n结晶性纤维素 (1.20 g)\n羧甲基纤维素钠 (0.12 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "湿阻脾胃、脘腹胀满、恶心呕吐、噫气吞酸。燥湿健脾、理气和中。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "0lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\" 领先运气散\n\"Leader\" Leader Yun Ci San",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n大黄 (75.2 mg)\n厚朴 (112.8 mg)\n苏木 (112.8 mg)\n梅片 (37.6 mg)\n木通 (75.2 mg)\n当归 (112.8 mg)\n陈皮 (112.8 mg)\n川七 (22.4 mg)\n枳壳 (112.8 mg)\n红花 (112.8 mg)\n甘草 (112.8 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "跌打损伤、瘀血停滞。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "QVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"强立\"养维宝散(平胃散)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有:\n厚朴 (220 mg)\n陈皮 (220 mg)\n甘草 (100 mg)\n苍朮 (280 mg)\n生姜 (100 mg)\n大枣 (80 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胃酸过多、嗳气吞酸、食欲不振。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "HFYTtJMBspugNIZgDv8J",
+          "recipe_name": "\"顺天堂\"分消汤浓缩颗粒\nFEN-HSIAO-TANG EXTRACT GRANULES \"SUN-TEN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６.０Ｇ中含：\n苍朮 (1.5000 g)\n白朮 (1.5000 g)\n陈皮 (1.0000 g)\n厚朴 (1.0000 g)\n枳实 (0.5000 g)\n泽泻 (1.0000 g)\n砂仁 (0.5000 g)\n木香 (0.5000 g)\n香附子 (1.0000 g)\n猪苓 (1.0000 g)\n大腹皮 (0.5000 g)\n茯苓 (1.5000 g)\n生姜 (0.5000 g)\n灯心草 (0.5000 g)\n以上生药制成浸膏 (3.0000 g)\n(生药与浸膏比例12.5:3.0=4.1:1) ( g)\n玉蜀黍淀粉 (3.0000 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "治中满或骏胀、脾虚发肿满饱闷、浮肿。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "plYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"天明\" 麻仁丸浓缩散\n\"TIMING\"MA JEN WAN EXTRACT POWDER",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６Ｇ中含有：\n麻仁 (7.5 g)\n枳实 (2.5 g)\n芍药 (2.5 g)\n大黄 (5.0 g)\n厚朴 (2.5 g)\n杏仁 (2.5 g)\n以上生药合并制成干浸膏4.0g(生药与浸膏比22.5:4=5.6:1) ( g)\n玉米淀粉 (2.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "润肠通便。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "qVYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"天明\" 胃苓汤浓缩散\n\"TIMING\"WIE LING TANG EXTRACT POWDER",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６.０Ｇ中含有：\n苍朮 (3.0000 g)\n厚朴 (3.0000 g)\n陈皮 (3.0000 g)\n白朮 (3.0000 g)\n茯苓 (3.0000 g)\n泽泻 (2.0000 g)\n苓 (2.0000 g)\n甘草 (1.2000 g)\n肉桂 (1.0000 g)\n生姜 (1.0000 g)\n大枣 (1.0000 g)\n以上生药合并制成干浸膏 (4.0000 g)\n(生药与浸膏比例23.2:4=5.8:1) (0.0000 g)\n玉米淀粉 (2.0000 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "渗湿蠲饮、和中化积、腹痛泄泻。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "slYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"天明\"保产无忧方浓缩细粒\n\"TIMING\"BAO CHAN WU YOU FANG GRANULA SUBTILAE",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每7.5公克中含有：\n厚朴 (1.4 g)\n艾叶 (1.4 g)\n当归 (3.0 g)\n川芎 (3.0 g)\n荆芥 (1.6 g)\n川贝母 (2.0 g)\n菟丝子 (2.0 g)\n羌活 (1.0 g)\n甘草 (1.0 g)\n枳壳 (1.2 g)\n白芍 (4.0 g)\n生姜 (3.0 g)\n黄耆 (1.6 g)\n以上生药制成浸膏3.4g(生药与浸膏比例26.2:3.4=7.71:1) ( )\n淀粉 (3.1 g)\n糊精 (1.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胎动不安。补气养血，安胎保产",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 5592
+    },
+    "message": ""
+  }
+}

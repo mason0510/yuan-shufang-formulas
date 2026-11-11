@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "白芍"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "6FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（５００毫克）中含有：\n黄耆 (25.1200 mg)\n白朮 (25.1200 mg)\n茯神 (25.1200 mg)\n熟地 (25.1200 mg)\n当归 (25.1200 mg)\n枸杞 (25.1200 mg)\n牛膝 (12.6600 mg)\n虎骨 (12.6600 mg)\n杜仲 (12.6600 mg)\n木瓜 (12.6600 mg)\n白芍 (12.6600 mg)\n独活 (12.6600 mg)\n菟丝子 (12.6600 mg)\n山药 (12.6600 mg)\n黄柏 (12.6600 mg)\n蜂蜜 (248.0000 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "腰腿疼痛、脚膝拘挛、筋骨无力、行步艰难。",
+          "related_organisms_count": 16,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "91YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6.0公克中含有：\n苍朮 (3.6 g)\n厚朴 (2.4 g)\n砂仁 (2.4 g)\n山楂 (2.4 g)\n麦芽 (2.4 g)\n白芍 (2.4 g)\n陈皮 (2.4 g)\n香附 (2.4 g)\n神曲 (2.4 g)\n枳壳 (2.4 g)\n生姜 (1.2 g)\n甘草 (1.2 g)\n以上生药制成浸膏3.0g（生药与浸膏比例27.6:3.0=9.2:1） ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "嗳气吞酸、恶心、食欲不振、消化不良、健胃。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "-FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n人参 (22 mg)\n白朮 (22 mg)\n茯苓 (22 mg)\n白芍 (22 mg)\n鹿角霜 (22 mg)\n川椒 (22 mg)\n杜仲 (22 mg)\n川芎 (12 mg)\n甘草 (12 mg)\n当归 (44 mg)\n熟地黄 (44 mg)\n菟丝子 (44 mg)\n蜂蜜 (190 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人气血俱虚、经脉不调、或断续或滞浊、腹痛。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公撮中含有：\n黄耆 (7.50 mg)\n茯苓 (3.75 mg)\n茯神 (7.50 mg)\n肉桂 (2.25 mg)\n全当归 (4.50 mg)\n熟地黄 (4.50 mg)\n陈皮 (3.75 mg)\n枸杞子 (3.75 mg)\n川芎 (3.75 mg)\n防风 (3.75 mg)\n五味子 (3.00 mg)\n羌活 (3.00 mg)\n杜仲 (4.50 mg)\n续断 (3.75 mg)\n沙参 (3.75 mg)\n白芍 (3.75 mg)\n秦艽 (3.75 mg)\n前胡 (3.75 mg)\n麦芽糖 (5.00 mg)\n22度原料酒加至 (1.00 ml)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "追风定痛、强壮筋骨、筋脉挛急、风寒湿痹、气弱阳衰、神疲体倦、腰酸背痛。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ElYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n熟地黄 (31 mg)\n党参 (31 mg)\n海狗肾 (31 mg)\n人参 (31 mg)\n黄耆 (31 mg)\n川芎 (31 mg)\n当归 (31 mg)\n白芍 (31 mg)\n茯苓 (31 mg)\n白朮 (31 mg)\n肉桂 (15 mg)\n山药(酒调) (167 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "气血两虚、肢体倦怠。补气血、壮元阳。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "O1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"桃红四物汤浓缩细粒",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n桃仁 (5.0 g)\n红花 (2.5 g)\n当归 (5.0 g)\n川芎 (2.5 g)\n白芍 (5.0 g)\n熟地黄 (5.0 g)\n以上生药制成浸膏4.5g(生药与浸膏比例25:4.5=5.6:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不调、痛经、经行不畅有血块。活血行瘀。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "S1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"港香兰\"白芍浓缩散\nBai Shao Concentrated Powder \"KAISER\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n白芍 (4.2 g)\n以上生药制成浸膏0.66g(生药与浸膏比例4.2：0.66=6.4：1) ( )\n淀粉 (0.34 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "止痛",
+          "related_organisms_count": 2,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "U1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"港香兰\"真武汤浓缩锭\nZhen Wu Tang Concentrated Tablets \"KAISER\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n茯苓 (247.5 mg)\n白芍 (247.5 mg)\n生姜 (247.5 mg)\n白朮 (165 mg)\n炮附子 (99 mg)\n以上生药制成浸膏162mg(生药与浸膏比例1006.5:162=6.2:1) ( )\n淀粉 (135 mg)\n硬脂酸镁 (3 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾肾阳虚、水气内停。温肾散寒、健脾利水。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ZFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"国科\"温经汤浓缩锭\nWen Jing Tang Extract Tablets“K.K.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n吴茱萸 (102 mg)\n当归 (68 mg)\n川芎 (68 mg)\n白芍 (68 mg)\n人参 (68 mg)\n桂枝 (68 mg)\n阿胶 (68 mg)\n牡丹皮 (68 mg)\n生姜 (68 mg)\n甘草 (68 mg)\n半夏(制) (102 mg)\n麦门冬 (136 mg)\n以上生药制成浸膏150mg(生药与浸膏比例952：150＝6.3：1) ( )\n淀粉 (147 mg)\n硬脂酸镁 (3 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人少腹寒冷、胀急不舒、经期不顺、淋漓不止。温经养血、活血调经。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "aFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(32mg)中含有：\n乌鸡 (17 mg)\n香附 (4.3 mg)\n熟地黄 (1.1 mg)\n生地黄 (0.5 mg)\n当归 (0.5 mg)\n白芍 (0.5 mg)\n黄耆 (0.5 mg)\n牛膝 (0.5 mg)\n柴胡 (0.5 mg)\n牡丹皮 (0.5 mg)\n知母 (0.5 mg)\n川贝母 (0.5 mg)\n黄连 (0.3 mg)\n地骨皮 (0.3 mg)\n干姜 (0.3 mg)\n延胡索 (0.3 mg)\n茯苓 (1.0 mg)\n秦艽 (0.7 mg)\n艾叶 (1.1 mg)\n青蒿 (1.1 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人赢瘦、血虚有热、经水不调、崩漏带下。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 11133
+    },
+    "message": ""
+  }
+}

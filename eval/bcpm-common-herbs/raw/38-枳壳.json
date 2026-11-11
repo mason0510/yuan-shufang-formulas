@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "枳壳"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "91YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6.0公克中含有：\n苍朮 (3.6 g)\n厚朴 (2.4 g)\n砂仁 (2.4 g)\n山楂 (2.4 g)\n麦芽 (2.4 g)\n白芍 (2.4 g)\n陈皮 (2.4 g)\n香附 (2.4 g)\n神曲 (2.4 g)\n枳壳 (2.4 g)\n生姜 (1.2 g)\n甘草 (1.2 g)\n以上生药制成浸膏3.0g（生药与浸膏比例27.6:3.0=9.2:1） ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "嗳气吞酸、恶心、食欲不振、消化不良、健胃。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "ZlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"国科\"枳壳浓缩细粒\nJyy Ker Extract Subtly Granule “K.K.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n枳壳 (2.5 g)\n以上生药制成浸膏0.5g(生药与浸膏比例2.5：0.5＝5：1) ( )\n淀粉 (0.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "破气、行痰消食。",
+          "related_organisms_count": 2,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "q1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"晋安\"保产无忧汤\nPAO CHAN WU YU TANG \"C.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包(10.0g)中含有：\n原朴 (0.59 g)\n蕲艾 (0.59 g)\n当归（酒炒） (1.26 g)\n川芎 (1.26 g)\n黄耆 (0.63 g)\n荆芥穗 (0.63 g)\n川贝母 (0.83 g)\n菟丝子 (0.83 g)\n羌活 (0.47 g)\n甘草 (0.47 g)\n枳壳（麸炒） (0.47 g)\n白芍药（酒炒) (1.58 g)\n生姜 (0.39 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "安胎、补血、产前调养。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "rlYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"晋安\"荆防败毒汤\nJING FANG BAI DU TONG \" C.A. \"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包(10.0g)中含有：\n羌活 (0.8 g)\n独活 (1.2 g)\n柴胡 (0.8 g)\n前胡 (0.8 g)\n枳壳（麸炒） (0.8 g)\n川芎 (0.8 g)\n桔梗 (0.8 g)\n茯苓 (0.8 g)\n荆芥 (0.8 g)\n防风 (0.8 g)\n人参 (0.4 g)\n甘草 (0.4 g)\n薄荷 (0.8 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风寒咳嗽、寒热作痛、咽喉肿痛。解表解毒。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "0lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\" 领先运气散\n\"Leader\" Leader Yun Ci San",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n大黄 (75.2 mg)\n厚朴 (112.8 mg)\n苏木 (112.8 mg)\n梅片 (37.6 mg)\n木通 (75.2 mg)\n当归 (112.8 mg)\n陈皮 (112.8 mg)\n川七 (22.4 mg)\n枳壳 (112.8 mg)\n红花 (112.8 mg)\n甘草 (112.8 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "跌打损伤、瘀血停滞。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "5lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"甘露饮浓缩锭\nKan Lu Yin Extract Tablets \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n熟地黄 (55.44 mg)\n麦门冬 (55.44 mg)\n枳壳 (55.44 mg)\n炙甘草 (55.44 mg)\n茵陈蒿 (55.44 mg)\n枇杷叶 (55.44 mg)\n石斛 (55.44 mg)\n黄芩 (55.44 mg)\n生地黄 (55.44 mg)\n天门冬 (55.44 mg)\n以上生药制成浸膏144mg(生药与浸膏比例554.4:144=3.85:1) ( )\n淀粉 (100 mg)\n麦芽糊精 (56 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胃经湿热、口臭咽痛、口舌生疮、牙宣龈肿。滋阴、清湿热。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "6lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"荆防败毒散浓缩锭\nChing Fang Pai Tu San Extract Tablets \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每锭(300mg)中含有：\n荆芥 (111.29 mg)\n防风 (111.29 mg)\n羌活 (111.29 mg)\n独活 (111.29 mg)\n柴胡 (111.29 mg)\n前胡 (111.29 mg)\n川芎 (111.29 mg)\n枳壳 (111.29 mg)\n桔梗 (111.29 mg)\n茯苓 (111.29 mg)\n甘草 (55.65 mg)\n生姜 (111.29 mg)\n薄荷 (37.10 mg)\n以上生药制成浸膏141mg(生药与浸膏比例1316.54:141=9.34:1) ( )\n淀粉 (100 mg)\n麦芽糊精 (59 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "外感风寒湿邪、恶寒发热、头痛项强、肢体酸痛、腮肿。发汗解表、散风祛湿。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "61YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"荆防败毒散浓缩细粒\nCHING FANG PAI TU SAN GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每12公克中含有:\n荆芥 (3.0 g)\n防风 (3.0 g)\n羌活 (3.0 g)\n独活 (3.0 g)\n柴胡 (3.0 g)\n前胡 (3.0 g)\n川芎 (3.0 g)\n枳壳 (3.0 g)\n桔梗 (3.0 g)\n茯苓 (3.0 g)\n甘草 (1.5 g)\n生姜 (3.0 g)\n薄荷 (1.0 g)\n以上生药制成浸膏6g(生药与浸膏比例35.5:6=5.91:1) ( )\n淀粉 (6.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "外感风寒湿邪、恶寒发热、头痛项强、肢体酸痛、腮肿。发汗解表、散风祛湿。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7FYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"领先易清痔丸(消痔丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n生地黄 (56 mg)\n黄芩 (21 mg)\n金银花 (14 mg)\n枳壳 (14 mg)\n秦艽 (14 mg)\n防风 (28 mg)\n大黄 (28 mg)\n当归 (28 mg)\n苍朮 (28 mg)\n槐花 (28 mg)\n赤芍 (28 mg)\n地龙 (28 mg)\n蜂蜜 (185 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "痔漏、便秘。清热、凉血、通便。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "_FYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"乌药顺气散浓缩细粒\nWU YAO SHUN CHI SAN GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n麻黄 (4 g)\n陈皮 (4 g)\n乌药 (4 g)\n川芎 (2 g)\n白殭蚕 (2 g)\n枳壳 (2 g)\n白芷 (2 g)\n甘草 (2 g)\n桔梗 (2 g)\n干姜 (1 g)\n生姜 (3 g)\n大枣 (1 g)\n以上生药制成浸膏4.5g(生药与浸膏比例29:4.5=6.4:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "遍身顽麻、骨节疼痛、步履艰难、语言蹇涩、口眼喎斜、筋脉拘挛。顺气宣散、祛风化痰。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 6095
+    },
+    "message": ""
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "桃仁"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "NlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"润肠丸浓缩细粒",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n羌活 (3 g)\n当归尾 (3 g)\n大黄 (3 g)\n麻子仁 (6 g)\n桃仁 (6 g)\n以上生药制成浸膏4.5g(生药与浸膏比例21:4.5=4.6:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "肠胃燥热、大便秘结。润肠通便。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "O1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"桃红四物汤浓缩细粒",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有：\n桃仁 (5.0 g)\n红花 (2.5 g)\n当归 (5.0 g)\n川芎 (2.5 g)\n白芍 (5.0 g)\n熟地黄 (5.0 g)\n以上生药制成浸膏4.5g(生药与浸膏比例25:4.5=5.6:1) ( )\n淀粉 (4.5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不调、痛经、经行不畅有血块。活血行瘀。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "iVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"华昌\"桃仁散\nTao Ren Powder \"H.C\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "桃仁 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血祛瘀。",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "l1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"华陀\"桃仁散\n\"Hua TO\" Taur Ren Powder",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "桃仁 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "活血祛瘀",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "dVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"护民”月宝汤\nTueh Bao Tong“H.M.”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包12.5公克中含有：\n当归 (2 g)\n白芍 (1.6 g)\n茯苓 (1.0 g)\n白朮 (0.8 g)\n泽泻 (0.5 g)\n川芎 (1.6 g)\n阿胶 (1.1 g)\n牡丹皮 (0.6 g)\n山药 (1.2 g)\n小茴香 (0.5 g)\n延胡索 (0.3 g)\n桃仁 (0.1 g)\n红花 (0.3 g)\n肉桂 (0.5 g)\n甘草 (0.4 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "月经不顺、经来腹痛、经期头痛、赤白带下。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "oVYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"降火谷\"经痛丸(桂枝茯苓丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n桂枝 (66 mg)\n茯苓 (66 mg)\n牡丹皮 (66 mg)\n桃仁 (66 mg)\n赤芍 (66 mg)\n蜂蜜 (170 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人宿有症块，妊娠胎动，漏下不止，瘀血痛经，经闭。活血化瘀，缓消症块。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "21YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"补阳还五汤浓缩细粒\nPU YANG HUAN WU TANG GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6公克中含有：\n黄耆 (20.0 g)\n归尾 (1.0 g)\n赤芍 (1.0 g)\n地龙 (0.5 g)\n川芎 (0.5 g)\n桃仁 (0.5 g)\n红花 (0.5 g)\n以上生药制成浸膏3g(生药与浸膏比例24:3=8:1) ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "半身不遂、口眼歪斜、语言蹇涩、中风后遗症。补气、活血、通络。",
+          "related_organisms_count": 8,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "9lYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"领先\"生化汤浓缩细粒\nSHENG HUA TANG GRANULA SUBTILAE \"LING SIAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每10公克中含有：\n当归 (16 g)\n川芎 (6 g)\n桃仁 (3 g)\n黑姜 (1 g)\n炙甘草 (1 g)\n以上生药制成浸膏5g(生药与浸膏比例27:5=5.4:1) ( )\n淀粉 (5 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "产后恶露不行、少腹疼痛。生新血、化瘀血、温中散寒。",
+          "related_organisms_count": 6,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "SVYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"人寿\"常清束丸(润肠丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(502mg)中含有：\n桃仁 (95 mg)\n火麻仁 (95 mg)\n大黄 (48 mg)\n羌活 (48 mg)\n当归尾 (48 mg)\n蜂蜜 (166 mg)\n活性碳 (1.75 mg)\n蜜蜡 (0.25 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "治脾胃伏火、痰结、大肠干燥、或风热血结、大便秘濇、不思饮食。润燥、和血、疏风。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "SlYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"人寿\"鹿茸壮雄丸",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(600mg)中含有:\n人参 (20 mg)\n沉香 (10 mg)\n肉桂 (10 mg)\n肉苁蓉 (20 mg)\n怀牛膝 (15 mg)\n鹿茸 (15 mg)\n熟地黄 (15 mg)\n炮附子 (15 mg)\n核桃肉 (15 mg)\n茯苓 (20 mg)\n枸杞子 (15 mg)\n山茱萸 (15 mg)\n杜仲 (15 mg)\n菟丝饼 (20 mg)\n巴戟天 (15 mg)\n小茴香 (10 mg)\n楮实 (15 mg)\n丁香 (10 mg)\n补骨脂 (15 mg)\n山药 (20 mg)\n远志 (15 mg)\n蜂蜜 (280 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脾肾虚寒、血气赢乏、体虚盗汗、遗精尿浊。补心肾脾胃四经虚损。",
+          "related_organisms_count": 22,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 3400
+    },
+    "message": ""
+  }
+}

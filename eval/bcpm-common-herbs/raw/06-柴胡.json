@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "柴胡"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "31YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"安生\"平血丸(大柴胡汤加味)\nPieng Shiee Pills \"An Shing\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有:\n柴胡 (30 mg)\n大黄 (20 mg)\n枳实 (30 mg)\n半夏 (30 mg)\n黄芩 (30 mg)\n芍药 (30 mg)\n生姜 (10 mg)\n大枣 (10 mg)\n夏枯草 (30 mg)\n杜仲 (40 mg)\n黄连 (20 mg)\n蜂蜜 (220 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "21YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"阿桐伯\"治肝保胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n柴胡 (84.0 mg)\n知母 (41.5 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n0号胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "7VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"得力\"顾立肝胶囊(龙胆泻肝汤第二方)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每胶囊(500mg)中含有：\n龙胆 (41.5 mg)\n甘草 (41.5 mg)\n人参 (41.5 mg)\n天门冬 (41.5 mg)\n黄连 (41.5 mg)\n山栀子 (41.5 mg)\n麦门冬 (41.5 mg)\n知母 (41.5 mg)\n柴胡 (84.0 mg)\n黄芩 (58.5 mg)\n五味子 (25.5 mg)\n０号透明胶囊 (1 粒)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"平肝散(龙胆泻肝汤)\nP’ien Kan Powder\"F.A.\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n龙胆 (83 mg)\n甘草 (83 mg)\n人参 (83 mg)\n天门冬 (83 mg)\n黄连 (83 mg)\n栀子 (83 mg)\n麦门冬 (83 mg)\n知母 (83 mg)\n柴胡 (168 mg)\n黄芩 (117 mg)\n五味子 (51 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肝火、滋阴血、肝胆经实火、湿热口苦。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "QFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦\"小柴胡汤散\nHSIAO CHAI FU TANG",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６公克中含：\n柴胡 (1500 mg)\n半夏 (1000 mg)\n黄芩 (750 mg)\n人参 (750 mg)\n甘草 (500 mg)\n生姜 (750 mg)\n大枣 (750 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "日晡潮热、胸肋苦满、心烦恶心、感冒、胃肠炎。",
+          "related_organisms_count": 7,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "RlYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"复旦牌\"补中益气汤散\nPU CHUNG I CHI TANG",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６　０ＧＭ中含：\n人参 (750 mg)\n黄耆 (1000 mg)\n白朮 (870 mg)\n当归 (750 mg)\n陈皮 (500 mg)\n柴胡 (500 mg)\n升麻 (250 mg)\n甘草 (380 mg)\n生姜 (500 mg)\n大枣 (500 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "劳倦、 口渴、 食少无味、 脾胃虚弱、 元气不足。补忠益气。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "aFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(32mg)中含有：\n乌鸡 (17 mg)\n香附 (4.3 mg)\n熟地黄 (1.1 mg)\n生地黄 (0.5 mg)\n当归 (0.5 mg)\n白芍 (0.5 mg)\n黄耆 (0.5 mg)\n牛膝 (0.5 mg)\n柴胡 (0.5 mg)\n牡丹皮 (0.5 mg)\n知母 (0.5 mg)\n川贝母 (0.5 mg)\n黄连 (0.3 mg)\n地骨皮 (0.3 mg)\n干姜 (0.3 mg)\n延胡索 (0.3 mg)\n茯苓 (1.0 mg)\n秦艽 (0.7 mg)\n艾叶 (1.1 mg)\n青蒿 (1.1 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "妇人赢瘦、血虚有热、经水不调、崩漏带下。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "c1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"厚生\"萧尧速立清丸(大柴胡汤加味)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸（５００mg）中含有：\n柴胡 (30 mg)\n枳实 (30 mg)\n白芍 (30 mg)\n大枣 (10 mg)\n杜仲 (40 mg)\n黄芩 (30 mg)\n大黄 (20 mg)\n半夏 (30 mg)\n生姜 (10 mg)\n夏枯草 (30 mg)\n黄连 (20 mg)\n蜂蜜 (220 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "头晕面赤、腹胀便秘。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "rlYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"晋安\"荆防败毒汤\nJING FANG BAI DU TONG \" C.A. \"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包(10.0g)中含有：\n羌活 (0.8 g)\n独活 (1.2 g)\n柴胡 (0.8 g)\n前胡 (0.8 g)\n枳壳（麸炒） (0.8 g)\n川芎 (0.8 g)\n桔梗 (0.8 g)\n茯苓 (0.8 g)\n荆芥 (0.8 g)\n防风 (0.8 g)\n人参 (0.4 g)\n甘草 (0.4 g)\n薄荷 (0.8 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风寒咳嗽、寒热作痛、咽喉肿痛。解表解毒。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "slYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"俊雄\"优肝宝丸(龙胆泻肝丸)\nYOU GAN BAO WAN（LONG DAN XIE GAN WAN）“JUN XIONG”",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n龙胆 (50 mg)\n黄芩 (25 mg)\n山栀子 (25 mg)\n泽泻 (50 mg)\n木通 (25 mg)\n车前子 (25 mg)\n当归 (25 mg)\n生地黄 (25 mg)\n柴胡 (50 mg)\n甘草 (25 mg)\n蜂蜜 (175 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "脏腑积热、耳鸣耳聋、耳肿疼痛、小便涩滞。泻肝火、利湿热。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 7229
+    },
+    "message": ""
+  }
+}

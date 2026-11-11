@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "桔梗"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "6VYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"成功\"天王补心散(去朱砂)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n生地黄 (55.55 mg)\n人参 (55.55 mg)\n茯苓 (55.55 mg)\n石菖蒲 (55.55 mg)\n玄参 (55.55 mg)\n柏子仁 (55.55 mg)\n桔梗 (55.55 mg)\n天门冬 (55.55 mg)\n远志 (55.55 mg)\n丹参 (55.55 mg)\n酸枣仁 (55.55 mg)\n甘草 (55.55 mg)\n麦门冬 (55.55 mg)\n百部 (55.55 mg)\n杜仲 (55.55 mg)\n茯神 (55.55 mg)\n当归 (55.55 mg)\n五味子 (55.65 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "思虑过度、神志不宁、咽干口燥、健忘怔忡、口舌生疮。宁心、化痰涎、祛烦热。",
+          "related_organisms_count": 18,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "8FYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\" 桔梗粉末\nPlatycodon Root Powder \"Dersan\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "桔梗 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "9lYTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每9公克中含有:\n当归 (1.5 g)\n赤芍 (1.5 g)\n黄芩 (1.5 g)\n连翘 (1.5 g)\n川芎 (1.5 g)\n生地黄 (1.5 g)\n山栀子 (1.5 g)\n防风 (1.5 g)\n荆芥 (1.5 g)\n羌活 (1.5 g)\n决明子 (1.5 g)\n薄荷 (1.5 g)\n蔓荆子 (1.5 g)\n菊花 (1.5 g)\n黄连 (1.5 g)\n蒺藜 (1.5 g)\n桔梗 (1.5 g)\n甘草 (1.5 g)\n石膏 (1.5 g)\n以上生药制成浸膏4.8g(生药与浸膏比例28.5:4.8=5.9:1) ( )\n淀粉 (4.2 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "清热祛风、目赤肿痛。",
+          "related_organisms_count": 20,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "E1YTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"宁嗽散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n桔梗 (110 mg)\n川石斛 (110 mg)\n半夏 (110 mg)\n川贝母 (105 mg)\n苏子 (105 mg)\n茯苓 (105 mg)\n薄荷 (75 mg)\n杏仁 (75 mg)\n桑白皮 (75 mg)\n橘红 (40 mg)\n麦芽 (60 mg)\n甘草 (30 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "咳嗽。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "FVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"福安\"清痘解毒散(犀角解毒丸去犀角)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n大生地黄 (130 mg)\n防风 (101 mg)\n川黄连 (101 mg)\n当归 (101 mg)\n荆芥 (101 mg)\n连翘 (72 mg)\n赤芍 (72 mg)\n桔梗 (72 mg)\n大力子 (72 mg)\n黄芩 (72 mg)\n薄荷 (53 mg)\n甘草 (53 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "痘瘄后余毒未消、清热解毒、咽干舌燥。",
+          "related_organisms_count": 12,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "VVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"公道伯\"顺喉丸(响声破笛丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n连翘 (93.3 mg)\n桔梗 (70.0 mg)\n川芎 (93.3 mg)\n砂仁 (35.0 mg)\n诃子 (35.0 mg)\n儿茶 (70.0 mg)\n薄荷 (140.0 mg)\n大黄 (35.0 mg)\n甘草 (70.0 mg)\n蜂蜜 (357.0 mg)\n蜜蜡 (1.4 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "喉痛声哑、失音。清肺润喉。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "XVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"广洲\"行气散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n广木香 (43.4700 mg)\n丁香 (43.4700 mg)\n川贝 (86.9600 mg)\n香附 (86.9600 mg)\n三棱 (86.9600 mg)\n莪朮 (86.9600 mg)\n红花 (43.4600 mg)\n桔梗 (86.9600 mg)\n百合 (86.9600 mg)\n甘草 (86.9600 mg)\n百部 (86.9600 mg)\n五味 (86.9600 mg)\n枇杷 (86.9600 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "打扑损伤引起之胸部疼痛　袪伤解郁。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "gVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"华昌\"桔梗散\nJie Geng Powder \"H.C\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "桔梗 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "宣肺祛痰。",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "rlYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"晋安\"荆防败毒汤\nJING FANG BAI DU TONG \" C.A. \"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每包(10.0g)中含有：\n羌活 (0.8 g)\n独活 (1.2 g)\n柴胡 (0.8 g)\n前胡 (0.8 g)\n枳壳（麸炒） (0.8 g)\n川芎 (0.8 g)\n桔梗 (0.8 g)\n茯苓 (0.8 g)\n荆芥 (0.8 g)\n防风 (0.8 g)\n人参 (0.4 g)\n甘草 (0.4 g)\n薄荷 (0.8 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "风寒咳嗽、寒热作痛、咽喉肿痛。解表解毒。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "sFYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"晶彩\"天王补心丸(去珠砂)\nTian Wang Bu Xin Wan(Qu Zhu Sha) \"JING CAI\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每丸(500mg)中含有：\n生地黄 (25 mg)\n丹参 (25 mg)\n人参 (25 mg)\n酸枣仁 (25 mg)\n远志 (25 mg)\n茯神 (25 mg)\n石菖蒲 (25 mg)\n麦门冬 (25 mg)\n玄参 (25 mg)\n当归 (25 mg)\n柏子仁 (25 mg)\n五味子 (25 mg)\n桔梗 (25 mg)\n天门冬 (25 mg)\n蜂蜜 (150 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "思虑过度、神志不宁、咽干口燥、健忘、怔仲、口舌生疮。宁心、化痰涎、袪烦热。",
+          "related_organisms_count": 15,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 8189
+    },
+    "message": ""
+  }
+}

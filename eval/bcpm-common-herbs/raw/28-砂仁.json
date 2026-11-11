@@ -1,0 +1,148 @@
+{
+  "request": {
+    "page": 1,
+    "search": {
+      "recipe_composition": "砂仁"
+    }
+  },
+  "http": 200,
+  "response": {
+    "code": 10200,
+    "data": {
+      "list": [
+        {
+          "id": "91YTtJMBspugNIZgA_yg",
+          "recipe_name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每6.0公克中含有：\n苍朮 (3.6 g)\n厚朴 (2.4 g)\n砂仁 (2.4 g)\n山楂 (2.4 g)\n麦芽 (2.4 g)\n白芍 (2.4 g)\n陈皮 (2.4 g)\n香附 (2.4 g)\n神曲 (2.4 g)\n枳壳 (2.4 g)\n生姜 (1.2 g)\n甘草 (1.2 g)\n以上生药制成浸膏3.0g（生药与浸膏比例27.6:3.0=9.2:1） ( )\n淀粉 (3.0 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "嗳气吞酸、恶心、食欲不振、消化不良、健胃。",
+          "related_organisms_count": 13,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "VVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"公道伯\"顺喉丸(响声破笛丸)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n连翘 (93.3 mg)\n桔梗 (70.0 mg)\n川芎 (93.3 mg)\n砂仁 (35.0 mg)\n诃子 (35.0 mg)\n儿茶 (70.0 mg)\n薄荷 (140.0 mg)\n大黄 (35.0 mg)\n甘草 (70.0 mg)\n蜂蜜 (357.0 mg)\n蜜蜡 (1.4 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "喉痛声哑、失音。清肺润喉。",
+          "related_organisms_count": 11,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "WFYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"观音牌\"香砂平胃散(加减味)\n“Guan Yin”Siang Sha Ping Wei San(Jia Jian Wei)",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每公克中含有：\n茯苓 (146 mg)\n苍朮 (146 mg)\n半夏 (146 mg)\n甘草 (42 mg)\n陈皮 (125 mg)\n木香 (83 mg)\n砂仁 (83 mg)\n丁香 (42 mg)\n肉桂 (42 mg)\n薄荷脑 (20 mg)\n碳酸氢钠 (125 mg)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "胃病、呕吐、腹痛。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "hVYTtJMBspugNIZgA_2g",
+          "recipe_name": "\"华昌\"砂仁散\nSha Ren Powder \"H.C\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "砂仁 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "行气、健脾、温中止泻。",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "lVYTtJMBspugNIZgDv0J",
+          "recipe_name": "\"华陀\"砂仁散\n\"Hua To\" Sha Ren Powder",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "砂仁 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "行气、健脾、温中止泻",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "o1YTtJMBspugNIZgDv0J",
+          "recipe_name": "\"金龙\"消化散",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每50gm中含\n苍朮 (6.0 gm)\n厚朴 (6.0 gm)\n橘皮 (6.0 gm)\n甘草 (3.0 gm)\n香附 (6.0 gm)\n生姜 (6.0 gm)\n薄荷叶 (6.0 gm)\n枳实 (4.0 gm)\n缩砂 (4.0 gm)\n木香 (3.0 gm)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "泻肚、胃酸过多、消化不良、食伤、食积、呕气、腹部膨满、食欲不振、健胃整肠。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "X1YTtJMBspugNIZgDv4J",
+          "recipe_name": "\"三虎\"治浊固本丸浓缩细粒",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每7.5公克中含有：\n莲须 (4.0 g)\n黄连 (4.0 g)\n茯苓 (2.0 g)\n砂仁 (2.0 g)\n益智仁 (2.0 g)\n半夏 (2.0 g)\n黄柏 (2.0 g)\n炙甘草 (6.0 g)\n猪苓 (5.0 g)\n以上生药制成浸膏3.75g（生药与浸膏比例29.0:3.75=7.73:1.0） ( )\n淀粉 (3.75 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "湿热下注、频尿白浊。清热、利湿。",
+          "related_organisms_count": 10,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "qFYTtJMBspugNIZgDv4J",
+          "recipe_name": "\"生春\"砂仁散\nAMOMI FRUCTUS POWDER \"SHENG CHUN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "砂仁 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "行气、健脾、温中止泻",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "HFYTtJMBspugNIZgDv8J",
+          "recipe_name": "\"顺天堂\"分消汤浓缩颗粒\nFEN-HSIAO-TANG EXTRACT GRANULES \"SUN-TEN\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "每６.０Ｇ中含：\n苍朮 (1.5000 g)\n白朮 (1.5000 g)\n陈皮 (1.0000 g)\n厚朴 (1.0000 g)\n枳实 (0.5000 g)\n泽泻 (1.0000 g)\n砂仁 (0.5000 g)\n木香 (0.5000 g)\n香附子 (1.0000 g)\n猪苓 (1.0000 g)\n大腹皮 (0.5000 g)\n茯苓 (1.5000 g)\n生姜 (0.5000 g)\n灯心草 (0.5000 g)\n以上生药制成浸膏 (3.0000 g)\n(生药与浸膏比例12.5:3.0=4.1:1) ( g)\n玉蜀黍淀粉 (3.0000 g)",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "治中满或骏胀、脾虚发肿满饱闷、浮肿。",
+          "related_organisms_count": 14,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        },
+        {
+          "id": "fFYTtJMBspugNIZgGf8t",
+          "recipe_name": "\"台马\"砂仁粉末\nSha Ren Powder \"TM\"",
+          "recipe_reference": "行政院卫生福利部（台湾）",
+          "recipe_class": "",
+          "recipe_composition": "砂仁 ( )",
+          "recipe_preparation": "",
+          "function": "",
+          "indications": "",
+          "related_organisms_count": 1,
+          "classical_recipe": "否",
+          "recipe_type": "近现代处方"
+        }
+      ],
+      "total": 3514
+    },
+    "message": ""
+  }
+}
