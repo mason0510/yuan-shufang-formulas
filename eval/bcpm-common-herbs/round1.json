@@ -1,0 +1,1642 @@
+[
+  {
+    "n": 1,
+    "herb": "当归",
+    "code": 10200,
+    "message": "",
+    "total": 25070,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"成功\"八厘散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 174,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 271,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"成功\"天王补心散(去朱砂)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 266,
+        "ind_chars": 36
+      },
+      {
+        "name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 272,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 160,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"东发\"大鵰风湿药酒(中药酒剂基准方十七方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 334,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰海芙蓉药酒(中药酒剂基准方十四)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 200,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰十一虎药酒(中药酒剂基准方十二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 184,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 278,
+        "ind_chars": 35
+      }
+    ],
+    "ms": 1446
+  },
+  {
+    "n": 2,
+    "herb": "白术",
+    "code": 10200,
+    "message": "",
+    "total": 14689,
+    "page_rows": 10,
+    "page_has_herb": 0,
+    "hits": [
+      {
+        "name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 271,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 160,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"东发\"大鵰海芙蓉药酒(中药酒剂基准方十四)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 200,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 152,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"复旦牌\"补中益气汤散\nPU CHUNG I CHI TANG",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 130,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"复旦牌\"利水通淋散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 78,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"复旦牌'疗女散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 135,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"港香兰\"真武汤浓缩锭\nZhen Wu Tang Concentrated Tablets \"KAISER\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 146,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"宏星\"参鞭海狗丸\n\"Hong Shing\"San Pan Hai Kuo Wan",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 461,
+        "ind_chars": 115
+      }
+    ],
+    "ms": 112
+  },
+  {
+    "n": 3,
+    "herb": "白芍",
+    "code": 10200,
+    "message": "",
+    "total": 11133,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 271,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 193,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 160,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 278,
+        "ind_chars": 35
+      },
+      {
+        "name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 152,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"复旦\"桃红四物汤浓缩细粒",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 124,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"港香兰\"白芍浓缩散\nBai Shao Concentrated Powder \"KAISER\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 71,
+        "ind_chars": 2
+      },
+      {
+        "name": "\"港香兰\"真武汤浓缩锭\nZhen Wu Tang Concentrated Tablets \"KAISER\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 146,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"国科\"温经汤浓缩锭\nWen Jing Tang Extract Tablets“K.K.”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 218,
+        "ind_chars": 32
+      },
+      {
+        "name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 257,
+        "ind_chars": 20
+      }
+    ],
+    "ms": 107
+  },
+  {
+    "n": 4,
+    "herb": "茯苓",
+    "code": 10200,
+    "message": "",
+    "total": 21736,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"爱生\"杞菊地黄丸\nChi Jyu Dih Hwang Pill“L.L.”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 118,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"安生\"加减玉泉散\nYeu-Cheng Powder \"An Shing\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 126,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"阿桐伯\"温补肾丸(还少丹)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 199,
+        "ind_chars": 28
+      },
+      {
+        "name": "\"保济堂天天乐\"丸(延龄固本丹)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 301,
+        "ind_chars": 25
+      },
+      {
+        "name": "\"八仙\" 六味地黄丸\nLoui Wei Di Fan Pill \"Ba Shian\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 95,
+        "ind_chars": 33
+      },
+      {
+        "name": "\"成功\"天王补心散(去朱砂)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 266,
+        "ind_chars": 36
+      },
+      {
+        "name": "\"得力\"得力不老丹丸\nTelibulaodan \"TeLi\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 119,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 160,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 278,
+        "ind_chars": 35
+      }
+    ],
+    "ms": 94
+  },
+  {
+    "n": 5,
+    "herb": "甘草",
+    "code": 10200,
+    "message": "",
+    "total": 38483,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"安生\"加减玉泉散\nYeu-Cheng Powder \"An Shing\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 126,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"安生\"清脑丸(孔圣枕中丹加味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 161,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"阿桐伯\"人参安脑丸",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 159,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"阿桐伯\"治肝保胶囊(龙胆泻肝汤第二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 172,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"成功\"天王补心散(去朱砂)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 266,
+        "ind_chars": 36
+      },
+      {
+        "name": "\"得力\"顾立肝胶囊(龙胆泻肝汤第二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 174,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"德山\"甘麦大枣汤浓缩细粒\nGan-Mai-Da-Tzau-Tang  conc.  shi li\"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 81,
+        "ind_chars": 28
+      },
+      {
+        "name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 193,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 272,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"得生\"筋畅喷剂\nBICEPS Spray \"T.S\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 197,
+        "ind_chars": 15
+      }
+    ],
+    "ms": 120
+  },
+  {
+    "n": 6,
+    "herb": "柴胡",
+    "code": 10200,
+    "message": "",
+    "total": 7229,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"安生\"平血丸(大柴胡汤加味)\nPieng Shiee Pills \"An Shing\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 147,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"阿桐伯\"治肝保胶囊(龙胆泻肝汤第二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 172,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"得力\"顾立肝胶囊(龙胆泻肝汤第二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 174,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"福安\"平肝散(龙胆泻肝汤)\nP’ien Kan Powder\"F.A.\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 133,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"复旦\"小柴胡汤散\nHSIAO CHAI FU TANG",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 93,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"复旦牌\"补中益气汤散\nPU CHUNG I CHI TANG",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 130,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 257,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"厚生\"萧尧速立清丸(大柴胡汤加味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 147,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"晋安\"荆防败毒汤\nJING FANG BAI DU TONG \" C.A. \"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 160,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"俊雄\"优肝宝丸(龙胆泻肝丸)\nYOU GAN BAO WAN（LONG DAN XIE GAN WAN）“JUN XIONG”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 138,
+        "ind_chars": 28
+      }
+    ],
+    "ms": 117
+  },
+  {
+    "n": 7,
+    "herb": "香附",
+    "code": 10200,
+    "message": "",
+    "total": 4261,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"阿桐伯\"消郁丸(越曲丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 81,
+        "ind_chars": 46
+      },
+      {
+        "name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 193,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"东阳\"香附浓缩细粒\nXiang Fu Extract Granules \"TONG YANG\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 71,
+        "ind_chars": 12
+      },
+      {
+        "name": "\"复旦\"越鞠丸浓缩细粒",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 114,
+        "ind_chars": 46
+      },
+      {
+        "name": "\"复旦牌'疗女散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 135,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"广洲\"行气散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 216,
+        "ind_chars": 17
+      },
+      {
+        "name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 257,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"护民”母女士丸",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 179,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"金龙\"消化散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 128,
+        "ind_chars": 37
+      },
+      {
+        "name": "\"领先\"二朮汤浓缩细粒\nERH CHU TANG GRANULA SUBTILAE \"LING SIAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 162,
+        "ind_chars": 11
+      }
+    ],
+    "ms": 122
+  },
+  {
+    "n": 8,
+    "herb": "陈皮",
+    "code": 10200,
+    "message": "",
+    "total": 13041,
+    "page_rows": 10,
+    "page_has_herb": 9,
+    "hits": [
+      {
+        "name": "\"德山\"香砂平胃散浓缩细粒\nShiang Sha Ping Wei San conc. shi li \"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 193,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰十一虎药酒(中药酒剂基准方十二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 184,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 278,
+        "ind_chars": 35
+      },
+      {
+        "name": "\"复旦牌\"补中益气汤散\nPU CHUNG I CHI TANG",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 130,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"观音牌\"香砂平胃散(加减味)\n“Guan Yin”Siang Sha Ping Wei San(Jia Jian Wei)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 136,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"国安\"嗽王固肺散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 184,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"黄泽丰\"国典药酒(周公百岁药酒)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 293,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"金龙\"消化散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 128,
+        "ind_chars": 37
+      },
+      {
+        "name": "\"科达\"平胃散浓缩细粒\nPING WEI SAN EXTRACT GRANULA SUBTILAE \"KO DA\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 144,
+        "ind_chars": 30
+      }
+    ],
+    "ms": 175
+  },
+  {
+    "n": 9,
+    "herb": "生地",
+    "code": 10200,
+    "message": "",
+    "total": 7141,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"安生\"清脑丸(孔圣枕中丹加味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 161,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"阿桐伯\"人参安脑丸",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 159,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"保济堂天天乐\"丸(延龄固本丹)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 301,
+        "ind_chars": 25
+      },
+      {
+        "name": "\"成功\"天王补心散(去朱砂)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 266,
+        "ind_chars": 36
+      },
+      {
+        "name": "\"得力\"得力不老丹丸\nTelibulaodan \"TeLi\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 119,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 272,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"福安\"清痘解毒散(犀角解毒丸去犀角)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 148,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"广洲\"接骨膏",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 243,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"国科\"消风散浓缩锭\nShiau Feng San Extract Tablets“K.K.”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 223,
+        "ind_chars": 28
+      }
+    ],
+    "ms": 137
+  },
+  {
+    "n": 10,
+    "herb": "川芎",
+    "code": 10200,
+    "message": "",
+    "total": 15629,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"安生\"清脑丸(孔圣枕中丹加味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 161,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"阿桐伯\"人参安脑丸",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 159,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"阿桐伯\"消郁丸(越曲丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 81,
+        "ind_chars": 46
+      },
+      {
+        "name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 272,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 160,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰十一虎药酒(中药酒剂基准方十二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 184,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 278,
+        "ind_chars": 35
+      },
+      {
+        "name": "\"东发\"山霸乌荳壮补药酒(中药酒剂基准方四)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 222,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"东阳\"酸枣仁汤浓缩细粒\nSuan-Tzao-Ren Tang Conc.Granules\"Tong-Yang\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 117,
+        "ind_chars": 9
+      }
+    ],
+    "ms": 110
+  },
+  {
+    "n": 11,
+    "herb": "熟地",
+    "code": 10200,
+    "message": "",
+    "total": 10260,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"爱生\"杞菊地黄丸\nChi Jyu Dih Hwang Pill“L.L.”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 118,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"阿桐伯\"温补肾丸(还少丹)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 199,
+        "ind_chars": 28
+      },
+      {
+        "name": "\"保济堂天天乐\"丸(延龄固本丹)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 301,
+        "ind_chars": 25
+      },
+      {
+        "name": "\"八仙\" 六味地黄丸\nLoui Wei Di Fan Pill \"Ba Shian\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 95,
+        "ind_chars": 33
+      },
+      {
+        "name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 271,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"得力\"得力不老丹丸\nTelibulaodan \"TeLi\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 119,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"迪弘\"正芝味妇美宝丸(毓麟珠丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 160,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 278,
+        "ind_chars": 35
+      },
+      {
+        "name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 152,
+        "ind_chars": 18
+      }
+    ],
+    "ms": 99
+  },
+  {
+    "n": 12,
+    "herb": "牛膝",
+    "code": 10200,
+    "message": "",
+    "total": 6020,
+    "page_rows": 10,
+    "page_has_herb": 9,
+    "hits": [
+      {
+        "name": "\"阿桐伯\"温补肾丸(还少丹)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 199,
+        "ind_chars": 28
+      },
+      {
+        "name": "\"保济堂天天乐\"丸(延龄固本丹)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 301,
+        "ind_chars": 25
+      },
+      {
+        "name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 271,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"东发\"大鵰风湿药酒(中药酒剂基准方十七方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 334,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰海芙蓉药酒(中药酒剂基准方十四)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 200,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"东发\"山霸乌荳壮补药酒(中药酒剂基准方四)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 222,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"福安\"万灵膏(万灵膏加减味)\nWan Ning Kao \"F.A.\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 307,
+        "ind_chars": 17
+      },
+      {
+        "name": "\"港香兰\"济生肾气丸\nJI SHENG SHEN QI WAN \"KAISER\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 216,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 257,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"宏星\"参鞭海狗丸\n\"Hong Shing\"San Pan Hai Kuo Wan",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 461,
+        "ind_chars": 115
+      }
+    ],
+    "ms": 120
+  },
+  {
+    "n": 13,
+    "herb": "黄芪",
+    "code": 10200,
+    "message": "",
+    "total": 9272,
+    "page_rows": 10,
+    "page_has_herb": 0,
+    "hits": [
+      {
+        "name": "\"安生\"加减玉泉散\nYeu-Cheng Powder \"An Shing\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 126,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 271,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰长春万寿药酒(中药酒剂基准方十五方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 278,
+        "ind_chars": 35
+      },
+      {
+        "name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 152,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"复旦牌\"补中益气汤散\nPU CHUNG I CHI TANG",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 130,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"富田\"玉泉丸浓缩细粒\nYUH CHYUAN WAN CONC GRAN“FT”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 161,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 257,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"宏星\"参鞭海狗丸\n\"Hong Shing\"San Pan Hai Kuo Wan",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 461,
+        "ind_chars": 115
+      },
+      {
+        "name": "\"黄泽丰\"国典药酒(周公百岁药酒)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 293,
+        "ind_chars": 30
+      }
+    ],
+    "ms": 145
+  },
+  {
+    "n": 14,
+    "herb": "黄芩",
+    "code": 10200,
+    "message": "",
+    "total": 12256,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"安生\"加减玉泉散\nYeu-Cheng Powder \"An Shing\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 126,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"安生\"平血丸(大柴胡汤加味)\nPieng Shiee Pills \"An Shing\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 147,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"阿桐伯\"治肝保胶囊(龙胆泻肝汤第二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 172,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"得力\"顾立肝胶囊(龙胆泻肝汤第二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 174,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 272,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"福安\"平肝散(龙胆泻肝汤)\nP’ien Kan Powder\"F.A.\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 133,
+        "ind_chars": 19
+      },
+      {
+        "name": "\"福安\"清痘解毒散(犀角解毒丸去犀角)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 148,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"复旦\"小柴胡汤散\nHSIAO CHAI FU TANG",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 93,
+        "ind_chars": 22
+      },
+      {
+        "name": "\"国安\"嗽王固肺散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 184,
+        "ind_chars": 9
+      },
+      {
+        "name": "\"厚生\"萧尧速立清丸(大柴胡汤加味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 147,
+        "ind_chars": 10
+      }
+    ],
+    "ms": 126
+  },
+  {
+    "n": 15,
+    "herb": "赤芍",
+    "code": 10200,
+    "message": "",
+    "total": 5644,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"德山\"洗肝明目散浓缩细粒\nShi-Gan-Ming-Mu-San  conc. shi li\"DERSAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 272,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"得生\"筋畅喷剂\nBICEPS Spray \"T.S\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 197,
+        "ind_chars": 15
+      },
+      {
+        "name": "\"福安\"清痘解毒散(犀角解毒丸去犀角)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 148,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"福安\"万灵膏(万灵膏加减味)\nWan Ning Kao \"F.A.\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 307,
+        "ind_chars": 17
+      },
+      {
+        "name": "\"降火谷\"经痛丸(桂枝茯苓丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 81,
+        "ind_chars": 35
+      },
+      {
+        "name": "\"降火谷\"痔痛丸",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 167,
+        "ind_chars": 14
+      },
+      {
+        "name": "\"科林顿\"科林顿酸痛膏(太乙膏加减味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 248,
+        "ind_chars": 16
+      },
+      {
+        "name": "\"领先\"补阳还五汤浓缩细粒\nPU YANG HUAN WU TANG GRANULA SUBTILAE \"LING SIAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 129,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"领先\"领先易清痔丸(消痔丸)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 159,
+        "ind_chars": 15
+      },
+      {
+        "name": "\"领先\"万应膏(加减味去穿山甲)\nPAIN RELIEF HERBAL BALM. TN",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 278,
+        "ind_chars": 22
+      }
+    ],
+    "ms": 423
+  },
+  {
+    "n": 16,
+    "herb": "黄柏",
+    "code": 10200,
+    "message": "",
+    "total": 5221,
+    "page_rows": 10,
+    "page_has_herb": 8,
+    "hits": [
+      {
+        "name": "\"成功\"风湿丸(虎骨木瓜丸去虎骨)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 271,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"福安\"滋阴降火丸",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 194,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"高基能\"抗治愈胶囊",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 84,
+        "ind_chars": 27
+      },
+      {
+        "name": "\"广洲\"接骨膏",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 243,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"宏星\"参鞭海狗丸\n\"Hong Shing\"San Pan Hai Kuo Wan",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 461,
+        "ind_chars": 115
+      },
+      {
+        "name": "\"龙杏\"黄柏粉末",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 6,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"三虎\"治浊固本丸浓缩细粒",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 168,
+        "ind_chars": 16
+      },
+      {
+        "name": "\"三品\"足得治外用粉\nAn Yeang Sann \"TS\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 66,
+        "ind_chars": 6
+      },
+      {
+        "name": "\"顺安\"黄蘗粉末\n\"S.A.\" Huangbo Powder",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": false,
+        "comp_chars": 6,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"顺安\"养血壮筋健步丸(加减味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 247,
+        "ind_chars": 12
+      }
+    ],
+    "ms": 122
+  },
+  {
+    "n": 17,
+    "herb": "炙甘草",
+    "code": 10200,
+    "message": "",
+    "total": 4053,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"复旦\"炙甘草散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 7,
+        "ind_chars": 14
+      },
+      {
+        "name": "\"晋安\"川芎茶调汤\nCHUAN CHIONG CHAR TIAO TANG \" C.A. \"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 115,
+        "ind_chars": 11
+      },
+      {
+        "name": "\"科达\"平胃散浓缩细粒\nPING WEI SAN EXTRACT GRANULA SUBTILAE \"KO DA\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 144,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"领先\" 芍药甘草汤浓缩锭\nSHAO YAO GAN CAO TANG EXTRACT TABLET \"LING SIAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 130,
+        "ind_chars": 15
+      },
+      {
+        "name": "\"领先\"补中益气汤浓缩锭\nPu Chung I Chi Tang Extract Tablets \"LING SIAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 227,
+        "ind_chars": 28
+      },
+      {
+        "name": "\"领先\"补中益气汤浓缩散\n\"LING SIAN\"PU CHUNG I CHI TANG EXTRACT POWDER",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 170,
+        "ind_chars": 28
+      },
+      {
+        "name": "\"领先\"当归四逆汤浓缩细粒\nTANG KUEI SU NI TANG GRANULA SUBTILAE \"LING SIAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 139,
+        "ind_chars": 25
+      },
+      {
+        "name": "\"领先\"甘露饮浓缩锭\nKan Lu Yin Extract Tablets \"LING SIAN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 228,
+        "ind_chars": 27
+      },
+      {
+        "name": "\"领先\"桂枝汤浓缩锭\nKUEI CHIH TANG EXTRACT TABLET “LING SIAN”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 166,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"领先\"加味逍遥散浓缩散\n\"LING SIAN\"CHIA WEI HSIAO YAO SAN EXTRACT POWDER",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 172,
+        "ind_chars": 27
+      }
+    ],
+    "ms": 162
+  },
+  {
+    "n": 18,
+    "herb": "党参",
+    "code": 10200,
+    "message": "",
+    "total": 1786,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"东发\"大鵰青春露药酒(中药酒剂基准方十三方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 258,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"东发\"大鵰十一虎药酒(中药酒剂基准方十二方)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 184,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"二仙\"宝阳丹丸(十补丸加减味)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 152,
+        "ind_chars": 18
+      },
+      {
+        "name": "\"黄泽丰\"国典药酒(周公百岁药酒)",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 293,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"农马\"党参粉末\nDang Shen Powder \"FH\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 6,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"劝奉堂\"党参散\nDang Shen Powder“C.F.T.”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 6,
+        "ind_chars": 8
+      },
+      {
+        "name": "\"胜昌\"明党参散\nCHANGII RADIX POWDER \"SHENG CHANG\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 7,
+        "ind_chars": 4
+      },
+      {
+        "name": "\"生春\"党参散\nCODONOPSIS RADIX POWDER \"SHENG CHUN\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 6,
+        "ind_chars": 7
+      },
+      {
+        "name": "\"台马\"党参粉末\nDang Shen Powder \"TM\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 6,
+        "ind_chars": 0
+      },
+      {
+        "name": "\"台马\"明党参粉末\nMing Dang Shen Powder \"TM\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 7,
+        "ind_chars": 0
+      }
+    ],
+    "ms": 127
+  },
+  {
+    "n": 19,
+    "herb": "丹皮",
+    "code": 10200,
+    "message": "",
+    "total": 4398,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "\"爱生\"杞菊地黄丸\nChi Jyu Dih Hwang Pill“L.L.”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 118,
+        "ind_chars": 30
+      },
+      {
+        "name": "\"八仙\" 六味地黄丸\nLoui Wei Di Fan Pill \"Ba Shian\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 95,
+        "ind_chars": 33
+      },
+      {
+        "name": "\"得生\"筋畅喷剂\nBICEPS Spray \"T.S\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 197,
+        "ind_chars": 15
+      },
+      {
+        "name": "\"福安\"滋阴降火丸",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 194,
+        "ind_chars": 21
+      },
+      {
+        "name": "\"复旦牌\"温经汤散",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 155,
+        "ind_chars": 14
+      },
+      {
+        "name": "\"港香兰\"济生肾气丸\nJI SHENG SHEN QI WAN \"KAISER\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 216,
+        "ind_chars": 10
+      },
+      {
+        "name": "\"国科\"温经汤浓缩锭\nWen Jing Tang Extract Tablets“K.K.”",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 218,
+        "ind_chars": 32
+      },
+      {
+        "name": "\"汉补世家\"金樽白凤丸\n\"THE PERSONAL SUPPLY PALACE\" CHIN TSUN PAI FENG WAN",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 257,
+        "ind_chars": 20
+      },
+      {
+        "name": "\"宏星\"参鞭海狗丸\n\"Hong Shing\"San Pan Hai Kuo Wan",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 461,
+        "ind_chars": 115
+      },
+      {
+        "name": "\"华昌\"牡丹皮散\nMu Dan Pi Powder \"H.C\"",
+        "ref": "行政院卫生福利部（台湾）",
+        "comp_has": true,
+        "comp_chars": 7,
+        "ind_chars": 10
+      }
+    ],
+    "ms": 135
+  },
+  {
+    "n": 20,
+    "herb": "元胡",
+    "code": 10200,
+    "message": "",
+    "total": 122,
+    "page_rows": 10,
+    "page_has_herb": 10,
+    "hits": [
+      {
+        "name": "安坤赞育丸",
+        "ref": "《北京市中药成方选集》",
+        "comp_has": true,
+        "comp_chars": 537,
+        "ind_chars": 32
+      },
+      {
+        "name": "安神止痛汤",
+        "ref": "《林如高骨伤验方歌诀方解》",
+        "comp_has": true,
+        "comp_chars": 93,
+        "ind_chars": 10
+      },
+      {
+        "name": "安胎丸",
+        "ref": "《仙拈集》卷三",
+        "comp_has": true,
+        "comp_chars": 40,
+        "ind_chars": 36
+      },
+      {
+        "name": "八宝瑞生丹",
+        "ref": "《全国中药成药处方集》（沈阳方）",
+        "comp_has": true,
+        "comp_chars": 85,
+        "ind_chars": 35
+      },
+      {
+        "name": "白芥子",
+        "ref": "《外治方》",
+        "comp_has": true,
+        "comp_chars": 20,
+        "ind_chars": 150
+      },
+      {
+        "name": "保胎金丹",
+        "ref": "《全国中药成药处方集》（大同方）",
+        "comp_has": true,
+        "comp_chars": 113,
+        "ind_chars": 32
+      },
+      {
+        "name": "保胎神效丸",
+        "ref": "《冯氏锦囊•杂症》卷十七",
+        "comp_has": true,
+        "comp_chars": 125,
+        "ind_chars": 29
+      },
+      {
+        "name": "补经汤",
+        "ref": "《女科切要》卷二",
+        "comp_has": true,
+        "comp_chars": 50,
+        "ind_chars": 62
+      },
+      {
+        "name": "补心养胃汤",
+        "ref": "《疮疡经验全书》卷三",
+        "comp_has": true,
+        "comp_chars": 56,
+        "ind_chars": 4
+      },
+      {
+        "name": "参桂鹿茸丸",
+        "ref": "《北京市中药成方选集》",
+        "comp_has": true,
+        "comp_chars": 313,
+        "ind_chars": 20
+      }
+    ],
+    "ms": 133
+  }
+]
