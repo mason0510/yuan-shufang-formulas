@@ -3,122 +3,157 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>摩熵方剂库可能怎么存</title>
+<title>摩熵方剂一条记录的原样</title>
 <style>
-  :root { --ink:#1c1917; --muted:#57534e; --line:#e7e5e4; --paper:#fafaf9; --card:#fff; --ancient:#7c2d12; --modern:#1e3a5f; --empty:#a8a29e; }
+  :root { --ink:#1a1a1a; --muted:#666; --line:#d4d4d4; --bg:#f3f3f3; --empty:#b5b5b5; }
   * { box-sizing: border-box; }
-  body { margin:0; font:16px/1.55 "Songti SC", "Source Han Serif SC", serif; color:var(--ink); background:var(--paper); }
-  main { max-width:1080px; margin:0 auto; padding:32px 20px 64px; }
-  h1 { font-size:28px; margin:0 0 8px; font-weight:700; }
-  h2 { font-size:20px; margin:36px 0 12px; }
-  p { margin:8px 0; }
-  .note { color:var(--muted); font-size:14px; }
-  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; }
-  .card h3 { margin:0 0 8px; font-size:16px; }
-  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; }
-  th, td { border-bottom:1px solid var(--line); text-align:left; padding:8px 10px; vertical-align:top; }
-  th { background:#f5f5f4; font-weight:600; }
-  code { font-family:ui-monospace, "SF Mono", Menlo, monospace; font-size:13px; }
-  .tag { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; }
-  .ancient { background:#ffedd5; color:var(--ancient); }
-  .modern { background:#dbeafe; color:var(--modern); }
-  .no { background:#f5f5f4; color:#44403c; }
-  .yes { background:#dcfce7; color:#14532d; }
-  .row { display:flex; gap:12px; align-items:stretch; margin:12px 0; }
-  .box { flex:1; background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
-  .arrow { align-self:center; color:var(--muted); }
-  .empty { color:var(--empty); }
-  ul { margin:8px 0; padding-left:1.2em; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.45 "IBM Plex Sans", "PingFang SC", sans-serif; }
+  main { padding:20px 16px 48px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  h2 { font-size:16px; margin:28px 0 8px; }
+  p { margin:6px 0; }
+  .note { color:var(--muted); }
+  .scroll { overflow:auto; background:#fff; border:1px solid var(--line); }
+  table { border-collapse:collapse; min-width:1600px; }
+  th, td { border:1px solid var(--line); padding:6px 8px; vertical-align:top; text-align:left; font-weight:400; }
+  th { background:#eee; position:sticky; top:0; white-space:nowrap; font-family:ui-monospace, Menlo, monospace; font-size:12px; }
+  td { font-family:ui-monospace, Menlo, monospace; font-size:12px; max-width:280px; white-space:pre-wrap; }
+  td.empty { color:var(--empty); }
+  .kv { width:100%; border-collapse:collapse; background:#fff; }
+  .kv th { width:220px; background:#fafafa; }
+  pre { background:#111; color:#e8e8e8; padding:12px 14px; overflow:auto; font-size:12px; line-height:1.4; }
 </style>
 </head>
 <body>
 <main>
-  <h1>摩熵方剂库可能怎么存</h1>
-  <p class="note">从列表接口、一条详情和开放平台公开字段反推。没有看到他们的表结构。已保存的 477 条是常见药检索的第 1 页，近现代处方占 461 条，不能当成全库比例。</p>
+  <h1>列表接口返回的就是一行</h1>
+  <p class="note">下面三行是 <code>raw/</code> 里的原文，没有改字段名，没有删空值。外层是 <code>{"code":10200,"data":{"list":[...],"total":数字},"message":""}</code>。一行 11 个字段。没有异名，没有用法，没有主治路径。</p>
 
-  <h2>一张表，一行一条方剂</h2>
-  <div class="row">
-    <div class="box">
-      <strong>检索列</strong>
-      <p>方名、异名、出处、组成原文、处方类型、是不是经典名方、主治分类路径</p>
-    </div>
-    <div class="arrow">同一行</div>
-    <div class="box">
-      <strong>详情列</strong>
-      <p>用法、主治正文、制法、功用、加减、禁忌、备注。列表里经常空着，详情里才有字。</p>
-    </div>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>recipe_name</th>
+          <th>recipe_reference</th>
+          <th>recipe_class</th>
+          <th>recipe_composition</th>
+          <th>recipe_preparation</th>
+          <th>function</th>
+          <th>indications</th>
+          <th>related_organisms_count</th>
+          <th>classical_recipe</th>
+          <th>recipe_type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>51YTtJMBspugNIZgA_yg</td>
+          <td>"成功"八厘散</td>
+          <td>行政院卫生福利部（台湾）</td>
+          <td class="empty">""</td>
+          <td>每公克中含有：
+苏木力面 (85.0000 mg)
+当归 (85.0000 mg)
+红花 (130.0000 mg)
+五加皮 (130.0000 mg)
+乳香 (160.0000 mg)
+没药 (160.0000 mg)
+血竭 (160.0000 mg)
+丁香 (50.0000 mg)
+麝香 (5.0000 mg)
+冰片 (35.0000 mg)</td>
+          <td class="empty">""</td>
+          <td class="empty">""</td>
+          <td>跌打损伤、瘀血停滞。</td>
+          <td>9</td>
+          <td>否</td>
+          <td>近现代处方</td>
+        </tr>
+        <tr>
+          <td>-VYNtJMBspugNIZg7Fvk</td>
+          <td>阿胶地黄汤</td>
+          <td>《太平圣惠方》卷三十七</td>
+          <td class="empty">""</td>
+          <td>生干地黄120克；阿胶60克（捣碎；炒令黄燥）；蒲黄60克</td>
+          <td class="empty">""</td>
+          <td class="empty">""</td>
+          <td>热伤肺脏，唾血不止。</td>
+          <td>4</td>
+          <td>否</td>
+          <td>古代方剂</td>
+        </tr>
+        <tr>
+          <td>-lYNtJMBspugNIZg7Fvk</td>
+          <td>阿胶地黄汤</td>
+          <td>方出《圣惠》卷三十七，名见《普济方》卷一九O</td>
+          <td class="empty">""</td>
+          <td>生干地黄四两；阿胶二两（捣碎，炒令黄燥）；蒲黄二两</td>
+          <td>上为散。</td>
+          <td class="empty">""</td>
+          <td>热伤肺脏，唾血不止。</td>
+          <td>4</td>
+          <td>否</td>
+          <td>古代方剂</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <p>同名方不合并。出处不同就是另一行。</p>
+  <p class="note">同名两行都在。id 不同，出处不同，组成的剂量单位不同。第二行的制法是「上为散。」，第一行制法是空字符串。id 是检索库文档号，不是 1、2、3。</p>
 
-  <h2>阿胶地黄汤在库里是两行</h2>
-  <table>
-    <thead>
-      <tr><th>方名</th><th>处方类型</th><th>经典名方</th><th>出处</th><th>组成原文</th><th>药物数</th></tr>
-    </thead>
+  <h2>详情是另一套字段，而且没有 id</h2>
+  <p class="note">八物二陈汤这一条详情。21 个字段。列表里有的 id、related_organisms_count，详情里没有。详情多出来的列，多数是空字符串。</p>
+  <table class="kv">
     <tbody>
-      <tr>
-        <td>阿胶地黄汤</td>
-        <td><span class="tag ancient">古代方剂</span></td>
-        <td><span class="tag no">否</span></td>
-        <td>《太平圣惠方》卷三十七</td>
-        <td>生干地黄120克；阿胶60克（捣碎；炒令黄燥）；蒲黄60克</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>阿胶地黄汤</td>
-        <td><span class="tag ancient">古代方剂</span></td>
-        <td><span class="tag no">否</span></td>
-        <td>方出《圣惠》卷三十七，名见《普济方》卷一九〇</td>
-        <td>生干地黄四两；阿胶二两（捣碎，炒令黄燥）；蒲黄二两</td>
-        <td>4</td>
-      </tr>
+      <tr><th>recipe_name</th><td>八物二陈汤</td></tr>
+      <tr><th>classical_recipe</th><td>否</td></tr>
+      <tr><th>recipe_type</th><td>古代方剂</td></tr>
+      <tr><th>recipe_name_1</th><td class="empty">""</td></tr>
+      <tr><th>recipe_reference</th><td>《医学入门》卷八</td></tr>
+      <tr><th>recipe_class</th><td class="empty">""</td></tr>
+      <tr><th>indications_class</th><td>外科病证&gt;&gt;瘰疬、结核、流注&gt;&gt;结核</td></tr>
+      <tr><th>recipe_composition</th><td>四君子汤；四物汤；二陈汤</td></tr>
+      <tr><th>recipe_preparation</th><td class="empty">""</td></tr>
+      <tr><th>usage_dosage</th><td>水煎，温服。</td></tr>
+      <tr><th>function</th><td class="empty">""</td></tr>
+      <tr><th>indications</th><td>劳发痰火，素有痰火，略有劳动，便发寒热，全类伤寒，轻者将息周日自愈，重者颈腋膊胯之间遂结核，肿痛或消，下次遇劳又发。</td></tr>
+      <tr><th>cautions</th><td class="empty">""</td></tr>
+      <tr><th>add_subtract</th><td class="empty">""</td></tr>
+      <tr><th>resolve</th><td class="empty">""</td></tr>
+      <tr><th>appendices_recipe</th><td class="empty">""</td></tr>
+      <tr><th>selection_of_theories</th><td class="empty">""</td></tr>
+      <tr><th>clinical_example</th><td class="empty">""</td></tr>
+      <tr><th>modern_research</th><td class="empty">""</td></tr>
+      <tr><th>note</th><td class="empty">""</td></tr>
+      <tr><th>remarks</th><td class="empty">""</td></tr>
     </tbody>
   </table>
 
-  <h2>类型和经典名方是两列</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>recipe_type</h3>
-      <p><span class="tag ancient">古代方剂</span> 出处是书名加卷次。</p>
-      <p><span class="tag modern">近现代处方</span> 出处是机构或药厂。第 1 页里 446 条属于这一类。</p>
-      <p class="note">这 477 条里古代方剂只有 16 条。第 1 页先出成药，不代表库里古代方就这么少。</p>
-    </div>
-    <div class="card">
-      <h3>classical_recipe</h3>
-      <p>另开一列，取值 <span class="tag yes">是</span> 或 <span class="tag no">否</span>。</p>
-      <p>不由处方类型自动填。抽到的 16 条古代方剂都是「否」。477 条里标「是」的只有 1 条。</p>
-    </div>
-  </div>
-
-  <h2>组成是一段原文，不是药表</h2>
-  <div class="card">
-    <p>药味用分号接在一起，剂量留在药名后面。</p>
-    <p>也可以不展开到药。八物二陈汤的组成是：</p>
-    <p><code>四君子汤；四物汤；二陈汤</code></p>
-    <p>出处《医学入门》卷八。主治分类是一条路径：<code>外科病证&gt;&gt;瘰疬、结核、流注&gt;&gt;结核</code>。</p>
-    <p>白术和白朮、黄芪和黄耆各存各的字，没有收成同一个药名。</p>
-    <p>药物数量 <code>related_organisms_count</code> 另存一个整数。活性化合物不在这一行里。</p>
-  </div>
-
-  <h2>列表经常空着的列</h2>
-  <table>
-    <thead><tr><th>字段</th><th>477 条里为空</th><th>可能放哪</th></tr></thead>
-    <tbody>
-      <tr><td><code>recipe_class</code> 功效分类</td><td>466</td><td class="empty">列表空，分类主要在详情的主治路径</td></tr>
-      <tr><td><code>recipe_preparation</code> 制法</td><td>466</td><td class="empty">详情列，多数没填</td></tr>
-      <tr><td><code>function</code> 功用</td><td>468</td><td class="empty">详情列，多数没填</td></tr>
-      <tr><td><code>indications</code> 主治</td><td>28</td><td>列表有时有，详情里更全</td></tr>
-    </tbody>
-  </table>
-
-  <h2>公开说明里有、这条接口没返回的</h2>
-  <ul>
-    <li>开放平台说这个库超过 10 万条，样例方是小青龙汤，出处写成《伤寒论》（汉·张仲景）。</li>
-    <li>样例把功效分类、主治病证分类写成数组。实际返回的主治分类是一条用 <code>&gt;&gt;</code> 连起来的字符串。</li>
-    <li>活性化合物、君臣佐使在宣传里有。方剂这一行只留药物数量。</li>
-  </ul>
+  <h2>详情原文</h2>
+  <pre>{
+  "recipe_name": "八物二陈汤",
+  "classical_recipe": "否",
+  "recipe_type": "古代方剂",
+  "recipe_name_1": "",
+  "recipe_reference": "《医学入门》卷八",
+  "recipe_class": "",
+  "indications_class": "外科病证&gt;&gt;瘰疬、结核、流注&gt;&gt;结核",
+  "recipe_composition": "四君子汤；四物汤；二陈汤",
+  "recipe_preparation": "",
+  "usage_dosage": "水煎，温服。",
+  "function": "",
+  "indications": "劳发痰火，素有痰火，略有劳动，便发寒热，全类伤寒，轻者将息周日自愈，重者颈腋膊胯之间遂结核，肿痛或消，下次遇劳又发。",
+  "cautions": "",
+  "add_subtract": "",
+  "resolve": "",
+  "appendices_recipe": "",
+  "selection_of_theories": "",
+  "clinical_example": "",
+  "modern_research": "",
+  "note": "",
+  "remarks": ""
+}</pre>
+  <p class="note">组成在同一列里有两种原文。成药是「每公克中含有」加换行。古籍是分号加剂量，或者直接写方名。没有拆成药名表。空着的列返回的是空字符串，不是省略，也不是 null。</p>
 </main>
 </body>
 </html>
