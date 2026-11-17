@@ -551,13 +551,7 @@ function selectedLibraryId() {
 function greetingFor(lib, data) {
   const n = loadedFormulaCount(data);
   if (lib.id === 'qibo') {
-    const names = (data.formulas || []).map((f) => f.name).filter(Boolean).join('、');
-    return (
-      '岐伯山千碑林公开著录已加载 ' + n + ' 条。' +
-      (data.coverage || '') +
-      (names ? '\n\n点到名的有：' + names + '。' : '') +
-      '\n\n这些条目没有药味和剂量。问到具体方时只说明未见碑文，不从别的书补进这张碑。须有资质医师把关，不可自行抓药。'
-    );
+    return '岐伯山千碑林已加载 ' + n + ' 条。方名和出处在上面的著录里，这里不重复列。问到著录里没有药味的方，只说明未见碑文。';
   }
   return (
     '验方库已加载 ' + n + ' 首。碑方对不上时会查库外方剂文献；查不到或接口未接通，只说明，不编方。\n\n' +
@@ -585,7 +579,12 @@ function paintLibraryNote(data) {
   const ul = document.createElement('ul');
   (data.formulas || []).forEach((f) => {
     const li = document.createElement('li');
-    li.textContent = (f.name || '') + '：' + (f.herbs || '') + '。' + (f.cite || '');
+    const herbs = String(f.herbs || '');
+    // Coverage already says these rows have no printed herbs. Repeating that sentence on every bullet hides the cite.
+    const unpublished = herbs.indexOf('公开报道未刊出') === 0;
+    li.textContent = unpublished
+      ? (f.name || '') + ' · ' + (f.cite || '')
+      : (f.name || '') + '：' + herbs + '。' + (f.cite || '');
     ul.appendChild(li);
   });
   box.appendChild(ul);
