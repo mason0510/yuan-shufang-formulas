@@ -111,4 +111,4 @@ jq '.formulas[] | select(.ind | contains("痛经"))' data/formulas.json
 
 ![Star 累计](docs/star-history.svg)
 
-曲线由 `python3 scripts/update_star_history.py <stargazers.tsv>` 重画。仓库里没有定时函数，不跑这句，图就停在上次写出的数字。
+曲线由每天 00:17（北京时间）的 GitHub Action `star-history` 重画，有新 star 才提交。手动重画：`python3 scripts/update_star_history.py <stargazers.tsv>`。徽章数字是 GitHub 实时计数，和这张图不是同一条更新路径。

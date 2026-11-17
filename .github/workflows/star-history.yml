@@ -1,0 +1,44 @@
+name: star-history
+
+on:
+  schedule:
+    - cron: "17 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  redraw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch stargazers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -eu
+          gh api --paginate -H "Accept: application/vnd.github.star+json" \
+            "/repos/${{ github.repository }}/stargazers?per_page=100" \
+            > /tmp/ysf-stars.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("/tmp/ysf-stars.json").read_text())
+          if not isinstance(data, list):
+              raise SystemExit("stargazer payload is not a list")
+          times = [row["starred_at"] for row in data if isinstance(row, dict) and row.get("starred_at")]
+          Path("/tmp/ysf-stars.tsv").write_text("\n".join(times) + ("\n" if times else ""))
+          print(len(times))
+          PY
+      - name: redraw svg
+        run: python3 scripts/update_star_history.py /tmp/ysf-stars.tsv
+      - name: commit when the curve changed
+        run: |
+          set -eu
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/star-history.svg
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: 重画 Star 累计"
+          git push

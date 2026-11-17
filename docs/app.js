@@ -84,6 +84,33 @@ const formEl = document.getElementById('composer');
 const dlg = document.getElementById('settings');
 
 let formulas = null;
+const LIB_KEY = 'ysf-lib';
+const LIBRARIES = {
+  yuan: {
+    id: 'yuan',
+    formulas: 'formulas.json?v=120',
+    system: 'system.md?v=137',
+    title: '中医袁淑芳 · 辨证开方',
+    sub: '参考方助手 · 可自配模型供应商',
+    rail: '河南西平袁淑芳墓碑验方公开整理，可对照查原方。妇科、儿科、外科有方。癫痫、骨伤库中无专条。',
+    mdHref: 'https://github.com/mason0510/yuan-shufang-formulas/blob/main/data/formulas.md',
+    mdLabel: 'formulas.md 全文',
+    jsonHref: 'https://github.com/mason0510/yuan-shufang-formulas/blob/main/data/formulas.json',
+    jsonLabel: 'formulas.json 结构化',
+  },
+  qibo: {
+    id: 'qibo',
+    formulas: 'qibo-formulas.json?v=2',
+    system: 'qibo-system.md?v=2',
+    title: '岐伯山千碑林 · 公开著录',
+    sub: '郑州新密 · 只收公开报道点到名的条目',
+    rail: '郑州新密苟堂镇方沟村岐伯山千碑林。公开网页没有刊出二百余首的药味和剂量。',
+    mdHref: 'qibo-sources.md',
+    mdLabel: '公开著录说明',
+    jsonHref: 'qibo-formulas.json',
+    jsonLabel: 'qibo-formulas.json',
+  },
+};
 let systemPrompt = '';
 let history = [];
 let clinicReady = false;
@@ -495,28 +522,134 @@ function loadedFormulaCount(data) {
 }
 
 /**
- * Load the formula file and the persona, then show the opening line.
- * Guarantees: the greeting count is the array length. Does not guarantee: the network is up.
+ * Read the library the visitor last chose.
+ * Guarantees: returns yuan or qibo. Does not guarantee: that file is still on the server.
  */
-async function bootstrap() {
+function selectedLibraryId() {
+  const saved = localStorage.getItem(LIB_KEY);
+  return LIBRARIES[saved] ? saved : 'yuan';
+}
+
+/**
+ * Opening line for the loaded library.
+ * Guarantees: the count is the array length. Does not guarantee: the stone has more lines.
+ */
+function greetingFor(lib, data) {
+  const n = loadedFormulaCount(data);
+  if (lib.id === 'qibo') {
+    const names = (data.formulas || []).map((f) => f.name).filter(Boolean).join('、');
+    return (
+      '岐伯山千碑林公开著录已加载 ' + n + ' 条。' +
+      (data.coverage || '') +
+      (names ? '\n\n点到名的有：' + names + '。' : '') +
+      '\n\n这些条目没有药味和剂量。问到具体方时只说明未见碑文，不从别的书补进这张碑。须有资质医师把关，不可自行抓药。'
+    );
+  }
+  return (
+    '验方库已加载 ' + n + ' 首。碑方对不上时会查库外方剂文献；查不到或接口未接通，只说明，不编方。\n\n' +
+    '【初诊流程】信息不全时我先问诊，不急着开方。请用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）。妇科可写经带胎产，儿科写年龄和喂养，外科写疮疡部位，癫痫写发作，骨伤写受伤处。再补病程、现用药、药房清单。\n\n' +
+    '【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。'
+  );
+}
+
+/**
+ * Show the qibo coverage note. Yuan hides it.
+ * Guarantees: the note is built from the loaded JSON, not from a second copy. Does not guarantee: the news pages stay up.
+ */
+function paintLibraryNote(data) {
+  const box = document.getElementById('libNote');
+  if (!box) return;
+  box.replaceChildren();
+  if (!data || data.library !== 'qibo') {
+    box.hidden = true;
+    return;
+  }
+  box.hidden = false;
+  const p = document.createElement('p');
+  p.textContent = data.coverage || '';
+  box.appendChild(p);
+  const ul = document.createElement('ul');
+  (data.formulas || []).forEach((f) => {
+    const li = document.createElement('li');
+    li.textContent = (f.name || '') + '：' + (f.herbs || '') + '。' + (f.cite || '');
+    ul.appendChild(li);
+  });
+  box.appendChild(ul);
+  const sources = Array.isArray(data.sources) ? data.sources : [];
+  if (sources.length) {
+    const foot = document.createElement('p');
+    sources.forEach((src, i) => {
+      if (i) foot.appendChild(document.createTextNode(' · '));
+      const a = document.createElement('a');
+      a.href = src.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = src.label || src.url;
+      foot.appendChild(a);
+    });
+    box.appendChild(foot);
+  }
+}
+
+/**
+ * Load one library and reset the visible thread.
+ * Guarantees: the model prompt and the greeting come from the same fetch. Does not guarantee: a saved yuan thread is shown under qibo.
+ */
+async function applyLibrary(id) {
+  const lib = LIBRARIES[id] || LIBRARIES.yuan;
+  localStorage.setItem(LIB_KEY, lib.id);
+  const select = document.getElementById('libSelect');
+  if (select) select.value = lib.id;
+  document.title = lib.title;
+  const title = document.getElementById('brandTitle');
+  const sub = document.getElementById('brandSub');
+  const rail = document.getElementById('railNote');
+  if (title) title.textContent = lib.title;
+  if (sub) sub.textContent = lib.sub;
+  if (rail) rail.textContent = lib.rail;
+  const md = document.getElementById('linkFormulasMd');
+  const json = document.getElementById('linkFormulasJson');
+  if (md) {
+    md.href = lib.mdHref;
+    md.textContent = lib.mdLabel;
+  }
+  if (json) {
+    json.href = lib.jsonHref;
+    json.textContent = lib.jsonLabel;
+  }
   addMsg('sys', '正在加载验方库…');
-  // v=120 bypasses the cached 40-formula file from the previous Pages deploy.
   const [fRes, sRes] = await Promise.all([
-    fetch('formulas.json?v=120', { cache: 'no-store' }),
-    fetch('system.md?v=137', { cache: 'no-store' }),
+    fetch(lib.formulas, { cache: 'no-store' }),
+    fetch(lib.system, { cache: 'no-store' }),
   ]);
   if (!fRes.ok) throw new Error('验方库 HTTP ' + fRes.status);
+  if (!sRes.ok) throw new Error('提示词 HTTP ' + sRes.status);
   formulas = await fRes.json();
   systemPrompt = await sRes.text();
-  const n = loadedFormulaCount(formulas);
+  history = [];
   chatEl.innerHTML = '';
-  addMsg(
-    'bot',
-    `验方库已加载 ${n} 首。碑方对不上时会查库外方剂文献；查不到或接口未接通，只说明，不编方。\n\n【初诊流程】信息不全时我先问诊，不急着开方。请用自己的话说明：年龄性别、主诉、体质（胖瘦寒热）。妇科可写经带胎产，儿科写年龄和喂养，外科写疮疡部位，癫痫写发作，骨伤写受伤处。再补病程、现用药、药房清单。\n\n【重要】本站可输出参考方，但仅供专业辨证参考；须有资质医师把关后抓药；不可自行照方抓药；急危重症请立刻就医。`,
-  );
-  // ChainFuel preset carries DEMO_KEY, so 开方 does not open settings first.
+  paintLibraryNote(formulas);
+  addMsg('bot', greetingFor(lib, formulas));
   clinicReady = true;
-  await loadChats();
+  if (lib.id === 'yuan') await loadChats();
+}
+
+/**
+ * Load the last chosen library.
+ * Guarantees: a missing choice opens 袁淑芳. Does not guarantee: the network is up.
+ */
+function bootstrap() {
+  const select = document.getElementById('libSelect');
+  if (select && !select.dataset.bound) {
+    select.dataset.bound = '1';
+    select.addEventListener('change', () => {
+      applyLibrary(select.value).catch((err) => {
+        chatEl.innerHTML = '';
+        addMsg('bot', '加载失败：' + err.message);
+      });
+    });
+  }
+  return applyLibrary(selectedLibraryId());
 }
 
 /**

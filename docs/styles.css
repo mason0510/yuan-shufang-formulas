@@ -237,6 +237,13 @@ body:has(> .mission) .main {
   background: transparent;
 }
 .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.lib-switch { display: flex; align-items: center; gap: 8px; margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
+.lib-switch select { font: inherit; font-size: 16px; padding: 4px 8px; }
+.lib-note { white-space: pre-wrap; background: #fffdf8; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 0.9rem; line-height: 1.55; }
+.lib-note[hidden] { display: none; }
+.lib-note p { margin: 0 0 8px; }
+.lib-note ul { margin: 0; padding-left: 1.2em; }
+.lib-note a { color: var(--accent); }
 .top-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
 .auth-who { font-weight: 700; color: var(--accent); white-space: nowrap; }
 #authDialog { max-width: 420px; width: calc(100vw - 32px); }
