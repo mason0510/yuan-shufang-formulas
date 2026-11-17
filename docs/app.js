@@ -100,8 +100,8 @@ const LIBRARIES = {
   },
   qibo: {
     id: 'qibo',
-    formulas: 'qibo-formulas.json?v=2',
-    system: 'qibo-system.md?v=2',
+    formulas: 'qibo-formulas.json?v=3',
+    system: 'qibo-system.md?v=3',
     title: '岐伯山千碑林 · 公开著录',
     sub: '郑州新密 · 只收公开报道点到名的条目',
     rail: '郑州新密苟堂镇方沟村岐伯山千碑林。公开网页没有刊出二百余首的药味和剂量。',

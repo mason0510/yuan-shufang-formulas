@@ -24,3 +24,5 @@
 - https://www.zhengguannews.cn/news/510244.html
 
 这些条目不能当方用。须有资质医师把关，不可自行抓药。
+
+正观新闻配图还能读出光明中医纪念碑上的黄元御名方和几首有克数的单方，编号 QB010 到 QB027，记在 qibo-formulas.json。看不清的没有补。
