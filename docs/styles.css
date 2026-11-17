@@ -239,12 +239,24 @@ body:has(> .mission) .main {
 .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .lib-switch { display: flex; align-items: center; gap: 8px; margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
 .lib-switch select { font: inherit; font-size: 16px; padding: 4px 8px; }
-.lib-note { white-space: pre-wrap; background: #fffdf8; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 0.9rem; line-height: 1.55; }
+.lib-note { flex: 0 1 auto; min-height: 0; max-height: 9.5rem; overflow-y: auto; background: #fffdf8; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 0.9rem; line-height: 1.55; }
 .lib-note[hidden] { display: none; }
 .lib-note p { margin: 0 0 8px; }
 .lib-note ul { margin: 0; padding-left: 1.2em; }
 .lib-note a { color: var(--accent); }
 .top-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.notice-wrap { position: relative; }
+.notice-btn { position: relative; }
+.notice-dot { position: absolute; top: 4px; right: 4px; width: 8px; height: 8px; border-radius: 50%; background: #9a3412; }
+.notice-panel { position: absolute; right: 0; top: calc(100% + 6px); z-index: 20; width: min(320px, calc(100vw - 32px)); background: #fffdf8; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; box-shadow: 0 8px 24px rgba(43, 36, 28, 0.12); }
+.notice-panel[hidden] { display: none; }
+.notice-head { font-weight: 700; margin-bottom: 8px; }
+.notice-item { border-top: 1px solid var(--line); padding-top: 8px; }
+.notice-item strong { display: block; }
+.notice-item p { margin: 4px 0 8px; color: var(--muted); font-size: 0.88rem; line-height: 1.45; }
+.notice-bar { display: flex; gap: 8px; align-items: center; background: #fff7ed; border: 1px solid #e7d3b0; border-radius: 12px; padding: 8px 10px; }
+.notice-bar[hidden] { display: none; }
+.notice-bar p { margin: 0; flex: 1; font-size: 0.9rem; line-height: 1.4; }
 .auth-who { font-weight: 700; color: var(--accent); white-space: nowrap; }
 #authDialog { max-width: 420px; width: calc(100vw - 32px); }
 #authDialog input, #authDialog select { width: 100%; font-size: 16px; }
@@ -279,6 +291,12 @@ body:has(> .mission) .main {
   border: 1px solid var(--line);
   display: block;
 }
+.avatar.scene {
+  width: 112px;
+  height: 74px;
+  border-radius: 12px;
+  object-position: center;
+}
 .bot-row {
   align-self: flex-start;
   max-width: 92%;
@@ -288,6 +306,11 @@ body:has(> .mission) .main {
 }
 .bot-row .avatar {
   width: 40px; height: 40px; flex-shrink: 0; margin-top: 2px;
+}
+.bot-row .avatar.scene {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
 }
 .bot-row .msg-wrap { max-width: 100%; flex: 1; min-width: 0; }
 .msg.thinking {
@@ -315,6 +338,7 @@ body:has(> .mission) .main {
 }
 h1 { font-size: 1.15rem; margin: 0; }
 .sub { margin: 2px 0 0; color: var(--muted); font-size: 0.85rem; }
+.top, .warn, .notice-bar, .examples, .composer { flex-shrink: 0; }
 .warn {
   background: var(--warn);
   border: 1px solid #f0df9c;

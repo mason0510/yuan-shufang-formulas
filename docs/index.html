@@ -6,7 +6,7 @@
   <title>中医袁淑芳 · 辨证开方</title>
   <link rel="icon" href="yuan-shufang.png" />
   <link rel="apple-touch-icon" href="yuan-shufang.png" />
-  <link rel="stylesheet" href="styles.css?v=156" />
+  <link rel="stylesheet" href="styles.css?v=158" />
 </head>
 <body>
   <a class="mission" href="open-medical.html">
@@ -42,7 +42,7 @@
     <main class="main">
       <header class="top">
         <div class="brand">
-          <img class="avatar" src="yuan-shufang.png" alt="中医袁淑芳" />
+          <img id="brandAvatar" class="avatar" src="yuan-shufang.png" alt="中医袁淑芳" />
           <div>
             <h1 id="brandTitle">中医袁淑芳 · 辨证开方</h1>
             <p class="sub" id="brandSub">参考方助手 · 可自配模型供应商</p>
@@ -55,6 +55,13 @@
           </div>
         </div>
         <div class="top-actions">
+          <div class="notice-wrap">
+            <button type="button" id="btnNotice" class="ghost notice-btn" aria-expanded="false" aria-controls="noticePanel">通知<span id="noticeDot" class="notice-dot" hidden></span></button>
+            <div id="noticePanel" class="notice-panel" hidden>
+              <div class="notice-head">站内通知</div>
+              <div id="noticeList"></div>
+            </div>
+          </div>
           <span id="authWho" class="auth-who">游客</span>
           <button type="button" id="authOpenLogin" class="ghost">登录</button>
           <button type="button" id="authOpenRegister" class="ghost">注册</button>
@@ -64,6 +71,11 @@
       </header>
 
       <div class="warn"><strong>风险：</strong>参考方须有资质医师把关后抓药；计量错误可伤身；急危重症请立刻就医；不可自行照方抓药。</div>
+      <div id="noticeBar" class="notice-bar" hidden>
+        <p id="noticeBarText"></p>
+        <button type="button" id="noticeBarGo">去看</button>
+        <button type="button" id="noticeBarClose" class="ghost">关闭</button>
+      </div>
       <section id="libNote" class="lib-note" hidden></section>
 
       <section id="chat" class="chat" aria-live="polite"></section>
@@ -210,6 +222,6 @@
   </dialog>
 
   <script src="dev.js?v=133"></script>
-  <script src="app.js?v=145"></script>
+  <script src="app.js?v=148"></script>
 </body>
 </html>

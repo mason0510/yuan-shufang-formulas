@@ -97,6 +97,8 @@ const LIBRARIES = {
     mdLabel: 'formulas.md 全文',
     jsonHref: 'https://github.com/mason0510/yuan-shufang-formulas/blob/main/data/formulas.json',
     jsonLabel: 'formulas.json 结构化',
+    avatar: 'yuan-shufang.png',
+    avatarAlt: '中医袁淑芳',
   },
   qibo: {
     id: 'qibo',
@@ -109,8 +111,19 @@ const LIBRARIES = {
     mdLabel: '公开著录说明',
     jsonHref: 'qibo-formulas.json',
     jsonLabel: 'qibo-formulas.json',
+    avatar: 'qibo-stele.jpg',
+    avatarAlt: '岐伯山千碑林',
   },
 };
+const NOTICES = [
+  {
+    id: 'qibo-lib-20261117',
+    title: '方剂库可以切换了',
+    body: '标题下可以选择袁淑芳或岐伯山千碑林。切到岐伯山后，头像换成碑林。那边目前只有公开著录，不能当方抓药。',
+    library: 'qibo',
+  },
+];
+const NOTICE_KEY = 'ysf-notices-read';
 let systemPrompt = '';
 let history = [];
 let clinicReady = false;
@@ -150,9 +163,10 @@ function cfg() {
  */
 function agentAvatar() {
   const img = document.createElement('img');
-  img.className = 'avatar';
-  img.src = 'yuan-shufang.png';
-  img.alt = '中医袁淑芳';
+  const lib = LIBRARIES[selectedLibraryId()] || LIBRARIES.yuan;
+  img.className = lib.id === 'qibo' ? 'avatar scene' : 'avatar';
+  img.src = lib.avatar;
+  img.alt = lib.avatarAlt;
   return img;
 }
 
@@ -606,6 +620,12 @@ async function applyLibrary(id) {
   const rail = document.getElementById('railNote');
   if (title) title.textContent = lib.title;
   if (sub) sub.textContent = lib.sub;
+  const avatar = document.getElementById('brandAvatar');
+  if (avatar) {
+    avatar.src = lib.avatar;
+    avatar.alt = lib.avatarAlt;
+    avatar.className = lib.id === 'qibo' ? 'avatar scene' : 'avatar';
+  }
   if (rail) rail.textContent = lib.rail;
   const md = document.getElementById('linkFormulasMd');
   const json = document.getElementById('linkFormulasJson');
@@ -635,10 +655,142 @@ async function applyLibrary(id) {
 }
 
 /**
+ * Read notice ids this browser already closed.
+ * Guarantees: returns an array. Does not guarantee: every stored id is still published.
+ */
+function readNoticeIds() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(NOTICE_KEY) || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch (_) {
+    return [];
+  }
+}
+
+/**
+ * Notices not yet closed on this browser.
+ * Guarantees: order matches NOTICES. Does not guarantee: the list stays unread after paint.
+ */
+function unreadNotices() {
+  const read = new Set(readNoticeIds());
+  return NOTICES.filter((n) => n && !read.has(n.id));
+}
+
+/**
+ * Remember one notice as closed. Does not remove it from the bell list.
+ */
+function markNoticeRead(id) {
+  const ids = readNoticeIds();
+  if (!ids.includes(id)) ids.push(id);
+  localStorage.setItem(NOTICE_KEY, JSON.stringify(ids));
+}
+
+/**
+ * Hide the dropdown. Does not mark notices read.
+ */
+function closeNoticePanel() {
+  const panel = document.getElementById('noticePanel');
+  const btn = document.getElementById('btnNotice');
+  if (panel) panel.hidden = true;
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+}
+
+/**
+ * Draw the unread bar and the bell list.
+ * Guarantees: a closed notice stays out of the bar. Does not guarantee: the panel is open.
+ */
+function paintNotices() {
+  const unread = unreadNotices();
+  const dot = document.getElementById('noticeDot');
+  const bar = document.getElementById('noticeBar');
+  const barText = document.getElementById('noticeBarText');
+  const list = document.getElementById('noticeList');
+  if (dot) dot.hidden = unread.length === 0;
+  if (bar && barText) {
+    bar.hidden = unread.length === 0;
+    if (unread[0]) barText.textContent = unread[0].title + '。' + unread[0].body;
+  }
+  if (!list) return;
+  list.replaceChildren();
+  const rows = NOTICES.length ? NOTICES : [];
+  if (!rows.length) {
+    const empty = document.createElement('p');
+    empty.textContent = '没有通知';
+    list.appendChild(empty);
+    return;
+  }
+  rows.forEach((n) => {
+    const item = document.createElement('div');
+    item.className = 'notice-item';
+    const strong = document.createElement('strong');
+    strong.textContent = n.title;
+    const p = document.createElement('p');
+    p.textContent = n.body;
+    item.append(strong, p);
+    if (n.library && unread.some((u) => u.id === n.id)) {
+      const go = document.createElement('button');
+      go.type = 'button';
+      go.textContent = '打开岐伯山千碑林';
+      go.addEventListener('click', () => {
+        markNoticeRead(n.id);
+        paintNotices();
+        closeNoticePanel();
+        applyLibrary(n.library).catch(() => {});
+      });
+      item.appendChild(go);
+    }
+    list.appendChild(item);
+  });
+}
+
+/**
+ * Wire the bell and the bar once.
+ * Guarantees: a second call does nothing. Does not guarantee: a notice exists.
+ */
+function bindNotices() {
+  if (document.body.dataset.notices === '1') return;
+  document.body.dataset.notices = '1';
+  const btn = document.getElementById('btnNotice');
+  const panel = document.getElementById('noticePanel');
+  const close = document.getElementById('noticeBarClose');
+  const go = document.getElementById('noticeBarGo');
+  if (btn && panel) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const willOpen = panel.hidden;
+      panel.hidden = !willOpen;
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (panel.hidden) return;
+      if (panel.contains(e.target) || btn.contains(e.target)) return;
+      closeNoticePanel();
+    });
+  }
+  if (close) {
+    close.addEventListener('click', () => {
+      unreadNotices().forEach((n) => markNoticeRead(n.id));
+      paintNotices();
+    });
+  }
+  if (go) {
+    go.addEventListener('click', () => {
+      const first = unreadNotices()[0];
+      if (!first) return;
+      markNoticeRead(first.id);
+      paintNotices();
+      if (first.library) applyLibrary(first.library).catch(() => {});
+    });
+  }
+  paintNotices();
+}
+
+/**
  * Load the last chosen library.
  * Guarantees: a missing choice opens 袁淑芳. Does not guarantee: the network is up.
  */
 function bootstrap() {
+  bindNotices();
   const select = document.getElementById('libSelect');
   if (select && !select.dataset.bound) {
     select.dataset.bound = '1';
