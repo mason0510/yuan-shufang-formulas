@@ -97,6 +97,12 @@ jq '.formulas[] | select(.ind | contains("痛经"))' data/formulas.json
 - 本库由照片 OCR/人工誊录与电子传抄互校而成，欢迎纠错 PR
 
 
+## 交流
+
+微信群。图上的二维码 7 天内有效，至 2026-12-02。过期后换 `docs/group-qr.jpg`。
+
+![交流群二维码](docs/group-qr.jpg)
+
 ## 在线智能体（GitHub Pages）
 
 启用仓库 Pages（Source: Deploy from branch → `/docs`）。

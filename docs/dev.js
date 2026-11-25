@@ -1,10 +1,9 @@
 /**
- * Open the developer WeChat card from the link under 开源仓库.
- * Guarantees: the card starts closed and shows the QR image plus the id zhcmason.
- * Does not guarantee: a phone can scan a screenshot of this card.
+ * 从侧栏按钮打开一张微信卡片。
+ * 保证：卡片默认关闭；点击后显示给定标题和图片；点关闭或点遮罩会收起。
+ * 不保证：手机能扫截图，也不保证群二维码在图上印的日期之后仍然有效。
  */
-(function devChat() {
-  const button = document.getElementById('btnDev');
+function bindWechatCard(button, titleText, imgSrc, imgAlt) {
   if (!button) return;
   const mask = document.createElement('div');
   mask.className = 'dev-mask';
@@ -12,10 +11,10 @@
   const pop = document.createElement('div');
   pop.className = 'dev-pop';
   const title = document.createElement('p');
-  title.textContent = '微信 zhcmason';
+  title.textContent = titleText;
   const img = document.createElement('img');
-  img.src = 'wechat-qr.jpg';
-  img.alt = '微信二维码 zhcmason';
+  img.src = imgSrc;
+  img.alt = imgAlt;
   const close = document.createElement('button');
   close.type = 'button';
   close.className = 'ghost';
@@ -34,4 +33,17 @@
   mask.addEventListener('click', (e) => {
     if (e.target === mask) shut();
   });
-})();
+}
+
+bindWechatCard(
+  document.getElementById('btnDev'),
+  '微信 zhcmason',
+  'wechat-qr.jpg',
+  '微信二维码 zhcmason'
+);
+bindWechatCard(
+  document.getElementById('btnGroup'),
+  '交流群',
+  'group-qr.jpg',
+  '微信交流群二维码'
+);
