@@ -1,0 +1,147 @@
+name: 构建测试打包部署
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: yuan-shufang-ci
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    outputs:
+      backend: ${{ steps.changes.outputs.backend }}
+      auth: ${{ steps.changes.outputs.auth }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: 测试
+        run: bash scripts/ci_check.sh
+      - name: 看这次改了哪一块
+        id: changes
+        run: |
+          set -eu
+          if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+            files=$(git diff --name-only HEAD^ HEAD)
+          else
+            files=$(git ls-tree -r --name-only HEAD)
+          fi
+          printf '%s\n' "$files"
+          backend=false
+          auth=false
+          printf '%s\n' "$files" | grep -q '^backend/' && backend=true || true
+          printf '%s\n' "$files" | grep -q '^auth/' && auth=true || true
+          echo "backend=$backend" >> "$GITHUB_OUTPUT"
+          echo "auth=$auth" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 构建
+        run: |
+          set -eu
+          test -f docs/index.html
+          test -f docs/group-qr.jpg
+          rm -rf dist
+          mkdir -p dist
+          cp -R docs/. dist/
+          test -f dist/index.html
+          test -f dist/group-qr.jpg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+          if-no-files-found: error
+
+  package:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/configure-pages@v6
+      - uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+      - name: 打包
+        run: |
+          set -eu
+          test -f dist/index.html
+          test -f dist/group-qr.jpg
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy-pages:
+    needs: package
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 发布页面
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+  deploy-worker:
+    needs: test
+    if: needs.test.outputs.backend == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 发布 Worker
+        working-directory: backend
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -eu
+          if [ -z "${CLOUDFLARE_API_TOKEN}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID}" ]; then
+            echo "缺少 CLOUDFLARE_API_TOKEN 或 CLOUDFLARE_ACCOUNT_ID，Worker 不发布"
+            exit 1
+          fi
+          curl --proto '=https' --tlsv1.2 -fsSL https://sh.rustup.rs | sh -s -- -y
+          . "$HOME/.cargo/env"
+          rustup target add wasm32-unknown-unknown
+          cargo install worker-build
+          npm install
+          npx wrangler deploy
+
+  deploy-auth:
+    needs: test
+    if: needs.test.outputs.auth == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 发布登录服务
+        env:
+          YSF_AUTH_HOST: ${{ secrets.YSF_AUTH_HOST }}
+          YSF_AUTH_USER: ${{ secrets.YSF_AUTH_USER }}
+          YSF_AUTH_SSH_KEY: ${{ secrets.YSF_AUTH_SSH_KEY }}
+        run: |
+          set -eu
+          if [ -z "${YSF_AUTH_HOST}" ] || [ -z "${YSF_AUTH_USER}" ] || [ -z "${YSF_AUTH_SSH_KEY}" ]; then
+            echo "缺少 YSF_AUTH_HOST、YSF_AUTH_USER 或 YSF_AUTH_SSH_KEY，登录服务不发布"
+            exit 1
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "${YSF_AUTH_SSH_KEY}" > ~/.ssh/ysf_auth
+          chmod 600 ~/.ssh/ysf_auth
+          ssh -i ~/.ssh/ysf_auth -o StrictHostKeyChecking=accept-new \
+            "${YSF_AUTH_USER}@${YSF_AUTH_HOST}" \
+            "sudo cp -a /opt/ysf-auth/server.py /opt/ysf-auth/server.py.bak-\$(date +%Y%m%d%H%M)"
+          scp -i ~/.ssh/ysf_auth -o StrictHostKeyChecking=accept-new \
+            auth/server.py "${YSF_AUTH_USER}@${YSF_AUTH_HOST}:/tmp/ysf-auth-server.py"
+          ssh -i ~/.ssh/ysf_auth -o StrictHostKeyChecking=accept-new \
+            "${YSF_AUTH_USER}@${YSF_AUTH_HOST}" \
+            "sudo cp /tmp/ysf-auth-server.py /opt/ysf-auth/server.py && sudo systemctl restart ysf-auth && systemctl is-active ysf-auth"

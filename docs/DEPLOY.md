@@ -3,18 +3,26 @@
 三块是分开的。页面在 GitHub Pages，开方代理和留言在 Cloudflare Worker，注册、会话和 open-medical 在登录服务。密钥不进仓库。
 
 ```
-改完代码
+改完并核对
    │
-   ├─ docs/ 推到 main ─────────► GitHub Pages
-   ├─ backend/ wrangler deploy ► ysf-api.tap365.org
-   └─ auth/server.py 换上并重启 ► progress.tap365.org
+   └─ scripts/ship.sh 推 origin main
+        │
+        └─ .github/workflows/ci.yml
+             ├─ 测试 scripts/ci_check.sh
+             ├─ 构建 dist/
+             ├─ 打包 dist/ 为 Pages 产物
+             ├─ 发布页面 ► GitHub Pages
+             ├─ 仅 backend/ 有变更时发布 Worker ► ysf-api.tap365.org
+             └─ 仅 auth/ 有变更时发布登录服务 ► progress.tap365.org
 ```
+
+本仓库任务收口后执行 `scripts/ship.sh`。不要停在本地提交。
 
 ## 1. 页面
 
-仓库 Settings → Pages → Deploy from a branch → `main` → `/docs`。
+流水线 `.github/workflows/ci.yml` 在测试通过后，把 `docs/` 打成 Pages 包再发布。线上是 https://mason0510.github.io/yuan-shufang-formulas/ 。
 
-推送 `main` 后，GitHub 会发布 `docs/`。线上是 https://mason0510.github.io/yuan-shufang-formulas/ 。
+Pages 来源要设为 GitHub Actions。测试失败时不发布页面。
 
 页面里的 `app.js?v=`、`styles.css?v=` 是缓存号。改了脚本或样式，把引用它们的 HTML 版本号加一，否则访客还会拿到旧文件。
 

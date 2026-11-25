@@ -8,6 +8,8 @@
 
 网站：https://mason0510.github.io/yuan-shufang-formulas/
 
+推到 `main` 后，由 `.github/workflows/ci.yml` 测试、打包并发布页面。
+
 河南西平县芦庙乡盘龙桥村老中医**袁淑芳**（行医八十余年）遗愿：将毕生精要验方刻于墓碑，供后人借鉴。
 
 ## 初心
