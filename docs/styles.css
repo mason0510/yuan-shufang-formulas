@@ -77,6 +77,15 @@ body:has(> .mission) .main {
   overflow-y: auto;
 }
 .rail.right { border-right: none; border-left: 1px solid var(--line); }
+.group-qr { margin: 0 auto; width: 100%; max-width: 208px; }
+.group-qr img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
 .rail-brand {
   color: var(--accent);
   font-weight: 800;
